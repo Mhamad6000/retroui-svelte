@@ -60,6 +60,69 @@
     "slugFull": "/index"
   },
   {
+    "title": "Alert Action",
+    "description": "The Alert Action is a powerful Svelte action that enables you to create interactive alert dialogs for displaying information, confirming operations, or showing prompt messages.",
+    "path": "components/alert",
+    "content": "<h2>Features</h2>\n<ul>\n<li>Easy to integrate with any clickable element</li>\n<li>Customizable title and description</li>\n<li>Support for close and confirm callbacks</li>\n<li>Clean and modern design</li>\n</ul>\n<h2>Installation</h2>\n<pre><code class=\"language-bash\">npm install svelte-legos\n</code></pre>\n<h2>Basic Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script>\n\timport { alertAction } from \"svelte-legos\";\n\n\tfunction onClose() {\n\t\t// Handle alert close event\n\t\tconsole.log(\"Alert closed\");\n\t}\n\n\tfunction onOk() {\n\t\t// Handle confirmation\n\t\tconsole.log(\"Alert confirmed\");\n\t}\n&#x3C;/script>\n\n&#x3C;button\n\tuse:alertAction={{\n\t\ttitle: \"Confirm Action\",\n\t\tdescription: \"Are you sure you want to proceed?\",\n\t\tonClose,\n\t\tonOk,\n\t}}\n>\n\tShow Alert\n&#x3C;/button>\n</code></pre>\n<h2>Parameters</h2>\n<p>The <code>alertAction</code> accepts an object with the following properties:</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<table><thead><tr><th>Parameter</th><th>Type</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>title</td><td>string</td><td>The title text shown in the alert dialog</td><td>Yes</td></tr><tr><td>description</td><td>string</td><td>The descriptive text shown below the title</td><td>Yes</td></tr><tr><td>onClose</td><td>() => void</td><td>Callback function triggered when alert is closed</td><td>No</td></tr><tr><td>onOk</td><td>() => void</td><td>Callback function triggered when OK is clicked</td><td>No</td></tr></tbody></table>\n<h2>Events</h2>\n<p>The alert provides two main events that you can handle:</p>\n<ol>\n<li><strong>onClose</strong>: Triggered when the user closes the alert (typically by clicking outside or pressing escape)</li>\n<li><strong>onOk</strong>: Triggered when the user confirms the alert by clicking the OK button</li>\n</ol>\n<h2>Examples</h2>\n<h3>Basic Alert</h3>\n<pre><code class=\"language-svelte\">&#x3C;button\n\tuse:alertAction={{\n\t\ttitle: \"Hello!\",\n\t\tdescription: \"This is a simple alert message.\",\n\t}}\n>\n\tShow Simple Alert\n&#x3C;/button>\n</code></pre>\n<h3>Confirmation Alert</h3>\n<pre><code class=\"language-svelte\">&#x3C;script>\n\timport { alertAction } from \"svelte-legos\";\n\n\tfunction handleDelete() {\n\t\tconsole.log(\"Item deleted!\");\n\t}\n&#x3C;/script>\n\n&#x3C;button\n\tuse:alertAction={{\n\t\ttitle: \"Delete Item\",\n\t\tdescription: \"Are you sure you want to delete this item? This action cannot be undone.\",\n\t\tonOk: handleDelete,\n\t}}\n>\n\tDelete Item\n&#x3C;/button>\n</code></pre>\n<h3>Alert with Both Callbacks</h3>\n<pre><code class=\"language-svelte\">&#x3C;script>\n\timport { alertAction } from \"svelte-legos\";\n\n\tfunction handleClose() {\n\t\tconsole.log(\"Operation cancelled\");\n\t}\n\n\tfunction handleConfirm() {\n\t\tconsole.log(\"Operation confirmed\");\n\t}\n&#x3C;/script>\n\n&#x3C;button\n\tuse:alertAction={{\n\t\ttitle: \"Confirm Operation\",\n\t\tdescription: \"Please confirm to proceed with this operation.\",\n\t\tonClose: handleClose,\n\t\tonOk: handleConfirm,\n\t}}\n>\n\tConfirm Operation\n&#x3C;/button>\n</code></pre>\n<h2>TypeScript Support</h2>\n<p>The action is fully typed and provides type safety when used in TypeScript projects:</p>\n<pre><code class=\"language-typescript\">interface LoadingActionParams {\n\ttitle: string;\n\tdescription: string;\n\tonClose?: () => void;\n\tonOk?: () => void;\n}\n</code></pre>",
+    "raw": "## Features\n\n- Easy to integrate with any clickable element\n- Customizable title and description\n- Support for close and confirm callbacks\n- Clean and modern design\n\n## Installation\n\n```bash\nnpm install svelte-legos\n```\n\n## Basic Usage\n\n```svelte\n<script>\n\timport { alertAction } from \"svelte-legos\";\n\n\tfunction onClose() {\n\t\t// Handle alert close event\n\t\tconsole.log(\"Alert closed\");\n\t}\n\n\tfunction onOk() {\n\t\t// Handle confirmation\n\t\tconsole.log(\"Alert confirmed\");\n\t}\n</script>\n\n<button\n\tuse:alertAction={{\n\t\ttitle: \"Confirm Action\",\n\t\tdescription: \"Are you sure you want to proceed?\",\n\t\tonClose,\n\t\tonOk,\n\t}}\n>\n\tShow Alert\n</button>\n```\n\n## Parameters\n\nThe `alertAction` accepts an object with the following properties:\n\n| Parameter   | Type       | Description                                      | Required |\n| ----------- | ---------- | ------------------------------------------------ | -------- |\n| title       | string     | The title text shown in the alert dialog         | Yes      |\n| description | string     | The descriptive text shown below the title       | Yes      |\n| onClose     | () => void | Callback function triggered when alert is closed | No       |\n| onOk        | () => void | Callback function triggered when OK is clicked   | No       |\n\n## Events\n\nThe alert provides two main events that you can handle:\n\n1. **onClose**: Triggered when the user closes the alert (typically by clicking outside or pressing escape)\n2. **onOk**: Triggered when the user confirms the alert by clicking the OK button\n\n## Examples\n\n### Basic Alert\n\n```svelte\n<button\n\tuse:alertAction={{\n\t\ttitle: \"Hello!\",\n\t\tdescription: \"This is a simple alert message.\",\n\t}}\n>\n\tShow Simple Alert\n</button>\n```\n\n### Confirmation Alert\n\n```svelte\n<script>\n\timport { alertAction } from \"svelte-legos\";\n\n\tfunction handleDelete() {\n\t\tconsole.log(\"Item deleted!\");\n\t}\n</script>\n\n<button\n\tuse:alertAction={{\n\t\ttitle: \"Delete Item\",\n\t\tdescription: \"Are you sure you want to delete this item? This action cannot be undone.\",\n\t\tonOk: handleDelete,\n\t}}\n>\n\tDelete Item\n</button>\n```\n\n### Alert with Both Callbacks\n\n```svelte\n<script>\n\timport { alertAction } from \"svelte-legos\";\n\n\tfunction handleClose() {\n\t\tconsole.log(\"Operation cancelled\");\n\t}\n\n\tfunction handleConfirm() {\n\t\tconsole.log(\"Operation confirmed\");\n\t}\n</script>\n\n<button\n\tuse:alertAction={{\n\t\ttitle: \"Confirm Operation\",\n\t\tdescription: \"Please confirm to proceed with this operation.\",\n\t\tonClose: handleClose,\n\t\tonOk: handleConfirm,\n\t}}\n>\n\tConfirm Operation\n</button>\n```\n\n## TypeScript Support\n\nThe action is fully typed and provides type safety when used in TypeScript projects:\n\n```typescript\ninterface LoadingActionParams {\n\ttitle: string;\n\tdescription: string;\n\tonClose?: () => void;\n\tonOk?: () => void;\n}\n```",
+    "toc": [
+      {
+        "title": "Features",
+        "url": "#features",
+        "items": []
+      },
+      {
+        "title": "Installation",
+        "url": "#installation",
+        "items": []
+      },
+      {
+        "title": "Basic Usage",
+        "url": "#basic-usage",
+        "items": []
+      },
+      {
+        "title": "Parameters",
+        "url": "#parameters",
+        "items": []
+      },
+      {
+        "title": "Events",
+        "url": "#events",
+        "items": []
+      },
+      {
+        "title": "Examples",
+        "url": "#examples",
+        "items": [
+          {
+            "title": "Basic Alert",
+            "url": "#basic-alert",
+            "items": []
+          },
+          {
+            "title": "Confirmation Alert",
+            "url": "#confirmation-alert",
+            "items": []
+          },
+          {
+            "title": "Alert with Both Callbacks",
+            "url": "#alert-with-both-callbacks",
+            "items": []
+          }
+        ]
+      },
+      {
+        "title": "TypeScript Support",
+        "url": "#typescript-support",
+        "items": []
+      }
+    ],
+    "section": "Components",
+    "slug": "components/alert",
+    "slugFull": "/components/alert"
+  },
+  {
     "title": "Button",
     "description": "Versatile button component that supports various styles, states, and sizes.",
     "path": "components/button",

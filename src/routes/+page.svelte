@@ -1,14 +1,9 @@
 <script lang="ts">
-	import Badge from "$lib/registry/ui/badge/badge.svelte";
+	import { Badge } from "$lib/registry/ui/badge";
 	import { Button } from "$lib/registry/ui/button";
-
-	// import HelloWorld from "$lib/registry/blocks/hello-world/hello-world.svelte";
-	// import ExampleForm from "$lib/registry/blocks/example-form/example-form.svelte";
-	// import PokemonPage from "$lib/registry/blocks/complex-component/+page.svelte";
-	// import ExampleCard from "$lib/registry/blocks/example-with-css/example-card.svelte";
-
-	// This page displays items from the custom registry.
-	// You are free to implement this with your design as needed.
+	import * as Avatar from "$lib/registry/ui/avatar";
+	import * as Breadcrumb from "$lib/registry/ui/breadcrumb";
+	import * as Card from "$lib/registry/ui/card";
 </script>
 
 <div class="mx-auto flex min-h-svh max-w-3xl flex-col gap-8 px-4 py-8">
@@ -23,9 +18,12 @@
 			<div class="flex items-center justify-between">
 				<h2 class="text-muted-foreground text-sm sm:pl-3">A simple hello world component</h2>
 			</div>
-			<div class="relative flex min-h-[400px] items-center justify-center">
+			<div class="relative flex min-h-[400px] items-center justify-center gap-5">
 				<!-- <HelloWorld /> -->
 				<Button type="button" variant="default" disabled>Button</Button>
+				<Button type="button" variant="secondary" disabled>Button</Button>
+				<Button type="button" variant="outline" disabled>Button</Button>
+				<Button type="button" variant="link" disabled>Button</Button>
 			</div>
 		</div>
 
@@ -36,25 +34,9 @@
 			<div class="relative flex min-h-[500px] flex-col flex-wrap items-center justify-center gap-5">
 				<div class="flex items-center justify-center gap-2">
 					<Badge variant="default">badge</Badge>
-					<Badge variant="secondary">badge</Badge>
-					<Badge variant="destructive">badge</Badge>
-					<Badge variant="success">badge</Badge>
-					<Badge variant="warning">badge</Badge>
-					<Badge variant="info">badge</Badge>
-				</div>
-				<div class="flex items-center justify-center gap-2">
 					<Badge variant="outline">badge</Badge>
-					<Badge variant="outline-destructive">badge</Badge>
-					<Badge variant="outline-success">badge</Badge>
-					<Badge variant="outline-warning">badge</Badge>
-					<Badge variant="outline-info">badge</Badge>
-				</div>
-				<div class="flex items-center justify-center gap-2">
-					<Badge variant="light-default">badge</Badge>
-					<Badge variant="light-destructive">badge</Badge>
-					<Badge variant="light-success">badge</Badge>
-					<Badge variant="light-warning">badge</Badge>
-					<Badge variant="light-info">badge</Badge>
+					<Badge variant="solid">badge</Badge>
+					<Badge variant="surface">badge</Badge>
 				</div>
 			</div>
 		</div>
@@ -65,8 +47,16 @@
 					A complex component showing hooks, libs and components.
 				</h2>
 			</div>
-			<div class="relative flex min-h-[400px] items-center justify-center">
-				<!-- <PokemonPage /> -->
+			<div class="relative flex min-h-[400px] items-center justify-center gap-5">
+				<Avatar.Root>
+					<Avatar.Image src="https://github.com/shadcn.png" alt="@shadcn" />
+					<Avatar.Fallback>CN</Avatar.Fallback>
+				</Avatar.Root>
+
+				<Avatar.Root>
+					<Avatar.Image src="https://github.com/shg" alt="@shadcn" />
+					<Avatar.Fallback>CN</Avatar.Fallback>
+				</Avatar.Root>
 			</div>
 		</div>
 
@@ -74,8 +64,41 @@
 			<div class="flex items-center justify-between">
 				<h2 class="text-muted-foreground text-sm sm:pl-3">A login form with a CSS file.</h2>
 			</div>
-			<div class="relative flex min-h-[400px] items-center justify-center">
-				<!-- <ExampleCard /> -->
+			<div class="relative flex min-h-[400px] items-center justify-center gap-5">
+				<Breadcrumb.Root>
+					<Breadcrumb.List>
+						<Breadcrumb.Item>
+							<Breadcrumb.Link href="/">Home</Breadcrumb.Link>
+						</Breadcrumb.Item>
+						<Breadcrumb.Separator />
+						<Breadcrumb.Item>
+							<Breadcrumb.Link href="/components">Components</Breadcrumb.Link>
+						</Breadcrumb.Item>
+						<Breadcrumb.Separator />
+						<Breadcrumb.Item>
+							<Breadcrumb.Page>Breadcrumb</Breadcrumb.Page>
+						</Breadcrumb.Item>
+					</Breadcrumb.List>
+				</Breadcrumb.Root>
+			</div>
+		</div>
+		<div class="relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4">
+			<div class="flex items-center justify-between">
+				<h2 class="text-muted-foreground text-sm sm:pl-3">A login form with a CSS file.</h2>
+			</div>
+			<div class="relative flex min-h-[400px] items-center justify-center gap-5">
+				<Card.Root class="w-[350px]">
+					<Card.Header>
+						<Card.Title>Card Title</Card.Title>
+						<Card.Description>Card Description</Card.Description>
+					</Card.Header>
+					<Card.Content>
+						<p>Card Content</p>
+					</Card.Content>
+					<Card.Footer>
+						<p>Card Footer</p>
+					</Card.Footer>
+				</Card.Root>
 			</div>
 		</div>
 	</main>
