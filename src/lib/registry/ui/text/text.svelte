@@ -31,8 +31,15 @@
 </script>
 
 <script lang="ts">
-	let { class: className, as = "p", ref = $bindable(null), ...restProps }: TextProps = $props();
+	let {
+		class: className,
+		as = "p",
+		children,
+		ref = $bindable(null),
+		...restProps
+	}: TextProps = $props();
 </script>
 
-<svelte:element this={as} class={cn(textVariants({ as }), className)} {...restProps}
-></svelte:element>
+<svelte:element this={as} class={cn(textVariants({ as }), className)} {...restProps}>
+	{@render children?.()}
+</svelte:element>

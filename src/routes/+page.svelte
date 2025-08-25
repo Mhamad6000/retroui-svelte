@@ -4,6 +4,7 @@
 	import * as Avatar from "$lib/registry/ui/avatar";
 	import * as Breadcrumb from "$lib/registry/ui/breadcrumb";
 	import * as Card from "$lib/registry/ui/card";
+	import Text from "$lib/registry/ui/text/text.svelte";
 </script>
 
 <div class="mx-auto flex min-h-svh max-w-3xl flex-col gap-8 px-4 py-8">
@@ -87,17 +88,31 @@
 				<h2 class="text-muted-foreground text-sm sm:pl-3">A login form with a CSS file.</h2>
 			</div>
 			<div class="relative flex min-h-[400px] items-center justify-center gap-5">
-				<Card.Root class="w-[350px]">
-					<Card.Header>
-						<Card.Title>Card Title</Card.Title>
-						<Card.Description>Card Description</Card.Description>
-					</Card.Header>
+				<Card.Root class="w-full max-w-[400px] shadow-none hover:shadow-md">
 					<Card.Content>
+						<Text class="text-lg">
+							&quot; RetroUI is the cooling looking UI library out there! &quot;
+						</Text>
+						<div class="mt-6 flex items-center space-x-2">
+							<Avatar.Root class="h-10 w-10">
+								<Avatar.Image
+									alt="avatar"
+									src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+								/>
+							</Avatar.Root>
+							<div>
+								<div class="font-medium">Leroy Jenkins</div>
+								<div class="text-sm text-gray-500 dark:text-gray-400">CEO of Uber</div>
+							</div>
+						</div>
+					</Card.Content>
+
+					<!-- <Card.Content>
 						<p>Card Content</p>
 					</Card.Content>
 					<Card.Footer>
 						<p>Card Footer</p>
-					</Card.Footer>
+					</Card.Footer> -->
 				</Card.Root>
 			</div>
 		</div>
