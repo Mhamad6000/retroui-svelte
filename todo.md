@@ -1,0 +1,53 @@
+## Components To Do
+
+- [x] Accordion
+- [ ] Alert Dialog
+- [x] Alert
+- [ ] Aspect Ratio
+- [x] Avatar
+- [x] Badge
+- [x] Breadcrumb
+- [x] Button
+- [ ] Calendar
+- [x] Card
+- [ ] Carousel
+- [ ] Chart
+- [x] Checkbox
+- [ ] Collapsible
+- [ ] Combobox
+- [ ] Command
+- [ ] Context Menu
+- [ ] Data Table
+- [ ] Date Picker
+- [ ] Dialog
+- [ ] Drawer
+- [ ] Dropdown Menu
+- [ ] Formsnap
+- [ ] Hover Card
+- [ ] Input OTP
+- [x] Input
+- [x] Label
+- [ ] Menubar
+- [ ] Navigation Menu
+- [ ] Pagination
+- [ ] Popover
+- [ ] Progress
+- [ ] Radio Group
+- [ ] Range Calendar
+- [ ] Resizable
+- [ ] Scroll Area
+- [ ] Select
+- [ ] Separator
+- [ ] Sheet
+- [ ] Sidebar
+- [ ] Skeleton
+- [ ] Slider
+- [ ] Sonner
+- [ ] Switch
+- [ ] Table
+- [ ] Tabs
+- [x] Textarea
+- [x] Toggle Group
+- [x] Toggle
+- [ ] Tooltip
+- [x] Text

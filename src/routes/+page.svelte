@@ -4,7 +4,17 @@
 	import * as Avatar from "$lib/registry/ui/avatar";
 	import * as Breadcrumb from "$lib/registry/ui/breadcrumb";
 	import * as Card from "$lib/registry/ui/card";
-	import Text from "$lib/registry/ui/text/text.svelte";
+	import * as Text from "$lib/registry/ui/text";
+	import * as Checkbox from "$lib/registry/ui/checkbox";
+	import * as Alert from "$lib/registry/ui/alert";
+	import CheckCircle from "@lucide/svelte/icons/circle-check";
+	import * as Accordion from "$lib/registry/ui/accordion";
+	import { Label } from "$lib/registry/ui/label";
+	import { Input } from "$lib/registry/ui/input";
+	import BoldIcon from "@lucide/svelte/icons/bold";
+	import { Toggle } from "$lib/registry/ui/toggle";
+	import * as ToggleGroup from "$lib/registry/ui/toggle-group";
+	import { Textarea } from "$lib/registry/ui/textarea";
 </script>
 
 <div class="mx-auto flex min-h-svh max-w-3xl flex-col gap-8 px-4 py-8">
@@ -90,9 +100,9 @@
 			<div class="relative flex min-h-[400px] items-center justify-center gap-5">
 				<Card.Root class="w-full max-w-[400px] shadow-none hover:shadow-md">
 					<Card.Content>
-						<Text class="text-lg">
+						<Text.Root class="text-lg">
 							&quot; RetroUI is the cooling looking UI library out there! &quot;
-						</Text>
+						</Text.Root>
 						<div class="mt-6 flex items-center space-x-2">
 							<Avatar.Root class="h-10 w-10">
 								<Avatar.Image
@@ -114,6 +124,171 @@
 						<p>Card Footer</p>
 					</Card.Footer> -->
 				</Card.Root>
+			</div>
+		</div>
+
+		<div class="relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4">
+			<div class="flex items-center justify-between">
+				<h2 class="text-muted-foreground text-sm sm:pl-3">A login form with a CSS file.</h2>
+			</div>
+			<div class="relative flex min-h-[400px] items-center justify-center gap-5">
+				<Checkbox.Root />
+				<Checkbox.Root variant="outline" />
+				<Checkbox.Root variant="solid" />
+			</div>
+		</div>
+
+		<div class="relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4">
+			<div class="flex items-center justify-between">
+				<h2 class="text-muted-foreground text-sm sm:pl-3">A login form with a CSS file.</h2>
+			</div>
+			<div class="relative flex min-h-[400px] flex-col items-center justify-center gap-5">
+				<Alert.Root>
+					<Alert.Title>Heads up!</Alert.Title>
+					<Alert.Description
+						>This is where you can write description that no one reads...</Alert.Description
+					>
+				</Alert.Root>
+				<Alert.Root variant="solid">
+					<Alert.Title>Heads up!</Alert.Title>
+					<Alert.Description
+						>This is where you can write description that no one reads...</Alert.Description
+					>
+				</Alert.Root>
+				<Alert.Root status="success" class="flex items-center">
+					<CheckCircle className="h-4 w-4 mr-4" />
+					<Alert.Title>This is a success alert!</Alert.Title>
+				</Alert.Root>
+				<Alert.Root status="error" class="flex items-center">
+					<CheckCircle className="h-4 w-4 mr-4" />
+					<Alert.Title>This is an error alert!</Alert.Title>
+				</Alert.Root>
+				<Alert.Root status="warning" class="flex items-center">
+					<CheckCircle className="h-4 w-4 mr-4" />
+					<Alert.Title>This is a warning alert!</Alert.Title>
+				</Alert.Root>
+				<Alert.Root status="info" class="flex items-center">
+					<CheckCircle className="h-4 w-4 mr-4" />
+					<Alert.Title>This is an info alert!</Alert.Title>
+				</Alert.Root>
+				<Alert.Root status="success" variant="solid" class="flex items-center">
+					<CheckCircle className="h-4 w-4 mr-4" />
+					<Alert.Title>This is a success alert!</Alert.Title>
+				</Alert.Root>
+			</div>
+		</div>
+
+		<div class="relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4">
+			<div class="flex items-center justify-between">
+				<h2 class="text-muted-foreground text-sm sm:pl-3">A login form with a CSS file.</h2>
+			</div>
+			<div class="relative flex min-h-[400px] items-center justify-center gap-5">
+				<Accordion.Root type="single" class="w-full space-y-4">
+					<Accordion.Item value="item-1">
+						<Accordion.Trigger>Accordion Item</Accordion.Trigger>
+						<Accordion.Content>Yes. It adheres to the WAI-ARIA design pattern.</Accordion.Content>
+					</Accordion.Item>
+					<Accordion.Item value="item-2">
+						<Accordion.Trigger>Is it accessible?</Accordion.Trigger>
+						<Accordion.Content>Yes. It adheres to the WAI-ARIA design pattern.</Accordion.Content>
+					</Accordion.Item>
+				</Accordion.Root>
+			</div>
+		</div>
+		<div class="relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4">
+			<div class="flex items-center justify-between">
+				<h2 class="text-muted-foreground text-sm sm:pl-3">A login form with a CSS file.</h2>
+			</div>
+			<div class="relative flex min-h-[400px] items-center justify-center gap-5">
+				<div class="flex items-center space-x-2">
+					<Checkbox.Root id="terms" />
+					<Label for="terms">Accept terms and conditions</Label>
+				</div>
+			</div>
+		</div>
+		<div class="relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4">
+			<div class="flex items-center justify-between">
+				<h2 class="text-muted-foreground text-sm sm:pl-3">A login form with a CSS file.</h2>
+			</div>
+			<div class="relative flex min-h-[400px] items-center justify-center gap-5">
+				<div class="flex flex-col space-y-2">
+					<Label for="name">Name:</Label>
+					<Input id="name" />
+				</div>
+			</div>
+		</div>
+
+		<div class="relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4">
+			<div class="flex items-center justify-between">
+				<h2 class="text-muted-foreground text-sm sm:pl-3">A login form with a CSS file.</h2>
+			</div>
+			<div class="relative flex min-h-[400px] items-center justify-center gap-5">
+				<Toggle variant="solid" aria-label="toggle bold">
+					<BoldIcon class="size-4" />
+				</Toggle>
+			</div>
+		</div>
+
+		<div class="relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4">
+			<div class="flex items-center justify-between">
+				<h2 class="text-muted-foreground text-sm sm:pl-3">A login form with a CSS file.</h2>
+			</div>
+			<div class="relative flex min-h-[400px] flex-col items-center justify-center gap-5">
+				<ToggleGroup.Root type="multiple">
+					<ToggleGroup.Item value="bold" aria-label="Toggle bold">
+						<BoldIcon class="size-4" />
+					</ToggleGroup.Item>
+					<ToggleGroup.Item value="italic" aria-label="Toggle italic">
+						<BoldIcon class="size-4" />
+					</ToggleGroup.Item>
+					<ToggleGroup.Item value="strikethrough" aria-label="Toggle strikethrough">
+						<BoldIcon class="size-4" />
+					</ToggleGroup.Item>
+				</ToggleGroup.Root>
+
+				<ToggleGroup.Root type="multiple" variant="outlined">
+					<ToggleGroup.Item value="bold" aria-label="Toggle bold">
+						<BoldIcon class="size-4" />
+					</ToggleGroup.Item>
+					<ToggleGroup.Item value="italic" aria-label="Toggle italic">
+						<BoldIcon class="size-4" />
+					</ToggleGroup.Item>
+					<ToggleGroup.Item value="strikethrough" aria-label="Toggle strikethrough">
+						<BoldIcon class="size-4" />
+					</ToggleGroup.Item>
+				</ToggleGroup.Root>
+
+				<ToggleGroup.Root type="multiple" variant="outline-muted">
+					<ToggleGroup.Item value="bold" aria-label="Toggle bold">
+						<BoldIcon class="size-4" />
+					</ToggleGroup.Item>
+					<ToggleGroup.Item value="italic" aria-label="Toggle italic">
+						<BoldIcon class="size-4" />
+					</ToggleGroup.Item>
+					<ToggleGroup.Item value="strikethrough" aria-label="Toggle strikethrough">
+						<BoldIcon class="size-4" />
+					</ToggleGroup.Item>
+				</ToggleGroup.Root>
+
+				<ToggleGroup.Root type="multiple" variant="solid">
+					<ToggleGroup.Item value="bold" aria-label="Toggle bold">
+						<BoldIcon class="size-4" />
+					</ToggleGroup.Item>
+					<ToggleGroup.Item value="italic" aria-label="Toggle italic">
+						<BoldIcon class="size-4" />
+					</ToggleGroup.Item>
+					<ToggleGroup.Item value="strikethrough" aria-label="Toggle strikethrough">
+						<BoldIcon class="size-4" />
+					</ToggleGroup.Item>
+				</ToggleGroup.Root>
+			</div>
+		</div>
+		<div class="relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4">
+			<div class="flex items-center justify-between">
+				<h2 class="text-muted-foreground text-sm sm:pl-3">A login form with a CSS file.</h2>
+			</div>
+			<div class="relative flex min-h-[400px] items-center justify-center gap-5">
+				<Textarea placeholder="type something..." />
 			</div>
 		</div>
 	</main>
