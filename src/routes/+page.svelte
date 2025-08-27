@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Badge } from "$lib/registry/ui/badge";
-	import { Button } from "$lib/registry/ui/button";
+	import { Button, buttonVariants } from "$lib/registry/ui/button";
 	import * as Avatar from "$lib/registry/ui/avatar";
 	import * as Breadcrumb from "$lib/registry/ui/breadcrumb";
 	import * as Card from "$lib/registry/ui/card";
@@ -15,6 +15,12 @@
 	import { Toggle } from "$lib/registry/ui/toggle";
 	import * as ToggleGroup from "$lib/registry/ui/toggle-group";
 	import { Textarea } from "$lib/registry/ui/textarea";
+	import * as Tooltip from "$lib/registry/ui/tooltip";
+	import { Switch } from "$lib/registry/ui/switch";
+	import { toast } from "svelte-sonner";
+	import { Slider } from "$lib/registry/ui/slider";
+
+	let value = $state(33);
 </script>
 
 <div class="mx-auto flex min-h-svh max-w-3xl flex-col gap-8 px-4 py-8">
@@ -289,6 +295,72 @@
 			</div>
 			<div class="relative flex min-h-[400px] items-center justify-center gap-5">
 				<Textarea placeholder="type something..." />
+			</div>
+		</div>
+		<div class="relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4">
+			<div class="flex items-center justify-between">
+				<h2 class="text-muted-foreground text-sm sm:pl-3">A login form with a CSS file.</h2>
+			</div>
+			<div class="relative flex min-h-[400px] flex-col items-center justify-center gap-5">
+				<Tooltip.Provider>
+					<Tooltip.Root>
+						<Tooltip.Trigger>Hover</Tooltip.Trigger>
+						<Tooltip.Content>
+							<p>Add to library</p>
+						</Tooltip.Content>
+					</Tooltip.Root>
+				</Tooltip.Provider>
+				<Tooltip.Provider>
+					<Tooltip.Root>
+						<Tooltip.Trigger class={buttonVariants({ variant: "default" })}>Hover</Tooltip.Trigger>
+						<Tooltip.Content variant="primary">
+							<p>Add to library</p>
+						</Tooltip.Content>
+					</Tooltip.Root>
+				</Tooltip.Provider>
+				<Tooltip.Provider>
+					<Tooltip.Root>
+						<Tooltip.Trigger class={buttonVariants({ variant: "outline" })}>Hover</Tooltip.Trigger>
+						<Tooltip.Content variant="solid">
+							<p>Add to library</p>
+						</Tooltip.Content>
+					</Tooltip.Root>
+				</Tooltip.Provider>
+			</div>
+		</div>
+		<div class="relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4">
+			<div class="flex items-center justify-between">
+				<h2 class="text-muted-foreground text-sm sm:pl-3">A login form with a CSS file.</h2>
+			</div>
+			<div class="relative flex min-h-[400px] flex-col items-center justify-center gap-5">
+				<div class="flex items-center space-x-2">
+					<Switch id="airplane-mode" />
+					<Label for="airplane-mode">Airplane Mode</Label>
+				</div>
+			</div>
+		</div>
+		<div class="relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4">
+			<div class="flex items-center justify-between">
+				<h2 class="text-muted-foreground text-sm sm:pl-3">A login form with a CSS file.</h2>
+			</div>
+			<div class="relative flex min-h-[400px] flex-col items-center justify-center gap-5">
+				<div class="flex items-center space-x-2">
+					<Button
+						onclick={() =>
+							toast.success("Event has been created", {
+								richColors: true,
+							})}>Show toast</Button
+					>
+				</div>
+			</div>
+		</div>
+
+		<div class="relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4">
+			<div class="flex items-center justify-between">
+				<h2 class="text-muted-foreground text-sm sm:pl-3">A login form with a CSS file.</h2>
+			</div>
+			<div class="relative flex min-h-[400px] flex-col items-center justify-center gap-5">
+				<Slider type="single" bind:value max={100} step={1} />
 			</div>
 		</div>
 	</main>

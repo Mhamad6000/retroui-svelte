@@ -41,13 +41,13 @@
 - [ ] Sheet
 - [ ] Sidebar
 - [ ] Skeleton
-- [ ] Slider
-- [ ] Sonner
-- [ ] Switch
+- [x] Slider
+- [x] Sonner
+- [x] Switch
 - [ ] Table
 - [ ] Tabs
 - [x] Textarea
 - [x] Toggle Group
 - [x] Toggle
-- [ ] Tooltip
+- [x] Tooltip
 - [x] Text
