@@ -19,7 +19,15 @@
 	import { Switch } from "$lib/registry/ui/switch";
 	import { toast } from "svelte-sonner";
 	import { Slider } from "$lib/registry/ui/slider";
-
+	import * as Tabs from "$lib/registry/ui/tabs";
+	import * as Popover from "$lib/registry/ui/popover";
+	import { Progress } from "$lib/registry/ui/progress";
+	import * as RadioGroup from "$lib/registry/ui/radio-group";
+	import { ScrollArea } from "$lib/registry/ui/scroll-area";
+	import { Skeleton } from "$lib/registry/ui/skeleton/";
+	import CalendarDaysIcon from "@lucide/svelte/icons/calendar-days";
+	import * as HoverCard from "$lib/registry/ui/hover-card";
+	import * as InputOTP from "$lib/registry/ui/input-otp";
 	let value = $state(33);
 </script>
 
@@ -361,6 +369,147 @@
 			</div>
 			<div class="relative flex min-h-[400px] flex-col items-center justify-center gap-5">
 				<Slider type="single" bind:value max={100} step={1} />
+			</div>
+		</div>
+
+		<div class="relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4">
+			<div class="flex items-center justify-between">
+				<h2 class="text-muted-foreground text-sm sm:pl-3">A login form with a CSS file.</h2>
+			</div>
+			<div class="relative flex min-h-[400px] flex-col items-center justify-center gap-5">
+				<Tabs.Root value="account" class="w-[400px]">
+					<Tabs.List>
+						<Tabs.Trigger value="account">Account</Tabs.Trigger>
+						<Tabs.Trigger value="password">Password</Tabs.Trigger>
+					</Tabs.List>
+					<Tabs.Content value="account">Make changes to your account here.</Tabs.Content>
+					<Tabs.Content value="password">Change your password here.</Tabs.Content>
+				</Tabs.Root>
+			</div>
+		</div>
+
+		<div class="relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4">
+			<div class="flex items-center justify-between">
+				<h2 class="text-muted-foreground text-sm sm:pl-3">A login form with a CSS file.</h2>
+			</div>
+			<div class="relative flex min-h-[400px] flex-col items-center justify-center gap-5">
+				<Popover.Root>
+					<Popover.Trigger class={buttonVariants({ variant: "default" })}>Open</Popover.Trigger>
+					<Popover.Content>Place content for the popover here.</Popover.Content>
+				</Popover.Root>
+			</div>
+		</div>
+		<div class="relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4">
+			<div class="flex items-center justify-between">
+				<h2 class="text-muted-foreground text-sm sm:pl-3">A login form with a CSS file.</h2>
+			</div>
+			<div class="relative flex min-h-[400px] flex-col items-center justify-center gap-5">
+				<Progress value={33} class="w-40" />
+			</div>
+		</div>
+
+		<div class="relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4">
+			<div class="flex items-center justify-between">
+				<h2 class="text-muted-foreground text-sm sm:pl-3">A login form with a CSS file.</h2>
+			</div>
+			<div class="relative flex min-h-[400px] flex-col items-center justify-center gap-5">
+				<RadioGroup.Root value="option-one">
+					<div class="flex items-center space-x-2">
+						<RadioGroup.Item size="sm" value="option-one" id="option-one" />
+						<Label for="option-one">Option One</Label>
+					</div>
+					<div class="flex items-center space-x-2">
+						<RadioGroup.Item size="md" variant="outline" value="option-two" id="option-two" />
+						<Label for="option-two">Option Two</Label>
+					</div>
+					<div class="flex items-center space-x-2">
+						<RadioGroup.Item size="lg" variant="solid" value="option-three" id="option-three" />
+						<Label for="option-three">Option Three</Label>
+					</div>
+				</RadioGroup.Root>
+			</div>
+		</div>
+		<div class="relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4">
+			<div class="flex items-center justify-between">
+				<h2 class="text-muted-foreground text-sm sm:pl-3">A login form with a CSS file.</h2>
+			</div>
+			<div class="relative flex min-h-[400px] flex-col items-center justify-center gap-5">
+				<ScrollArea class="h-[200px] w-[350px] border p-4">
+					Jokester began sneaking into the castle in the middle of the night and leaving jokes all
+					over the place: under the king's pillow, in his soup, even in the royal toilet. The king
+					was furious, but he couldn't seem to stop Jokester. And then, one day, the people of the
+					kingdom discovered that the jokes left by Jokester were so funny that they couldn't help
+					but laugh. And once they started laughing, they couldn't stop.
+				</ScrollArea>
+			</div>
+		</div>
+		<div class="relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4">
+			<div class="flex items-center justify-between">
+				<h2 class="text-muted-foreground text-sm sm:pl-3">A login form with a CSS file.</h2>
+			</div>
+			<div class="relative flex min-h-[400px] flex-col items-center justify-center gap-5">
+				<HoverCard.Root>
+					<HoverCard.Trigger
+						href="https://github.com/sveltejs"
+						target="_blank"
+						rel="noreferrer noopener"
+						class="rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-black"
+					>
+						@sveltejs
+					</HoverCard.Trigger>
+					<HoverCard.Content class="w-80">
+						<div class="flex justify-between space-x-4">
+							<Avatar.Root>
+								<Avatar.Image src="https://github.com/sveltejs.png" />
+								<Avatar.Fallback>SK</Avatar.Fallback>
+							</Avatar.Root>
+							<div class="space-y-1">
+								<h4 class="text-sm font-semibold">@sveltejs</h4>
+								<p class="text-sm">Cybernetically enhanced web apps.</p>
+								<div class="flex items-center pt-2">
+									<CalendarDaysIcon class="mr-2 size-4 opacity-70" />
+									<span class="text-muted-foreground text-xs"> Joined September 2022 </span>
+								</div>
+							</div>
+						</div>
+					</HoverCard.Content>
+				</HoverCard.Root>
+			</div>
+		</div>
+		<div class="relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4">
+			<div class="flex items-center justify-between">
+				<h2 class="text-muted-foreground text-sm sm:pl-3">A login form with a CSS file.</h2>
+			</div>
+			<div class="relative flex min-h-[400px] flex-col items-center justify-center gap-5">
+				<div class="flex items-center space-x-4">
+					<Skeleton class="size-12 rounded-full" />
+					<div class="space-y-2">
+						<Skeleton variant="primary" class="h-4 w-[250px]" />
+						<Skeleton variant="solid" class="h-4 w-[200px]" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4">
+			<div class="flex items-center justify-between">
+				<h2 class="text-muted-foreground text-sm sm:pl-3">A login form with a CSS file.</h2>
+			</div>
+			<div class="relative flex min-h-[400px] flex-col items-center justify-center gap-5">
+				<InputOTP.Root maxlength={6}>
+					{#snippet children({ cells })}
+						<InputOTP.Group>
+							{#each cells.slice(0, 3) as cell (cell)}
+								<InputOTP.Slot {cell} />
+							{/each}
+						</InputOTP.Group>
+						<InputOTP.Separator />
+						<InputOTP.Group>
+							{#each cells.slice(3, 6) as cell (cell)}
+								<InputOTP.Slot {cell} />
+							{/each}
+						</InputOTP.Group>
+					{/snippet}
+				</InputOTP.Root>
 			</div>
 		</div>
 	</main>

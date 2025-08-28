@@ -29,6 +29,7 @@
 		"eslint-plugin-svelte": "^3.9.2",
 		"globals": "^16.0.0",
 		"mode-watcher": "^1.1.0",
+		"paneforge": "^1.0.2",
 		"prettier": "^3.4.2",
 		"prettier-plugin-svelte": "^3.3.3",
 		"prettier-plugin-tailwindcss": "^0.6.11",

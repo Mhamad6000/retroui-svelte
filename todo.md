@@ -3,7 +3,7 @@
 - [x] Accordion
 - [ ] Alert Dialog
 - [x] Alert
-- [ ] Aspect Ratio
+- [x] Aspect Ratio
 - [x] Avatar
 - [x] Badge
 - [x] Breadcrumb
@@ -23,31 +23,35 @@
 - [ ] Drawer
 - [ ] Dropdown Menu
 - [ ] Formsnap
-- [ ] Hover Card
-- [ ] Input OTP
+- [x] Hover Card
+- [x] Input OTP
 - [x] Input
 - [x] Label
 - [ ] Menubar
 - [ ] Navigation Menu
 - [ ] Pagination
-- [ ] Popover
-- [ ] Progress
-- [ ] Radio Group
+- [x] Popover
+- [x] Progress
+- [x] Radio Group
 - [ ] Range Calendar
-- [ ] Resizable
-- [ ] Scroll Area
+- [x] Resizable
+- [x] Scroll Area
 - [ ] Select
-- [ ] Separator
+- [x] Separator
 - [ ] Sheet
 - [ ] Sidebar
-- [ ] Skeleton
+- [x] Skeleton
 - [x] Slider
 - [x] Sonner
 - [x] Switch
 - [ ] Table
-- [ ] Tabs
+- [x] Tabs
 - [x] Textarea
 - [x] Toggle Group
 - [x] Toggle
 - [x] Tooltip
 - [x] Text
+
+## Progress
+
+28 / 51 components done
