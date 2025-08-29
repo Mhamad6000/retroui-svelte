@@ -1,16 +1,8 @@
 {
-	"/(landing)": [
-		"src/routes/(landing)/+page.ts"
-	],
-	"/(docs)": [],
 	"/": [],
-	"/api/search.json": [
-		"src/routes/api/search.json/+server.ts"
-	],
-	"/(docs)/docs": [
-		"src/routes/(docs)/docs/+page.ts"
-	],
-	"/(docs)/docs/[...slug]": [
-		"src/routes/(docs)/docs/[...slug]/+page.ts"
-	]
+	"/docs/blocks/authentication": [],
+	"/docs/charts/area": [],
+	"/docs/colors/default": [],
+	"/docs/components/card": [],
+	"/docs/installation": []
 }

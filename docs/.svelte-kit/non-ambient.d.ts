@@ -27,21 +27,25 @@ export {};
 
 declare module "$app/types" {
 	export interface AppTypes {
-		RouteId(): "/(landing)" | "/(docs)" | "/" | "/api" | "/api/search.json" | "/(docs)/docs" | "/(docs)/docs/[...slug]";
+		RouteId(): "/" | "/docs" | "/docs/blocks" | "/docs/blocks/authentication" | "/docs/charts" | "/docs/charts/area" | "/docs/colors" | "/docs/colors/default" | "/docs/components" | "/docs/components/card" | "/docs/installation";
 		RouteParams(): {
-			"/(docs)/docs/[...slug]": { slug: string }
+			
 		};
 		LayoutParams(): {
-			"/(landing)": Record<string, never>;
-			"/(docs)": { slug?: string };
-			"/": { slug?: string };
-			"/api": Record<string, never>;
-			"/api/search.json": Record<string, never>;
-			"/(docs)/docs": { slug?: string };
-			"/(docs)/docs/[...slug]": { slug: string }
+			"/": Record<string, never>;
+			"/docs": Record<string, never>;
+			"/docs/blocks": Record<string, never>;
+			"/docs/blocks/authentication": Record<string, never>;
+			"/docs/charts": Record<string, never>;
+			"/docs/charts/area": Record<string, never>;
+			"/docs/colors": Record<string, never>;
+			"/docs/colors/default": Record<string, never>;
+			"/docs/components": Record<string, never>;
+			"/docs/components/card": Record<string, never>;
+			"/docs/installation": Record<string, never>
 		};
-		Pathname(): "/" | "/api" | "/api/" | "/api/search.json" | "/api/search.json/" | "/docs" | "/docs/" | `/docs/${string}` & {} | `/docs/${string}/` & {};
+		Pathname(): "/" | "/docs" | "/docs/" | "/docs/blocks" | "/docs/blocks/" | "/docs/blocks/authentication" | "/docs/blocks/authentication/" | "/docs/charts" | "/docs/charts/" | "/docs/charts/area" | "/docs/charts/area/" | "/docs/colors" | "/docs/colors/" | "/docs/colors/default" | "/docs/colors/default/" | "/docs/components" | "/docs/components/" | "/docs/components/card" | "/docs/components/card/" | "/docs/installation" | "/docs/installation/";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
-		Asset(): "/android-chrome-192x192.png" | "/android-chrome-512x512.png" | "/apple-touch-icon.png" | "/favicon copy.png" | "/favicon-16x16.png" | "/favicon-32x32.png" | "/favicon.ico" | "/logo-dark.svg" | "/logo-light.svg" | "/og.png" | "/site.webmanifest" | string & {};
+		Asset(): "/pagefind.html" | string & {};
 	}
 }

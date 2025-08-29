@@ -1,9 +1,6 @@
 {
 	"compilerOptions": {
 		"paths": {
-			"$content/*": [
-				"../.velite/*"
-			],
 			"$lib": [
 				"../src/lib"
 			],

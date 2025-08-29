@@ -11,10 +11,14 @@ type OutputDataShape<T> = MaybeWithVoid<Omit<App.PageData, RequiredKeys<T>> & Pa
 type EnsureDefined<T> = T extends null | undefined ? {} : T;
 type OptionalUnion<U extends Record<string, any>, A extends keyof U = U extends U ? keyof U : never> = U extends unknown ? { [P in Exclude<A, keyof U>]?: never } & U : never;
 export type Snapshot<T = any> = Kit.Snapshot<T>;
-type LayoutRouteId = RouteId | "/(docs)/docs" | "/(docs)/docs/[...slug]" | "/(landing)" | null
-type LayoutParams = RouteParams & { slug?: string }
+type PageParentData = EnsureDefined<LayoutData>;
+type LayoutRouteId = RouteId | "/" | "/docs/blocks/authentication" | "/docs/charts/area" | "/docs/colors/default" | "/docs/components/card" | "/docs/installation" | null
+type LayoutParams = RouteParams & {  }
 type LayoutParentData = EnsureDefined<{}>;
 
+export type PageServerData = null;
+export type PageData = Expand<PageParentData>;
+export type PageProps = { params: RouteParams; data: PageData }
 export type LayoutServerData = null;
 export type LayoutData = Expand<LayoutParentData>;
 export type LayoutProps = { params: LayoutParams; data: LayoutData; children: import("svelte").Snippet }

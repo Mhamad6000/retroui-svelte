@@ -1,38 +1,113 @@
-# sv
+# Zeno UI Documentation
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+This is the documentation website for Zeno UI - a collection of beautiful, accessible, and customizable components built with SvelteKit and Tailwind CSS.
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- 📖 Comprehensive documentation for all 47+ components
+- 🔍 Full-text search powered by Pagefind
+- 🌙 Dark mode support
+- 📱 Mobile-responsive design
+- 🎨 Color palette documentation
+- 🧱 Pre-built block components
+- 📊 Chart components
+- ⚡ Fast and lightweight
+
+## Development
+
+### Prerequisites
+
+- Node.js 16.14 or later
+- pnpm (recommended) or npm
+
+### Installation
 
 ```bash
-# create a new project in the current directory
-npx sv create
+# Install dependencies
+pnpm install
 
-# create a new project in my-app
-npx sv create my-app
+# Start development server
+pnpm dev
+
+# Build for production
+pnpm build
+
+# Preview production build
+pnpm preview
 ```
 
-## Developing
+### Project Structure
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
+docs/
+├── src/
+│   ├── lib/
+│   │   ├── components/          # Reusable components
+│   │   └── layouts/             # Layout components
+│   └── routes/
+│       ├── docs/
+│       │   ├── components/      # Component documentation
+│       │   ├── blocks/          # Block documentation
+│       │   ├── charts/          # Chart documentation
+│       │   └── colors/          # Color documentation
+│       └── +page.md             # Home page
+├── static/                      # Static assets
+└── package.json
+```
+
+## Features
+
+### Search
+
+The documentation includes full-text search powered by Pagefind. The search index is built automatically during the build process.
+
+### Navigation
+
+- Responsive sidebar navigation
+- Previous/Next page navigation
+- Mobile-friendly hamburger menu
+- Keyboard shortcuts (⌘K for search)
+
+### Components
+
+Each component page includes:
+
+- Live preview
+- Installation instructions
+- Usage examples
+- API reference
+- Multiple installation methods (CLI, manual, package managers)
+
+### Theming
+
+The documentation supports multiple color themes and includes comprehensive color palette documentation.
 
 ## Building
 
-To create a production version of your app:
+The site is built as a static site using SvelteKit's static adapter. The build process includes:
 
-```bash
-npm run build
-```
+1. Building the SvelteKit app
+2. Generating the Pagefind search index
+3. Optimizing assets
 
-You can preview the production build with `npm run preview`.
+## Deployment
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+The documentation can be deployed to any static hosting service like:
+
+- Vercel
+- Netlify
+- GitHub Pages
+- Cloudflare Pages
+
+## Contributing
+
+To add new documentation:
+
+1. Create a new markdown file in the appropriate directory
+2. Add frontmatter with title and description
+3. Write the documentation content
+4. Add the page to the navigation in `Sidebar.svelte`
+
+## License
+
+This documentation is part of the Zeno UI project.

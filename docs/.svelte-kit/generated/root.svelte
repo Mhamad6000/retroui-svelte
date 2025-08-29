@@ -5,7 +5,7 @@
 	import { browser } from '$app/environment';
 
 	// stores
-	let { stores, page, constructors, components = [], form, data_0 = null, data_1 = null, data_2 = null } = $props();
+	let { stores, page, constructors, components = [], form, data_0 = null, data_1 = null } = $props();
 
 	if (!browser) {
 		setContext('__svelte__', stores);
@@ -17,7 +17,7 @@
 		stores.page.set(page);
 	}
 	$effect(() => {
-		stores;page;constructors;components;form;data_0;data_1;data_2;
+		stores;page;constructors;components;form;data_0;data_1;
 		stores.page.notify();
 	});
 
@@ -39,27 +39,15 @@
 		return unsubscribe;
 	});
 
-	const Pyramid_2=$derived(constructors[2])
+	const Pyramid_1=$derived(constructors[1])
 </script>
 
 {#if constructors[1]}
 	{@const Pyramid_0 = constructors[0]}
 							<!-- svelte-ignore binding_property_non_reactive -->
 							<Pyramid_0 bind:this={components[0]} data={data_0} {form} params={page.params}>
-								{#if constructors[2]}
-									{@const Pyramid_1 = constructors[1]}
-															<!-- svelte-ignore binding_property_non_reactive -->
-															<Pyramid_1 bind:this={components[1]} data={data_1} {form} params={page.params}>
-																<!-- svelte-ignore binding_property_non_reactive -->
-																		<Pyramid_2 bind:this={components[2]} data={data_2} {form} params={page.params} />
-															</Pyramid_1>
-								
-								{:else}
-									{@const Pyramid_1 = constructors[1]}
-									<!-- svelte-ignore binding_property_non_reactive -->
-									<Pyramid_1 bind:this={components[1]} data={data_1} {form} params={page.params} />
-								
-								{/if}
+								<!-- svelte-ignore binding_property_non_reactive -->
+										<Pyramid_1 bind:this={components[1]} data={data_1} {form} params={page.params} />
 							</Pyramid_0>
 
 {:else}

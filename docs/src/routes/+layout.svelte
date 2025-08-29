@@ -1,11 +1,8 @@
-<script lang="ts">
-	import { siteConfig } from "$lib/site-config";
+<script>
 	import "../app.css";
-	import { useSiteConfig } from "@svecodocs/kit";
-
-	let { children } = $props();
-
-	useSiteConfig(() => siteConfig);
+	import { ModeWatcher } from "mode-watcher";
 </script>
 
-{@render children?.()}
+<ModeWatcher />
+
+<slot />
