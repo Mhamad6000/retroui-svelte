@@ -1,12 +1,17 @@
 <script lang="ts">
+	import { siteConfig } from "$lib/site-config";
 	import "../app.css";
-	import { Toaster } from "$lib/registry/ui/sonner";
+	import { useSiteConfig } from "@svecodocs/kit";
+	import { navigation } from "$lib/navigation";
+	import MainLayout from "$lib/layouts/main-layout.svelte";
+	import { ModeWatcher } from "mode-watcher";
 
 	let { children } = $props();
+
+	useSiteConfig(() => siteConfig);
 </script>
 
-<div class="">
-	<Toaster theme="light" />
-
-	{@render children()}
-</div>
+<ModeWatcher />
+<MainLayout {navigation}>
+	{@render children?.()}
+</MainLayout>

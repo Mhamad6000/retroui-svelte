@@ -1,0 +1,7 @@
+<script lang="ts">
+	import DocPage from "$lib/components/doc-page.svelte";
+
+	let { data } = $props();
+</script>
+
+<DocPage component={data.component} {...data.metadata} />
