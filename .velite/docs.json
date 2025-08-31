@@ -60,6 +60,43 @@
     "slugFull": "/index"
   },
   {
+    "title": "Accordion",
+    "description": "A vertically stacked set of interactive headings that each reveal a section of content.",
+    "path": "components/accordion",
+    "content": "<script>\n\timport { Button } from \"$registry/ui/button/index.js\";\n\timport { ComponentPreview } from \"$lib/components\";\n\t\n</script>\n<componentpreview name=\"accordion-style-default\">\n<br>\n<br>\n<br>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"accordion-style-default\"></componentpreview></componentpreview>",
+    "raw": "<script>\n\timport { Button } from \"$registry/ui/button/index.js\";\n\timport { ComponentPreview } from \"$lib/components\";\n\t\n</script>\n\n<ComponentPreview name=\"accordion-style-default\" />\n<br />\n<br />\n\n<!-- ## Installation\n\n<ComponentInstall>\n  <ComponentInstall.Cli npmCommand=\"npx shadcn@latest add 'https://retroui.dev/r/accordion.json'\" />\n  <ComponentInstall.Manual>\n#### 1. Install dependencies:\n\n```\nnpm install @radix-ui/react-accordion lucide-react\n```\n\n<br />\n\n#### 2. Copy the code 👇 into your project:\n\n<ComponentSource name=\"accordion\" />\n\n  </ComponentInstall.Manual>\n</ComponentInstall> -->\n\n<br />\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"accordion-style-default\" />",
+    "toc": [
+      {
+        "title": "Examples",
+        "url": "#examples",
+        "items": [
+          {
+            "title": "Default",
+            "url": "#default",
+            "items": []
+          }
+        ]
+      }
+    ],
+    "section": "Components",
+    "links": [
+      {
+        "title": "Docs",
+        "href": "https://bits-ui.com/docs/components/accordion"
+      },
+      {
+        "title": "API Reference",
+        "href": "https://bits-ui.com/docs/components/accordion#api-reference"
+      },
+      {
+        "title": "Component Source",
+        "href": "https://bits-ui.com/docs/components/accordion"
+      }
+    ],
+    "slug": "components/accordion",
+    "slugFull": "/components/accordion"
+  },
+  {
     "title": "Button",
     "description": "A button component to use in examples and documentation.",
     "path": "components/button",

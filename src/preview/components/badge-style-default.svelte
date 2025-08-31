@@ -1,15 +1,3 @@
-<!-- 
-Badge Component Preview
-Showcases different badge variants and styling options.
-
-Props:
-- variant: "default" | "outline" | "solid" | "surface"
-- size: "sm" | "md" | "lg"
-- class: string - additional CSS classes
-
-Usage:
-<Badge variant="default">New</Badge>
--->
 <script lang="ts">
 	import * as Badge from "$registry/ui/badge/index.js";
 </script>

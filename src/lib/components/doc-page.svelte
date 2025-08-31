@@ -1,16 +1,3 @@
-<!--
-Custom DocPage Component
-A documentation page layout component with proper typography and table of contents.
-
-Props:
-- component: Svelte component - The main content component to render
-- title: string - Page title
-- description?: string - Page description
-- toc: TOCEntry[] - Table of contents entries
-
-Usage:
-<DocPage component={MyComponent} title="API Reference" description="Complete API documentation" toc={tocEntries} />
--->
 <script lang="ts">
 	import PageHeader from "$lib/components/layout/page-header/page-header.svelte";
 	import Toc from "$lib/components/toc/toc.svelte";
@@ -23,13 +10,15 @@ Usage:
 		title,
 		description,
 		toc = [],
+		links = [],
 	}: {
 		component: Component;
 		title: string;
 		description?: string;
 		toc: TocItem[];
+		links?: { title: string; href: string }[];
 	} = $props();
-
+	console.log(links);
 	const PageComponent = $derived(component);
 </script>
 
@@ -45,7 +34,7 @@ Usage:
 		<Toc toc={{ items: toc }} type="mobile" />
 	</aside>
 	<main class="mx-auto w-full min-w-0 max-w-[640px] pb-12 2xl:max-w-[760px]" id="main-content">
-		<PageHeader {title} {description} />
+		<PageHeader {title} {description} {links} />
 		<PageComponent />
 	</main>
 </div>

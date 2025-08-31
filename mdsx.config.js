@@ -1,22 +1,53 @@
 import { defineConfig } from "mdsx";
-import { resolve } from "node:path";
-import { fileURLToPath } from "node:url";
-import rehypeSlug from 'rehype-slug';
-import remarkGfm from 'remark-gfm';
-import rehypePrettyCode from 'rehype-pretty-code';
+import { createHighlighterCore } from 'shiki/core';
+import { createJavaScriptRegexEngine } from 'shiki/engine/javascript';
+import { rehypeCustomHighlight } from '@mdsx/rehype-custom-highlighter';
 
+const jsEngine = createJavaScriptRegexEngine();
+let highlighter = null;
 
-const __dirname = fileURLToPath(new URL(".", import.meta.url));
+const highlighterPromise = createHighlighterCore({
+	themes: [import('@shikijs/themes/github-light'), import('@shikijs/themes/github-dark')],
+	langs: [
+		import('@shikijs/langs/javascript'),
+		import('@shikijs/langs/typescript'),
+		import('@shikijs/langs/svelte'),
+		import('@shikijs/langs/css'),
+		import('@shikijs/langs/html'),
+		import('@shikijs/langs/json'),
+		import('@shikijs/langs/markdown'),
+	],
+	engine: jsEngine,
+});
+
+const highlightOptions = {
+	highlight: async ({ value, lang }) => {
+		if (!lang) return value;
+		if (!highlighter) {
+			highlighter = await highlighterPromise;
+		}
+		return highlighter.codeToHtml(value, { 
+			lang, 
+			theme: 'github-dark',
+			transformers: [
+				{
+					pre(node) {
+						// Add custom classes to the pre element
+						const existingClass = node.properties.class || '';
+						node.properties.class = `${existingClass} p-4 text-sm`.trim();
+					}
+				}
+			]
+		});
+	}
+};
 
 export default defineConfig({
-	// remarkPlugins: [remarkGfm],
-	// rehypePlugins: [rehypeSlug],
-		blueprints: {
+	extensions: ['.md'],
+	rehypePlugins: [[rehypeCustomHighlight, highlightOptions]],
+	blueprints: {
 		default: {
-			// rehypePlugins: [rehypePrettyCode],
 			path: 'src/lib/components/blueprint.svelte',
 		},
-		
 	},
-	extensions: [".md"],
 });

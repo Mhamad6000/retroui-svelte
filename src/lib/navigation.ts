@@ -7,15 +7,15 @@ import { getAllDocs } from "./utils.js";
 const allDocs = getAllDocs();
 
 const components = allDocs
-	.filter((doc) => doc.section === "Components")
-	.map((doc) => ({
+	.filter((doc : any) => doc.section === "Components")
+	.map((doc :any) => ({
 		title: doc.title,
 		href: `/docs/${doc.slug}`,
 	}));
 
 const configuration = allDocs
-	.filter((doc) => doc.section === "Configuration")
-	.map((doc) => ({
+	.filter((doc :any) => doc.section === "Configuration")
+	.map((doc :any) => ({
 		title: doc.title,
 		href: `/docs/${doc.slug}`,
 	}));

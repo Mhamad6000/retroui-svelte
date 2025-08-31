@@ -16,6 +16,7 @@
 	"devDependencies": {
 		"@internationalized/date": "^3.9.0",
 		"@lucide/svelte": "^0.542.0",
+		"@mdsx/rehype-custom-highlighter": "^0.0.3",
 		"@svecodocs/kit": "latest",
 		"@sveltejs/adapter-cloudflare": "^4.8.0",
 		"@sveltejs/kit": "^2.20.3",

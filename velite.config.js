@@ -9,6 +9,10 @@ const baseSchema = s.object({
 	raw: s.raw(),
 	toc: s.toc(),
 	section: s.enum(["Overview", "Components", "Configuration", "Utilities"]),
+	 links: s.array(s.object({
+        title: s.string(),
+        href: s.string().url()
+    })).optional()
 });
 
 const docSchema = baseSchema.transform((data) => {

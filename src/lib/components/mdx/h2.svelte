@@ -11,11 +11,9 @@ Custom H2 component for MDX content
 		type?: "doc" | "blog";
 	}
 
-	let { children, class: className, type = "doc", ...rest }: Props = $props();
-
-	const h2Class = type === "blog" ? "mb-4 mt-8" : "border-b pb-1 mb-6";
+	let { children, class: className, ...rest }: Props = $props();
 </script>
 
-<Text as="h2" class={cn(h2Class, className)} {...rest}>
+<Text as="h2" class={cn("border-b pb-1 mb-6", className)} {...rest}>
 	{@render children?.()}
 </Text>

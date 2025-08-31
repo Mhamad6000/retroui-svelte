@@ -1,8 +1,4 @@
-<!--
-Blueprint component for MDX content
-This component provides custom MDX components and basic layout
--->
-<script lang="ts" context="module">
+<script lang="ts" module>
 	export { default as h1 } from "$lib/components/mdx/h1.svelte";
 	export { default as h2 } from "$lib/components/mdx/h2.svelte";
 	export { default as h3 } from "$lib/components/mdx/h3.svelte";

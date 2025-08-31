@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { DocPage } from "@svecodocs/kit";
+	import DocPage from "$lib/components/doc-page.svelte";
 	let { data } = $props();
 </script>
 

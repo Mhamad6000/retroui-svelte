@@ -12,10 +12,8 @@ Custom Li component for MDX content
 	}
 
 	let { children, class: className, type = "doc", ...rest }: Props = $props();
-
-	const liClass = type === "blog" ? "text-lg text-foreground ml-4 lg:ml-8 mb-2" : "mb-2";
 </script>
 
-<Text as="li" class={cn(liClass, className)} {...rest}>
+<Text as="li" class={cn("mb-2", className)} {...rest}>
 	{@render children?.()}
 </Text>

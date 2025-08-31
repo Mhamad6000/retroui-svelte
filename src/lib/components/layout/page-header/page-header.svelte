@@ -1,21 +1,15 @@
-<!--
-Page Header Component
-A simple page header component for documentation pages.
-
-Props:
-- title: string - Page title
-- description?: string - Page description
-
-Usage:
-<PageHeader title="Page Title" description="Page description" />
--->
 <script lang="ts">
+	import { Badge } from "$registry/ui/badge";
+	import ExternalLink from "@lucide/svelte/icons/external-link";
+
 	let {
 		title,
 		description,
+		links = [],
 	}: {
 		title: string;
 		description?: string;
+		links?: { title: string; href: string }[];
 	} = $props();
 </script>
 
@@ -27,5 +21,21 @@ Usage:
 		<p class="text-lg text-muted-foreground leading-relaxed">
 			{description}
 		</p>
+	{/if}
+	{#if links.length > 0}
+		<div class="mt-4 flex flex-wrap gap-2">
+			{#each links as link}
+				<Badge
+					href={link.href}
+					variant="default"
+					size="sm"
+					target={link.href.startsWith("https") ? "_blank" : undefined}
+					rel={link.href.startsWith("https") ? "noopener noreferrer" : undefined}
+				>
+					{link.title}
+					<ExternalLink />
+				</Badge>
+			{/each}
+		</div>
 	{/if}
 </header>

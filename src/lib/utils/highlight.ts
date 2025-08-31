@@ -16,35 +16,35 @@ const highlighterPromise = createHighlighterCore({
 });
 
 export async function highlightCode(code: string, language: string = "svelte"): Promise<string> {
-	const cacheKey = `${code}-${language}`;
-	const cachedCode = highlightCodeCache.get(cacheKey);
-	if (cachedCode) return cachedCode;
+    const cacheKey = `${code}-${language}`;
+    const cachedCode = highlightCodeCache.get(cacheKey);
+    if (cachedCode) return cachedCode;
 
-	const highlighter = await highlighterPromise;
+    const highlighter = await highlighterPromise;
 
-	const html = highlighter.codeToHtml(formatCode(code), {
-		lang: language,
-		theme: "github-dark",
-		transformers: [
-			{
-				pre(node) {
-					node.properties["class"] = "shiki";
-				},
-				code(node) {
-					node.properties["data-language"] = language;
-				},
-				line(node, line) {
-					node.properties["data-line"] = line;
-				},
-			},
-		],
-	});
+    const html = highlighter.codeToHtml(formatCode(code), {
+        lang: language,
+        theme: "github-dark",
+        transformers: [
+            {
+                pre(node) {
+                    // Match the MDSX configuration
+                    const existingClass = node.properties.class || '';
+                    node.properties.class = `${existingClass} p-4 text-sm overflow-y-auto h-[450px]`.trim();
+                },
+                code(node) {
+                    node.properties["data-language"] = language;
+                },
+                line(node, line) {
+                    node.properties["data-line"] = line;
+                },
+            },
+        ],
+    });
 
-	highlightCodeCache.set(cacheKey, html);
-
-	return html;
+    highlightCodeCache.set(cacheKey, html);
+    return html;
 }
-
 function formatCode(code: string): string {
 	return code.replace(/\t/g, "  ");
 }
