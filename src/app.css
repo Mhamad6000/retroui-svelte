@@ -107,5 +107,140 @@
 	body {
 		@apply bg-background text-foreground;
 	}
+
+	#content code:not(pre > code):not(.custom) {
+		@apply text-foreground relative rounded-[5px] bg-gray-200/60 px-[0.375rem] py-[0.1875rem] font-mono text-[0.9em] dark:bg-gray-100/10;
+	}
+
+	a:has(code) {
+		/* Style anchors with code differently */
+		@apply rounded-[5px];
+	}
+	a > code {
+		/* Style code inside of links differently */
+		color: var(--color-brand-code-link) !important;
+	}
+
+	a:hover > code {
+		/* Style code inside of links differently */
+		color: var(--color-brand-code-link-hover) !important;
+	}
+
+	[data-theme*="github-dark"] {
+		display: flex !important;
+		flex-direction: column;
+	}
+
+	[data-rehype-pretty-code-figure] {
+		@apply dark:bg-primary bg-background dark:ring-primary-hover dark:inset-shadow-muted/20 dark:inset-ring-muted/10 inset-ring-muted/20 ring-muted inset-shadow-muted/20 inset-ring inset-shadow-sm relative mb-4 mt-6 max-w-[760px] overflow-hidden rounded-xl pt-3 ring;
+	}
+
+	[data-rehype-pretty-code-figure] code {
+		@apply grid min-w-0 break-words rounded-none border-0 p-0 text-sm md:text-base;
+		counter-reset: line;
+		box-decoration-break: clone;
+	}
+
+	[data-rehype-pretty-code-figure] [data-line] {
+		@apply inline-block min-h-[1.5rem] w-full px-4 py-0.5;
+	}
+
+	[data-rehype-pretty-code-figure] [data-line-numbers] [data-line] {
+		@apply px-2;
+	}
+
+	[data-rehype-pretty-code-figure] [data-line-numbers] > [data-line]::before {
+		@apply text-xs text-zinc-50/40;
+		counter-increment: line;
+		content: counter(line);
+		display: inline-block;
+		width: 1.8rem;
+		margin-right: 1.4rem;
+		text-align: right;
+	}
+
+	[data-pre-copy-btn] {
+		@apply absolute right-2 top-2;
+	}
+
+	[data-rehype-pretty-code-figure]:has([data-language="bash"]) [data-pre-copy-btn] {
+		@apply top-[0.688rem];
+	}
+
+	[data-metadata] [data-pre-copy-btn] {
+		@apply top-1;
+	}
+
+	[data-metadata] [data-pre-wrapper] {
+		@apply pt-2;
+	}
+
+	[data-rehype-pretty-code-figure] .line--highlighted {
+		@apply bg-gray-200/50 dark:bg-gray-100/5;
+	}
+
+	[data-rehype-pretty-code-figure] .line-highlighted span {
+		@apply relative;
+	}
+
+	[data-rehype-pretty-code-figure] .chars--highlighted {
+		@apply rounded-md border-zinc-700/70 bg-zinc-700/50 p-1;
+	}
+
+	.dark [data-rehype-pretty-code-figure] .chars--highlighted {
+		@apply bg-zinc-900;
+	}
+
+	[data-rehype-pretty-code-title] {
+		@apply text-muted-foreground leading-1 border-b border-gray-400/15 px-4 pb-4 pt-2 font-mono text-sm dark:border-gray-700/30;
+	}
+
+	[data-pre-wrapper] {
+		@apply pb-3;
+	}
+
+	[data-rehype-pretty-code-figure]:not(:has([data-language="bash"])) {
+		@apply pt-2;
+
+		[data-pre-wrapper] {
+			@apply pb-2;
+		}
+	}
+
+	code[data-theme*="github-light github-dark"],
+	code[data-theme*="github-light github-dark"] span {
+		color: var(--shiki-light);
+	}
+
+	.dark {
+		code[data-theme*="github-light github-dark"],
+		code[data-theme*="github-light github-dark"] span {
+			color: var(--shiki-dark);
+		}
+	}
+
+	::selection {
+		background-color: var(--color-muted); /* Change this to any color you want */
+		/* color: white; Optional: change the text color when selected */
+	}
+
+	input::selection {
+		background-color: var(--color-primary-active);
+	}
+
+	code::selection {
+		background-color: var(--color-primary-active);
+	}
+
+	.dark {
+		input::selection {
+			background-color: var(--color-background-secondary);
+		}
+
+		code::selection {
+			background-color: var(--color-background-secondary);
+		}
+	}
 }
+
 

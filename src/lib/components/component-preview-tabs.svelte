@@ -97,69 +97,80 @@
 			</Tabs.List>
 		{/if}
 
-		<Tabs.Content value="preview" class="mt-2 border-0 p-0">
-			<div class="relative rounded-lg border">
-				<div
-					data-align={align}
-					class="preview flex h-[450px] w-full justify-center p-10 data-[align=start]:items-start data-[align=end]:items-end data-[align=center]:items-center"
-				>
-					{#if example}
-						{@render example()}
-					{:else}
-						{@render ExampleFallback()}
-					{/if}
-				</div>
-			</div>
-		</Tabs.Content>
-
-		<Tabs.Content value="code" class="mt-2 border-0 p-0">
-			<div class="relative rounded-lg border overflow-hidden">
-				{#if children}
-					{@render children()}
-				{:else}
-					{#await loadPreviewComponentCode(name)}
-						<div class="flex h-[450px] items-center justify-center">
-							<div class="text-muted-foreground text-sm">Loading code...</div>
-						</div>
-					{:then sourceCode}
-						{#if sourceCode}
-							{#await highlightCode(sourceCode, "svelte")}
-								<div class="flex h-[450px] items-center justify-center">
-									<div class="text-muted-foreground text-sm">Highlighting code...</div>
-								</div>
-							{:then highlightedHtml}
-								<div class="">
-									<CopyCodeButton code={sourceCode} />
-
-									<div class="rounded-lg">
-										{@html highlightedHtml}
-									</div>
-								</div>
-							{:catch}
-								<div class="">
-									<CopyCodeButton code={sourceCode} />
-									<pre class=" rounded-lg"><code>{sourceCode}</code></pre>
-								</div>
-							{/await}
+		<div class="relative mt-2 h-[450px]">
+			<Tabs.Content
+				value="preview"
+				class="border-0 p-0 absolute inset-0 hidden overflow-hidden data-[state=active]:block"
+			>
+				<div class="relative rounded-lg border h-full">
+					<div
+						data-align={align}
+						class="preview flex h-full overflow-y-auto w-full justify-center p-10 data-[align=start]:items-start data-[align=end]:items-end data-[align=center]:items-center"
+					>
+						{#if example}
+							{@render example()}
 						{:else}
-							<div class="flex h-[450px] items-center justify-center">
-								<p class="text-muted-foreground text-sm">
-									Could not load source code for
-									<code class="bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm">
-										{name}
-									</code>
+							{@render ExampleFallback()}
+						{/if}
+					</div>
+				</div>
+			</Tabs.Content>
+
+			<Tabs.Content
+				value="code"
+				class="border-0 p-0 absolute inset-0 hidden overflow-hidden data-[state=active]:block"
+			>
+				<div class="relative rounded-lg border h-full overflow-hidden">
+					{#if children}
+						{@render children()}
+					{:else}
+						{#await loadPreviewComponentCode(name)}
+							<div class="flex h-full items-center justify-center">
+								<div class="text-muted-foreground text-sm">Loading code...</div>
+							</div>
+						{:then sourceCode}
+							{#if sourceCode}
+								{#await highlightCode(sourceCode, "svelte")}
+									<div class="flex h-full items-center justify-center">
+										<div class="text-muted-foreground text-sm">Highlighting code...</div>
+									</div>
+								{:then highlightedHtml}
+									<div class="relative h-full">
+										<CopyCodeButton code={sourceCode} />
+										<div
+											class="rounded-lg h-full [&_figure]:!m-0 [&_pre]:h-full [&_pre]:overflow-auto"
+										>
+											{@html highlightedHtml}
+										</div>
+									</div>
+								{:catch}
+									<div class="relative h-full">
+										<CopyCodeButton code={sourceCode} />
+										<pre class="rounded-lg h-full overflow-auto"><code>{sourceCode}</code></pre>
+									</div>
+								{/await}
+							{:else}
+								<div class="flex h-full items-center justify-center">
+									<p class="text-muted-foreground text-sm">
+										Could not load source code for
+										<code
+											class="bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm"
+										>
+											{name}
+										</code>
+									</p>
+								</div>
+							{/if}
+						{:catch error}
+							<div class="flex h-full items-center justify-center">
+								<p class="text-destructive text-sm">
+									Error loading source code: {error.message}
 								</p>
 							</div>
-						{/if}
-					{:catch error}
-						<div class="flex h-[450px] items-center justify-center">
-							<p class="text-destructive text-sm">
-								Error loading source code: {error.message}
-							</p>
-						</div>
-					{/await}
-				{/if}
-			</div>
-		</Tabs.Content>
+						{/await}
+					{/if}
+				</div>
+			</Tabs.Content>
+		</div>
 	</Tabs.Root>
 </div>
