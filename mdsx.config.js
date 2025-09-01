@@ -16,6 +16,7 @@ const highlighterPromise = createHighlighterCore({
 		import('@shikijs/langs/html'),
 		import('@shikijs/langs/json'),
 		import('@shikijs/langs/markdown'),
+		import('@shikijs/langs/bash'),
 	],
 	engine: jsEngine,
 });

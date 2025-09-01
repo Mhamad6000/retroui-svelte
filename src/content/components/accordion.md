@@ -12,13 +12,15 @@ links:
 ---
 <script>
 	import { Button } from "$registry/ui/button/index.js";
-	import { ComponentPreview } from "$lib/components";
+	import { ComponentPreview , PMCommand } from "$lib/components";
 	
 </script>
 
 <ComponentPreview name="accordion-style-default" />
 <br />
 <br />
+
+<PMCommand command="execute" args={["shadcn-svelte@next", "add"]} />
 
 <!-- ## Installation
 

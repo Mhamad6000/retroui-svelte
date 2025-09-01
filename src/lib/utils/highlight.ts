@@ -10,7 +10,9 @@ const highlighterPromise = createHighlighterCore({
 		import("@shikijs/langs/svelte"),
 		import("@shikijs/langs/javascript"),
 		import("@shikijs/langs/html"),
-		import("@shikijs/langs/css")
+		import("@shikijs/langs/css"),
+		import("@shikijs/langs/bash"),
+		import("@shikijs/langs/shell")
 	],
 	engine: jsEngine,
 });
@@ -28,12 +30,21 @@ export async function highlightCode(code: string, language: string = "svelte"): 
         transformers: [
             {
                 pre(node) {
-                    // Match the MDSX configuration
-                    const existingClass = node.properties.class || '';
-                    node.properties.class = `${existingClass} p-4 text-sm overflow-y-auto h-[450px]`.trim();
+                    // For command highlighting, use minimal styling
+                    if (language === "bash" || language === "shell") {
+                        node.properties.class = "p-3 text-sm font-mono font-light";
+                        node.properties.style = "background: transparent; margin: 0; white-space: nowrap; overflow-x: auto;";
+                    } else {
+                        // Match the MDSX configuration for other languages
+                        const existingClass = node.properties.class || '';
+                        node.properties.class = `${existingClass} p-4 text-sm overflow-auto h-[450px] w-full`.trim();
+                    }
                 },
                 code(node) {
                     node.properties["data-language"] = language;
+                    if (language === "bash" || language === "shell") {
+                        node.properties.style = "background: transparent; padding: 0; font-weight: 300;";
+                    }
                 },
                 line(node, line) {
                     node.properties["data-line"] = line;
