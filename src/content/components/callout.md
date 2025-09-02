@@ -6,7 +6,6 @@ section: Components
 
 <script>
 	import { Callout } from "@svecodocs/kit";
-	import Avocado from "phosphor-svelte/lib/Avocado";
 </script>
 
 Callouts (also known as _admonitions_) are used to highlight a block of text. There are five types of callouts available: `'note'`, `'warning'`, `'danger'`, `'tip'`, and `'success'`.
@@ -73,7 +72,7 @@ This is an example of a success callout.
 
 ### Custom Icon
 
-<Callout type="note" icon={Avocado}>
+<Callout type="note">
 
 This is an example of a note callout with a custom icon.
 

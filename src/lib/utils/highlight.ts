@@ -35,9 +35,9 @@ export async function highlightCode(code: string, language: string = "svelte"): 
                         node.properties.class = "p-3 text-sm font-mono font-light";
                         node.properties.style = "background: transparent; margin: 0; white-space: nowrap; overflow-x: auto;";
                     } else {
-                        // Keep original MDSX configuration but force width constraints
+                        // Match the MDSX configuration for other languages
                         const existingClass = node.properties.class || '';
-                        node.properties.class = `${existingClass} p-4 text-sm overflow-x-auto h-[450px] !w-full !max-w-full`.trim();
+                        node.properties.class = `${existingClass} p-4 text-sm !overflow-x-auto h-[450px] w-full`.trim();
                     }
                 },
                 code(node) {

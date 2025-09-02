@@ -13,6 +13,9 @@ Custom Code component for MDX content
 	let { class: className, children, ...rest }: Props = $props();
 </script>
 
-<code class={cn("relative rounded-sm bg-[#282A36] p-1 text-primary text-sm", className)} {...rest}>
+<code
+	class={cn("relative inline-flex rounded-sm bg-[#282A36] p-1 text-primary text-sm", className)}
+	{...rest}
+>
 	{@render children?.()}
 </code>

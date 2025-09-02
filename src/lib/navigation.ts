@@ -1,7 +1,5 @@
-import { defineNavigation } from "@svecodocs/kit";
-import ChalkboardTeacher from "phosphor-svelte/lib/ChalkboardTeacher";
-import RocketLaunch from "phosphor-svelte/lib/RocketLaunch";
-import Tag from "phosphor-svelte/lib/Tag";
+import { defineNavigation } from "./utils/navigation.js";
+import { BookOpen, Rocket, Tag } from "@lucide/svelte";
 import { getAllDocs } from "./utils.js";
 
 const allDocs = getAllDocs();
@@ -25,12 +23,12 @@ export const navigation = defineNavigation({
 		{
 			title: "Introduction",
 			href: "/docs",
-			icon: ChalkboardTeacher,
+			icon: BookOpen,
 		},
 		{
 			title: "Getting Started",
 			href: "/docs/getting-started",
-			icon: RocketLaunch,
+			icon: Rocket,
 		},
 		{
 			title: "Releases",

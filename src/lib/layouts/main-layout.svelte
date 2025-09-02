@@ -1,5 +1,4 @@
 <script lang="ts">
-	import type { Navigation } from "@svecodocs/kit";
 	import type { Snippet } from "svelte";
 	import SunIcon from "@lucide/svelte/icons/sun";
 	import MoonIcon from "@lucide/svelte/icons/moon";
@@ -7,7 +6,7 @@
 	import { Button } from "$registry/ui/button";
 	import AppSidebar from "./app-sidebar.svelte";
 	import MenuIcon from "@lucide/svelte/icons/menu";
-
+	import type { Navigation } from "$lib/utils/navigation.js";
 	interface Props {
 		children: Snippet;
 		navigation: Navigation;
@@ -101,6 +100,6 @@
 </div>
 
 <!-- Main Content -->
-<main class="flex-1 overflow-auto">
+<main class="">
 	{@render children?.()}
 </main>

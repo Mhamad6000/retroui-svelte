@@ -1,22 +1,12 @@
-import { defineSiteConfig } from "@svecodocs/kit";
+import { defineSiteConfig } from "./hooks/use-site-config.svelte.js";
 
 export const siteConfig = defineSiteConfig({
-	name: "Svecodocs",
-	url: "https://docs.sveco.dev",
-	ogImage: {
-		url: "https://docs.sveco.dev/og.png",
-		height: "630",
-		width: "1200",
-	},
-	description: "Documentation toolkit for Svecosystem Projects.",
-	author: "Huntabyte",
-	keywords: ["svecosystem", "sveltekit", "documentation", "docs"],
-	license: {
-		name: "MIT",
-		url: "https://github.com/svecosystem/svecodocs/blob/main/LICENSE",
-	},
+	name: "RetroUI Svelte",
+	url: "https://retroui-svelte.dev",
+	description: "A collection of retro-styled UI components for Svelte",
+	author: "RetroUI Team",
+	keywords: ["svelte", "ui", "components", "retro", "retroui"],
 	links: {
-		x: "https://x.com/huntabyte",
-		github: "https://github.com/svecosystem/svecodocs",
+		github: "https://github.com/retroui/retroui-svelte",
 	},
 });

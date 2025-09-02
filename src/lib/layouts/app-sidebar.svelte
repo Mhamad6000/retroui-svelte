@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Navigation } from "@svecodocs/kit";
+	import type { Navigation } from "$lib/utils/navigation.js";
 	import * as Sheet from "$registry/ui/sheet/index.js";
 	import ExternalLinkIcon from "@lucide/svelte/icons/external-link";
 	import { page } from "$app/state";

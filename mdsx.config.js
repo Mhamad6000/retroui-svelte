@@ -1,54 +1,27 @@
 import { defineConfig } from "mdsx";
-import { createHighlighterCore } from 'shiki/core';
-import { createJavaScriptRegexEngine } from 'shiki/engine/javascript';
-import { rehypeCustomHighlight } from '@mdsx/rehype-custom-highlighter';
+import remarkGfm from "remark-gfm";
+import rehypeSlug from "rehype-slug";
+import rehypePrettyCode from "rehype-pretty-code";
+import { resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 
-const jsEngine = createJavaScriptRegexEngine();
-let highlighter = null;
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
-const highlighterPromise = createHighlighterCore({
-	themes: [import('@shikijs/themes/github-light'), import('@shikijs/themes/github-dark')],
-	langs: [
-		import('@shikijs/langs/javascript'),
-		import('@shikijs/langs/typescript'),
-		import('@shikijs/langs/svelte'),
-		import('@shikijs/langs/css'),
-		import('@shikijs/langs/html'),
-		import('@shikijs/langs/json'),
-		import('@shikijs/langs/markdown'),
-		import('@shikijs/langs/bash'),
-	],
-	engine: jsEngine,
-});
-
-const highlightOptions = {
-	highlight: async ({ value, lang }) => {
-		if (!lang) return value;
-		if (!highlighter) {
-			highlighter = await highlighterPromise;
-		}
-		return highlighter.codeToHtml(value, { 
-			lang, 
-			theme: 'github-dark',
-			transformers: [
-				{
-					pre(node) {
-						// Add custom classes to the pre element
-						const existingClass = node.properties.class || '';
-						node.properties.class = `${existingClass} p-4 text-sm`.trim();
-					}
-				}
-			]
-		});
-	}
+const prettyCodeOptions = {
+	theme: "github-dark",
+	keepBackground: false,
 };
 
 export default defineConfig({
-	extensions: ['.md'],
-	rehypePlugins: [[rehypeCustomHighlight, highlightOptions]],
+	remarkPlugins: [remarkGfm],
+	rehypePlugins: [
+		rehypeSlug,
+		[rehypePrettyCode, prettyCodeOptions]
+	],
 	blueprints: {
 		default: {
-			path: 'src/lib/components/blueprint.svelte',
+			path: resolve(__dirname, "./src/lib/components/blueprint.svelte"),
 		},
 	},
+	extensions: [".md"],
 });

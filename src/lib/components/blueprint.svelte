@@ -11,6 +11,7 @@
 	export { default as img } from "$lib/components/mdx/img.svelte";
 	export { default as li } from "$lib/components/mdx/li.svelte";
 	export { default as a } from "$lib/components/mdx/link.svelte";
+	// export { code, pre } from "@svecodocs/kit";
 </script>
 
 <script lang="ts">
@@ -23,7 +24,4 @@
 	} = $props();
 </script>
 
-<!-- Render MDX content with custom components -->
-<div class="prose prose-lg max-w-none dark:prose-invert">
-	{@render children?.()}
-</div>
+{@render children?.()}

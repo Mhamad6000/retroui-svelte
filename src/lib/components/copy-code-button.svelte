@@ -42,6 +42,7 @@ Usage:
 	variant="default"
 	size="icon"
 	class="absolute right-2 top-2 z-10 {className}"
+	data-pre-copy-btn=""
 	onclick={copyToClipboard}
 	title={copied ? "Copied!" : "Copy code"}
 >

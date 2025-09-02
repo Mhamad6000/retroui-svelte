@@ -12,7 +12,7 @@ section: Components
 
 ## Usage
 
-```svelte title="document.md"
+```svelte
 <script>
 	import { Button } from "@svecodocs/kit";
 </script>

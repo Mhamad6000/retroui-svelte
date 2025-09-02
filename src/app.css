@@ -101,11 +101,15 @@
 
 @layer base {
 	* {
-		@apply border-border;
+		border: var(--color-border);
+		min-width: 0;
 	}
 
 	body {
 		@apply bg-background text-foreground;
+	}
+	[data-rehype-pretty-code-title] {
+		height: 35px;
 	}
 
 	#content code:not(pre > code):not(.custom) {
@@ -132,11 +136,11 @@
 	}
 
 	[data-rehype-pretty-code-figure] {
-		@apply dark:bg-primary bg-background dark:ring-primary-hover dark:inset-shadow-muted/20 dark:inset-ring-muted/10 inset-ring-muted/20 ring-muted inset-shadow-muted/20 inset-ring inset-shadow-sm relative mb-4 mt-6 max-w-[760px] overflow-hidden rounded-xl pt-3 ring;
+		@apply bg-[#24292e] text-[#e1e4e8] dark:inset-shadow-muted/20 inset-ring-muted/20 ring-muted inset-shadow-muted/20 inset-ring inset-shadow-sm relative mb-4 mt-6 max-w-[760px] overflow-hidden rounded-xl pt-3 ring;
 	}
 
 	[data-rehype-pretty-code-figure] code {
-		@apply grid min-w-0 break-words rounded-none border-0 p-0 text-sm md:text-base;
+		@apply grid min-w-0 break-words rounded-none border-0 p-0 text-sm;
 		counter-reset: line;
 		box-decoration-break: clone;
 	}
@@ -158,10 +162,7 @@
 		margin-right: 1.4rem;
 		text-align: right;
 	}
-
-	[data-pre-copy-btn] {
-		@apply absolute right-2 top-2;
-	}
+	
 
 	[data-rehype-pretty-code-figure]:has([data-language="bash"]) [data-pre-copy-btn] {
 		@apply top-[0.688rem];

@@ -24,11 +24,10 @@
 
 <MetaData {title} {description} />
 
-<aside class="sticky">
-	<div class="sticky top-24 hidden pl-16 xl:block">
-		<Toc toc={{ items: toc }} />
-	</div>
-</aside>
+<div class="sticky top-20 pl-16 block">
+	<Toc toc={{ items: toc }} />
+</div>
+
 <div class="mx-auto">
 	<aside>
 		<Toc toc={{ items: toc }} type="mobile" />

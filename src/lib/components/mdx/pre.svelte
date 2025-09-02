@@ -8,6 +8,7 @@ This component is automatically used by MDSX for ```code blocks in markdown.
 -->
 <script lang="ts">
 	import { cn } from "$registry/lib/utils";
+	import ScrollArea from "$registry/ui/scroll-area/scroll-area.svelte";
 	import CopyCodeButton from "../copy-code-button.svelte";
 
 	let {
@@ -21,7 +22,7 @@ This component is automatically used by MDSX for ```code blocks in markdown.
 	} = $props();
 
 	// Extract the code text from the rendered content for copying
-	let preElement: HTMLDivElement;
+	let preElement: HTMLPreElement;
 	let codeText = $state("");
 
 	$effect(() => {
@@ -35,15 +36,11 @@ This component is automatically used by MDSX for ```code blocks in markdown.
 	});
 </script>
 
-<div class="relative group">
+<ScrollArea orientation="both" data-pre-wrapper="">
 	<!-- Copy button positioned absolutely over the code block -->
-	<CopyCodeButton code={codeText} />
 
-	<div
-		bind:this={preElement}
-		class={cn("overflow-x-auto rounded-lg relative", className)}
-		{...props}
-	>
+	<pre bind:this={preElement} class={cn("text-sm", className)} {...props}>
 		{@render children()}
-	</div>
-</div>
+	</pre>
+</ScrollArea>
+<CopyCodeButton code={codeText} />

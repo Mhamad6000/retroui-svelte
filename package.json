@@ -17,17 +17,14 @@
 		"@internationalized/date": "^3.9.0",
 		"@lucide/svelte": "^0.542.0",
 		"@mdsx/rehype-custom-highlighter": "^0.0.3",
-		"@svecodocs/kit": "latest",
 		"@sveltejs/adapter-cloudflare": "^4.8.0",
 		"@sveltejs/kit": "^2.20.3",
 		"@sveltejs/vite-plugin-svelte": "^5.0.3",
 		"@tailwindcss/vite": "^4.1.1",
-		"bits-ui": "^2.9.4",
 		"clsx": "^2.1.1",
 		"mdsx": "^0.0.6",
 		"mode-watcher": "^1.1.0",
 		"package-manager-detector": "^1.3.0",
-		"phosphor-svelte": "^3.0.1",
 		"rehype-pretty-code": "^0.14.1",
 		"rehype-slug": "^6.0.0",
 		"remark-gfm": "^4.0.1",
@@ -47,6 +44,7 @@
 	"dependencies": {
 		"@shikijs/langs": "^3.12.0",
 		"@shikijs/themes": "^3.12.0",
+		"bits-ui": "^2.9.6",
 		"shiki": "^3.12.0"
 	}
 }
