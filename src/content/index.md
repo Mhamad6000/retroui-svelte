@@ -5,7 +5,7 @@ section: Overview
 ---
 
 <script>
-	import { Callout } from '@svecodocs/kit'
+	
 </script>
 
 After spending countless hours building documentation sites for various projects, we decided to build a docs package/starter template that we can use for future projects. This project is a result of that effort.

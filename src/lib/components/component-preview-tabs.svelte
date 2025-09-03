@@ -88,7 +88,7 @@
 	{/if}
 {/snippet}
 
-<div class={cn("group relative mb-12 mt-4 flex flex-col gap-2", className)} {...restProps}>
+<div class={cn("group relative flex flex-col gap-2", className)} {...restProps}>
 	<Tabs.Root bind:value class="relative mr-auto w-full">
 		{#if !hideCode}
 			<Tabs.List class="justify-start gap-4 rounded-none w-full pb-4 border-b px-2 md:px-0">
@@ -138,7 +138,7 @@
 									<div class="relative h-full">
 										<CopyCodeButton code={sourceCode} />
 										<div
-											class="rounded-lg h-full [&_figure]:!m-0 [&_pre]:h-full [&_pre]:overflow-auto"
+											class="rounded-md h-full [&_figure]:!m-0 [&_pre]:h-full [&_pre]:overflow-auto"
 										>
 											{@html highlightedHtml}
 										</div>

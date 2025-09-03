@@ -1,21 +1,16 @@
 ---
-title: Accordion
-description: A vertically stacked set of interactive headings that each reveal a section of content.
+title: Alert
+description: Displays a callout for user attention.
 section: Components
 links:
-  - title: "Docs"
-    href: "https://bits-ui.com/docs/components/accordion"
-  - title: "API Reference"
-    href: "https://bits-ui.com/docs/components/accordion#api-reference"
   - title : "Component Source"
     href: "https://bits-ui.com/docs/components/accordion"
 ---
 <script>
 	import { ComponentPreview , PMCommand } from "$lib/components";
-	
 </script>
 
-<ComponentPreview name="accordion-style-default" />
+<ComponentPreview name="alert-style-default" />
 <br />
 <br />
 

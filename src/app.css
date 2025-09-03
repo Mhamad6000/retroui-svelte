@@ -136,7 +136,7 @@
 	}
 
 	[data-rehype-pretty-code-figure] {
-		@apply bg-[#24292e] text-[#e1e4e8] dark:inset-shadow-muted/20 inset-ring-muted/20 ring-muted inset-shadow-muted/20 inset-ring inset-shadow-sm relative mb-4 mt-6 max-w-[760px] overflow-hidden rounded-xl pt-3 ring;
+		@apply bg-[#24292e] text-[#e1e4e8] dark:inset-shadow-muted/20 inset-ring-muted/20 ring-muted inset-shadow-muted/20 inset-ring inset-shadow-sm relative mb-4 mt-6 max-w-[760px] overflow-hidden rounded-md pt-3 ring;
 	}
 
 	[data-rehype-pretty-code-figure] code {

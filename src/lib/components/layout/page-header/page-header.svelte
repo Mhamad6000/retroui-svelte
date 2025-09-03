@@ -14,7 +14,7 @@
 </script>
 
 <header class="mb-8 border-b pb-6">
-	<h1 class="text-4xl font-bold tracking-tight text-foreground mb-2">
+	<h1 class="text-4xl font-head lg:text-5xl font-bold tracking-tight text-foreground mb-2">
 		{title}
 	</h1>
 	{#if description}

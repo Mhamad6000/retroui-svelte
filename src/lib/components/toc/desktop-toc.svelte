@@ -10,7 +10,7 @@
 	}: { tree: TableOfContents; tocState: TocState; class?: string } = $props();
 </script>
 
-<div class={cn("w-[220px] max-w-[220px] space-y-2 text-sm", className)}>
+<div class={cn("w-[250px] rounded-md border p-4 max-w-[250px] space-y-2 text-sm", className)}>
 	<div class="text-muted-foreground -ml-px flex items-center gap-1.5">
 		<!-- <List class="size-4 shrink-0" /> -->
 		<p class="text-muted-foreground text-sm">On this page</p>

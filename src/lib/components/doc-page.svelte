@@ -18,13 +18,13 @@
 		toc: TocItem[];
 		links?: { title: string; href: string }[];
 	} = $props();
-	console.log(links);
+
 	const PageComponent = $derived(component);
 </script>
 
 <MetaData {title} {description} />
 
-<div class="sticky top-20 pl-16 block">
+<div class="sticky top-20 self-start hidden lg:block">
 	<Toc toc={{ items: toc }} />
 </div>
 

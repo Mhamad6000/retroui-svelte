@@ -62,7 +62,7 @@ export function useToc(getItemIds: () => string[]) {
 			},
 			{ rootMargin: "0% 0% -80% 0% " }
 		);
-
+		
 		for (const id of itemIds) {
 			const node = document.getElementById(id);
 			if (node) observer.observe(node);

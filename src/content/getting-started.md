@@ -5,7 +5,7 @@ section: Overview
 ---
 
 <script>
-	import { Callout } from "@svecodocs/kit";
+
 </script>
 
 The following guide will walk you through the process of getting a Svecodocs project up and running.
@@ -54,10 +54,6 @@ export const siteConfig = defineSiteConfig({
 ### Per-Route Site Config
 
 You can override any part of the site config on a per-route basis using the `useSiteConfig` hook.
-
-<Callout type="warning" title="Under Development">
-This feature is still being worked on.
-</Callout>
 
 ## Theme
 

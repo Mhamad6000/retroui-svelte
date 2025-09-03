@@ -3,7 +3,7 @@ import { error } from "@sveltejs/kit";
 import type { Component } from "svelte";
 
 export function getDocMetadata(slug: string = "index") {
-	return docs.find((doc) => doc.slug === slug);
+	return docs.find((doc:any) => doc.slug === slug);
 }
 
 export function getAllDocs() {
