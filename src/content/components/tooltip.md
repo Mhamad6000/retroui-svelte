@@ -3,8 +3,12 @@ title: Tooltip
 description: A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.
 section: Components
 links:
-  - title: "Component Source"
+  - title: "Docs"
     href: "https://bits-ui.com/docs/components/tooltip"
+  - title: "API Reference"
+    href: "https://bits-ui.com/docs/components/tooltip#api-reference"
+  - title : "Component Source"
+    href: "https://bits-ui.com/docs/components/accordion"
 ---
 <script>
 	import { ComponentPreview, PMCommand } from "$lib/components";
@@ -26,17 +30,16 @@ links:
 ```svelte
 <script lang="ts">
   import * as Tooltip from "$lib/components/ui/tooltip/index.js";
-  import { Button } from "$lib/components/ui/button/index.js";
 </script>
-
-<Tooltip.Root>
-  <Tooltip.Trigger asChild>
-    <Button variant="outline">Hover</Button>
-  </Tooltip.Trigger>
-  <Tooltip.Content>
-    <p>Add to library</p>
-  </Tooltip.Content>
-</Tooltip.Root>
+ 
+<Tooltip.Provider>
+  <Tooltip.Root>
+    <Tooltip.Trigger>Hover</Tooltip.Trigger>
+    <Tooltip.Content>
+      <p>Add to library</p>
+    </Tooltip.Content>
+  </Tooltip.Root>
+</Tooltip.Provider>
 ```
 
 <br />
@@ -45,16 +48,18 @@ links:
 
 ### Default
 
-<ComponentPreview name="tooltip-default" />
+<ComponentPreview name="tooltip-style-default" />
 
-### With Icon
+<br />
 
-<ComponentPreview name="tooltip-with-icon" />
+### Primary
 
-### Multiple
+<ComponentPreview name="tooltip-style-primary" />
 
-<ComponentPreview name="tooltip-multiple" />
+<br />
 
-### Custom Delay
+### Solid
 
-<ComponentPreview name="tooltip-custom-delay" />
+<ComponentPreview name="tooltip-style-solid" />
+
+

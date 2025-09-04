@@ -3,8 +3,12 @@ title: Checkbox
 description: A control that allows the user to toggle between checked and not checked.
 section: Components
 links:
-  - title: "Component Source"
+  - title: "Docs"
     href: "https://bits-ui.com/docs/components/checkbox"
+  - title: "API Reference"
+    href: "https://bits-ui.com/docs/components/checkbox#api-reference"
+  - title : "Component Source"
+    href: "https://bits-ui.com/docs/components/accordion"
 ---
 <script>
 	import { ComponentPreview, PMCommand } from "$lib/components";
@@ -26,34 +30,22 @@ links:
 ```svelte
 <script lang="ts">
   import { Checkbox } from "$lib/components/ui/checkbox/index.js";
-
-  let checked = $state(false);
 </script>
-
-<div class="flex items-center space-x-2">
-  <Checkbox id="terms" bind:checked />
-  <label for="terms" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-    Accept terms and conditions
-  </label>
-</div>
+ 
+<Checkbox />
 ```
 
 <br />
 
 ## Examples
 
-### With Text
+### Variants
 
-<ComponentPreview name="checkbox-with-text" />
+<ComponentPreview name="checkbox-variants" />
 
-### Disabled
+<br />
 
-<ComponentPreview name="checkbox-disabled" />
+### Size
 
-### Form
+<ComponentPreview name="checkbox-size" />
 
-<ComponentPreview name="checkbox-form" />
-
-### Indeterminate
-
-<ComponentPreview name="checkbox-indeterminate" />

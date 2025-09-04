@@ -530,8 +530,8 @@
     "title": "Checkbox",
     "description": "A control that allows the user to toggle between checked and not checked.",
     "path": "components/checkbox",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"checkbox-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"checkbox\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import { Checkbox } from \"$lib/components/ui/checkbox/index.js\";\n\n  let checked = $state(false);\n&#x3C;/script>\n\n&#x3C;div class=\"flex items-center space-x-2\">\n  &#x3C;Checkbox id=\"terms\" bind:checked />\n  &#x3C;label for=\"terms\" class=\"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70\">\n    Accept terms and conditions\n  &#x3C;/label>\n&#x3C;/div>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>With Text</h3>\n<componentpreview name=\"checkbox-with-text\">\n<h3>Disabled</h3>\n<componentpreview name=\"checkbox-disabled\">\n<h3>Form</h3>\n<componentpreview name=\"checkbox-form\">\n<h3>Indeterminate</h3>\n<componentpreview name=\"checkbox-indeterminate\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"checkbox-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"checkbox\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { Checkbox } from \"$lib/components/ui/checkbox/index.js\";\n\n  let checked = $state(false);\n</script>\n\n<div class=\"flex items-center space-x-2\">\n  <Checkbox id=\"terms\" bind:checked />\n  <label for=\"terms\" class=\"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70\">\n    Accept terms and conditions\n  </label>\n</div>\n```\n\n<br />\n\n## Examples\n\n### With Text\n\n<ComponentPreview name=\"checkbox-with-text\" />\n\n### Disabled\n\n<ComponentPreview name=\"checkbox-disabled\" />\n\n### Form\n\n<ComponentPreview name=\"checkbox-form\" />\n\n### Indeterminate\n\n<ComponentPreview name=\"checkbox-indeterminate\" />",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"checkbox-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"checkbox\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import { Checkbox } from \"$lib/components/ui/checkbox/index.js\";\n&#x3C;/script>\n \n&#x3C;Checkbox />\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Variants</h3>\n<componentpreview name=\"checkbox-variants\">\n<br>\n<h3>Size</h3>\n<componentpreview name=\"checkbox-size\"></componentpreview></componentpreview></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"checkbox-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"checkbox\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { Checkbox } from \"$lib/components/ui/checkbox/index.js\";\n</script>\n \n<Checkbox />\n```\n\n<br />\n\n## Examples\n\n### Variants\n\n<ComponentPreview name=\"checkbox-variants\" />\n\n<br />\n\n### Size\n\n<ComponentPreview name=\"checkbox-size\" />",
     "toc": [
       {
         "title": "Installation",
@@ -548,23 +548,13 @@
         "url": "#examples",
         "items": [
           {
-            "title": "With Text",
-            "url": "#with-text",
+            "title": "Variants",
+            "url": "#variants",
             "items": []
           },
           {
-            "title": "Disabled",
-            "url": "#disabled",
-            "items": []
-          },
-          {
-            "title": "Form",
-            "url": "#form",
-            "items": []
-          },
-          {
-            "title": "Indeterminate",
-            "url": "#indeterminate",
+            "title": "Size",
+            "url": "#size",
             "items": []
           }
         ]
@@ -573,8 +563,16 @@
     "section": "Components",
     "links": [
       {
-        "title": "Component Source",
+        "title": "Docs",
         "href": "https://bits-ui.com/docs/components/checkbox"
+      },
+      {
+        "title": "API Reference",
+        "href": "https://bits-ui.com/docs/components/checkbox#api-reference"
+      },
+      {
+        "title": "Component Source",
+        "href": "https://bits-ui.com/docs/components/accordion"
       }
     ],
     "slug": "components/checkbox",
@@ -584,8 +582,44 @@
     "title": "Collapsible",
     "description": "An interactive component which expands/collapses a panel.",
     "path": "components/collapsible",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"collapsible-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"collapsible\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import * as Collapsible from \"$lib/components/ui/collapsible/index.js\";\n  import { Button } from \"$lib/components/ui/button/index.js\";\n\n  let open = $state(false);\n&#x3C;/script>\n\n&#x3C;Collapsible.Root bind:open>\n  &#x3C;div class=\"flex items-center justify-between space-x-4 px-4\">\n    &#x3C;h4 class=\"text-sm font-semibold\">\n      @peduarte starred 3 repositories\n    &#x3C;/h4>\n    &#x3C;Collapsible.Trigger asChild>\n      &#x3C;Button variant=\"ghost\" size=\"sm\">\n        &#x3C;ChevronDownIcon class=\"h-4 w-4\" />\n        &#x3C;span class=\"sr-only\">Toggle&#x3C;/span>\n      &#x3C;/Button>\n    &#x3C;/Collapsible.Trigger>\n  &#x3C;/div>\n  &#x3C;div class=\"rounded-md border px-4 py-3 font-mono text-sm\">\n    @radix-ui/primitives\n  &#x3C;/div>\n  &#x3C;Collapsible.Content class=\"space-y-2\">\n    &#x3C;div class=\"rounded-md border px-4 py-3 font-mono text-sm\">\n      @radix-ui/colors\n    &#x3C;/div>\n    &#x3C;div class=\"rounded-md border px-4 py-3 font-mono text-sm\">\n      @radix-ui/themes\n    &#x3C;/div>\n  &#x3C;/Collapsible.Content>\n&#x3C;/Collapsible.Root>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"collapsible-default\">\n<h3>Animated</h3>\n<componentpreview name=\"collapsible-animated\">\n<h3>Custom Trigger</h3>\n<componentpreview name=\"collapsible-custom-trigger\"></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"collapsible-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"collapsible\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import * as Collapsible from \"$lib/components/ui/collapsible/index.js\";\n  import { Button } from \"$lib/components/ui/button/index.js\";\n\n  let open = $state(false);\n</script>\n\n<Collapsible.Root bind:open>\n  <div class=\"flex items-center justify-between space-x-4 px-4\">\n    <h4 class=\"text-sm font-semibold\">\n      @peduarte starred 3 repositories\n    </h4>\n    <Collapsible.Trigger asChild>\n      <Button variant=\"ghost\" size=\"sm\">\n        <ChevronDownIcon class=\"h-4 w-4\" />\n        <span class=\"sr-only\">Toggle</span>\n      </Button>\n    </Collapsible.Trigger>\n  </div>\n  <div class=\"rounded-md border px-4 py-3 font-mono text-sm\">\n    @radix-ui/primitives\n  </div>\n  <Collapsible.Content class=\"space-y-2\">\n    <div class=\"rounded-md border px-4 py-3 font-mono text-sm\">\n      @radix-ui/colors\n    </div>\n    <div class=\"rounded-md border px-4 py-3 font-mono text-sm\">\n      @radix-ui/themes\n    </div>\n  </Collapsible.Content>\n</Collapsible.Root>\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"collapsible-default\" />\n\n### Animated\n\n<ComponentPreview name=\"collapsible-animated\" />\n\n### Custom Trigger\n\n<ComponentPreview name=\"collapsible-custom-trigger\" />",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"collapsible-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"collapsible\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import * as Collapsible from \"$lib/components/ui/collapsible/index.js\";\n&#x3C;/script>\n \n&#x3C;Collapsible.Root>\n  &#x3C;Collapsible.Trigger>Can I use this in my project?&#x3C;/Collapsible.Trigger>\n  &#x3C;Collapsible.Content>\n    Yes. Free to use for personal and commercial projects. No attribution\n    required.\n  &#x3C;/Collapsible.Content>\n&#x3C;/Collapsible.Root>\n</code></pre></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"collapsible-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"collapsible\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import * as Collapsible from \"$lib/components/ui/collapsible/index.js\";\n</script>\n \n<Collapsible.Root>\n  <Collapsible.Trigger>Can I use this in my project?</Collapsible.Trigger>\n  <Collapsible.Content>\n    Yes. Free to use for personal and commercial projects. No attribution\n    required.\n  </Collapsible.Content>\n</Collapsible.Root>\n```",
+    "toc": [
+      {
+        "title": "Installation",
+        "url": "#installation",
+        "items": []
+      },
+      {
+        "title": "Usage",
+        "url": "#usage",
+        "items": []
+      }
+    ],
+    "section": "Components",
+    "links": [
+      {
+        "title": "Docs",
+        "href": "https://bits-ui.com/docs/components/collapsible"
+      },
+      {
+        "title": "API Reference",
+        "href": "https://bits-ui.com/docs/components/collapsible#api-reference"
+      },
+      {
+        "title": "Component Source",
+        "href": "https://bits-ui.com/docs/components/accordion"
+      }
+    ],
+    "slug": "components/collapsible",
+    "slugFull": "/components/collapsible"
+  },
+  {
+    "title": "Command",
+    "description": "Fast, composable, unstyled command menu for React.",
+    "path": "components/command",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"command-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"command\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n import * as Command from \"$lib/components/ui/command/index.js\";\n&#x3C;/script>\n \n&#x3C;Command.Root>\n &#x3C;Command.Input placeholder=\"Type a command or search...\" />\n &#x3C;Command.List>\n  &#x3C;Command.Empty>No results found.&#x3C;/Command.Empty>\n  &#x3C;Command.Group heading=\"Suggestions\">\n   &#x3C;Command.Item>Calendar&#x3C;/Command.Item>\n   &#x3C;Command.Item>Search Emoji&#x3C;/Command.Item>\n   &#x3C;Command.Item>Calculator&#x3C;/Command.Item>\n  &#x3C;/Command.Group>\n  &#x3C;Command.Separator />\n  &#x3C;Command.Group heading=\"Settings\">\n   &#x3C;Command.Item>Profile&#x3C;/Command.Item>\n   &#x3C;Command.Item>Billing&#x3C;/Command.Item>\n   &#x3C;Command.Item>Settings&#x3C;/Command.Item>\n  &#x3C;/Command.Group>\n &#x3C;/Command.List>\n&#x3C;/Command.Root>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"command-usage-example\">\n<br>\n<h3>Dialog</h3>\n<componentpreview name=\"command-dialog\"></componentpreview></componentpreview></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"command-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"command\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n import * as Command from \"$lib/components/ui/command/index.js\";\n</script>\n \n<Command.Root>\n <Command.Input placeholder=\"Type a command or search...\" />\n <Command.List>\n  <Command.Empty>No results found.</Command.Empty>\n  <Command.Group heading=\"Suggestions\">\n   <Command.Item>Calendar</Command.Item>\n   <Command.Item>Search Emoji</Command.Item>\n   <Command.Item>Calculator</Command.Item>\n  </Command.Group>\n  <Command.Separator />\n  <Command.Group heading=\"Settings\">\n   <Command.Item>Profile</Command.Item>\n   <Command.Item>Billing</Command.Item>\n   <Command.Item>Settings</Command.Item>\n  </Command.Group>\n </Command.List>\n</Command.Root>\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"command-usage-example\" />\n\n<br />\n\n### Dialog\n\n<ComponentPreview name=\"command-dialog\" />",
     "toc": [
       {
         "title": "Installation",
@@ -607,62 +641,8 @@
             "items": []
           },
           {
-            "title": "Animated",
-            "url": "#animated",
-            "items": []
-          },
-          {
-            "title": "Custom Trigger",
-            "url": "#custom-trigger",
-            "items": []
-          }
-        ]
-      }
-    ],
-    "section": "Components",
-    "links": [
-      {
-        "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/collapsible"
-      }
-    ],
-    "slug": "components/collapsible",
-    "slugFull": "/components/collapsible"
-  },
-  {
-    "title": "Command",
-    "description": "Fast, composable, unstyled command menu for React.",
-    "path": "components/command",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"command-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"command\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import * as Command from \"$lib/components/ui/command/index.js\";\n  import { Button } from \"$lib/components/ui/button/index.js\";\n\n  let open = $state(false);\n&#x3C;/script>\n\n&#x3C;Button onclick={() => open = true} variant=\"outline\">\n  Open Command Menu\n&#x3C;/Button>\n\n&#x3C;Command.Root bind:open>\n  &#x3C;Command.Input placeholder=\"Type a command or search...\" />\n  &#x3C;Command.List>\n    &#x3C;Command.Empty>No results found.&#x3C;/Command.Empty>\n    &#x3C;Command.Group heading=\"Suggestions\">\n      &#x3C;Command.Item>Calendar&#x3C;/Command.Item>\n      &#x3C;Command.Item>Search Emoji&#x3C;/Command.Item>\n      &#x3C;Command.Item>Calculator&#x3C;/Command.Item>\n    &#x3C;/Command.Group>\n    &#x3C;Command.Separator />\n    &#x3C;Command.Group heading=\"Settings\">\n      &#x3C;Command.Item>Profile&#x3C;/Command.Item>\n      &#x3C;Command.Item>Billing&#x3C;/Command.Item>\n      &#x3C;Command.Item>Settings&#x3C;/Command.Item>\n    &#x3C;/Command.Group>\n  &#x3C;/Command.List>\n&#x3C;/Command.Root>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Dialog</h3>\n<componentpreview name=\"command-dialog\">\n<h3>Combobox</h3>\n<componentpreview name=\"command-combobox\">\n<h3>Popover</h3>\n<componentpreview name=\"command-popover\"></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"command-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"command\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import * as Command from \"$lib/components/ui/command/index.js\";\n  import { Button } from \"$lib/components/ui/button/index.js\";\n\n  let open = $state(false);\n</script>\n\n<Button onclick={() => open = true} variant=\"outline\">\n  Open Command Menu\n</Button>\n\n<Command.Root bind:open>\n  <Command.Input placeholder=\"Type a command or search...\" />\n  <Command.List>\n    <Command.Empty>No results found.</Command.Empty>\n    <Command.Group heading=\"Suggestions\">\n      <Command.Item>Calendar</Command.Item>\n      <Command.Item>Search Emoji</Command.Item>\n      <Command.Item>Calculator</Command.Item>\n    </Command.Group>\n    <Command.Separator />\n    <Command.Group heading=\"Settings\">\n      <Command.Item>Profile</Command.Item>\n      <Command.Item>Billing</Command.Item>\n      <Command.Item>Settings</Command.Item>\n    </Command.Group>\n  </Command.List>\n</Command.Root>\n```\n\n<br />\n\n## Examples\n\n### Dialog\n\n<ComponentPreview name=\"command-dialog\" />\n\n### Combobox\n\n<ComponentPreview name=\"command-combobox\" />\n\n### Popover\n\n<ComponentPreview name=\"command-popover\" />",
-    "toc": [
-      {
-        "title": "Installation",
-        "url": "#installation",
-        "items": []
-      },
-      {
-        "title": "Usage",
-        "url": "#usage",
-        "items": []
-      },
-      {
-        "title": "Examples",
-        "url": "#examples",
-        "items": [
-          {
             "title": "Dialog",
             "url": "#dialog",
-            "items": []
-          },
-          {
-            "title": "Combobox",
-            "url": "#combobox",
-            "items": []
-          },
-          {
-            "title": "Popover",
-            "url": "#popover",
             "items": []
           }
         ]
@@ -2042,8 +2022,8 @@
     "title": "Tabs",
     "description": "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
     "path": "components/tabs",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"tabs-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"tabs\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import * as Tabs from \"$lib/components/ui/tabs/index.js\";\n&#x3C;/script>\n\n&#x3C;Tabs.Root value=\"account\" class=\"w-[400px]\">\n  &#x3C;Tabs.List class=\"grid w-full grid-cols-2\">\n    &#x3C;Tabs.Trigger value=\"account\">Account&#x3C;/Tabs.Trigger>\n    &#x3C;Tabs.Trigger value=\"password\">Password&#x3C;/Tabs.Trigger>\n  &#x3C;/Tabs.List>\n  &#x3C;Tabs.Content value=\"account\">\n    &#x3C;p class=\"text-sm text-muted-foreground\">\n      Make changes to your account here. Click save when you're done.\n    &#x3C;/p>\n  &#x3C;/Tabs.Content>\n  &#x3C;Tabs.Content value=\"password\">\n    &#x3C;p class=\"text-sm text-muted-foreground\">\n      Change your password here. After saving, you'll be logged out.\n    &#x3C;/p>\n  &#x3C;/Tabs.Content>\n&#x3C;/Tabs.Root>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"tabs-default\">\n<h3>Pill</h3>\n<componentpreview name=\"tabs-pill\">\n<h3>Vertical</h3>\n<componentpreview name=\"tabs-vertical\"></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"tabs-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"tabs\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import * as Tabs from \"$lib/components/ui/tabs/index.js\";\n</script>\n\n<Tabs.Root value=\"account\" class=\"w-[400px]\">\n  <Tabs.List class=\"grid w-full grid-cols-2\">\n    <Tabs.Trigger value=\"account\">Account</Tabs.Trigger>\n    <Tabs.Trigger value=\"password\">Password</Tabs.Trigger>\n  </Tabs.List>\n  <Tabs.Content value=\"account\">\n    <p class=\"text-sm text-muted-foreground\">\n      Make changes to your account here. Click save when you're done.\n    </p>\n  </Tabs.Content>\n  <Tabs.Content value=\"password\">\n    <p class=\"text-sm text-muted-foreground\">\n      Change your password here. After saving, you'll be logged out.\n    </p>\n  </Tabs.Content>\n</Tabs.Root>\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"tabs-default\" />\n\n### Pill\n\n<ComponentPreview name=\"tabs-pill\" />\n\n### Vertical\n\n<ComponentPreview name=\"tabs-vertical\" />",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"tabs-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"tabs\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import * as Tabs from \"$lib/components/ui/tabs/index.js\";\n&#x3C;/script>\n \n&#x3C;Tabs.Root value=\"account\" class=\"w-[400px]\">\n  &#x3C;Tabs.List>\n    &#x3C;Tabs.Trigger value=\"account\">Account&#x3C;/Tabs.Trigger>\n    &#x3C;Tabs.Trigger value=\"password\">Password&#x3C;/Tabs.Trigger>\n  &#x3C;/Tabs.List>\n  &#x3C;Tabs.Content value=\"account\">\n    Make changes to your account here.\n  &#x3C;/Tabs.Content>\n  &#x3C;Tabs.Content value=\"password\">Change your password here.&#x3C;/Tabs.Content>\n&#x3C;/Tabs.Root>\n</code></pre></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"tabs-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"tabs\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import * as Tabs from \"$lib/components/ui/tabs/index.js\";\n</script>\n \n<Tabs.Root value=\"account\" class=\"w-[400px]\">\n  <Tabs.List>\n    <Tabs.Trigger value=\"account\">Account</Tabs.Trigger>\n    <Tabs.Trigger value=\"password\">Password</Tabs.Trigger>\n  </Tabs.List>\n  <Tabs.Content value=\"account\">\n    Make changes to your account here.\n  </Tabs.Content>\n  <Tabs.Content value=\"password\">Change your password here.</Tabs.Content>\n</Tabs.Root>\n```",
     "toc": [
       {
         "title": "Installation",
@@ -2054,27 +2034,6 @@
         "title": "Usage",
         "url": "#usage",
         "items": []
-      },
-      {
-        "title": "Examples",
-        "url": "#examples",
-        "items": [
-          {
-            "title": "Default",
-            "url": "#default",
-            "items": []
-          },
-          {
-            "title": "Pill",
-            "url": "#pill",
-            "items": []
-          },
-          {
-            "title": "Vertical",
-            "url": "#vertical",
-            "items": []
-          }
-        ]
       }
     ],
     "section": "Components",
@@ -2145,8 +2104,8 @@
     "title": "Textarea",
     "description": "Displays a form textarea or a component that looks like a textarea.",
     "path": "components/textarea",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"textarea-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"textarea\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import { Textarea } from \"$lib/components/ui/textarea/index.js\";\n&#x3C;/script>\n\n&#x3C;Textarea placeholder=\"Type your message here.\" />\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"textarea-default\">\n<h3>With Label</h3>\n<componentpreview name=\"textarea-with-label\">\n<h3>With Button</h3>\n<componentpreview name=\"textarea-with-button\">\n<h3>Disabled</h3>\n<componentpreview name=\"textarea-disabled\">\n<h3>With Text</h3>\n<componentpreview name=\"textarea-with-text\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"textarea-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"textarea\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { Textarea } from \"$lib/components/ui/textarea/index.js\";\n</script>\n\n<Textarea placeholder=\"Type your message here.\" />\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"textarea-default\" />\n\n### With Label\n\n<ComponentPreview name=\"textarea-with-label\" />\n\n### With Button\n\n<ComponentPreview name=\"textarea-with-button\" />\n\n### Disabled\n\n<ComponentPreview name=\"textarea-disabled\" />\n\n### With Text\n\n<ComponentPreview name=\"textarea-with-text\" />",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"textarea-style-default\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"textarea\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import { Textarea } from \"$lib/components/ui/textarea/index.js\";\n&#x3C;/script>\n\n&#x3C;Textarea placeholder=\"Type your message here.\" />\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"textarea-style-default\">\n<br>\n<h3>Diabled</h3>\n<componentpreview name=\"textarea-style-disabled\"></componentpreview></componentpreview></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"textarea-style-default\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"textarea\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { Textarea } from \"$lib/components/ui/textarea/index.js\";\n</script>\n\n<Textarea placeholder=\"Type your message here.\" />\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"textarea-style-default\" />\n\n<br />\n\n### Diabled\n\n<ComponentPreview name=\"textarea-style-disabled\" />",
     "toc": [
       {
         "title": "Installation",
@@ -2168,23 +2127,8 @@
             "items": []
           },
           {
-            "title": "With Label",
-            "url": "#with-label",
-            "items": []
-          },
-          {
-            "title": "With Button",
-            "url": "#with-button",
-            "items": []
-          },
-          {
-            "title": "Disabled",
-            "url": "#disabled",
-            "items": []
-          },
-          {
-            "title": "With Text",
-            "url": "#with-text",
+            "title": "Diabled",
+            "url": "#diabled",
             "items": []
           }
         ]
@@ -2258,8 +2202,8 @@
     "title": "Toggle",
     "description": "A two-state button that can be either on or off.",
     "path": "components/toggle",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"toggle-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"toggle\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import { Toggle } from \"$lib/components/ui/toggle/index.js\";\n\n  let pressed = $state(false);\n&#x3C;/script>\n\n&#x3C;Toggle bind:pressed aria-label=\"Toggle italic\">\n  &#x3C;ItalicIcon class=\"h-4 w-4\" />\n&#x3C;/Toggle>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"toggle-default\">\n<h3>With Text</h3>\n<componentpreview name=\"toggle-with-text\">\n<h3>Disabled</h3>\n<componentpreview name=\"toggle-disabled\">\n<h3>Multiple</h3>\n<componentpreview name=\"toggle-multiple\">\n<h3>Outline</h3>\n<componentpreview name=\"toggle-outline\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"toggle-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"toggle\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { Toggle } from \"$lib/components/ui/toggle/index.js\";\n\n  let pressed = $state(false);\n</script>\n\n<Toggle bind:pressed aria-label=\"Toggle italic\">\n  <ItalicIcon class=\"h-4 w-4\" />\n</Toggle>\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"toggle-default\" />\n\n### With Text\n\n<ComponentPreview name=\"toggle-with-text\" />\n\n### Disabled\n\n<ComponentPreview name=\"toggle-disabled\" />\n\n### Multiple\n\n<ComponentPreview name=\"toggle-multiple\" />\n\n### Outline\n\n<ComponentPreview name=\"toggle-outline\" />",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"toggle-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"toggle\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import { Toggle } from \"$lib/components/ui/toggle/index.js\";\n&#x3C;/script>\n \n&#x3C;Toggle>Toggle&#x3C;/Toggle>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"toggle-style-default\">\n<br>\n<h3>Outlined</h3>\n<componentpreview name=\"toggle-style-outlined\">\n<br>\n<h3>Solid</h3>\n<componentpreview name=\"toggle-style-solid\">\n<br>\n<h3>Outline Muted</h3>\n<componentpreview name=\"toggle-style-outline-muted\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"toggle-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"toggle\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { Toggle } from \"$lib/components/ui/toggle/index.js\";\n</script>\n \n<Toggle>Toggle</Toggle>\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"toggle-style-default\" />\n\n<br />\n\n### Outlined\n\n<ComponentPreview name=\"toggle-style-outlined\" />\n\n<br />\n\n### Solid\n\n<ComponentPreview name=\"toggle-style-solid\" />\n\n<br />\n\n### Outline Muted\n\n<ComponentPreview name=\"toggle-style-outline-muted\" />",
     "toc": [
       {
         "title": "Installation",
@@ -2281,23 +2225,18 @@
             "items": []
           },
           {
-            "title": "With Text",
-            "url": "#with-text",
+            "title": "Outlined",
+            "url": "#outlined",
             "items": []
           },
           {
-            "title": "Disabled",
-            "url": "#disabled",
+            "title": "Solid",
+            "url": "#solid",
             "items": []
           },
           {
-            "title": "Multiple",
-            "url": "#multiple",
-            "items": []
-          },
-          {
-            "title": "Outline",
-            "url": "#outline",
+            "title": "Outline Muted",
+            "url": "#outline-muted",
             "items": []
           }
         ]
@@ -2317,8 +2256,8 @@
     "title": "Tooltip",
     "description": "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
     "path": "components/tooltip",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"tooltip-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"tooltip\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import * as Tooltip from \"$lib/components/ui/tooltip/index.js\";\n  import { Button } from \"$lib/components/ui/button/index.js\";\n&#x3C;/script>\n\n&#x3C;Tooltip.Root>\n  &#x3C;Tooltip.Trigger asChild>\n    &#x3C;Button variant=\"outline\">Hover&#x3C;/Button>\n  &#x3C;/Tooltip.Trigger>\n  &#x3C;Tooltip.Content>\n    &#x3C;p>Add to library&#x3C;/p>\n  &#x3C;/Tooltip.Content>\n&#x3C;/Tooltip.Root>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"tooltip-default\">\n<h3>With Icon</h3>\n<componentpreview name=\"tooltip-with-icon\">\n<h3>Multiple</h3>\n<componentpreview name=\"tooltip-multiple\">\n<h3>Custom Delay</h3>\n<componentpreview name=\"tooltip-custom-delay\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"tooltip-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"tooltip\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import * as Tooltip from \"$lib/components/ui/tooltip/index.js\";\n  import { Button } from \"$lib/components/ui/button/index.js\";\n</script>\n\n<Tooltip.Root>\n  <Tooltip.Trigger asChild>\n    <Button variant=\"outline\">Hover</Button>\n  </Tooltip.Trigger>\n  <Tooltip.Content>\n    <p>Add to library</p>\n  </Tooltip.Content>\n</Tooltip.Root>\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"tooltip-default\" />\n\n### With Icon\n\n<ComponentPreview name=\"tooltip-with-icon\" />\n\n### Multiple\n\n<ComponentPreview name=\"tooltip-multiple\" />\n\n### Custom Delay\n\n<ComponentPreview name=\"tooltip-custom-delay\" />",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"tooltip-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"tooltip\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import * as Tooltip from \"$lib/components/ui/tooltip/index.js\";\n&#x3C;/script>\n \n&#x3C;Tooltip.Provider>\n  &#x3C;Tooltip.Root>\n    &#x3C;Tooltip.Trigger>Hover&#x3C;/Tooltip.Trigger>\n    &#x3C;Tooltip.Content>\n      &#x3C;p>Add to library&#x3C;/p>\n    &#x3C;/Tooltip.Content>\n  &#x3C;/Tooltip.Root>\n&#x3C;/Tooltip.Provider>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"tooltip-style-default\">\n<br>\n<h3>Primary</h3>\n<componentpreview name=\"tooltip-style-primary\">\n<br>\n<h3>Solid</h3>\n<componentpreview name=\"tooltip-style-solid\"></componentpreview></componentpreview></componentpreview></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"tooltip-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"tooltip\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import * as Tooltip from \"$lib/components/ui/tooltip/index.js\";\n</script>\n \n<Tooltip.Provider>\n  <Tooltip.Root>\n    <Tooltip.Trigger>Hover</Tooltip.Trigger>\n    <Tooltip.Content>\n      <p>Add to library</p>\n    </Tooltip.Content>\n  </Tooltip.Root>\n</Tooltip.Provider>\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"tooltip-style-default\" />\n\n<br />\n\n### Primary\n\n<ComponentPreview name=\"tooltip-style-primary\" />\n\n<br />\n\n### Solid\n\n<ComponentPreview name=\"tooltip-style-solid\" />",
     "toc": [
       {
         "title": "Installation",
@@ -2340,18 +2279,13 @@
             "items": []
           },
           {
-            "title": "With Icon",
-            "url": "#with-icon",
+            "title": "Primary",
+            "url": "#primary",
             "items": []
           },
           {
-            "title": "Multiple",
-            "url": "#multiple",
-            "items": []
-          },
-          {
-            "title": "Custom Delay",
-            "url": "#custom-delay",
+            "title": "Solid",
+            "url": "#solid",
             "items": []
           }
         ]
@@ -2360,8 +2294,16 @@
     "section": "Components",
     "links": [
       {
-        "title": "Component Source",
+        "title": "Docs",
         "href": "https://bits-ui.com/docs/components/tooltip"
+      },
+      {
+        "title": "API Reference",
+        "href": "https://bits-ui.com/docs/components/tooltip#api-reference"
+      },
+      {
+        "title": "Component Source",
+        "href": "https://bits-ui.com/docs/components/accordion"
       }
     ],
     "slug": "components/tooltip",

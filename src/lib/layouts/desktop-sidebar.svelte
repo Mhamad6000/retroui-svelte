@@ -51,7 +51,7 @@
 						{:else}
 							<a
 								href={anchor.href}
-								class="flex items-center gap-2 px-3 py-2 text-sm transition-colors hover:bg-muted/50 hover:text-accent-foreground {isActive(
+								class="flex items-center gap-2 px-3 py-2 text-sm transition-colors hover:bg-muted/50 hover:text-accent-foreground dark:hover:text-white {isActive(
 									anchor.href
 								)
 									? 'bg-primary text-primary-foreground font-medium'
@@ -96,7 +96,7 @@
 								{:else}
 									<a
 										href={item.href}
-										class="flex items-center justify-between px-3 py-2 text-sm transition-colors hover:bg-muted/50 hover:text-accent-foreground {isActive(
+										class="flex items-center justify-between px-3 py-2 text-sm transition-colors hover:bg-muted/50 hover:text-accent-foreground dark:hover:text-white {isActive(
 											item.href
 										)
 											? 'bg-primary text-primary-foreground font-medium'
@@ -157,7 +157,7 @@
 							{:else}
 								<a
 									href={item.href}
-									class="flex items-center justify-between px-3 py-2 text-sm transition-colors hover:bg-muted/50 hover:text-accent-foreground {isActive(
+									class="flex items-center justify-between px-3 py-2 text-sm transition-colors hover:bg-muted/50 hover:text-accent-foreground dark:hover:text-white {isActive(
 										item.href
 									)
 										? 'bg-primary text-primary-foreground font-medium'

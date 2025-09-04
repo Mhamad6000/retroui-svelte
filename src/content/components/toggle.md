@@ -26,13 +26,9 @@ links:
 ```svelte
 <script lang="ts">
   import { Toggle } from "$lib/components/ui/toggle/index.js";
-
-  let pressed = $state(false);
 </script>
-
-<Toggle bind:pressed aria-label="Toggle italic">
-  <ItalicIcon class="h-4 w-4" />
-</Toggle>
+ 
+<Toggle>Toggle</Toggle>
 ```
 
 <br />
@@ -41,20 +37,22 @@ links:
 
 ### Default
 
-<ComponentPreview name="toggle-default" />
+<ComponentPreview name="toggle-style-default" />
 
-### With Text
+<br />
 
-<ComponentPreview name="toggle-with-text" />
+### Outlined
 
-### Disabled
+<ComponentPreview name="toggle-style-outlined" />
 
-<ComponentPreview name="toggle-disabled" />
+<br />
 
-### Multiple
+### Solid
 
-<ComponentPreview name="toggle-multiple" />
+<ComponentPreview name="toggle-style-solid" />
 
-### Outline
+<br />
 
-<ComponentPreview name="toggle-outline" />
+### Outline Muted
+
+<ComponentPreview name="toggle-style-outline-muted" />

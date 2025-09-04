@@ -27,37 +27,15 @@ links:
 <script lang="ts">
   import * as Tabs from "$lib/components/ui/tabs/index.js";
 </script>
-
+ 
 <Tabs.Root value="account" class="w-[400px]">
-  <Tabs.List class="grid w-full grid-cols-2">
+  <Tabs.List>
     <Tabs.Trigger value="account">Account</Tabs.Trigger>
     <Tabs.Trigger value="password">Password</Tabs.Trigger>
   </Tabs.List>
   <Tabs.Content value="account">
-    <p class="text-sm text-muted-foreground">
-      Make changes to your account here. Click save when you're done.
-    </p>
+    Make changes to your account here.
   </Tabs.Content>
-  <Tabs.Content value="password">
-    <p class="text-sm text-muted-foreground">
-      Change your password here. After saving, you'll be logged out.
-    </p>
-  </Tabs.Content>
+  <Tabs.Content value="password">Change your password here.</Tabs.Content>
 </Tabs.Root>
 ```
-
-<br />
-
-## Examples
-
-### Default
-
-<ComponentPreview name="tabs-default" />
-
-### Pill
-
-<ComponentPreview name="tabs-pill" />
-
-### Vertical
-
-<ComponentPreview name="tabs-vertical" />

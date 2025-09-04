@@ -11,7 +11,7 @@ links:
 
 </script>
 
-<ComponentPreview name="textarea-usage-example" />
+<ComponentPreview name="textarea-style-default" />
 <br />
 <br />
 
@@ -37,20 +37,10 @@ links:
 
 ### Default
 
-<ComponentPreview name="textarea-default" />
+<ComponentPreview name="textarea-style-default" />
 
-### With Label
+<br />
 
-<ComponentPreview name="textarea-with-label" />
+### Diabled
 
-### With Button
-
-<ComponentPreview name="textarea-with-button" />
-
-### Disabled
-
-<ComponentPreview name="textarea-disabled" />
-
-### With Text
-
-<ComponentPreview name="textarea-with-text" />
+<ComponentPreview name="textarea-style-disabled" />
