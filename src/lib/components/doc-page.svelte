@@ -1,5 +1,5 @@
 <script lang="ts">
-	import PageHeader from "$lib/components/layout/page-header/page-header.svelte";
+	import PageHeader from "$lib/components/page-header.svelte";
 	import Toc from "$lib/components/toc/toc.svelte";
 	import type { Component } from "svelte";
 	import type { TocItem } from "$lib/types.js";
@@ -24,14 +24,14 @@
 
 <MetaData {title} {description} />
 
-<div class="sticky top-20 self-start hidden lg:block">
+<div class="sticky top-0 self-start hidden xl:block">
 	<Toc toc={{ items: toc }} />
 </div>
 
 <div class="mx-auto">
-	<aside>
+	<!-- <aside>
 		<Toc toc={{ items: toc }} type="mobile" />
-	</aside>
+	</aside> -->
 	<main class="mx-auto w-full min-w-0 max-w-[640px] pb-12 2xl:max-w-[760px]" id="main-content">
 		<PageHeader {title} {description} {links} />
 		<PageComponent />

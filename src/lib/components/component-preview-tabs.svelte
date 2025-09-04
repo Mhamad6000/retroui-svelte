@@ -5,6 +5,7 @@
 	import * as Tabs from "$registry/ui/tabs/index.js";
 	import { highlightCode } from "$lib/utils/highlight.js";
 	import CopyCodeButton from "./copy-code-button.svelte";
+	import ScrollArea from "$registry/ui/scroll-area/scroll-area.svelte";
 
 	let {
 		class: className,
@@ -137,11 +138,9 @@
 								{:then highlightedHtml}
 									<div class="relative h-full">
 										<CopyCodeButton code={sourceCode} />
-										<div
-											class="rounded-md h-full [&_figure]:!m-0 [&_pre]:h-full [&_pre]:overflow-auto"
-										>
+										<ScrollArea orientation="both" class="h-full pb-0" data-pre-wrapper="">
 											{@html highlightedHtml}
-										</div>
+										</ScrollArea>
 									</div>
 								{:catch}
 									<div class="relative h-full">

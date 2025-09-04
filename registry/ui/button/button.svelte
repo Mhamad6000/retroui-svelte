@@ -10,10 +10,12 @@
 					"hover:shadow-none bg-primary text-black border-2 border-black transition hover:translate-y-1 hover:bg-primary-hover",
 				secondary:
 					"hover:shadow-none bg-secondary shadow-primary text-secondary-foreground border-2 border-black transition hover:translate-y-1",
+				destructive:
+					"hover:shadow-none bg-destructive text-destructive-foreground border-2 border-black transition hover:translate-y-1 hover:bg-destructive-hover",
 				outline: "hover:shadow-none bg-transparent border-2 transition hover:translate-y-1",
-				link: "bg-transparent hover:underline",
+				link: "bg-transparent hover:underline !shadow-none !border-none",
 				ghost:
-					"bg-transparent border-transparent hover:border-border transition border-2 hover:text-foreground",
+					"bg-transparent border-transparent !shadow-none hover:border-border transition border-2 hover:text-foreground",
 			},
 			// size: {
 			// 	sm: "px-3 py-1 text-sm",

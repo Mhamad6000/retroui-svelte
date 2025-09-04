@@ -2,4 +2,4 @@
 	import * as Button from "$registry/ui/button/index.js";
 </script>
 
-<Button.Root>Primary</Button.Root>
+<Button.Root variant="destructive">Destructive</Button.Root>

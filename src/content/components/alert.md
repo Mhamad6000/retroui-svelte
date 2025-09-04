@@ -24,15 +24,37 @@ links:
 
 ```svelte
 <script lang="ts">
-  import * as Accordion from "$lib/components/ui/accordion/index.js";
+  import * as Alert from "$lib/components/ui/alert/index.js";
 </script>
 
-<Accordion.Root type="single" class="space-y-4">
-  <Accordion.Item value="item-1">
-    <Accordion.Trigger>Is it accessible?</Accordion.Trigger>
-    <Accordion.Content>
-      Yes. It adheres to the WAI-ARIA design pattern.
-    </Accordion.Content>
-  </Accordion.Item>
-</Accordion.Root>
+<Alert.Root>
+	<Alert.Title>Success! Your changes have been saved</Alert.Title>
+	<Alert.Description>This is an alert with icon, title and description.</Alert.Description>
+</Alert.Root>
 ```
+<br />
+<br />
+
+## Examples
+
+### Default
+
+<ComponentPreview name="alert-style-default" />
+
+<br />
+
+### Solid
+
+<ComponentPreview name="alert-style-solid" />
+
+<br />
+
+### With Icon
+
+<ComponentPreview name="alert-style-icon" />
+
+<br />
+
+### Status
+
+<ComponentPreview name="alert-status" />

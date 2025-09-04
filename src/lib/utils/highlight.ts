@@ -37,7 +37,7 @@ export async function highlightCode(code: string, language: string = "svelte"): 
                     } else {
                         // Match the MDSX configuration for other languages
                         const existingClass = node.properties.class || '';
-                        node.properties.class = `${existingClass} p-4 text-sm !overflow-x-auto h-[450px] w-full`.trim();
+                        node.properties.class = `${existingClass} p-4 text-sm h-full w-full`.trim();
                     }
                 },
                 code(node) {
