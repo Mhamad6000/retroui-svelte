@@ -52,16 +52,16 @@ export const navigation = defineNavigation({
 			title: "Docs",
 		},
 		{
-			href: "/components",
+			href: "/docs/components",
 			title: "Components",
 		},
-		{
-			href: "/blocks",
-			title: "Blocks",
-		},
-		{
-			href: "/themes",
-			title: "Themes",
-		},
+		// {
+		// 	href: "/blocks",
+		// 	title: "Blocks",
+		// },
+		// {
+		// 	href: "/themes",
+		// 	title: "Themes",
+		// },
 	],
 });

@@ -51,12 +51,12 @@
 						{:else}
 							<a
 								href={anchor.href}
-								class="flex items-center gap-2 px-3 py-2 text-sm transition-colors hover:bg-muted/50 hover:text-accent-foreground dark:hover:text-white {isActive(
+								class="flex items-center gap-2 px-3 py-2 text-sm transition-colors hover:bg-muted/50 hover:text-accent-foreground dark:hover:text-wh {isActive(
 									anchor.href
 								)
 									? 'bg-primary text-primary-foreground font-medium'
 									: ''}"
-								target={anchor.href.startsWith("http") ? "_blank" : "_self"}
+								{...anchor.href.startsWith("http") && { target: "_blank" }}
 							>
 								<IconComponent class="h-4 w-4" />
 								{anchor.title}
@@ -96,12 +96,12 @@
 								{:else}
 									<a
 										href={item.href}
-										class="flex items-center justify-between px-3 py-2 text-sm transition-colors hover:bg-muted/50 hover:text-accent-foreground dark:hover:text-white {isActive(
+										class="flex items-center justify-between px-3 py-2 text-sm transition-colors hover:bg-muted/50 hover:text-accent-foreground dark:hover:text-wh {isActive(
 											item.href
 										)
 											? 'bg-primary text-primary-foreground font-medium'
 											: ''}"
-										target={item.external ? "_blank" : "_self"}
+										{...item.external && { target: "_blank" }}
 									>
 										<span>{item.title}</span>
 										<div class="flex items-center gap-1">
@@ -157,12 +157,12 @@
 							{:else}
 								<a
 									href={item.href}
-									class="flex items-center justify-between px-3 py-2 text-sm transition-colors hover:bg-muted/50 hover:text-accent-foreground dark:hover:text-white {isActive(
+									class="flex items-center justify-between px-3 py-2 text-sm transition-colors hover:bg-muted/50 hover:text-accent-foreground dark:hover:text-wh {isActive(
 										item.href
 									)
 										? 'bg-primary text-primary-foreground font-medium'
 										: ''}"
-									target={item.external ? "_blank" : "_self"}
+									{...item.external && { target: "_blank" }}
 								>
 									<span>{item.title}</span>
 									<div class="flex items-center gap-1">

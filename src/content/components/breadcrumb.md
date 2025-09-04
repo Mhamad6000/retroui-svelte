@@ -35,7 +35,7 @@ links:
     </Breadcrumb.Item>
     <Breadcrumb.Separator />
     <Breadcrumb.Item>
-      <Breadcrumb.Link href="/components">Components</Breadcrumb.Link>
+      <Breadcrumb.Link href="/docs/components">Components</Breadcrumb.Link>
     </Breadcrumb.Item>
     <Breadcrumb.Separator />
     <Breadcrumb.Item>
