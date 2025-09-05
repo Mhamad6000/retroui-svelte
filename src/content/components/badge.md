@@ -44,3 +44,38 @@ You can use the badgeVariants helper to create a link that looks like a badge.
  
 <a href="/dashboard" class={badgeVariants({ variant: "outline" })}>Badge</a>
 ```
+
+<br />
+<br />
+
+## Examples
+
+### Default
+
+<ComponentPreview name="badge-style-default" />
+
+<br/>
+
+### Primary
+
+<ComponentPreview name="badge-style-primary" />
+
+<br/>
+
+### Outline
+
+<ComponentPreview name="badge-style-outline" />
+
+<br/>
+
+### Solid
+
+<ComponentPreview name="badge-style-solid" />
+
+<br/>
+
+### Sizes
+
+<ComponentPreview name="badge-sizes" />
+
+

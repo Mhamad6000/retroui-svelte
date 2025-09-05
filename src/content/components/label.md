@@ -3,8 +3,12 @@ title: Label
 description: Renders an accessible label associated with controls.
 section: Components
 links:
-  - title: "Component Source"
+  - title: "Docs"
     href: "https://bits-ui.com/docs/components/label"
+  - title: "API Reference"
+    href: "https://bits-ui.com/docs/components/label#api-reference"
+  - title : "Component Source"
+    href: "https://bits-ui.com/docs/components/accordion"
 ---
 <script>
 	import { ComponentPreview, PMCommand } from "$lib/components";
@@ -26,31 +30,10 @@ links:
 ```svelte
 <script lang="ts">
   import { Label } from "$lib/components/ui/label/index.js";
-  import { Input } from "$lib/components/ui/input/index.js";
 </script>
-
-<div class="grid w-full max-w-sm items-center gap-1.5">
-  <Label for="email">Email</Label>
-  <Input type="email" id="email" placeholder="Email" />
-</div>
+ 
+<Label for="email">Your email address</Label>
 ```
 
-<br />
 
-## Examples
 
-### With Input
-
-<ComponentPreview name="label-with-input" />
-
-### With Checkbox
-
-<ComponentPreview name="label-with-checkbox" />
-
-### With Switch
-
-<ComponentPreview name="label-with-switch" />
-
-### With Radio Group
-
-<ComponentPreview name="label-with-radio-group" />

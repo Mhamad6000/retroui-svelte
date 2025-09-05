@@ -3,8 +3,12 @@ title: Switch
 description: A control that allows the user to toggle between checked and not checked.
 section: Components
 links:
-  - title: "Component Source"
+  - title: "Docs"
     href: "https://bits-ui.com/docs/components/switch"
+  - title: "API Reference"
+    href: "https://bits-ui.com/docs/components/switch#api-reference"
+  - title : "Component Source"
+    href: "https://bits-ui.com/docs/components/accordion"
 ---
 <script>
 	import { ComponentPreview, PMCommand } from "$lib/components";
@@ -26,16 +30,9 @@ links:
 ```svelte
 <script lang="ts">
   import { Switch } from "$lib/components/ui/switch/index.js";
-
-  let checked = $state(false);
 </script>
-
-<div class="flex items-center space-x-2">
-  <Switch id="airplane-mode" bind:checked />
-  <label for="airplane-mode" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-    Airplane Mode
-  </label>
-</div>
+ 
+<Switch />
 ```
 
 <br />
@@ -44,16 +41,11 @@ links:
 
 ### Default
 
-<ComponentPreview name="switch-default" />
+<ComponentPreview name="switch-usage-example" />
 
-### With Text
-
-<ComponentPreview name="switch-with-text" />
+<br />
 
 ### Disabled
 
 <ComponentPreview name="switch-disabled" />
 
-### Form
-
-<ComponentPreview name="switch-form" />

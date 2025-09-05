@@ -7,7 +7,7 @@
 				default: "bg-gray-200 text-gray-700",
 				outline: "outline-2 outline-foreground text-foreground",
 				solid: "bg-foreground text-background",
-				surface: "outline-2 bg-primary text-black",
+				primary: "outline-2 bg-primary text-black",
 			},
 			size: {
 				sm: "px-2 py-1 text-xs",

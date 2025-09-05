@@ -23,7 +23,7 @@
 		class={cn(
 			"selection:bg-primary dark:bg-input/30 selection:text-primary-foreground placeholder:text-muted-foreground flex h-9 w-full min-w-0 border-2 bg-transparent px-4 py-2 pt-1.5 text-sm font-medium shadow-xs transition-[color,box-shadow] outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
 			// "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
-			"aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive aria-invalid:shadow-xs",
+			"aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive aria-invalid:shadow-xs aria-invalid:shadow-destructive",
 			className
 		)}
 		type="file"
@@ -38,7 +38,7 @@
 		class={cn(
 			"bg-background selection:bg-primary selection:text-primary-foreground placeholder:text-muted-foreground flex h-9 w-full min-w-0 border-2 px-4 py-2 text-base shadow-md transition-[color,box-shadow] outline-none focus:shadow-xs focus:outline-hidden disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
 			// "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
-			"aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive aria-invalid:shadow-xs",
+			"aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive aria-invalid:shadow-xs aria-invalid:shadow-destructive",
 			className
 		)}
 		{type}

@@ -2,4 +2,4 @@
 	import { Input } from "$registry/ui/input/index.js";
 </script>
 
-<Input type="email" placeholder="email" class="max-w-xs" />
+<Input aria-invalid type="email" placeholder="email" class="max-w-xs" />

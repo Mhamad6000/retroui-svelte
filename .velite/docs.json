@@ -82,6 +82,72 @@
     "slugFull": "/index"
   },
   {
+    "title": "Navigation",
+    "description": "Learn how to customize the navigation in your Svecodocs project.",
+    "path": "configuration/navigation",
+    "content": "<p>Navigation is a key component of every site, documenting the structure of your site and providing a clear path for users to navigate through your content.</p>\n<p>Svecodocs comes with a navigation structure that is designed to be flexible and customizable. Each page in your site should have a corresponding navigation item, and the navigation items should be nested according to their hierarchy.</p>\n<h2>Navigation Structure</h2>\n<h3>Anchors</h3>\n<p>Anchors are links that are displayed at the top of the sidebar and typically used to either highlight important information or provide quick access to linked content.</p>\n<h3>Sections</h3>\n<p>Sections are used to group related navigation items together. They are typically used to organize content into different categories, such as \"Components\", \"Configuration\", and \"Utilities\".</p>",
+    "raw": "Navigation is a key component of every site, documenting the structure of your site and providing a clear path for users to navigate through your content.\n\nSvecodocs comes with a navigation structure that is designed to be flexible and customizable. Each page in your site should have a corresponding navigation item, and the navigation items should be nested according to their hierarchy.\n\n## Navigation Structure\n\n### Anchors\n\nAnchors are links that are displayed at the top of the sidebar and typically used to either highlight important information or provide quick access to linked content.\n\n### Sections\n\nSections are used to group related navigation items together. They are typically used to organize content into different categories, such as \"Components\", \"Configuration\", and \"Utilities\".",
+    "toc": [
+      {
+        "title": "Navigation Structure",
+        "url": "#navigation-structure",
+        "items": [
+          {
+            "title": "Anchors",
+            "url": "#anchors",
+            "items": []
+          },
+          {
+            "title": "Sections",
+            "url": "#sections",
+            "items": []
+          }
+        ]
+      }
+    ],
+    "section": "Configuration",
+    "slug": "configuration/navigation",
+    "slugFull": "/configuration/navigation"
+  },
+  {
+    "title": "Theme",
+    "description": "Learn how to customize the theme in your Svecodocs project.",
+    "path": "configuration/theme",
+    "content": "<p>The theme determines the branded color scheme for your site. A theme for each of the TailwindCSS colors is provided by the <code>@svecodocs/kit</code> package. Each theme has been designed to present well in both light and dark mode.</p>\n<h2>Using a theme</h2>\n<p>To use a theme, import the theme file into your <code>src/app.css</code> file <em>before</em> importing the <code>@svecodocs/kit/globals.css</code> file.</p>\n<pre><code class=\"language-css\">/* @import \"@svecodocs/kit/theme-orange.css\"; */\n@import \"@svecodocs/kit/theme-emerald.css\";\n@import \"@svecodocs/kit/globals.css\";\n</code></pre>\n<p>It's not recommended to customize the theme to maintain consistency across the UI components that are provided by Svecodocs and align with the provided themes.</p>\n<h2>Available themes</h2>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<table><thead><tr><th>Theme name</th><th>Import path</th></tr></thead><tbody><tr><td>orange</td><td><code>@svecodocs/kit/theme-orange.css</code></td></tr><tr><td>green</td><td><code>@svecodocs/kit/theme-green.css</code></td></tr><tr><td>blue</td><td><code>@svecodocs/kit/theme-blue.css</code></td></tr><tr><td>purple</td><td><code>@svecodocs/kit/theme-purple.css</code></td></tr><tr><td>pink</td><td><code>@svecodocs/kit/theme-pink.css</code></td></tr><tr><td>lime</td><td><code>@svecodocs/kit/theme-lime.css</code></td></tr><tr><td>yellow</td><td><code>@svecodocs/kit/theme-yellow.css</code></td></tr><tr><td>cyan</td><td><code>@svecodocs/kit/theme-cyan.css</code></td></tr><tr><td>teal</td><td><code>@svecodocs/kit/theme-teal.css</code></td></tr><tr><td>violet</td><td><code>@svecodocs/kit/theme-violet.css</code></td></tr><tr><td>amber</td><td><code>@svecodocs/kit/theme-amber.css</code></td></tr><tr><td>red</td><td><code>@svecodocs/kit/theme-red.css</code></td></tr><tr><td>sky</td><td><code>@svecodocs/kit/theme-sky.css</code></td></tr><tr><td>emerald</td><td><code>@svecodocs/kit/theme-emerald.css</code></td></tr><tr><td>fuchsia</td><td><code>@svecodocs/kit/theme-fuchsia.css</code></td></tr><tr><td>rose</td><td><code>@svecodocs/kit/theme-rose.css</code></td></tr></tbody></table>\n<h2>Tailwind Variables</h2>\n<p>Svecodocs uses TailwindCSS to style the UI components and provides a set of Tailwind variables that can be used to style your examples/custom components.</p>\n<h3>Gray</h3>\n<p>We override the TailwindCSS <code>gray</code> color scale to provide our own grays.</p>\n<h3>Brand</h3>\n<p>You can use the <code>brand</code> color to use the brand color of your project.</p>",
+    "raw": "The theme determines the branded color scheme for your site. A theme for each of the TailwindCSS colors is provided by the `@svecodocs/kit` package. Each theme has been designed to present well in both light and dark mode.\n\n## Using a theme\n\nTo use a theme, import the theme file into your `src/app.css` file _before_ importing the `@svecodocs/kit/globals.css` file.\n\n```css\n/* @import \"@svecodocs/kit/theme-orange.css\"; */\n@import \"@svecodocs/kit/theme-emerald.css\";\n@import \"@svecodocs/kit/globals.css\";\n```\n\nIt's not recommended to customize the theme to maintain consistency across the UI components that are provided by Svecodocs and align with the provided themes.\n\n## Available themes\n\n| Theme name | Import path                        |\n| ---------- | ---------------------------------- |\n| orange     | `@svecodocs/kit/theme-orange.css`  |\n| green      | `@svecodocs/kit/theme-green.css`   |\n| blue       | `@svecodocs/kit/theme-blue.css`    |\n| purple     | `@svecodocs/kit/theme-purple.css`  |\n| pink       | `@svecodocs/kit/theme-pink.css`    |\n| lime       | `@svecodocs/kit/theme-lime.css`    |\n| yellow     | `@svecodocs/kit/theme-yellow.css`  |\n| cyan       | `@svecodocs/kit/theme-cyan.css`    |\n| teal       | `@svecodocs/kit/theme-teal.css`    |\n| violet     | `@svecodocs/kit/theme-violet.css`  |\n| amber      | `@svecodocs/kit/theme-amber.css`   |\n| red        | `@svecodocs/kit/theme-red.css`     |\n| sky        | `@svecodocs/kit/theme-sky.css`     |\n| emerald    | `@svecodocs/kit/theme-emerald.css` |\n| fuchsia    | `@svecodocs/kit/theme-fuchsia.css` |\n| rose       | `@svecodocs/kit/theme-rose.css`    |\n\n## Tailwind Variables\n\nSvecodocs uses TailwindCSS to style the UI components and provides a set of Tailwind variables that can be used to style your examples/custom components.\n\n### Gray\n\nWe override the TailwindCSS `gray` color scale to provide our own grays.\n\n### Brand\n\nYou can use the `brand` color to use the brand color of your project.",
+    "toc": [
+      {
+        "title": "Using a theme",
+        "url": "#using-a-theme",
+        "items": []
+      },
+      {
+        "title": "Available themes",
+        "url": "#available-themes",
+        "items": []
+      },
+      {
+        "title": "Tailwind Variables",
+        "url": "#tailwind-variables",
+        "items": [
+          {
+            "title": "Gray",
+            "url": "#gray",
+            "items": []
+          },
+          {
+            "title": "Brand",
+            "url": "#brand",
+            "items": []
+          }
+        ]
+      }
+    ],
+    "section": "Configuration",
+    "slug": "configuration/theme",
+    "slugFull": "/configuration/theme"
+  },
+  {
     "title": "Accordion",
     "description": "A vertically stacked set of interactive headings that each reveal a section of content.",
     "path": "components/accordion",
@@ -247,8 +313,8 @@
     "title": "Badge",
     "description": "Displays a badge or a component that looks like a badge.",
     "path": "components/badge",
-    "content": "<script>\n\timport { ComponentPreview , PMCommand } from \"$lib/components\";\n\t\n</script>\n<componentpreview name=\"badge-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n import { Badge } from \"$lib/components/ui/badge/index.js\";\n&#x3C;/script>\n \n&#x3C;Badge variant=\"outline\">Badge&#x3C;/Badge>\n</code></pre>\n<br>\n<h3>Link</h3>\n<p>You can use the badgeVariants helper to create a link that looks like a badge.</p>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import { badgeVariants } from \"$lib/components/ui/badge/index.js\";\n&#x3C;/script>\n \n&#x3C;a href=\"/dashboard\" class={badgeVariants({ variant: \"outline\" })}>Badge&#x3C;/a>\n</code></pre></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview , PMCommand } from \"$lib/components\";\n\t\n</script>\n\n<ComponentPreview name=\"badge-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n import { Badge } from \"$lib/components/ui/badge/index.js\";\n</script>\n \n<Badge variant=\"outline\">Badge</Badge>\n```\n\n<br />\n\n### Link\n\nYou can use the badgeVariants helper to create a link that looks like a badge.\n\n```svelte\n<script lang=\"ts\">\n  import { badgeVariants } from \"$lib/components/ui/badge/index.js\";\n</script>\n \n<a href=\"/dashboard\" class={badgeVariants({ variant: \"outline\" })}>Badge</a>\n```",
+    "content": "<script>\n\timport { ComponentPreview , PMCommand } from \"$lib/components\";\n\t\n</script>\n<componentpreview name=\"badge-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n import { Badge } from \"$lib/components/ui/badge/index.js\";\n&#x3C;/script>\n \n&#x3C;Badge variant=\"outline\">Badge&#x3C;/Badge>\n</code></pre>\n<br>\n<h3>Link</h3>\n<p>You can use the badgeVariants helper to create a link that looks like a badge.</p>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import { badgeVariants } from \"$lib/components/ui/badge/index.js\";\n&#x3C;/script>\n \n&#x3C;a href=\"/dashboard\" class={badgeVariants({ variant: \"outline\" })}>Badge&#x3C;/a>\n</code></pre>\n<br>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"badge-style-default\">\n<br>\n<h3>Primary</h3>\n<componentpreview name=\"badge-style-primary\">\n<br>\n<h3>Outline</h3>\n<componentpreview name=\"badge-style-outline\">\n<br>\n<h3>Solid</h3>\n<componentpreview name=\"badge-style-solid\">\n<br>\n<h3>Sizes</h3>\n<componentpreview name=\"badge-sizes\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview , PMCommand } from \"$lib/components\";\n\t\n</script>\n\n<ComponentPreview name=\"badge-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n import { Badge } from \"$lib/components/ui/badge/index.js\";\n</script>\n \n<Badge variant=\"outline\">Badge</Badge>\n```\n\n<br />\n\n### Link\n\nYou can use the badgeVariants helper to create a link that looks like a badge.\n\n```svelte\n<script lang=\"ts\">\n  import { badgeVariants } from \"$lib/components/ui/badge/index.js\";\n</script>\n \n<a href=\"/dashboard\" class={badgeVariants({ variant: \"outline\" })}>Badge</a>\n```\n\n<br />\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"badge-style-default\" />\n\n<br/>\n\n### Primary\n\n<ComponentPreview name=\"badge-style-primary\" />\n\n<br/>\n\n### Outline\n\n<ComponentPreview name=\"badge-style-outline\" />\n\n<br/>\n\n### Solid\n\n<ComponentPreview name=\"badge-style-solid\" />\n\n<br/>\n\n### Sizes\n\n<ComponentPreview name=\"badge-sizes\" />",
     "toc": [
       {
         "title": "Installation",
@@ -262,6 +328,37 @@
           {
             "title": "Link",
             "url": "#link",
+            "items": []
+          }
+        ]
+      },
+      {
+        "title": "Examples",
+        "url": "#examples",
+        "items": [
+          {
+            "title": "Default",
+            "url": "#default",
+            "items": []
+          },
+          {
+            "title": "Primary",
+            "url": "#primary",
+            "items": []
+          },
+          {
+            "title": "Outline",
+            "url": "#outline",
+            "items": []
+          },
+          {
+            "title": "Solid",
+            "url": "#solid",
+            "items": []
+          },
+          {
+            "title": "Sizes",
+            "url": "#sizes",
             "items": []
           }
         ]
@@ -667,8 +764,8 @@
     "title": "Dialog",
     "description": "A modal dialog that interrupts the user with important content and expects a response.",
     "path": "components/dialog",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"dialog-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"dialog\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import * as Dialog from \"$lib/components/ui/dialog/index.js\";\n  import { Button } from \"$lib/components/ui/button/index.js\";\n\n  let open = $state(false);\n&#x3C;/script>\n\n&#x3C;Button onclick={() => open = true}>Open Dialog&#x3C;/Button>\n\n&#x3C;Dialog.Root bind:open>\n  &#x3C;Dialog.Content>\n    &#x3C;Dialog.Header>\n      &#x3C;Dialog.Title>Are you sure absolutely sure?&#x3C;/Dialog.Title>\n      &#x3C;Dialog.Description>\n        This action cannot be undone. This will permanently delete your account\n        and remove your data from our servers.\n      &#x3C;/Dialog.Description>\n    &#x3C;/Dialog.Header>\n    &#x3C;Dialog.Footer>\n      &#x3C;Button onclick={() => open = false} variant=\"outline\">Cancel&#x3C;/Button>\n      &#x3C;Button onclick={() => open = false}>Continue&#x3C;/Button>\n    &#x3C;/Dialog.Footer>\n  &#x3C;/Dialog.Content>\n&#x3C;/Dialog.Root>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Alert Dialog</h3>\n<componentpreview name=\"dialog-alert\">\n<h3>Form</h3>\n<componentpreview name=\"dialog-form\">\n<h3>Custom Close Button</h3>\n<componentpreview name=\"dialog-custom-close\">\n<h3>Responsive</h3>\n<componentpreview name=\"dialog-responsive\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"dialog-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"dialog\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import * as Dialog from \"$lib/components/ui/dialog/index.js\";\n  import { Button } from \"$lib/components/ui/button/index.js\";\n\n  let open = $state(false);\n</script>\n\n<Button onclick={() => open = true}>Open Dialog</Button>\n\n<Dialog.Root bind:open>\n  <Dialog.Content>\n    <Dialog.Header>\n      <Dialog.Title>Are you sure absolutely sure?</Dialog.Title>\n      <Dialog.Description>\n        This action cannot be undone. This will permanently delete your account\n        and remove your data from our servers.\n      </Dialog.Description>\n    </Dialog.Header>\n    <Dialog.Footer>\n      <Button onclick={() => open = false} variant=\"outline\">Cancel</Button>\n      <Button onclick={() => open = false}>Continue</Button>\n    </Dialog.Footer>\n  </Dialog.Content>\n</Dialog.Root>\n```\n\n<br />\n\n## Examples\n\n### Alert Dialog\n\n<ComponentPreview name=\"dialog-alert\" />\n\n### Form\n\n<ComponentPreview name=\"dialog-form\" />\n\n### Custom Close Button\n\n<ComponentPreview name=\"dialog-custom-close\" />\n\n### Responsive\n\n<ComponentPreview name=\"dialog-responsive\" />",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"dialog-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"dialog\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n import * as Dialog from \"$lib/components/ui/dialog/index.js\";\n&#x3C;/script>\n \n&#x3C;Dialog.Root>\n &#x3C;Dialog.Trigger>Open&#x3C;/Dialog.Trigger>\n &#x3C;Dialog.Content>\n  &#x3C;Dialog.Header>\n   &#x3C;Dialog.Title>Are you sure absolutely sure?&#x3C;/Dialog.Title>\n   &#x3C;Dialog.Description>\n    This action cannot be undone. This will permanently delete your account\n    and remove your data from our servers.\n   &#x3C;/Dialog.Description>\n  &#x3C;/Dialog.Header>\n &#x3C;/Dialog.Content>\n&#x3C;/Dialog.Root>\n</code></pre></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"dialog-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"dialog\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n import * as Dialog from \"$lib/components/ui/dialog/index.js\";\n</script>\n \n<Dialog.Root>\n <Dialog.Trigger>Open</Dialog.Trigger>\n <Dialog.Content>\n  <Dialog.Header>\n   <Dialog.Title>Are you sure absolutely sure?</Dialog.Title>\n   <Dialog.Description>\n    This action cannot be undone. This will permanently delete your account\n    and remove your data from our servers.\n   </Dialog.Description>\n  </Dialog.Header>\n </Dialog.Content>\n</Dialog.Root>\n```",
     "toc": [
       {
         "title": "Installation",
@@ -679,39 +776,21 @@
         "title": "Usage",
         "url": "#usage",
         "items": []
-      },
-      {
-        "title": "Examples",
-        "url": "#examples",
-        "items": [
-          {
-            "title": "Alert Dialog",
-            "url": "#alert-dialog",
-            "items": []
-          },
-          {
-            "title": "Form",
-            "url": "#form",
-            "items": []
-          },
-          {
-            "title": "Custom Close Button",
-            "url": "#custom-close-button",
-            "items": []
-          },
-          {
-            "title": "Responsive",
-            "url": "#responsive",
-            "items": []
-          }
-        ]
       }
     ],
     "section": "Components",
     "links": [
       {
-        "title": "Component Source",
+        "title": "Docs",
         "href": "https://bits-ui.com/docs/components/dialog"
+      },
+      {
+        "title": "API Reference",
+        "href": "https://bits-ui.com/docs/components/dialog#api-reference"
+      },
+      {
+        "title": "Component Source",
+        "href": "https://bits-ui.com/docs/components/accordion"
       }
     ],
     "slug": "components/dialog",
@@ -775,8 +854,8 @@
     "title": "Hover Card",
     "description": "For sighted users to preview content available behind a link.",
     "path": "components/hover-card",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"hover-card-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"hover-card\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import * as HoverCard from \"$lib/components/ui/hover-card/index.js\";\n&#x3C;/script>\n\n&#x3C;HoverCard.Root>\n  &#x3C;HoverCard.Trigger asChild>\n    &#x3C;a\n      class=\"text-primary underline-offset-4 hover:underline\"\n      href=\"https://twitter.com/@shadcn\"\n    >\n      @shadcn\n    &#x3C;/a>\n  &#x3C;/HoverCard.Trigger>\n  &#x3C;HoverCard.Content class=\"w-80\">\n    &#x3C;div class=\"flex justify-between space-x-4\">\n      &#x3C;Avatar>\n        &#x3C;AvatarImage src=\"https://github.com/shadcn.png\" />\n        &#x3C;AvatarFallback>SH&#x3C;/AvatarFallback>\n      &#x3C;/Avatar>\n      &#x3C;div class=\"space-y-1\">\n        &#x3C;h4 class=\"text-sm font-semibold\">@shadcn&#x3C;/h4>\n        &#x3C;p class=\"text-sm\">\n          The React component library you love, now in Svelte.\n        &#x3C;/p>\n        &#x3C;div class=\"flex items-center pt-2\">\n          &#x3C;CalendarDaysIcon class=\"mr-2 h-4 w-4 opacity-70\" />\n          &#x3C;span class=\"text-xs text-muted-foreground\">\n            Joined December 2021\n          &#x3C;/span>\n        &#x3C;/div>\n      &#x3C;/div>\n    &#x3C;/div>\n  &#x3C;/HoverCard.Content>\n&#x3C;/HoverCard.Root>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"hover-card-default\">\n<h3>With Link</h3>\n<componentpreview name=\"hover-card-with-link\">\n<h3>Custom Delay</h3>\n<componentpreview name=\"hover-card-custom-delay\"></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"hover-card-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"hover-card\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import * as HoverCard from \"$lib/components/ui/hover-card/index.js\";\n</script>\n\n<HoverCard.Root>\n  <HoverCard.Trigger asChild>\n    <a\n      class=\"text-primary underline-offset-4 hover:underline\"\n      href=\"https://twitter.com/@shadcn\"\n    >\n      @shadcn\n    </a>\n  </HoverCard.Trigger>\n  <HoverCard.Content class=\"w-80\">\n    <div class=\"flex justify-between space-x-4\">\n      <Avatar>\n        <AvatarImage src=\"https://github.com/shadcn.png\" />\n        <AvatarFallback>SH</AvatarFallback>\n      </Avatar>\n      <div class=\"space-y-1\">\n        <h4 class=\"text-sm font-semibold\">@shadcn</h4>\n        <p class=\"text-sm\">\n          The React component library you love, now in Svelte.\n        </p>\n        <div class=\"flex items-center pt-2\">\n          <CalendarDaysIcon class=\"mr-2 h-4 w-4 opacity-70\" />\n          <span class=\"text-xs text-muted-foreground\">\n            Joined December 2021\n          </span>\n        </div>\n      </div>\n    </div>\n  </HoverCard.Content>\n</HoverCard.Root>\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"hover-card-default\" />\n\n### With Link\n\n<ComponentPreview name=\"hover-card-with-link\" />\n\n### Custom Delay\n\n<ComponentPreview name=\"hover-card-custom-delay\" />",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"hover-card-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"hover-card\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import * as HoverCard from \"$lib/components/ui/hover-card/index.js\";\n&#x3C;/script>\n \n&#x3C;HoverCard.Root>\n  &#x3C;HoverCard.Trigger>Hover&#x3C;/HoverCard.Trigger>\n  &#x3C;HoverCard.Content>\n    SvelteKit - Web development, streamlined\n  &#x3C;/HoverCard.Content>\n&#x3C;/HoverCard.Root>\n</code></pre></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"hover-card-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"hover-card\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import * as HoverCard from \"$lib/components/ui/hover-card/index.js\";\n</script>\n \n<HoverCard.Root>\n  <HoverCard.Trigger>Hover</HoverCard.Trigger>\n  <HoverCard.Content>\n    SvelteKit - Web development, streamlined\n  </HoverCard.Content>\n</HoverCard.Root>\n```",
     "toc": [
       {
         "title": "Installation",
@@ -787,34 +866,21 @@
         "title": "Usage",
         "url": "#usage",
         "items": []
-      },
-      {
-        "title": "Examples",
-        "url": "#examples",
-        "items": [
-          {
-            "title": "Default",
-            "url": "#default",
-            "items": []
-          },
-          {
-            "title": "With Link",
-            "url": "#with-link",
-            "items": []
-          },
-          {
-            "title": "Custom Delay",
-            "url": "#custom-delay",
-            "items": []
-          }
-        ]
       }
     ],
     "section": "Components",
     "links": [
       {
+        "title": "Docs",
+        "href": "https://bits-ui.com/docs/components/link-preview"
+      },
+      {
+        "title": "API Reference",
+        "href": "https://bits-ui.com/docs/components/link-preview#api-reference"
+      },
+      {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/hover-card"
+        "href": "https://bits-ui.com/docs/components/accordion"
       }
     ],
     "slug": "components/hover-card",
@@ -878,8 +944,8 @@
     "title": "Input",
     "description": "Displays a form input field or a component that looks like an input field.",
     "path": "components/input",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"input-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"input\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import { Input } from \"$lib/components/ui/input/index.js\";\n&#x3C;/script>\n\n&#x3C;Input type=\"email\" placeholder=\"Email\" />\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"input-default\">\n<h3>With Label</h3>\n<componentpreview name=\"input-with-label\">\n<h3>With Button</h3>\n<componentpreview name=\"input-with-button\">\n<h3>File</h3>\n<componentpreview name=\"input-file\">\n<h3>Disabled</h3>\n<componentpreview name=\"input-disabled\">\n<h3>With Icon</h3>\n<componentpreview name=\"input-with-icon\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"input-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"input\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { Input } from \"$lib/components/ui/input/index.js\";\n</script>\n\n<Input type=\"email\" placeholder=\"Email\" />\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"input-default\" />\n\n### With Label\n\n<ComponentPreview name=\"input-with-label\" />\n\n### With Button\n\n<ComponentPreview name=\"input-with-button\" />\n\n### File\n\n<ComponentPreview name=\"input-file\" />\n\n### Disabled\n\n<ComponentPreview name=\"input-disabled\" />\n\n### With Icon\n\n<ComponentPreview name=\"input-with-icon\" />",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"input-style-default\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"input\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import { Input } from \"$lib/components/ui/input/index.js\";\n&#x3C;/script>\n \n&#x3C;Input />\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"input-style-default\">\n<br>\n<h3>With Label</h3>\n<componentpreview name=\"input-style-label\">\n<br>\n<h3>Error</h3>\n<componentpreview name=\"input-style-error\">\n<br>\n<h3>Disabled</h3>\n<componentpreview name=\"input-style-disabled\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"input-style-default\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"input\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { Input } from \"$lib/components/ui/input/index.js\";\n</script>\n \n<Input />\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"input-style-default\" />\n\n<br/>\n\n### With Label\n\n<ComponentPreview name=\"input-style-label\" />\n\n<br/>\n\n### Error\n\n<ComponentPreview name=\"input-style-error\" />\n\n<br/>\n\n### Disabled\n\n<ComponentPreview name=\"input-style-disabled\" />",
     "toc": [
       {
         "title": "Installation",
@@ -906,23 +972,13 @@
             "items": []
           },
           {
-            "title": "With Button",
-            "url": "#with-button",
-            "items": []
-          },
-          {
-            "title": "File",
-            "url": "#file",
+            "title": "Error",
+            "url": "#error",
             "items": []
           },
           {
             "title": "Disabled",
             "url": "#disabled",
-            "items": []
-          },
-          {
-            "title": "With Icon",
-            "url": "#with-icon",
             "items": []
           }
         ]
@@ -942,8 +998,8 @@
     "title": "Label",
     "description": "Renders an accessible label associated with controls.",
     "path": "components/label",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"label-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"label\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import { Label } from \"$lib/components/ui/label/index.js\";\n  import { Input } from \"$lib/components/ui/input/index.js\";\n&#x3C;/script>\n\n&#x3C;div class=\"grid w-full max-w-sm items-center gap-1.5\">\n  &#x3C;Label for=\"email\">Email&#x3C;/Label>\n  &#x3C;Input type=\"email\" id=\"email\" placeholder=\"Email\" />\n&#x3C;/div>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>With Input</h3>\n<componentpreview name=\"label-with-input\">\n<h3>With Checkbox</h3>\n<componentpreview name=\"label-with-checkbox\">\n<h3>With Switch</h3>\n<componentpreview name=\"label-with-switch\">\n<h3>With Radio Group</h3>\n<componentpreview name=\"label-with-radio-group\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"label-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"label\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { Label } from \"$lib/components/ui/label/index.js\";\n  import { Input } from \"$lib/components/ui/input/index.js\";\n</script>\n\n<div class=\"grid w-full max-w-sm items-center gap-1.5\">\n  <Label for=\"email\">Email</Label>\n  <Input type=\"email\" id=\"email\" placeholder=\"Email\" />\n</div>\n```\n\n<br />\n\n## Examples\n\n### With Input\n\n<ComponentPreview name=\"label-with-input\" />\n\n### With Checkbox\n\n<ComponentPreview name=\"label-with-checkbox\" />\n\n### With Switch\n\n<ComponentPreview name=\"label-with-switch\" />\n\n### With Radio Group\n\n<ComponentPreview name=\"label-with-radio-group\" />",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"label-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"label\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import { Label } from \"$lib/components/ui/label/index.js\";\n&#x3C;/script>\n \n&#x3C;Label for=\"email\">Your email address&#x3C;/Label>\n</code></pre></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"label-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"label\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { Label } from \"$lib/components/ui/label/index.js\";\n</script>\n \n<Label for=\"email\">Your email address</Label>\n```",
     "toc": [
       {
         "title": "Installation",
@@ -954,39 +1010,21 @@
         "title": "Usage",
         "url": "#usage",
         "items": []
-      },
-      {
-        "title": "Examples",
-        "url": "#examples",
-        "items": [
-          {
-            "title": "With Input",
-            "url": "#with-input",
-            "items": []
-          },
-          {
-            "title": "With Checkbox",
-            "url": "#with-checkbox",
-            "items": []
-          },
-          {
-            "title": "With Switch",
-            "url": "#with-switch",
-            "items": []
-          },
-          {
-            "title": "With Radio Group",
-            "url": "#with-radio-group",
-            "items": []
-          }
-        ]
       }
     ],
     "section": "Components",
     "links": [
       {
-        "title": "Component Source",
+        "title": "Docs",
         "href": "https://bits-ui.com/docs/components/label"
+      },
+      {
+        "title": "API Reference",
+        "href": "https://bits-ui.com/docs/components/label#api-reference"
+      },
+      {
+        "title": "Component Source",
+        "href": "https://bits-ui.com/docs/components/accordion"
       }
     ],
     "slug": "components/label",
@@ -1256,8 +1294,8 @@
     "title": "Progress",
     "description": "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
     "path": "components/progress",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"progress-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"progress\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import { Progress } from \"$lib/components/ui/progress/index.js\";\n\n  let progress = $state(33);\n&#x3C;/script>\n\n&#x3C;Progress value={progress} class=\"w-[60%]\" />\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"progress-default\">\n<h3>With Label</h3>\n<componentpreview name=\"progress-with-label\">\n<h3>Loading</h3>\n<componentpreview name=\"progress-loading\">\n<h3>Custom Color</h3>\n<componentpreview name=\"progress-custom-color\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"progress-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"progress\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { Progress } from \"$lib/components/ui/progress/index.js\";\n\n  let progress = $state(33);\n</script>\n\n<Progress value={progress} class=\"w-[60%]\" />\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"progress-default\" />\n\n### With Label\n\n<ComponentPreview name=\"progress-with-label\" />\n\n### Loading\n\n<ComponentPreview name=\"progress-loading\" />\n\n### Custom Color\n\n<ComponentPreview name=\"progress-custom-color\" />",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"progress-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"progress\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import { Progress } from \"$lib/components/ui/progress/index.js\";\n&#x3C;/script>\n \n&#x3C;Progress value={33} />\n</code></pre></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"progress-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"progress\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { Progress } from \"$lib/components/ui/progress/index.js\";\n</script>\n \n<Progress value={33} />\n```",
     "toc": [
       {
         "title": "Installation",
@@ -1268,39 +1306,21 @@
         "title": "Usage",
         "url": "#usage",
         "items": []
-      },
-      {
-        "title": "Examples",
-        "url": "#examples",
-        "items": [
-          {
-            "title": "Default",
-            "url": "#default",
-            "items": []
-          },
-          {
-            "title": "With Label",
-            "url": "#with-label",
-            "items": []
-          },
-          {
-            "title": "Loading",
-            "url": "#loading",
-            "items": []
-          },
-          {
-            "title": "Custom Color",
-            "url": "#custom-color",
-            "items": []
-          }
-        ]
       }
     ],
     "section": "Components",
     "links": [
       {
-        "title": "Component Source",
+        "title": "Docs",
         "href": "https://bits-ui.com/docs/components/progress"
+      },
+      {
+        "title": "API Reference",
+        "href": "https://bits-ui.com/docs/components/progress#api-reference"
+      },
+      {
+        "title": "Component Source",
+        "href": "https://bits-ui.com/docs/components/accordion"
       }
     ],
     "slug": "components/progress",
@@ -1310,8 +1330,8 @@
     "title": "Radio Group",
     "description": "A set of checkable buttons—known as radio buttons—where no more than one of the buttons can be checked at a time.",
     "path": "components/radio-group",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"radio-group-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"radio-group\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import * as RadioGroup from \"$lib/components/ui/radio-group/index.js\";\n\n  let value = $state(\"default\");\n&#x3C;/script>\n\n&#x3C;RadioGroup.Root bind:value>\n  &#x3C;div class=\"flex items-center space-x-2\">\n    &#x3C;RadioGroup.Item value=\"default\" id=\"r1\" />\n    &#x3C;Label for=\"r1\">Default&#x3C;/Label>\n  &#x3C;/div>\n  &#x3C;div class=\"flex items-center space-x-2\">\n    &#x3C;RadioGroup.Item value=\"comfortable\" id=\"r2\" />\n    &#x3C;Label for=\"r2\">Comfortable&#x3C;/Label>\n  &#x3C;/div>\n  &#x3C;div class=\"flex items-center space-x-2\">\n    &#x3C;RadioGroup.Item value=\"compact\" id=\"r3\" />\n    &#x3C;Label for=\"r3\">Compact&#x3C;/Label>\n  &#x3C;/div>\n&#x3C;/RadioGroup.Root>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"radio-group-default\">\n<h3>With Label</h3>\n<componentpreview name=\"radio-group-with-label\">\n<h3>Disabled</h3>\n<componentpreview name=\"radio-group-disabled\">\n<h3>Form</h3>\n<componentpreview name=\"radio-group-form\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"radio-group-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"radio-group\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import * as RadioGroup from \"$lib/components/ui/radio-group/index.js\";\n\n  let value = $state(\"default\");\n</script>\n\n<RadioGroup.Root bind:value>\n  <div class=\"flex items-center space-x-2\">\n    <RadioGroup.Item value=\"default\" id=\"r1\" />\n    <Label for=\"r1\">Default</Label>\n  </div>\n  <div class=\"flex items-center space-x-2\">\n    <RadioGroup.Item value=\"comfortable\" id=\"r2\" />\n    <Label for=\"r2\">Comfortable</Label>\n  </div>\n  <div class=\"flex items-center space-x-2\">\n    <RadioGroup.Item value=\"compact\" id=\"r3\" />\n    <Label for=\"r3\">Compact</Label>\n  </div>\n</RadioGroup.Root>\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"radio-group-default\" />\n\n### With Label\n\n<ComponentPreview name=\"radio-group-with-label\" />\n\n### Disabled\n\n<ComponentPreview name=\"radio-group-disabled\" />\n\n### Form\n\n<ComponentPreview name=\"radio-group-form\" />",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"radio-group-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"radio-group\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import { Label } from \"$lib/components/ui/label/index.js\";\n  import * as RadioGroup from \"$lib/components/ui/radio-group/index.js\";\n&#x3C;/script>\n \n&#x3C;RadioGroup.Root value=\"option-one\">\n  &#x3C;div class=\"flex items-center space-x-2\">\n    &#x3C;RadioGroup.Item value=\"option-one\" id=\"option-one\" />\n    &#x3C;Label for=\"option-one\">Option One&#x3C;/Label>\n  &#x3C;/div>\n  &#x3C;div class=\"flex items-center space-x-2\">\n    &#x3C;RadioGroup.Item value=\"option-two\" id=\"option-two\" />\n    &#x3C;Label for=\"option-two\">Option Two&#x3C;/Label>\n  &#x3C;/div>\n&#x3C;/RadioGroup.Root>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Variants</h3>\n<componentpreview name=\"radio-group-variants\">\n<br>\n<h3>Sizes</h3>\n<componentpreview name=\"radio-group-sizes\">\n<br>\n<h3>Disabled</h3>\n<componentpreview name=\"radio-group-disabled\"></componentpreview></componentpreview></componentpreview></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"radio-group-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"radio-group\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { Label } from \"$lib/components/ui/label/index.js\";\n  import * as RadioGroup from \"$lib/components/ui/radio-group/index.js\";\n</script>\n \n<RadioGroup.Root value=\"option-one\">\n  <div class=\"flex items-center space-x-2\">\n    <RadioGroup.Item value=\"option-one\" id=\"option-one\" />\n    <Label for=\"option-one\">Option One</Label>\n  </div>\n  <div class=\"flex items-center space-x-2\">\n    <RadioGroup.Item value=\"option-two\" id=\"option-two\" />\n    <Label for=\"option-two\">Option Two</Label>\n  </div>\n</RadioGroup.Root>\n```\n\n<br />\n\n## Examples\n\n### Variants\n\n<ComponentPreview name=\"radio-group-variants\" />\n\n<br />\n\n### Sizes\n\n<ComponentPreview name=\"radio-group-sizes\" />\n\n<br />\n\n### Disabled\n\n<ComponentPreview name=\"radio-group-disabled\" />",
     "toc": [
       {
         "title": "Installation",
@@ -1328,23 +1348,18 @@
         "url": "#examples",
         "items": [
           {
-            "title": "Default",
-            "url": "#default",
+            "title": "Variants",
+            "url": "#variants",
             "items": []
           },
           {
-            "title": "With Label",
-            "url": "#with-label",
+            "title": "Sizes",
+            "url": "#sizes",
             "items": []
           },
           {
             "title": "Disabled",
             "url": "#disabled",
-            "items": []
-          },
-          {
-            "title": "Form",
-            "url": "#form",
             "items": []
           }
         ]
@@ -1353,8 +1368,16 @@
     "section": "Components",
     "links": [
       {
-        "title": "Component Source",
+        "title": "Docs",
         "href": "https://bits-ui.com/docs/components/radio-group"
+      },
+      {
+        "title": "API Reference",
+        "href": "https://bits-ui.com/docs/components/radio-group#api-reference"
+      },
+      {
+        "title": "Component Source",
+        "href": "https://bits-ui.com/docs/components/accordion"
       }
     ],
     "slug": "components/radio-group",
@@ -1415,65 +1438,11 @@
     "slugFull": "/components/range-calendar"
   },
   {
-    "title": "Scroll Area",
-    "description": "Augments native scroll functionality for custom, cross-browser styling.",
-    "path": "components/scroll-area",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"scroll-area-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"scroll-area\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import * as ScrollArea from \"$lib/components/ui/scroll-area/index.js\";\n&#x3C;/script>\n\n&#x3C;ScrollArea.Root class=\"h-[200px] w-[350px] rounded-md border p-4\">\n  &#x3C;ScrollArea.Viewport>\n    Jokester began sneaking into the castle in the middle of the night and leaving\n    jokes all over the place: under the king's pillow, in his soup, even in the\n    royal toilet. The king was furious, but he couldn't seem to stop Jokester.\n    And then, one day, the people of the kingdom discovered that the jokes left\n    by Jokester were so funny that they couldn't help but laugh. And once they\n    started laughing, they couldn't stop.\n  &#x3C;/ScrollArea.Viewport>\n  &#x3C;ScrollArea.Scrollbar orientation=\"vertical\">\n    &#x3C;ScrollArea.Thumb />\n  &#x3C;/ScrollArea.Scrollbar>\n  &#x3C;ScrollArea.Scrollbar orientation=\"horizontal\">\n    &#x3C;ScrollArea.Thumb />\n  &#x3C;/ScrollArea.Scrollbar>\n  &#x3C;ScrollArea.Corner />\n&#x3C;/ScrollArea.Root>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Horizontal</h3>\n<componentpreview name=\"scroll-area-horizontal\">\n<h3>Vertical</h3>\n<componentpreview name=\"scroll-area-vertical\">\n<h3>Both</h3>\n<componentpreview name=\"scroll-area-both\">\n<h3>Custom Scrollbar</h3>\n<componentpreview name=\"scroll-area-custom-scrollbar\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"scroll-area-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"scroll-area\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import * as ScrollArea from \"$lib/components/ui/scroll-area/index.js\";\n</script>\n\n<ScrollArea.Root class=\"h-[200px] w-[350px] rounded-md border p-4\">\n  <ScrollArea.Viewport>\n    Jokester began sneaking into the castle in the middle of the night and leaving\n    jokes all over the place: under the king's pillow, in his soup, even in the\n    royal toilet. The king was furious, but he couldn't seem to stop Jokester.\n    And then, one day, the people of the kingdom discovered that the jokes left\n    by Jokester were so funny that they couldn't help but laugh. And once they\n    started laughing, they couldn't stop.\n  </ScrollArea.Viewport>\n  <ScrollArea.Scrollbar orientation=\"vertical\">\n    <ScrollArea.Thumb />\n  </ScrollArea.Scrollbar>\n  <ScrollArea.Scrollbar orientation=\"horizontal\">\n    <ScrollArea.Thumb />\n  </ScrollArea.Scrollbar>\n  <ScrollArea.Corner />\n</ScrollArea.Root>\n```\n\n<br />\n\n## Examples\n\n### Horizontal\n\n<ComponentPreview name=\"scroll-area-horizontal\" />\n\n### Vertical\n\n<ComponentPreview name=\"scroll-area-vertical\" />\n\n### Both\n\n<ComponentPreview name=\"scroll-area-both\" />\n\n### Custom Scrollbar\n\n<ComponentPreview name=\"scroll-area-custom-scrollbar\" />",
-    "toc": [
-      {
-        "title": "Installation",
-        "url": "#installation",
-        "items": []
-      },
-      {
-        "title": "Usage",
-        "url": "#usage",
-        "items": []
-      },
-      {
-        "title": "Examples",
-        "url": "#examples",
-        "items": [
-          {
-            "title": "Horizontal",
-            "url": "#horizontal",
-            "items": []
-          },
-          {
-            "title": "Vertical",
-            "url": "#vertical",
-            "items": []
-          },
-          {
-            "title": "Both",
-            "url": "#both",
-            "items": []
-          },
-          {
-            "title": "Custom Scrollbar",
-            "url": "#custom-scrollbar",
-            "items": []
-          }
-        ]
-      }
-    ],
-    "section": "Components",
-    "links": [
-      {
-        "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/scroll-area"
-      }
-    ],
-    "slug": "components/scroll-area",
-    "slugFull": "/components/scroll-area"
-  },
-  {
     "title": "Select",
     "description": "Displays a list of options for the user to pick from—triggered by a button.",
     "path": "components/select",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"select-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"select\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import * as Select from \"$lib/components/ui/select/index.js\";\n\n  let value = $state(\"\");\n&#x3C;/script>\n\n&#x3C;Select.Root bind:value>\n  &#x3C;Select.Trigger>\n    &#x3C;Select.Value placeholder=\"Select a fruit...\" />\n  &#x3C;/Select.Trigger>\n  &#x3C;Select.Content>\n    &#x3C;Select.Group>\n      &#x3C;Select.Label>Fruits&#x3C;/Select.Label>\n      &#x3C;Select.Item value=\"apple\">Apple&#x3C;/Select.Item>\n      &#x3C;Select.Item value=\"banana\">Banana&#x3C;/Select.Item>\n      &#x3C;Select.Item value=\"blueberry\">Blueberry&#x3C;/Select.Item>\n      &#x3C;Select.Item value=\"grapes\">Grapes&#x3C;/Select.Item>\n      &#x3C;Select.Item value=\"pineapple\">Pineapple&#x3C;/Select.Item>\n    &#x3C;/Select.Group>\n  &#x3C;/Select.Content>\n&#x3C;/Select.Root>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Scrollable</h3>\n<componentpreview name=\"select-scrollable\">\n<h3>Form</h3>\n<componentpreview name=\"select-form\">\n<h3>Disabled</h3>\n<componentpreview name=\"select-disabled\"></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"select-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"select\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import * as Select from \"$lib/components/ui/select/index.js\";\n\n  let value = $state(\"\");\n</script>\n\n<Select.Root bind:value>\n  <Select.Trigger>\n    <Select.Value placeholder=\"Select a fruit...\" />\n  </Select.Trigger>\n  <Select.Content>\n    <Select.Group>\n      <Select.Label>Fruits</Select.Label>\n      <Select.Item value=\"apple\">Apple</Select.Item>\n      <Select.Item value=\"banana\">Banana</Select.Item>\n      <Select.Item value=\"blueberry\">Blueberry</Select.Item>\n      <Select.Item value=\"grapes\">Grapes</Select.Item>\n      <Select.Item value=\"pineapple\">Pineapple</Select.Item>\n    </Select.Group>\n  </Select.Content>\n</Select.Root>\n```\n\n<br />\n\n## Examples\n\n### Scrollable\n\n<ComponentPreview name=\"select-scrollable\" />\n\n### Form\n\n<ComponentPreview name=\"select-form\" />\n\n### Disabled\n\n<ComponentPreview name=\"select-disabled\" />",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"select-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"select\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n import * as Select from \"$lib/components/ui/select/index.js\";\n&#x3C;/script>\n \n&#x3C;Select.Root type=\"single\">\n &#x3C;Select.Trigger class=\"w-[180px]\">&#x3C;/Select.Trigger>\n &#x3C;Select.Content>\n  &#x3C;Select.Item value=\"light\">Light&#x3C;/Select.Item>\n  &#x3C;Select.Item value=\"dark\">Dark&#x3C;/Select.Item>\n  &#x3C;Select.Item value=\"system\">System&#x3C;/Select.Item>\n &#x3C;/Select.Content>\n&#x3C;/Select.Root>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"select-style-default\">\n<br>\n<h3>Disabled</h3>\n<componentpreview name=\"select-style-disabled\">\n<br>\n<h3>Error</h3>\n<componentpreview name=\"select-style-error\"></componentpreview></componentpreview></componentpreview></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"select-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"select\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n import * as Select from \"$lib/components/ui/select/index.js\";\n</script>\n \n<Select.Root type=\"single\">\n <Select.Trigger class=\"w-[180px]\"></Select.Trigger>\n <Select.Content>\n  <Select.Item value=\"light\">Light</Select.Item>\n  <Select.Item value=\"dark\">Dark</Select.Item>\n  <Select.Item value=\"system\">System</Select.Item>\n </Select.Content>\n</Select.Root>\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"select-style-default\" />\n\n<br />\n\n### Disabled\n\n<ComponentPreview name=\"select-style-disabled\" />\n\n<br />\n\n### Error\n\n<ComponentPreview name=\"select-style-error\" />",
     "toc": [
       {
         "title": "Installation",
@@ -1490,19 +1459,19 @@
         "url": "#examples",
         "items": [
           {
-            "title": "Scrollable",
-            "url": "#scrollable",
-            "items": []
-          },
-          {
-            "title": "Form",
-            "url": "#form",
+            "title": "Default",
+            "url": "#default",
             "items": []
           },
           {
             "title": "Disabled",
             "url": "#disabled",
             "items": []
+          },
+          {
+            "title": "Error",
+            "url": "#error",
+            "items": []
           }
         ]
       }
@@ -1510,8 +1479,16 @@
     "section": "Components",
     "links": [
       {
-        "title": "Component Source",
+        "title": "Docs",
         "href": "https://bits-ui.com/docs/components/select"
+      },
+      {
+        "title": "API Reference",
+        "href": "https://bits-ui.com/docs/components/select#api-reference"
+      },
+      {
+        "title": "Component Source",
+        "href": "https://bits-ui.com/docs/components/accordion"
       }
     ],
     "slug": "components/select",
@@ -1670,65 +1647,11 @@
     "slugFull": "/components/sidebar"
   },
   {
-    "title": "Skeleton",
-    "description": "Used to display the loading state of some component.",
-    "path": "components/skeleton",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"skeleton-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"skeleton\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import { Skeleton } from \"$lib/components/ui/skeleton/index.js\";\n&#x3C;/script>\n\n&#x3C;div class=\"flex items-center space-x-4\">\n  &#x3C;Skeleton class=\"h-12 w-12 rounded-full\" />\n  &#x3C;div class=\"space-y-2\">\n    &#x3C;Skeleton class=\"h-4 w-[250px]\" />\n    &#x3C;Skeleton class=\"h-4 w-[200px]\" />\n  &#x3C;/div>\n&#x3C;/div>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Card</h3>\n<componentpreview name=\"skeleton-card\">\n<h3>Text</h3>\n<componentpreview name=\"skeleton-text\">\n<h3>Image</h3>\n<componentpreview name=\"skeleton-image\">\n<h3>Table</h3>\n<componentpreview name=\"skeleton-table\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"skeleton-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"skeleton\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { Skeleton } from \"$lib/components/ui/skeleton/index.js\";\n</script>\n\n<div class=\"flex items-center space-x-4\">\n  <Skeleton class=\"h-12 w-12 rounded-full\" />\n  <div class=\"space-y-2\">\n    <Skeleton class=\"h-4 w-[250px]\" />\n    <Skeleton class=\"h-4 w-[200px]\" />\n  </div>\n</div>\n```\n\n<br />\n\n## Examples\n\n### Card\n\n<ComponentPreview name=\"skeleton-card\" />\n\n### Text\n\n<ComponentPreview name=\"skeleton-text\" />\n\n### Image\n\n<ComponentPreview name=\"skeleton-image\" />\n\n### Table\n\n<ComponentPreview name=\"skeleton-table\" />",
-    "toc": [
-      {
-        "title": "Installation",
-        "url": "#installation",
-        "items": []
-      },
-      {
-        "title": "Usage",
-        "url": "#usage",
-        "items": []
-      },
-      {
-        "title": "Examples",
-        "url": "#examples",
-        "items": [
-          {
-            "title": "Card",
-            "url": "#card",
-            "items": []
-          },
-          {
-            "title": "Text",
-            "url": "#text",
-            "items": []
-          },
-          {
-            "title": "Image",
-            "url": "#image",
-            "items": []
-          },
-          {
-            "title": "Table",
-            "url": "#table",
-            "items": []
-          }
-        ]
-      }
-    ],
-    "section": "Components",
-    "links": [
-      {
-        "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/skeleton"
-      }
-    ],
-    "slug": "components/skeleton",
-    "slugFull": "/components/skeleton"
-  },
-  {
     "title": "Slider",
     "description": "An input where the user selects a value from within a given range.",
     "path": "components/slider",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"slider-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"slider\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import { Slider } from \"$lib/components/ui/slider/index.js\";\n\n  let value = $state([50]);\n&#x3C;/script>\n\n&#x3C;Slider bind:value max={100} step={1} />\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"slider-default\">\n<h3>With Label</h3>\n<componentpreview name=\"slider-with-label\">\n<h3>Range</h3>\n<componentpreview name=\"slider-range\">\n<h3>Step</h3>\n<componentpreview name=\"slider-step\">\n<h3>Disabled</h3>\n<componentpreview name=\"slider-disabled\">\n<h3>Vertical</h3>\n<componentpreview name=\"slider-vertical\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"slider-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"slider\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { Slider } from \"$lib/components/ui/slider/index.js\";\n\n  let value = $state([50]);\n</script>\n\n<Slider bind:value max={100} step={1} />\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"slider-default\" />\n\n### With Label\n\n<ComponentPreview name=\"slider-with-label\" />\n\n### Range\n\n<ComponentPreview name=\"slider-range\" />\n\n### Step\n\n<ComponentPreview name=\"slider-step\" />\n\n### Disabled\n\n<ComponentPreview name=\"slider-disabled\" />\n\n### Vertical\n\n<ComponentPreview name=\"slider-vertical\" />",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"slider-style-default\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"slider\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import { Slider } from \"$lib/components/ui/slider/index.js\";\n  let value = $state(33);\n&#x3C;/script>\n \n&#x3C;Slider type=\"single\" bind:value max={100} step={1} />\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"slider-style-default\">\n<br>\n<h3>Multiple Thumbs</h3>\n<componentpreview name=\"slider-style-multi\"></componentpreview></componentpreview></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"slider-style-default\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"slider\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { Slider } from \"$lib/components/ui/slider/index.js\";\n  let value = $state(33);\n</script>\n \n<Slider type=\"single\" bind:value max={100} step={1} />\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"slider-style-default\" />\n\n<br />\n\n### Multiple Thumbs\n\n<ComponentPreview name=\"slider-style-multi\" />",
     "toc": [
       {
         "title": "Installation",
@@ -1750,28 +1673,8 @@
             "items": []
           },
           {
-            "title": "With Label",
-            "url": "#with-label",
-            "items": []
-          },
-          {
-            "title": "Range",
-            "url": "#range",
-            "items": []
-          },
-          {
-            "title": "Step",
-            "url": "#step",
-            "items": []
-          },
-          {
-            "title": "Disabled",
-            "url": "#disabled",
-            "items": []
-          },
-          {
-            "title": "Vertical",
-            "url": "#vertical",
+            "title": "Multiple Thumbs",
+            "url": "#multiple-thumbs",
             "items": []
           }
         ]
@@ -1780,8 +1683,16 @@
     "section": "Components",
     "links": [
       {
-        "title": "Component Source",
+        "title": "Docs",
         "href": "https://bits-ui.com/docs/components/slider"
+      },
+      {
+        "title": "API Reference",
+        "href": "https://bits-ui.com/docs/components/slider#api-reference"
+      },
+      {
+        "title": "Component Source",
+        "href": "https://bits-ui.com/docs/components/accordion"
       }
     ],
     "slug": "components/slider",
@@ -1865,8 +1776,8 @@
     "title": "Switch",
     "description": "A control that allows the user to toggle between checked and not checked.",
     "path": "components/switch",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"switch-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"switch\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import { Switch } from \"$lib/components/ui/switch/index.js\";\n\n  let checked = $state(false);\n&#x3C;/script>\n\n&#x3C;div class=\"flex items-center space-x-2\">\n  &#x3C;Switch id=\"airplane-mode\" bind:checked />\n  &#x3C;label for=\"airplane-mode\" class=\"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70\">\n    Airplane Mode\n  &#x3C;/label>\n&#x3C;/div>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"switch-default\">\n<h3>With Text</h3>\n<componentpreview name=\"switch-with-text\">\n<h3>Disabled</h3>\n<componentpreview name=\"switch-disabled\">\n<h3>Form</h3>\n<componentpreview name=\"switch-form\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"switch-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"switch\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { Switch } from \"$lib/components/ui/switch/index.js\";\n\n  let checked = $state(false);\n</script>\n\n<div class=\"flex items-center space-x-2\">\n  <Switch id=\"airplane-mode\" bind:checked />\n  <label for=\"airplane-mode\" class=\"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70\">\n    Airplane Mode\n  </label>\n</div>\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"switch-default\" />\n\n### With Text\n\n<ComponentPreview name=\"switch-with-text\" />\n\n### Disabled\n\n<ComponentPreview name=\"switch-disabled\" />\n\n### Form\n\n<ComponentPreview name=\"switch-form\" />",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"switch-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"switch\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import { Switch } from \"$lib/components/ui/switch/index.js\";\n&#x3C;/script>\n \n&#x3C;Switch />\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"switch-usage-example\">\n<br>\n<h3>Disabled</h3>\n<componentpreview name=\"switch-disabled\"></componentpreview></componentpreview></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"switch-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"switch\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { Switch } from \"$lib/components/ui/switch/index.js\";\n</script>\n \n<Switch />\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"switch-usage-example\" />\n\n<br />\n\n### Disabled\n\n<ComponentPreview name=\"switch-disabled\" />",
     "toc": [
       {
         "title": "Installation",
@@ -1888,18 +1799,8 @@
             "items": []
           },
           {
-            "title": "With Text",
-            "url": "#with-text",
-            "items": []
-          },
-          {
             "title": "Disabled",
             "url": "#disabled",
-            "items": []
-          },
-          {
-            "title": "Form",
-            "url": "#form",
             "items": []
           }
         ]
@@ -1908,8 +1809,16 @@
     "section": "Components",
     "links": [
       {
-        "title": "Component Source",
+        "title": "Docs",
         "href": "https://bits-ui.com/docs/components/switch"
+      },
+      {
+        "title": "API Reference",
+        "href": "https://bits-ui.com/docs/components/switch#api-reference"
+      },
+      {
+        "title": "Component Source",
+        "href": "https://bits-ui.com/docs/components/accordion"
       }
     ],
     "slug": "components/switch",
@@ -2264,71 +2173,5 @@
     ],
     "slug": "components/tooltip",
     "slugFull": "/components/tooltip"
-  },
-  {
-    "title": "Navigation",
-    "description": "Learn how to customize the navigation in your Svecodocs project.",
-    "path": "configuration/navigation",
-    "content": "<p>Navigation is a key component of every site, documenting the structure of your site and providing a clear path for users to navigate through your content.</p>\n<p>Svecodocs comes with a navigation structure that is designed to be flexible and customizable. Each page in your site should have a corresponding navigation item, and the navigation items should be nested according to their hierarchy.</p>\n<h2>Navigation Structure</h2>\n<h3>Anchors</h3>\n<p>Anchors are links that are displayed at the top of the sidebar and typically used to either highlight important information or provide quick access to linked content.</p>\n<h3>Sections</h3>\n<p>Sections are used to group related navigation items together. They are typically used to organize content into different categories, such as \"Components\", \"Configuration\", and \"Utilities\".</p>",
-    "raw": "Navigation is a key component of every site, documenting the structure of your site and providing a clear path for users to navigate through your content.\n\nSvecodocs comes with a navigation structure that is designed to be flexible and customizable. Each page in your site should have a corresponding navigation item, and the navigation items should be nested according to their hierarchy.\n\n## Navigation Structure\n\n### Anchors\n\nAnchors are links that are displayed at the top of the sidebar and typically used to either highlight important information or provide quick access to linked content.\n\n### Sections\n\nSections are used to group related navigation items together. They are typically used to organize content into different categories, such as \"Components\", \"Configuration\", and \"Utilities\".",
-    "toc": [
-      {
-        "title": "Navigation Structure",
-        "url": "#navigation-structure",
-        "items": [
-          {
-            "title": "Anchors",
-            "url": "#anchors",
-            "items": []
-          },
-          {
-            "title": "Sections",
-            "url": "#sections",
-            "items": []
-          }
-        ]
-      }
-    ],
-    "section": "Configuration",
-    "slug": "configuration/navigation",
-    "slugFull": "/configuration/navigation"
-  },
-  {
-    "title": "Theme",
-    "description": "Learn how to customize the theme in your Svecodocs project.",
-    "path": "configuration/theme",
-    "content": "<p>The theme determines the branded color scheme for your site. A theme for each of the TailwindCSS colors is provided by the <code>@svecodocs/kit</code> package. Each theme has been designed to present well in both light and dark mode.</p>\n<h2>Using a theme</h2>\n<p>To use a theme, import the theme file into your <code>src/app.css</code> file <em>before</em> importing the <code>@svecodocs/kit/globals.css</code> file.</p>\n<pre><code class=\"language-css\">/* @import \"@svecodocs/kit/theme-orange.css\"; */\n@import \"@svecodocs/kit/theme-emerald.css\";\n@import \"@svecodocs/kit/globals.css\";\n</code></pre>\n<p>It's not recommended to customize the theme to maintain consistency across the UI components that are provided by Svecodocs and align with the provided themes.</p>\n<h2>Available themes</h2>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<table><thead><tr><th>Theme name</th><th>Import path</th></tr></thead><tbody><tr><td>orange</td><td><code>@svecodocs/kit/theme-orange.css</code></td></tr><tr><td>green</td><td><code>@svecodocs/kit/theme-green.css</code></td></tr><tr><td>blue</td><td><code>@svecodocs/kit/theme-blue.css</code></td></tr><tr><td>purple</td><td><code>@svecodocs/kit/theme-purple.css</code></td></tr><tr><td>pink</td><td><code>@svecodocs/kit/theme-pink.css</code></td></tr><tr><td>lime</td><td><code>@svecodocs/kit/theme-lime.css</code></td></tr><tr><td>yellow</td><td><code>@svecodocs/kit/theme-yellow.css</code></td></tr><tr><td>cyan</td><td><code>@svecodocs/kit/theme-cyan.css</code></td></tr><tr><td>teal</td><td><code>@svecodocs/kit/theme-teal.css</code></td></tr><tr><td>violet</td><td><code>@svecodocs/kit/theme-violet.css</code></td></tr><tr><td>amber</td><td><code>@svecodocs/kit/theme-amber.css</code></td></tr><tr><td>red</td><td><code>@svecodocs/kit/theme-red.css</code></td></tr><tr><td>sky</td><td><code>@svecodocs/kit/theme-sky.css</code></td></tr><tr><td>emerald</td><td><code>@svecodocs/kit/theme-emerald.css</code></td></tr><tr><td>fuchsia</td><td><code>@svecodocs/kit/theme-fuchsia.css</code></td></tr><tr><td>rose</td><td><code>@svecodocs/kit/theme-rose.css</code></td></tr></tbody></table>\n<h2>Tailwind Variables</h2>\n<p>Svecodocs uses TailwindCSS to style the UI components and provides a set of Tailwind variables that can be used to style your examples/custom components.</p>\n<h3>Gray</h3>\n<p>We override the TailwindCSS <code>gray</code> color scale to provide our own grays.</p>\n<h3>Brand</h3>\n<p>You can use the <code>brand</code> color to use the brand color of your project.</p>",
-    "raw": "The theme determines the branded color scheme for your site. A theme for each of the TailwindCSS colors is provided by the `@svecodocs/kit` package. Each theme has been designed to present well in both light and dark mode.\n\n## Using a theme\n\nTo use a theme, import the theme file into your `src/app.css` file _before_ importing the `@svecodocs/kit/globals.css` file.\n\n```css\n/* @import \"@svecodocs/kit/theme-orange.css\"; */\n@import \"@svecodocs/kit/theme-emerald.css\";\n@import \"@svecodocs/kit/globals.css\";\n```\n\nIt's not recommended to customize the theme to maintain consistency across the UI components that are provided by Svecodocs and align with the provided themes.\n\n## Available themes\n\n| Theme name | Import path                        |\n| ---------- | ---------------------------------- |\n| orange     | `@svecodocs/kit/theme-orange.css`  |\n| green      | `@svecodocs/kit/theme-green.css`   |\n| blue       | `@svecodocs/kit/theme-blue.css`    |\n| purple     | `@svecodocs/kit/theme-purple.css`  |\n| pink       | `@svecodocs/kit/theme-pink.css`    |\n| lime       | `@svecodocs/kit/theme-lime.css`    |\n| yellow     | `@svecodocs/kit/theme-yellow.css`  |\n| cyan       | `@svecodocs/kit/theme-cyan.css`    |\n| teal       | `@svecodocs/kit/theme-teal.css`    |\n| violet     | `@svecodocs/kit/theme-violet.css`  |\n| amber      | `@svecodocs/kit/theme-amber.css`   |\n| red        | `@svecodocs/kit/theme-red.css`     |\n| sky        | `@svecodocs/kit/theme-sky.css`     |\n| emerald    | `@svecodocs/kit/theme-emerald.css` |\n| fuchsia    | `@svecodocs/kit/theme-fuchsia.css` |\n| rose       | `@svecodocs/kit/theme-rose.css`    |\n\n## Tailwind Variables\n\nSvecodocs uses TailwindCSS to style the UI components and provides a set of Tailwind variables that can be used to style your examples/custom components.\n\n### Gray\n\nWe override the TailwindCSS `gray` color scale to provide our own grays.\n\n### Brand\n\nYou can use the `brand` color to use the brand color of your project.",
-    "toc": [
-      {
-        "title": "Using a theme",
-        "url": "#using-a-theme",
-        "items": []
-      },
-      {
-        "title": "Available themes",
-        "url": "#available-themes",
-        "items": []
-      },
-      {
-        "title": "Tailwind Variables",
-        "url": "#tailwind-variables",
-        "items": [
-          {
-            "title": "Gray",
-            "url": "#gray",
-            "items": []
-          },
-          {
-            "title": "Brand",
-            "url": "#brand",
-            "items": []
-          }
-        ]
-      }
-    ],
-    "section": "Configuration",
-    "slug": "configuration/theme",
-    "slugFull": "/configuration/theme"
   }
 ]

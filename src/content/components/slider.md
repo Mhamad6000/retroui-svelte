@@ -3,15 +3,19 @@ title: Slider
 description: An input where the user selects a value from within a given range.
 section: Components
 links:
-  - title: "Component Source"
+  - title: "Docs"
     href: "https://bits-ui.com/docs/components/slider"
+  - title: "API Reference"
+    href: "https://bits-ui.com/docs/components/slider#api-reference"
+  - title : "Component Source"
+    href: "https://bits-ui.com/docs/components/accordion"
 ---
 <script>
 	import { ComponentPreview, PMCommand } from "$lib/components";
 
 </script>
 
-<ComponentPreview name="slider-usage-example" />
+<ComponentPreview name="slider-style-default" />
 <br />
 <br />
 
@@ -26,11 +30,10 @@ links:
 ```svelte
 <script lang="ts">
   import { Slider } from "$lib/components/ui/slider/index.js";
-
-  let value = $state([50]);
+  let value = $state(33);
 </script>
-
-<Slider bind:value max={100} step={1} />
+ 
+<Slider type="single" bind:value max={100} step={1} />
 ```
 
 <br />
@@ -39,24 +42,10 @@ links:
 
 ### Default
 
-<ComponentPreview name="slider-default" />
+<ComponentPreview name="slider-style-default" />
 
-### With Label
+<br />
 
-<ComponentPreview name="slider-with-label" />
+### Multiple Thumbs
 
-### Range
-
-<ComponentPreview name="slider-range" />
-
-### Step
-
-<ComponentPreview name="slider-step" />
-
-### Disabled
-
-<ComponentPreview name="slider-disabled" />
-
-### Vertical
-
-<ComponentPreview name="slider-vertical" />
+<ComponentPreview name="slider-style-multi" />

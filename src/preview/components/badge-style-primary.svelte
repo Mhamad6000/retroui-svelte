@@ -2,4 +2,4 @@
 	import * as Badge from "$registry/ui/badge/index.js";
 </script>
 
-<Badge.Badge>Default</Badge.Badge>
+<Badge.Badge variant="primary">Primary</Badge.Badge>

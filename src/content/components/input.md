@@ -11,7 +11,7 @@ links:
 
 </script>
 
-<ComponentPreview name="input-usage-example" />
+<ComponentPreview name="input-style-default" />
 <br />
 <br />
 
@@ -27,8 +27,8 @@ links:
 <script lang="ts">
   import { Input } from "$lib/components/ui/input/index.js";
 </script>
-
-<Input type="email" placeholder="Email" />
+ 
+<Input />
 ```
 
 <br />
@@ -37,24 +37,22 @@ links:
 
 ### Default
 
-<ComponentPreview name="input-default" />
+<ComponentPreview name="input-style-default" />
+
+<br/>
 
 ### With Label
 
-<ComponentPreview name="input-with-label" />
+<ComponentPreview name="input-style-label" />
 
-### With Button
+<br/>
 
-<ComponentPreview name="input-with-button" />
+### Error
 
-### File
+<ComponentPreview name="input-style-error" />
 
-<ComponentPreview name="input-file" />
+<br/>
 
 ### Disabled
 
-<ComponentPreview name="input-disabled" />
-
-### With Icon
-
-<ComponentPreview name="input-with-icon" />
+<ComponentPreview name="input-style-disabled" />
