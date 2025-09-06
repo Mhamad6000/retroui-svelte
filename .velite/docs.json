@@ -82,6 +82,72 @@
     "slugFull": "/index"
   },
   {
+    "title": "Navigation",
+    "description": "Learn how to customize the navigation in your Svecodocs project.",
+    "path": "configuration/navigation",
+    "content": "<p>Navigation is a key component of every site, documenting the structure of your site and providing a clear path for users to navigate through your content.</p>\n<p>Svecodocs comes with a navigation structure that is designed to be flexible and customizable. Each page in your site should have a corresponding navigation item, and the navigation items should be nested according to their hierarchy.</p>\n<h2>Navigation Structure</h2>\n<h3>Anchors</h3>\n<p>Anchors are links that are displayed at the top of the sidebar and typically used to either highlight important information or provide quick access to linked content.</p>\n<h3>Sections</h3>\n<p>Sections are used to group related navigation items together. They are typically used to organize content into different categories, such as \"Components\", \"Configuration\", and \"Utilities\".</p>",
+    "raw": "Navigation is a key component of every site, documenting the structure of your site and providing a clear path for users to navigate through your content.\n\nSvecodocs comes with a navigation structure that is designed to be flexible and customizable. Each page in your site should have a corresponding navigation item, and the navigation items should be nested according to their hierarchy.\n\n## Navigation Structure\n\n### Anchors\n\nAnchors are links that are displayed at the top of the sidebar and typically used to either highlight important information or provide quick access to linked content.\n\n### Sections\n\nSections are used to group related navigation items together. They are typically used to organize content into different categories, such as \"Components\", \"Configuration\", and \"Utilities\".",
+    "toc": [
+      {
+        "title": "Navigation Structure",
+        "url": "#navigation-structure",
+        "items": [
+          {
+            "title": "Anchors",
+            "url": "#anchors",
+            "items": []
+          },
+          {
+            "title": "Sections",
+            "url": "#sections",
+            "items": []
+          }
+        ]
+      }
+    ],
+    "section": "Configuration",
+    "slug": "configuration/navigation",
+    "slugFull": "/configuration/navigation"
+  },
+  {
+    "title": "Theme",
+    "description": "Learn how to customize the theme in your Svecodocs project.",
+    "path": "configuration/theme",
+    "content": "<p>The theme determines the branded color scheme for your site. A theme for each of the TailwindCSS colors is provided by the <code>@svecodocs/kit</code> package. Each theme has been designed to present well in both light and dark mode.</p>\n<h2>Using a theme</h2>\n<p>To use a theme, import the theme file into your <code>src/app.css</code> file <em>before</em> importing the <code>@svecodocs/kit/globals.css</code> file.</p>\n<pre><code class=\"language-css\">/* @import \"@svecodocs/kit/theme-orange.css\"; */\n@import \"@svecodocs/kit/theme-emerald.css\";\n@import \"@svecodocs/kit/globals.css\";\n</code></pre>\n<p>It's not recommended to customize the theme to maintain consistency across the UI components that are provided by Svecodocs and align with the provided themes.</p>\n<h2>Available themes</h2>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<table><thead><tr><th>Theme name</th><th>Import path</th></tr></thead><tbody><tr><td>orange</td><td><code>@svecodocs/kit/theme-orange.css</code></td></tr><tr><td>green</td><td><code>@svecodocs/kit/theme-green.css</code></td></tr><tr><td>blue</td><td><code>@svecodocs/kit/theme-blue.css</code></td></tr><tr><td>purple</td><td><code>@svecodocs/kit/theme-purple.css</code></td></tr><tr><td>pink</td><td><code>@svecodocs/kit/theme-pink.css</code></td></tr><tr><td>lime</td><td><code>@svecodocs/kit/theme-lime.css</code></td></tr><tr><td>yellow</td><td><code>@svecodocs/kit/theme-yellow.css</code></td></tr><tr><td>cyan</td><td><code>@svecodocs/kit/theme-cyan.css</code></td></tr><tr><td>teal</td><td><code>@svecodocs/kit/theme-teal.css</code></td></tr><tr><td>violet</td><td><code>@svecodocs/kit/theme-violet.css</code></td></tr><tr><td>amber</td><td><code>@svecodocs/kit/theme-amber.css</code></td></tr><tr><td>red</td><td><code>@svecodocs/kit/theme-red.css</code></td></tr><tr><td>sky</td><td><code>@svecodocs/kit/theme-sky.css</code></td></tr><tr><td>emerald</td><td><code>@svecodocs/kit/theme-emerald.css</code></td></tr><tr><td>fuchsia</td><td><code>@svecodocs/kit/theme-fuchsia.css</code></td></tr><tr><td>rose</td><td><code>@svecodocs/kit/theme-rose.css</code></td></tr></tbody></table>\n<h2>Tailwind Variables</h2>\n<p>Svecodocs uses TailwindCSS to style the UI components and provides a set of Tailwind variables that can be used to style your examples/custom components.</p>\n<h3>Gray</h3>\n<p>We override the TailwindCSS <code>gray</code> color scale to provide our own grays.</p>\n<h3>Brand</h3>\n<p>You can use the <code>brand</code> color to use the brand color of your project.</p>",
+    "raw": "The theme determines the branded color scheme for your site. A theme for each of the TailwindCSS colors is provided by the `@svecodocs/kit` package. Each theme has been designed to present well in both light and dark mode.\n\n## Using a theme\n\nTo use a theme, import the theme file into your `src/app.css` file _before_ importing the `@svecodocs/kit/globals.css` file.\n\n```css\n/* @import \"@svecodocs/kit/theme-orange.css\"; */\n@import \"@svecodocs/kit/theme-emerald.css\";\n@import \"@svecodocs/kit/globals.css\";\n```\n\nIt's not recommended to customize the theme to maintain consistency across the UI components that are provided by Svecodocs and align with the provided themes.\n\n## Available themes\n\n| Theme name | Import path                        |\n| ---------- | ---------------------------------- |\n| orange     | `@svecodocs/kit/theme-orange.css`  |\n| green      | `@svecodocs/kit/theme-green.css`   |\n| blue       | `@svecodocs/kit/theme-blue.css`    |\n| purple     | `@svecodocs/kit/theme-purple.css`  |\n| pink       | `@svecodocs/kit/theme-pink.css`    |\n| lime       | `@svecodocs/kit/theme-lime.css`    |\n| yellow     | `@svecodocs/kit/theme-yellow.css`  |\n| cyan       | `@svecodocs/kit/theme-cyan.css`    |\n| teal       | `@svecodocs/kit/theme-teal.css`    |\n| violet     | `@svecodocs/kit/theme-violet.css`  |\n| amber      | `@svecodocs/kit/theme-amber.css`   |\n| red        | `@svecodocs/kit/theme-red.css`     |\n| sky        | `@svecodocs/kit/theme-sky.css`     |\n| emerald    | `@svecodocs/kit/theme-emerald.css` |\n| fuchsia    | `@svecodocs/kit/theme-fuchsia.css` |\n| rose       | `@svecodocs/kit/theme-rose.css`    |\n\n## Tailwind Variables\n\nSvecodocs uses TailwindCSS to style the UI components and provides a set of Tailwind variables that can be used to style your examples/custom components.\n\n### Gray\n\nWe override the TailwindCSS `gray` color scale to provide our own grays.\n\n### Brand\n\nYou can use the `brand` color to use the brand color of your project.",
+    "toc": [
+      {
+        "title": "Using a theme",
+        "url": "#using-a-theme",
+        "items": []
+      },
+      {
+        "title": "Available themes",
+        "url": "#available-themes",
+        "items": []
+      },
+      {
+        "title": "Tailwind Variables",
+        "url": "#tailwind-variables",
+        "items": [
+          {
+            "title": "Gray",
+            "url": "#gray",
+            "items": []
+          },
+          {
+            "title": "Brand",
+            "url": "#brand",
+            "items": []
+          }
+        ]
+      }
+    ],
+    "section": "Configuration",
+    "slug": "configuration/theme",
+    "slugFull": "/configuration/theme"
+  },
+  {
     "title": "Accordion",
     "description": "A vertically stacked set of interactive headings that each reveal a section of content.",
     "path": "components/accordion",
@@ -423,19 +489,14 @@
   },
   {
     "title": "Calendar",
-    "description": "A date picker component with range and multiple selection.",
+    "description": "A calendar component that allows users to select dates.",
     "path": "components/calendar",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"calendar-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"calendar\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import * as Calendar from \"$lib/components/ui/calendar/index.js\";\n\n  let date = $state&#x3C;Date | undefined>(new Date());\n&#x3C;/script>\n\n&#x3C;Calendar.Root bind:value={date} />\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"calendar-default\">\n<h3>Date Picker</h3>\n<componentpreview name=\"calendar-date-picker\">\n<h3>Date Range Picker</h3>\n<componentpreview name=\"calendar-date-range-picker\">\n<h3>Multiple Selection</h3>\n<componentpreview name=\"calendar-multiple-selection\">\n<h3>Form</h3>\n<componentpreview name=\"calendar-form\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"calendar-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"calendar\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import * as Calendar from \"$lib/components/ui/calendar/index.js\";\n\n  let date = $state<Date | undefined>(new Date());\n</script>\n\n<Calendar.Root bind:value={date} />\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"calendar-default\" />\n\n### Date Picker\n\n<ComponentPreview name=\"calendar-date-picker\" />\n\n### Date Range Picker\n\n<ComponentPreview name=\"calendar-date-range-picker\" />\n\n### Multiple Selection\n\n<ComponentPreview name=\"calendar-multiple-selection\" />\n\n### Form\n\n<ComponentPreview name=\"calendar-form\" />",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"calendar-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"calendar\"]} /></p>\n<br>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"calendar-usage-example\">\n<br>\n<h3>Range Calendar</h3>\n<componentpreview name=\"calendar-style-range\">\n<br>\n<h3>Date Picker</h3>\n<componentpreview name=\"calendar-style-month-year\"></componentpreview></componentpreview></componentpreview></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"calendar-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"calendar\"]} />\n\n<br />\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"calendar-usage-example\" />\n\n<br />\n\n### Range Calendar\n\n<ComponentPreview name=\"calendar-style-range\" />\n\n<br />\n\n### Date Picker\n\n<ComponentPreview name=\"calendar-style-month-year\" />",
     "toc": [
       {
         "title": "Installation",
         "url": "#installation",
-        "items": []
-      },
-      {
-        "title": "Usage",
-        "url": "#usage",
         "items": []
       },
       {
@@ -448,23 +509,13 @@
             "items": []
           },
           {
+            "title": "Range Calendar",
+            "url": "#range-calendar",
+            "items": []
+          },
+          {
             "title": "Date Picker",
             "url": "#date-picker",
-            "items": []
-          },
-          {
-            "title": "Date Range Picker",
-            "url": "#date-range-picker",
-            "items": []
-          },
-          {
-            "title": "Multiple Selection",
-            "url": "#multiple-selection",
-            "items": []
-          },
-          {
-            "title": "Form",
-            "url": "#form",
             "items": []
           }
         ]
@@ -473,8 +524,16 @@
     "section": "Components",
     "links": [
       {
-        "title": "Component Source",
+        "title": "Docs",
         "href": "https://bits-ui.com/docs/components/calendar"
+      },
+      {
+        "title": "API Reference",
+        "href": "https://bits-ui.com/docs/components/calendar#api-reference"
+      },
+      {
+        "title": "Component Source",
+        "href": "https://bits-ui.com/docs/components/accordion"
       }
     ],
     "slug": "components/calendar",
@@ -638,8 +697,16 @@
     "section": "Components",
     "links": [
       {
-        "title": "Component Source",
+        "title": "Docs",
         "href": "https://bits-ui.com/docs/components/command"
+      },
+      {
+        "title": "API Reference",
+        "href": "https://bits-ui.com/docs/components/command#api-reference"
+      },
+      {
+        "title": "Component Source",
+        "href": "https://bits-ui.com/docs/components/accordion"
       }
     ],
     "slug": "components/command",
@@ -649,8 +716,8 @@
     "title": "Context Menu",
     "description": "Displays a menu to the user—such as a set of actions or functions—triggered by right-clicking.",
     "path": "components/context-menu",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"context-menu-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"context-menu\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import * as ContextMenu from \"$lib/components/ui/context-menu/index.js\";\n&#x3C;/script>\n\n&#x3C;ContextMenu.Root>\n  &#x3C;ContextMenu.Trigger class=\"flex h-[150px] w-[300px] items-center justify-center rounded-md border border-dashed text-sm\">\n    Right click here\n  &#x3C;/ContextMenu.Trigger>\n  &#x3C;ContextMenu.Content class=\"w-64\">\n    &#x3C;ContextMenu.Item inset>\n      Back\n      &#x3C;ContextMenu.Shortcut>⌘[&#x3C;/ContextMenu.Shortcut>\n    &#x3C;/ContextMenu.Item>\n    &#x3C;ContextMenu.Item inset disabled>\n      Forward\n      &#x3C;ContextMenu.Shortcut>⌘]&#x3C;/ContextMenu.Shortcut>\n    &#x3C;/ContextMenu.Item>\n    &#x3C;ContextMenu.Item inset>\n      Reload\n      &#x3C;ContextMenu.Shortcut>⌘R&#x3C;/ContextMenu.Shortcut>\n    &#x3C;/ContextMenu.Item>\n    &#x3C;ContextMenu.Separator />\n    &#x3C;ContextMenu.CheckboxItem>\n      Show Bookmarks Bar\n      &#x3C;ContextMenu.CheckboxIndicator />\n    &#x3C;/ContextMenu.CheckboxItem>\n    &#x3C;ContextMenu.CheckboxItem checked>\n      Show Full URLs\n      &#x3C;ContextMenu.CheckboxIndicator />\n    &#x3C;/ContextMenu.CheckboxItem>\n    &#x3C;ContextMenu.Separator />\n    &#x3C;ContextMenu.Label inset>People&#x3C;/ContextMenu.Label>\n    &#x3C;ContextMenu.RadioGroup value=\"pedro\">\n      &#x3C;ContextMenu.RadioItem value=\"pedro\">\n        Pedro Duarte\n      &#x3C;/ContextMenu.RadioItem>\n      &#x3C;ContextMenu.RadioItem value=\"colm\">\n        Colm Tuite\n      &#x3C;/ContextMenu.RadioItem>\n    &#x3C;/ContextMenu.RadioGroup>\n  &#x3C;/ContextMenu.Content>\n&#x3C;/ContextMenu.Root>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"context-menu-default\">\n<h3>With Icons</h3>\n<componentpreview name=\"context-menu-with-icons\">\n<h3>Submenu</h3>\n<componentpreview name=\"context-menu-submenu\"></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"context-menu-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"context-menu\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import * as ContextMenu from \"$lib/components/ui/context-menu/index.js\";\n</script>\n\n<ContextMenu.Root>\n  <ContextMenu.Trigger class=\"flex h-[150px] w-[300px] items-center justify-center rounded-md border border-dashed text-sm\">\n    Right click here\n  </ContextMenu.Trigger>\n  <ContextMenu.Content class=\"w-64\">\n    <ContextMenu.Item inset>\n      Back\n      <ContextMenu.Shortcut>⌘[</ContextMenu.Shortcut>\n    </ContextMenu.Item>\n    <ContextMenu.Item inset disabled>\n      Forward\n      <ContextMenu.Shortcut>⌘]</ContextMenu.Shortcut>\n    </ContextMenu.Item>\n    <ContextMenu.Item inset>\n      Reload\n      <ContextMenu.Shortcut>⌘R</ContextMenu.Shortcut>\n    </ContextMenu.Item>\n    <ContextMenu.Separator />\n    <ContextMenu.CheckboxItem>\n      Show Bookmarks Bar\n      <ContextMenu.CheckboxIndicator />\n    </ContextMenu.CheckboxItem>\n    <ContextMenu.CheckboxItem checked>\n      Show Full URLs\n      <ContextMenu.CheckboxIndicator />\n    </ContextMenu.CheckboxItem>\n    <ContextMenu.Separator />\n    <ContextMenu.Label inset>People</ContextMenu.Label>\n    <ContextMenu.RadioGroup value=\"pedro\">\n      <ContextMenu.RadioItem value=\"pedro\">\n        Pedro Duarte\n      </ContextMenu.RadioItem>\n      <ContextMenu.RadioItem value=\"colm\">\n        Colm Tuite\n      </ContextMenu.RadioItem>\n    </ContextMenu.RadioGroup>\n  </ContextMenu.Content>\n</ContextMenu.Root>\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"context-menu-default\" />\n\n### With Icons\n\n<ComponentPreview name=\"context-menu-with-icons\" />\n\n### Submenu\n\n<ComponentPreview name=\"context-menu-submenu\" />",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"context-menu-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"context-menu\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n import * as ContextMenu from \"$lib/components/ui/context-menu/index.js\";\n&#x3C;/script>\n \n&#x3C;ContextMenu.Root>\n &#x3C;ContextMenu.Trigger>Right click&#x3C;/ContextMenu.Trigger>\n &#x3C;ContextMenu.Content>\n  &#x3C;ContextMenu.Item>Profile&#x3C;/ContextMenu.Item>\n  &#x3C;ContextMenu.Item>Billing&#x3C;/ContextMenu.Item>\n  &#x3C;ContextMenu.Item>Team&#x3C;/ContextMenu.Item>\n  &#x3C;ContextMenu.Item>Subscription&#x3C;/ContextMenu.Item>\n &#x3C;/ContextMenu.Content>\n&#x3C;/ContextMenu.Root>\n</code></pre></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"context-menu-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"context-menu\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n import * as ContextMenu from \"$lib/components/ui/context-menu/index.js\";\n</script>\n \n<ContextMenu.Root>\n <ContextMenu.Trigger>Right click</ContextMenu.Trigger>\n <ContextMenu.Content>\n  <ContextMenu.Item>Profile</ContextMenu.Item>\n  <ContextMenu.Item>Billing</ContextMenu.Item>\n  <ContextMenu.Item>Team</ContextMenu.Item>\n  <ContextMenu.Item>Subscription</ContextMenu.Item>\n </ContextMenu.Content>\n</ContextMenu.Root>\n```",
     "toc": [
       {
         "title": "Installation",
@@ -661,34 +728,21 @@
         "title": "Usage",
         "url": "#usage",
         "items": []
-      },
-      {
-        "title": "Examples",
-        "url": "#examples",
-        "items": [
-          {
-            "title": "Default",
-            "url": "#default",
-            "items": []
-          },
-          {
-            "title": "With Icons",
-            "url": "#with-icons",
-            "items": []
-          },
-          {
-            "title": "Submenu",
-            "url": "#submenu",
-            "items": []
-          }
-        ]
       }
     ],
     "section": "Components",
     "links": [
       {
-        "title": "Component Source",
+        "title": "Docs",
         "href": "https://bits-ui.com/docs/components/context-menu"
+      },
+      {
+        "title": "API Reference",
+        "href": "https://bits-ui.com/docs/components/context-menu#api-reference"
+      },
+      {
+        "title": "Component Source",
+        "href": "https://bits-ui.com/docs/components/accordion"
       }
     ],
     "slug": "components/context-menu",
@@ -734,8 +788,8 @@
     "title": "Dropdown Menu",
     "description": "Displays a menu to the user—such as a set of actions or functions—triggered by a button.",
     "path": "components/dropdown-menu",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"dropdown-menu-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"dropdown-menu\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import * as DropdownMenu from \"$lib/components/ui/dropdown-menu/index.js\";\n  import { Button } from \"$lib/components/ui/button/index.js\";\n&#x3C;/script>\n\n&#x3C;DropdownMenu.Root>\n  &#x3C;DropdownMenu.Trigger asChild>\n    &#x3C;Button variant=\"outline\">Open&#x3C;/Button>\n  &#x3C;/DropdownMenu.Trigger>\n  &#x3C;DropdownMenu.Content class=\"w-56\">\n    &#x3C;DropdownMenu.Label>My Account&#x3C;/DropdownMenu.Label>\n    &#x3C;DropdownMenu.Separator />\n    &#x3C;DropdownMenu.Item>Profile&#x3C;/DropdownMenu.Item>\n    &#x3C;DropdownMenu.Item>Billing&#x3C;/DropdownMenu.Item>\n    &#x3C;DropdownMenu.Item>Team&#x3C;/DropdownMenu.Item>\n    &#x3C;DropdownMenu.Item>Subscription&#x3C;/DropdownMenu.Item>\n  &#x3C;/DropdownMenu.Content>\n&#x3C;/DropdownMenu.Root>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Checkboxes</h3>\n<componentpreview name=\"dropdown-menu-checkboxes\">\n<h3>Radio Group</h3>\n<componentpreview name=\"dropdown-menu-radio-group\">\n<h3>With Icons</h3>\n<componentpreview name=\"dropdown-menu-with-icons\">\n<h3>Submenu</h3>\n<componentpreview name=\"dropdown-menu-submenu\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"dropdown-menu-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"dropdown-menu\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import * as DropdownMenu from \"$lib/components/ui/dropdown-menu/index.js\";\n  import { Button } from \"$lib/components/ui/button/index.js\";\n</script>\n\n<DropdownMenu.Root>\n  <DropdownMenu.Trigger asChild>\n    <Button variant=\"outline\">Open</Button>\n  </DropdownMenu.Trigger>\n  <DropdownMenu.Content class=\"w-56\">\n    <DropdownMenu.Label>My Account</DropdownMenu.Label>\n    <DropdownMenu.Separator />\n    <DropdownMenu.Item>Profile</DropdownMenu.Item>\n    <DropdownMenu.Item>Billing</DropdownMenu.Item>\n    <DropdownMenu.Item>Team</DropdownMenu.Item>\n    <DropdownMenu.Item>Subscription</DropdownMenu.Item>\n  </DropdownMenu.Content>\n</DropdownMenu.Root>\n```\n\n<br />\n\n## Examples\n\n### Checkboxes\n\n<ComponentPreview name=\"dropdown-menu-checkboxes\" />\n\n### Radio Group\n\n<ComponentPreview name=\"dropdown-menu-radio-group\" />\n\n### With Icons\n\n<ComponentPreview name=\"dropdown-menu-with-icons\" />\n\n### Submenu\n\n<ComponentPreview name=\"dropdown-menu-submenu\" />",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"dropdown-menu-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"dropdown-menu\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n import * as DropdownMenu from \"$lib/components/ui/dropdown-menu/index.js\";\n&#x3C;/script>\n \n&#x3C;DropdownMenu.Root>\n &#x3C;DropdownMenu.Trigger>Open&#x3C;/DropdownMenu.Trigger>\n &#x3C;DropdownMenu.Content>\n  &#x3C;DropdownMenu.Group>\n   &#x3C;DropdownMenu.Label>My Account&#x3C;/DropdownMenu.Label>\n   &#x3C;DropdownMenu.Separator />\n   &#x3C;DropdownMenu.Item>Profile&#x3C;/DropdownMenu.Item>\n   &#x3C;DropdownMenu.Item>Billing&#x3C;/DropdownMenu.Item>\n   &#x3C;DropdownMenu.Item>Team&#x3C;/DropdownMenu.Item>\n   &#x3C;DropdownMenu.Item>Subscription&#x3C;/DropdownMenu.Item>\n  &#x3C;/DropdownMenu.Group>\n &#x3C;/DropdownMenu.Content>\n&#x3C;/DropdownMenu.Root>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Checkboxes</h3>\n<componentpreview name=\"dropdown-menu-checkboxes\">\n<br>\n<h3>Radio Group</h3>\n<componentpreview name=\"dropdown-menu-radio-group\"></componentpreview></componentpreview></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"dropdown-menu-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"dropdown-menu\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n import * as DropdownMenu from \"$lib/components/ui/dropdown-menu/index.js\";\n</script>\n \n<DropdownMenu.Root>\n <DropdownMenu.Trigger>Open</DropdownMenu.Trigger>\n <DropdownMenu.Content>\n  <DropdownMenu.Group>\n   <DropdownMenu.Label>My Account</DropdownMenu.Label>\n   <DropdownMenu.Separator />\n   <DropdownMenu.Item>Profile</DropdownMenu.Item>\n   <DropdownMenu.Item>Billing</DropdownMenu.Item>\n   <DropdownMenu.Item>Team</DropdownMenu.Item>\n   <DropdownMenu.Item>Subscription</DropdownMenu.Item>\n  </DropdownMenu.Group>\n </DropdownMenu.Content>\n</DropdownMenu.Root>\n```\n\n<br />\n\n## Examples\n\n### Checkboxes\n\n<ComponentPreview name=\"dropdown-menu-checkboxes\" />\n\n<br />\n\n### Radio Group\n\n<ComponentPreview name=\"dropdown-menu-radio-group\" />",
     "toc": [
       {
         "title": "Installation",
@@ -760,16 +814,6 @@
             "title": "Radio Group",
             "url": "#radio-group",
             "items": []
-          },
-          {
-            "title": "With Icons",
-            "url": "#with-icons",
-            "items": []
-          },
-          {
-            "title": "Submenu",
-            "url": "#submenu",
-            "items": []
           }
         ]
       }
@@ -777,8 +821,16 @@
     "section": "Components",
     "links": [
       {
-        "title": "Component Source",
+        "title": "Docs",
         "href": "https://bits-ui.com/docs/components/dropdown-menu"
+      },
+      {
+        "title": "API Reference",
+        "href": "https://bits-ui.com/docs/components/dropdown-menu#api-reference"
+      },
+      {
+        "title": "Component Source",
+        "href": "https://bits-ui.com/docs/components/accordion"
       }
     ],
     "slug": "components/dropdown-menu",
@@ -968,8 +1020,8 @@
     "title": "Menubar",
     "description": "A visually persistent menu common in desktop applications that provides quick access to a consistent set of commands.",
     "path": "components/menubar",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"menubar-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"menubar\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import * as Menubar from \"$lib/components/ui/menubar/index.js\";\n&#x3C;/script>\n\n&#x3C;Menubar.Root>\n  &#x3C;Menubar.Menu>\n    &#x3C;Menubar.Trigger>File&#x3C;/Menubar.Trigger>\n    &#x3C;Menubar.Content>\n      &#x3C;Menubar.Item>\n        New Tab &#x3C;Menubar.Shortcut>⌘T&#x3C;/Menubar.Shortcut>\n      &#x3C;/Menubar.Item>\n      &#x3C;Menubar.Item>\n        New Window &#x3C;Menubar.Shortcut>⌘N&#x3C;/Menubar.Shortcut>\n      &#x3C;/Menubar.Item>\n      &#x3C;Menubar.Item disabled>New Incognito Window&#x3C;/Menubar.Item>\n      &#x3C;Menubar.Separator />\n      &#x3C;Menubar.Sub>\n        &#x3C;Menubar.SubTrigger>Share&#x3C;/Menubar.SubTrigger>\n        &#x3C;Menubar.SubContent>\n          &#x3C;Menubar.Item>Email link&#x3C;/Menubar.Item>\n          &#x3C;Menubar.Item>Messages&#x3C;/Menubar.Item>\n          &#x3C;Menubar.Item>Notes&#x3C;/Menubar.Item>\n        &#x3C;/Menubar.SubContent>\n      &#x3C;/Menubar.Sub>\n      &#x3C;Menubar.Separator />\n      &#x3C;Menubar.Item>\n        Print &#x3C;Menubar.Shortcut>⌘P&#x3C;/Menubar.Shortcut>\n      &#x3C;/Menubar.Item>\n    &#x3C;/Menubar.Content>\n  &#x3C;/Menubar.Menu>\n&#x3C;/Menubar.Root>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"menubar-default\">\n<h3>With Icons</h3>\n<componentpreview name=\"menubar-with-icons\">\n<h3>Radio Group</h3>\n<componentpreview name=\"menubar-radio-group\">\n<h3>Checkboxes</h3>\n<componentpreview name=\"menubar-checkboxes\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"menubar-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"menubar\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import * as Menubar from \"$lib/components/ui/menubar/index.js\";\n</script>\n\n<Menubar.Root>\n  <Menubar.Menu>\n    <Menubar.Trigger>File</Menubar.Trigger>\n    <Menubar.Content>\n      <Menubar.Item>\n        New Tab <Menubar.Shortcut>⌘T</Menubar.Shortcut>\n      </Menubar.Item>\n      <Menubar.Item>\n        New Window <Menubar.Shortcut>⌘N</Menubar.Shortcut>\n      </Menubar.Item>\n      <Menubar.Item disabled>New Incognito Window</Menubar.Item>\n      <Menubar.Separator />\n      <Menubar.Sub>\n        <Menubar.SubTrigger>Share</Menubar.SubTrigger>\n        <Menubar.SubContent>\n          <Menubar.Item>Email link</Menubar.Item>\n          <Menubar.Item>Messages</Menubar.Item>\n          <Menubar.Item>Notes</Menubar.Item>\n        </Menubar.SubContent>\n      </Menubar.Sub>\n      <Menubar.Separator />\n      <Menubar.Item>\n        Print <Menubar.Shortcut>⌘P</Menubar.Shortcut>\n      </Menubar.Item>\n    </Menubar.Content>\n  </Menubar.Menu>\n</Menubar.Root>\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"menubar-default\" />\n\n### With Icons\n\n<ComponentPreview name=\"menubar-with-icons\" />\n\n### Radio Group\n\n<ComponentPreview name=\"menubar-radio-group\" />\n\n### Checkboxes\n\n<ComponentPreview name=\"menubar-checkboxes\" />",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"menubar-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"menubar\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n import * as Menubar from \"$lib/components/ui/menubar/index.js\";\n&#x3C;/script>\n \n&#x3C;Menubar.Root>\n &#x3C;Menubar.Menu>\n  &#x3C;Menubar.Trigger>File&#x3C;/Menubar.Trigger>\n  &#x3C;Menubar.Content>\n   &#x3C;Menubar.Item>\n    New Tab\n    &#x3C;Menubar.Shortcut>⌘T&#x3C;/Menubar.Shortcut>\n   &#x3C;/Menubar.Item>\n   &#x3C;Menubar.Item>New Window&#x3C;/Menubar.Item>\n   &#x3C;Menubar.Separator />\n   &#x3C;Menubar.Item>Share&#x3C;/Menubar.Item>\n   &#x3C;Menubar.Separator />\n   &#x3C;Menubar.Item>Print&#x3C;/Menubar.Item>\n  &#x3C;/Menubar.Content>\n &#x3C;/Menubar.Menu>\n&#x3C;/Menubar.Root>\n</code></pre></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"menubar-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"menubar\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n import * as Menubar from \"$lib/components/ui/menubar/index.js\";\n</script>\n \n<Menubar.Root>\n <Menubar.Menu>\n  <Menubar.Trigger>File</Menubar.Trigger>\n  <Menubar.Content>\n   <Menubar.Item>\n    New Tab\n    <Menubar.Shortcut>⌘T</Menubar.Shortcut>\n   </Menubar.Item>\n   <Menubar.Item>New Window</Menubar.Item>\n   <Menubar.Separator />\n   <Menubar.Item>Share</Menubar.Item>\n   <Menubar.Separator />\n   <Menubar.Item>Print</Menubar.Item>\n  </Menubar.Content>\n </Menubar.Menu>\n</Menubar.Root>\n```",
     "toc": [
       {
         "title": "Installation",
@@ -980,39 +1032,21 @@
         "title": "Usage",
         "url": "#usage",
         "items": []
-      },
-      {
-        "title": "Examples",
-        "url": "#examples",
-        "items": [
-          {
-            "title": "Default",
-            "url": "#default",
-            "items": []
-          },
-          {
-            "title": "With Icons",
-            "url": "#with-icons",
-            "items": []
-          },
-          {
-            "title": "Radio Group",
-            "url": "#radio-group",
-            "items": []
-          },
-          {
-            "title": "Checkboxes",
-            "url": "#checkboxes",
-            "items": []
-          }
-        ]
       }
     ],
     "section": "Components",
     "links": [
       {
-        "title": "Component Source",
+        "title": "Docs",
         "href": "https://bits-ui.com/docs/components/menubar"
+      },
+      {
+        "title": "API Reference",
+        "href": "https://bits-ui.com/docs/components/menubar#api-reference"
+      },
+      {
+        "title": "Component Source",
+        "href": "https://bits-ui.com/docs/components/accordion"
       }
     ],
     "slug": "components/menubar",
@@ -1022,8 +1056,8 @@
     "title": "Navigation Menu",
     "description": "A collection of navigation links that can be displayed in a horizontal or vertical layout.",
     "path": "components/navigation-menu",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"navigation-menu-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"navigation-menu\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import * as NavigationMenu from \"$lib/components/ui/navigation-menu/index.js\";\n&#x3C;/script>\n\n&#x3C;NavigationMenu.Root>\n  &#x3C;NavigationMenu.List>\n    &#x3C;NavigationMenu.Item>\n      &#x3C;NavigationMenu.Trigger>Getting started&#x3C;/NavigationMenu.Trigger>\n      &#x3C;NavigationMenu.Content>\n        &#x3C;ul class=\"grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]\">\n          &#x3C;li class=\"row-span-3\">\n            &#x3C;NavigationMenu.Link asChild>\n              &#x3C;a\n                class=\"flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md\"\n                href=\"/\"\n              >\n                &#x3C;svg class=\"h-6 w-6\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                  &#x3C;path d=\"M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n                &#x3C;/svg>\n                &#x3C;div class=\"mb-2 mt-4 text-lg font-medium\">\n                  shadcn/ui\n                &#x3C;/div>\n                &#x3C;p class=\"text-sm leading-tight text-muted-foreground\">\n                  Beautifully designed components built with Radix UI and Tailwind CSS.\n                &#x3C;/p>\n              &#x3C;/a>\n            &#x3C;/NavigationMenu.Link>\n          &#x3C;/li>\n          &#x3C;li>\n            &#x3C;NavigationMenu.Link asChild>\n              &#x3C;a class=\"block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground\" href=\"/docs\">\n                &#x3C;div class=\"text-sm font-medium leading-none\">Introduction&#x3C;/div>\n                &#x3C;p class=\"line-clamp-2 text-sm leading-snug text-muted-foreground\">\n                  Re-usable components built using Radix UI and Tailwind CSS.\n                &#x3C;/p>\n              &#x3C;/a>\n            &#x3C;/NavigationMenu.Link>\n          &#x3C;/li>\n          &#x3C;li>\n            &#x3C;NavigationMenu.Link asChild>\n              &#x3C;a class=\"block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground\" href=\"/docs/installation\">\n                &#x3C;div class=\"text-sm font-medium leading-none\">Installation&#x3C;/div>\n                &#x3C;p class=\"line-clamp-2 text-sm leading-snug text-muted-foreground\">\n                  How to install dependencies and structure your app.\n                &#x3C;/p>\n              &#x3C;/a>\n            &#x3C;/NavigationMenu.Link>\n          &#x3C;/li>\n          &#x3C;li>\n            &#x3C;NavigationMenu.Link asChild>\n              &#x3C;a class=\"block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground\" href=\"/docs/primitives/typography\">\n                &#x3C;div class=\"text-sm font-medium leading-none\">Typography&#x3C;/div>\n                &#x3C;p class=\"line-clamp-2 text-sm leading-snug text-muted-foreground\">\n                  Styles for headings, paragraphs, lists...etc\n                &#x3C;/p>\n              &#x3C;/a>\n            &#x3C;/NavigationMenu.Link>\n          &#x3C;/li>\n        &#x3C;/ul>\n      &#x3C;/NavigationMenu.Content>\n    &#x3C;/NavigationMenu.Item>\n    &#x3C;NavigationMenu.Item>\n      &#x3C;NavigationMenu.Trigger>Components&#x3C;/NavigationMenu.Trigger>\n      &#x3C;NavigationMenu.Content>\n        &#x3C;ul class=\"grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]\">\n          {components.map((component) => (\n            &#x3C;li key={component.title}>\n              &#x3C;NavigationMenu.Link asChild>\n                &#x3C;a\n                  class=\"block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground\"\n                  href={component.href}\n                >\n                  &#x3C;div class=\"text-sm font-medium leading-none\">{component.title}&#x3C;/div>\n                  &#x3C;p class=\"line-clamp-2 text-sm leading-snug text-muted-foreground\">\n                    {component.description}\n                  &#x3C;/p>\n                &#x3C;/a>\n              &#x3C;/NavigationMenu.Link>\n            &#x3C;/li>\n          ))}\n        &#x3C;/ul>\n      &#x3C;/NavigationMenu.Content>\n    &#x3C;/NavigationMenu.Item>\n    &#x3C;NavigationMenu.Item>\n      &#x3C;NavigationMenu.Link href=\"/docs\">\n        Documentation\n      &#x3C;/NavigationMenu.Link>\n    &#x3C;/NavigationMenu.Item>\n  &#x3C;/NavigationMenu.List>\n&#x3C;/NavigationMenu.Root>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"navigation-menu-default\">\n<h3>Vertical</h3>\n<componentpreview name=\"navigation-menu-vertical\">\n<h3>With Viewport</h3>\n<componentpreview name=\"navigation-menu-with-viewport\"></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"navigation-menu-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"navigation-menu\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import * as NavigationMenu from \"$lib/components/ui/navigation-menu/index.js\";\n</script>\n\n<NavigationMenu.Root>\n  <NavigationMenu.List>\n    <NavigationMenu.Item>\n      <NavigationMenu.Trigger>Getting started</NavigationMenu.Trigger>\n      <NavigationMenu.Content>\n        <ul class=\"grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]\">\n          <li class=\"row-span-3\">\n            <NavigationMenu.Link asChild>\n              <a\n                class=\"flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md\"\n                href=\"/\"\n              >\n                <svg class=\"h-6 w-6\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                  <path d=\"M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n                </svg>\n                <div class=\"mb-2 mt-4 text-lg font-medium\">\n                  shadcn/ui\n                </div>\n                <p class=\"text-sm leading-tight text-muted-foreground\">\n                  Beautifully designed components built with Radix UI and Tailwind CSS.\n                </p>\n              </a>\n            </NavigationMenu.Link>\n          </li>\n          <li>\n            <NavigationMenu.Link asChild>\n              <a class=\"block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground\" href=\"/docs\">\n                <div class=\"text-sm font-medium leading-none\">Introduction</div>\n                <p class=\"line-clamp-2 text-sm leading-snug text-muted-foreground\">\n                  Re-usable components built using Radix UI and Tailwind CSS.\n                </p>\n              </a>\n            </NavigationMenu.Link>\n          </li>\n          <li>\n            <NavigationMenu.Link asChild>\n              <a class=\"block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground\" href=\"/docs/installation\">\n                <div class=\"text-sm font-medium leading-none\">Installation</div>\n                <p class=\"line-clamp-2 text-sm leading-snug text-muted-foreground\">\n                  How to install dependencies and structure your app.\n                </p>\n              </a>\n            </NavigationMenu.Link>\n          </li>\n          <li>\n            <NavigationMenu.Link asChild>\n              <a class=\"block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground\" href=\"/docs/primitives/typography\">\n                <div class=\"text-sm font-medium leading-none\">Typography</div>\n                <p class=\"line-clamp-2 text-sm leading-snug text-muted-foreground\">\n                  Styles for headings, paragraphs, lists...etc\n                </p>\n              </a>\n            </NavigationMenu.Link>\n          </li>\n        </ul>\n      </NavigationMenu.Content>\n    </NavigationMenu.Item>\n    <NavigationMenu.Item>\n      <NavigationMenu.Trigger>Components</NavigationMenu.Trigger>\n      <NavigationMenu.Content>\n        <ul class=\"grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]\">\n          {components.map((component) => (\n            <li key={component.title}>\n              <NavigationMenu.Link asChild>\n                <a\n                  class=\"block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground\"\n                  href={component.href}\n                >\n                  <div class=\"text-sm font-medium leading-none\">{component.title}</div>\n                  <p class=\"line-clamp-2 text-sm leading-snug text-muted-foreground\">\n                    {component.description}\n                  </p>\n                </a>\n              </NavigationMenu.Link>\n            </li>\n          ))}\n        </ul>\n      </NavigationMenu.Content>\n    </NavigationMenu.Item>\n    <NavigationMenu.Item>\n      <NavigationMenu.Link href=\"/docs\">\n        Documentation\n      </NavigationMenu.Link>\n    </NavigationMenu.Item>\n  </NavigationMenu.List>\n</NavigationMenu.Root>\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"navigation-menu-default\" />\n\n### Vertical\n\n<ComponentPreview name=\"navigation-menu-vertical\" />\n\n### With Viewport\n\n<ComponentPreview name=\"navigation-menu-with-viewport\" />",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"navigation-menu-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"navigation-menu\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n import * as NavigationMenu from \"$lib/components/ui/navigation-menu/index.js\";\n&#x3C;/script>\n \n&#x3C;NavigationMenu.Root>\n &#x3C;NavigationMenu.List>\n  &#x3C;NavigationMenu.Item>\n   &#x3C;NavigationMenu.Trigger>Item One&#x3C;/NavigationMenu.Trigger>\n   &#x3C;NavigationMenu.Content>\n    &#x3C;NavigationMenu.Link>Link&#x3C;/NavigationMenu.Link>\n   &#x3C;/NavigationMenu.Content>\n  &#x3C;/NavigationMenu.Item>\n &#x3C;/NavigationMenu.List>\n&#x3C;/NavigationMenu.Root>\n</code></pre></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"navigation-menu-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"navigation-menu\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n import * as NavigationMenu from \"$lib/components/ui/navigation-menu/index.js\";\n</script>\n \n<NavigationMenu.Root>\n <NavigationMenu.List>\n  <NavigationMenu.Item>\n   <NavigationMenu.Trigger>Item One</NavigationMenu.Trigger>\n   <NavigationMenu.Content>\n    <NavigationMenu.Link>Link</NavigationMenu.Link>\n   </NavigationMenu.Content>\n  </NavigationMenu.Item>\n </NavigationMenu.List>\n</NavigationMenu.Root>\n```",
     "toc": [
       {
         "title": "Installation",
@@ -1034,34 +1068,21 @@
         "title": "Usage",
         "url": "#usage",
         "items": []
-      },
-      {
-        "title": "Examples",
-        "url": "#examples",
-        "items": [
-          {
-            "title": "Default",
-            "url": "#default",
-            "items": []
-          },
-          {
-            "title": "Vertical",
-            "url": "#vertical",
-            "items": []
-          },
-          {
-            "title": "With Viewport",
-            "url": "#with-viewport",
-            "items": []
-          }
-        ]
       }
     ],
     "section": "Components",
     "links": [
       {
-        "title": "Component Source",
+        "title": "Docs",
         "href": "https://bits-ui.com/docs/components/navigation-menu"
+      },
+      {
+        "title": "API Reference",
+        "href": "https://bits-ui.com/docs/components/navigation-menu#api-reference"
+      },
+      {
+        "title": "Component Source",
+        "href": "https://bits-ui.com/docs/components/accordion"
       }
     ],
     "slug": "components/navigation-menu",
@@ -1954,71 +1975,5 @@
     ],
     "slug": "components/tooltip",
     "slugFull": "/components/tooltip"
-  },
-  {
-    "title": "Navigation",
-    "description": "Learn how to customize the navigation in your Svecodocs project.",
-    "path": "configuration/navigation",
-    "content": "<p>Navigation is a key component of every site, documenting the structure of your site and providing a clear path for users to navigate through your content.</p>\n<p>Svecodocs comes with a navigation structure that is designed to be flexible and customizable. Each page in your site should have a corresponding navigation item, and the navigation items should be nested according to their hierarchy.</p>\n<h2>Navigation Structure</h2>\n<h3>Anchors</h3>\n<p>Anchors are links that are displayed at the top of the sidebar and typically used to either highlight important information or provide quick access to linked content.</p>\n<h3>Sections</h3>\n<p>Sections are used to group related navigation items together. They are typically used to organize content into different categories, such as \"Components\", \"Configuration\", and \"Utilities\".</p>",
-    "raw": "Navigation is a key component of every site, documenting the structure of your site and providing a clear path for users to navigate through your content.\n\nSvecodocs comes with a navigation structure that is designed to be flexible and customizable. Each page in your site should have a corresponding navigation item, and the navigation items should be nested according to their hierarchy.\n\n## Navigation Structure\n\n### Anchors\n\nAnchors are links that are displayed at the top of the sidebar and typically used to either highlight important information or provide quick access to linked content.\n\n### Sections\n\nSections are used to group related navigation items together. They are typically used to organize content into different categories, such as \"Components\", \"Configuration\", and \"Utilities\".",
-    "toc": [
-      {
-        "title": "Navigation Structure",
-        "url": "#navigation-structure",
-        "items": [
-          {
-            "title": "Anchors",
-            "url": "#anchors",
-            "items": []
-          },
-          {
-            "title": "Sections",
-            "url": "#sections",
-            "items": []
-          }
-        ]
-      }
-    ],
-    "section": "Configuration",
-    "slug": "configuration/navigation",
-    "slugFull": "/configuration/navigation"
-  },
-  {
-    "title": "Theme",
-    "description": "Learn how to customize the theme in your Svecodocs project.",
-    "path": "configuration/theme",
-    "content": "<p>The theme determines the branded color scheme for your site. A theme for each of the TailwindCSS colors is provided by the <code>@svecodocs/kit</code> package. Each theme has been designed to present well in both light and dark mode.</p>\n<h2>Using a theme</h2>\n<p>To use a theme, import the theme file into your <code>src/app.css</code> file <em>before</em> importing the <code>@svecodocs/kit/globals.css</code> file.</p>\n<pre><code class=\"language-css\">/* @import \"@svecodocs/kit/theme-orange.css\"; */\n@import \"@svecodocs/kit/theme-emerald.css\";\n@import \"@svecodocs/kit/globals.css\";\n</code></pre>\n<p>It's not recommended to customize the theme to maintain consistency across the UI components that are provided by Svecodocs and align with the provided themes.</p>\n<h2>Available themes</h2>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<table><thead><tr><th>Theme name</th><th>Import path</th></tr></thead><tbody><tr><td>orange</td><td><code>@svecodocs/kit/theme-orange.css</code></td></tr><tr><td>green</td><td><code>@svecodocs/kit/theme-green.css</code></td></tr><tr><td>blue</td><td><code>@svecodocs/kit/theme-blue.css</code></td></tr><tr><td>purple</td><td><code>@svecodocs/kit/theme-purple.css</code></td></tr><tr><td>pink</td><td><code>@svecodocs/kit/theme-pink.css</code></td></tr><tr><td>lime</td><td><code>@svecodocs/kit/theme-lime.css</code></td></tr><tr><td>yellow</td><td><code>@svecodocs/kit/theme-yellow.css</code></td></tr><tr><td>cyan</td><td><code>@svecodocs/kit/theme-cyan.css</code></td></tr><tr><td>teal</td><td><code>@svecodocs/kit/theme-teal.css</code></td></tr><tr><td>violet</td><td><code>@svecodocs/kit/theme-violet.css</code></td></tr><tr><td>amber</td><td><code>@svecodocs/kit/theme-amber.css</code></td></tr><tr><td>red</td><td><code>@svecodocs/kit/theme-red.css</code></td></tr><tr><td>sky</td><td><code>@svecodocs/kit/theme-sky.css</code></td></tr><tr><td>emerald</td><td><code>@svecodocs/kit/theme-emerald.css</code></td></tr><tr><td>fuchsia</td><td><code>@svecodocs/kit/theme-fuchsia.css</code></td></tr><tr><td>rose</td><td><code>@svecodocs/kit/theme-rose.css</code></td></tr></tbody></table>\n<h2>Tailwind Variables</h2>\n<p>Svecodocs uses TailwindCSS to style the UI components and provides a set of Tailwind variables that can be used to style your examples/custom components.</p>\n<h3>Gray</h3>\n<p>We override the TailwindCSS <code>gray</code> color scale to provide our own grays.</p>\n<h3>Brand</h3>\n<p>You can use the <code>brand</code> color to use the brand color of your project.</p>",
-    "raw": "The theme determines the branded color scheme for your site. A theme for each of the TailwindCSS colors is provided by the `@svecodocs/kit` package. Each theme has been designed to present well in both light and dark mode.\n\n## Using a theme\n\nTo use a theme, import the theme file into your `src/app.css` file _before_ importing the `@svecodocs/kit/globals.css` file.\n\n```css\n/* @import \"@svecodocs/kit/theme-orange.css\"; */\n@import \"@svecodocs/kit/theme-emerald.css\";\n@import \"@svecodocs/kit/globals.css\";\n```\n\nIt's not recommended to customize the theme to maintain consistency across the UI components that are provided by Svecodocs and align with the provided themes.\n\n## Available themes\n\n| Theme name | Import path                        |\n| ---------- | ---------------------------------- |\n| orange     | `@svecodocs/kit/theme-orange.css`  |\n| green      | `@svecodocs/kit/theme-green.css`   |\n| blue       | `@svecodocs/kit/theme-blue.css`    |\n| purple     | `@svecodocs/kit/theme-purple.css`  |\n| pink       | `@svecodocs/kit/theme-pink.css`    |\n| lime       | `@svecodocs/kit/theme-lime.css`    |\n| yellow     | `@svecodocs/kit/theme-yellow.css`  |\n| cyan       | `@svecodocs/kit/theme-cyan.css`    |\n| teal       | `@svecodocs/kit/theme-teal.css`    |\n| violet     | `@svecodocs/kit/theme-violet.css`  |\n| amber      | `@svecodocs/kit/theme-amber.css`   |\n| red        | `@svecodocs/kit/theme-red.css`     |\n| sky        | `@svecodocs/kit/theme-sky.css`     |\n| emerald    | `@svecodocs/kit/theme-emerald.css` |\n| fuchsia    | `@svecodocs/kit/theme-fuchsia.css` |\n| rose       | `@svecodocs/kit/theme-rose.css`    |\n\n## Tailwind Variables\n\nSvecodocs uses TailwindCSS to style the UI components and provides a set of Tailwind variables that can be used to style your examples/custom components.\n\n### Gray\n\nWe override the TailwindCSS `gray` color scale to provide our own grays.\n\n### Brand\n\nYou can use the `brand` color to use the brand color of your project.",
-    "toc": [
-      {
-        "title": "Using a theme",
-        "url": "#using-a-theme",
-        "items": []
-      },
-      {
-        "title": "Available themes",
-        "url": "#available-themes",
-        "items": []
-      },
-      {
-        "title": "Tailwind Variables",
-        "url": "#tailwind-variables",
-        "items": [
-          {
-            "title": "Gray",
-            "url": "#gray",
-            "items": []
-          },
-          {
-            "title": "Brand",
-            "url": "#brand",
-            "items": []
-          }
-        ]
-      }
-    ],
-    "section": "Configuration",
-    "slug": "configuration/theme",
-    "slugFull": "/configuration/theme"
   }
 ]

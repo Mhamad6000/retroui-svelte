@@ -3,8 +3,12 @@ title: Command
 description: Fast, composable, unstyled command menu for React.
 section: Components
 links:
-  - title: "Component Source"
+  - title: "Docs"
     href: "https://bits-ui.com/docs/components/command"
+  - title: "API Reference"
+    href: "https://bits-ui.com/docs/components/command#api-reference"
+  - title : "Component Source"
+    href: "https://bits-ui.com/docs/components/accordion"
 ---
 <script>
 	import { ComponentPreview, PMCommand } from "$lib/components";

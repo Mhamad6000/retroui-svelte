@@ -1,10 +1,14 @@
 ---
 title: Calendar
-description: A date picker component with range and multiple selection.
+description: A calendar component that allows users to select dates.
 section: Components
 links:
-  - title: "Component Source"
+  - title: "Docs"
     href: "https://bits-ui.com/docs/components/calendar"
+  - title: "API Reference"
+    href: "https://bits-ui.com/docs/components/calendar#api-reference"
+  - title : "Component Source"
+    href: "https://bits-ui.com/docs/components/accordion"
 ---
 <script>
 	import { ComponentPreview, PMCommand } from "$lib/components";
@@ -21,38 +25,20 @@ links:
 <br />
 <br />
 
-## Usage
-
-```svelte
-<script lang="ts">
-  import * as Calendar from "$lib/components/ui/calendar/index.js";
-
-  let date = $state<Date | undefined>(new Date());
-</script>
-
-<Calendar.Root bind:value={date} />
-```
-
-<br />
-
 ## Examples
 
 ### Default
 
-<ComponentPreview name="calendar-default" />
+<ComponentPreview name="calendar-usage-example" />
+
+<br />
+
+### Range Calendar
+
+<ComponentPreview name="calendar-style-range" />
+
+<br />
 
 ### Date Picker
 
-<ComponentPreview name="calendar-date-picker" />
-
-### Date Range Picker
-
-<ComponentPreview name="calendar-date-range-picker" />
-
-### Multiple Selection
-
-<ComponentPreview name="calendar-multiple-selection" />
-
-### Form
-
-<ComponentPreview name="calendar-form" />
+<ComponentPreview name="calendar-style-month-year" />

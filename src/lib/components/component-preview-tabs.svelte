@@ -101,12 +101,12 @@
 		<div class="relative mt-2 h-[450px]">
 			<Tabs.Content
 				value="preview"
-				class="border-0 p-0 absolute inset-0 hidden overflow-hidden data-[state=active]:block"
+				class="border-0 p-0 absolute inset-0 hidden data-[state=active]:block"
 			>
 				<div class="relative rounded-lg border h-full">
 					<div
 						data-align={align}
-						class="preview flex h-full overflow-y-auto w-full justify-center p-10 data-[align=start]:items-start data-[align=end]:items-end data-[align=center]:items-center"
+						class="preview flex h-full w-full justify-center p-10 data-[align=start]:items-start data-[align=end]:items-end data-[align=center]:items-center"
 					>
 						{#if example}
 							{@render example()}
