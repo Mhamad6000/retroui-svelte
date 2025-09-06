@@ -82,72 +82,6 @@
     "slugFull": "/index"
   },
   {
-    "title": "Navigation",
-    "description": "Learn how to customize the navigation in your Svecodocs project.",
-    "path": "configuration/navigation",
-    "content": "<p>Navigation is a key component of every site, documenting the structure of your site and providing a clear path for users to navigate through your content.</p>\n<p>Svecodocs comes with a navigation structure that is designed to be flexible and customizable. Each page in your site should have a corresponding navigation item, and the navigation items should be nested according to their hierarchy.</p>\n<h2>Navigation Structure</h2>\n<h3>Anchors</h3>\n<p>Anchors are links that are displayed at the top of the sidebar and typically used to either highlight important information or provide quick access to linked content.</p>\n<h3>Sections</h3>\n<p>Sections are used to group related navigation items together. They are typically used to organize content into different categories, such as \"Components\", \"Configuration\", and \"Utilities\".</p>",
-    "raw": "Navigation is a key component of every site, documenting the structure of your site and providing a clear path for users to navigate through your content.\n\nSvecodocs comes with a navigation structure that is designed to be flexible and customizable. Each page in your site should have a corresponding navigation item, and the navigation items should be nested according to their hierarchy.\n\n## Navigation Structure\n\n### Anchors\n\nAnchors are links that are displayed at the top of the sidebar and typically used to either highlight important information or provide quick access to linked content.\n\n### Sections\n\nSections are used to group related navigation items together. They are typically used to organize content into different categories, such as \"Components\", \"Configuration\", and \"Utilities\".",
-    "toc": [
-      {
-        "title": "Navigation Structure",
-        "url": "#navigation-structure",
-        "items": [
-          {
-            "title": "Anchors",
-            "url": "#anchors",
-            "items": []
-          },
-          {
-            "title": "Sections",
-            "url": "#sections",
-            "items": []
-          }
-        ]
-      }
-    ],
-    "section": "Configuration",
-    "slug": "configuration/navigation",
-    "slugFull": "/configuration/navigation"
-  },
-  {
-    "title": "Theme",
-    "description": "Learn how to customize the theme in your Svecodocs project.",
-    "path": "configuration/theme",
-    "content": "<p>The theme determines the branded color scheme for your site. A theme for each of the TailwindCSS colors is provided by the <code>@svecodocs/kit</code> package. Each theme has been designed to present well in both light and dark mode.</p>\n<h2>Using a theme</h2>\n<p>To use a theme, import the theme file into your <code>src/app.css</code> file <em>before</em> importing the <code>@svecodocs/kit/globals.css</code> file.</p>\n<pre><code class=\"language-css\">/* @import \"@svecodocs/kit/theme-orange.css\"; */\n@import \"@svecodocs/kit/theme-emerald.css\";\n@import \"@svecodocs/kit/globals.css\";\n</code></pre>\n<p>It's not recommended to customize the theme to maintain consistency across the UI components that are provided by Svecodocs and align with the provided themes.</p>\n<h2>Available themes</h2>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<table><thead><tr><th>Theme name</th><th>Import path</th></tr></thead><tbody><tr><td>orange</td><td><code>@svecodocs/kit/theme-orange.css</code></td></tr><tr><td>green</td><td><code>@svecodocs/kit/theme-green.css</code></td></tr><tr><td>blue</td><td><code>@svecodocs/kit/theme-blue.css</code></td></tr><tr><td>purple</td><td><code>@svecodocs/kit/theme-purple.css</code></td></tr><tr><td>pink</td><td><code>@svecodocs/kit/theme-pink.css</code></td></tr><tr><td>lime</td><td><code>@svecodocs/kit/theme-lime.css</code></td></tr><tr><td>yellow</td><td><code>@svecodocs/kit/theme-yellow.css</code></td></tr><tr><td>cyan</td><td><code>@svecodocs/kit/theme-cyan.css</code></td></tr><tr><td>teal</td><td><code>@svecodocs/kit/theme-teal.css</code></td></tr><tr><td>violet</td><td><code>@svecodocs/kit/theme-violet.css</code></td></tr><tr><td>amber</td><td><code>@svecodocs/kit/theme-amber.css</code></td></tr><tr><td>red</td><td><code>@svecodocs/kit/theme-red.css</code></td></tr><tr><td>sky</td><td><code>@svecodocs/kit/theme-sky.css</code></td></tr><tr><td>emerald</td><td><code>@svecodocs/kit/theme-emerald.css</code></td></tr><tr><td>fuchsia</td><td><code>@svecodocs/kit/theme-fuchsia.css</code></td></tr><tr><td>rose</td><td><code>@svecodocs/kit/theme-rose.css</code></td></tr></tbody></table>\n<h2>Tailwind Variables</h2>\n<p>Svecodocs uses TailwindCSS to style the UI components and provides a set of Tailwind variables that can be used to style your examples/custom components.</p>\n<h3>Gray</h3>\n<p>We override the TailwindCSS <code>gray</code> color scale to provide our own grays.</p>\n<h3>Brand</h3>\n<p>You can use the <code>brand</code> color to use the brand color of your project.</p>",
-    "raw": "The theme determines the branded color scheme for your site. A theme for each of the TailwindCSS colors is provided by the `@svecodocs/kit` package. Each theme has been designed to present well in both light and dark mode.\n\n## Using a theme\n\nTo use a theme, import the theme file into your `src/app.css` file _before_ importing the `@svecodocs/kit/globals.css` file.\n\n```css\n/* @import \"@svecodocs/kit/theme-orange.css\"; */\n@import \"@svecodocs/kit/theme-emerald.css\";\n@import \"@svecodocs/kit/globals.css\";\n```\n\nIt's not recommended to customize the theme to maintain consistency across the UI components that are provided by Svecodocs and align with the provided themes.\n\n## Available themes\n\n| Theme name | Import path                        |\n| ---------- | ---------------------------------- |\n| orange     | `@svecodocs/kit/theme-orange.css`  |\n| green      | `@svecodocs/kit/theme-green.css`   |\n| blue       | `@svecodocs/kit/theme-blue.css`    |\n| purple     | `@svecodocs/kit/theme-purple.css`  |\n| pink       | `@svecodocs/kit/theme-pink.css`    |\n| lime       | `@svecodocs/kit/theme-lime.css`    |\n| yellow     | `@svecodocs/kit/theme-yellow.css`  |\n| cyan       | `@svecodocs/kit/theme-cyan.css`    |\n| teal       | `@svecodocs/kit/theme-teal.css`    |\n| violet     | `@svecodocs/kit/theme-violet.css`  |\n| amber      | `@svecodocs/kit/theme-amber.css`   |\n| red        | `@svecodocs/kit/theme-red.css`     |\n| sky        | `@svecodocs/kit/theme-sky.css`     |\n| emerald    | `@svecodocs/kit/theme-emerald.css` |\n| fuchsia    | `@svecodocs/kit/theme-fuchsia.css` |\n| rose       | `@svecodocs/kit/theme-rose.css`    |\n\n## Tailwind Variables\n\nSvecodocs uses TailwindCSS to style the UI components and provides a set of Tailwind variables that can be used to style your examples/custom components.\n\n### Gray\n\nWe override the TailwindCSS `gray` color scale to provide our own grays.\n\n### Brand\n\nYou can use the `brand` color to use the brand color of your project.",
-    "toc": [
-      {
-        "title": "Using a theme",
-        "url": "#using-a-theme",
-        "items": []
-      },
-      {
-        "title": "Available themes",
-        "url": "#available-themes",
-        "items": []
-      },
-      {
-        "title": "Tailwind Variables",
-        "url": "#tailwind-variables",
-        "items": [
-          {
-            "title": "Gray",
-            "url": "#gray",
-            "items": []
-          },
-          {
-            "title": "Brand",
-            "url": "#brand",
-            "items": []
-          }
-        ]
-      }
-    ],
-    "section": "Configuration",
-    "slug": "configuration/theme",
-    "slugFull": "/configuration/theme"
-  },
-  {
     "title": "Accordion",
     "description": "A vertically stacked set of interactive headings that each reveal a section of content.",
     "path": "components/accordion",
@@ -2020,5 +1954,71 @@
     ],
     "slug": "components/tooltip",
     "slugFull": "/components/tooltip"
+  },
+  {
+    "title": "Navigation",
+    "description": "Learn how to customize the navigation in your Svecodocs project.",
+    "path": "configuration/navigation",
+    "content": "<p>Navigation is a key component of every site, documenting the structure of your site and providing a clear path for users to navigate through your content.</p>\n<p>Svecodocs comes with a navigation structure that is designed to be flexible and customizable. Each page in your site should have a corresponding navigation item, and the navigation items should be nested according to their hierarchy.</p>\n<h2>Navigation Structure</h2>\n<h3>Anchors</h3>\n<p>Anchors are links that are displayed at the top of the sidebar and typically used to either highlight important information or provide quick access to linked content.</p>\n<h3>Sections</h3>\n<p>Sections are used to group related navigation items together. They are typically used to organize content into different categories, such as \"Components\", \"Configuration\", and \"Utilities\".</p>",
+    "raw": "Navigation is a key component of every site, documenting the structure of your site and providing a clear path for users to navigate through your content.\n\nSvecodocs comes with a navigation structure that is designed to be flexible and customizable. Each page in your site should have a corresponding navigation item, and the navigation items should be nested according to their hierarchy.\n\n## Navigation Structure\n\n### Anchors\n\nAnchors are links that are displayed at the top of the sidebar and typically used to either highlight important information or provide quick access to linked content.\n\n### Sections\n\nSections are used to group related navigation items together. They are typically used to organize content into different categories, such as \"Components\", \"Configuration\", and \"Utilities\".",
+    "toc": [
+      {
+        "title": "Navigation Structure",
+        "url": "#navigation-structure",
+        "items": [
+          {
+            "title": "Anchors",
+            "url": "#anchors",
+            "items": []
+          },
+          {
+            "title": "Sections",
+            "url": "#sections",
+            "items": []
+          }
+        ]
+      }
+    ],
+    "section": "Configuration",
+    "slug": "configuration/navigation",
+    "slugFull": "/configuration/navigation"
+  },
+  {
+    "title": "Theme",
+    "description": "Learn how to customize the theme in your Svecodocs project.",
+    "path": "configuration/theme",
+    "content": "<p>The theme determines the branded color scheme for your site. A theme for each of the TailwindCSS colors is provided by the <code>@svecodocs/kit</code> package. Each theme has been designed to present well in both light and dark mode.</p>\n<h2>Using a theme</h2>\n<p>To use a theme, import the theme file into your <code>src/app.css</code> file <em>before</em> importing the <code>@svecodocs/kit/globals.css</code> file.</p>\n<pre><code class=\"language-css\">/* @import \"@svecodocs/kit/theme-orange.css\"; */\n@import \"@svecodocs/kit/theme-emerald.css\";\n@import \"@svecodocs/kit/globals.css\";\n</code></pre>\n<p>It's not recommended to customize the theme to maintain consistency across the UI components that are provided by Svecodocs and align with the provided themes.</p>\n<h2>Available themes</h2>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<table><thead><tr><th>Theme name</th><th>Import path</th></tr></thead><tbody><tr><td>orange</td><td><code>@svecodocs/kit/theme-orange.css</code></td></tr><tr><td>green</td><td><code>@svecodocs/kit/theme-green.css</code></td></tr><tr><td>blue</td><td><code>@svecodocs/kit/theme-blue.css</code></td></tr><tr><td>purple</td><td><code>@svecodocs/kit/theme-purple.css</code></td></tr><tr><td>pink</td><td><code>@svecodocs/kit/theme-pink.css</code></td></tr><tr><td>lime</td><td><code>@svecodocs/kit/theme-lime.css</code></td></tr><tr><td>yellow</td><td><code>@svecodocs/kit/theme-yellow.css</code></td></tr><tr><td>cyan</td><td><code>@svecodocs/kit/theme-cyan.css</code></td></tr><tr><td>teal</td><td><code>@svecodocs/kit/theme-teal.css</code></td></tr><tr><td>violet</td><td><code>@svecodocs/kit/theme-violet.css</code></td></tr><tr><td>amber</td><td><code>@svecodocs/kit/theme-amber.css</code></td></tr><tr><td>red</td><td><code>@svecodocs/kit/theme-red.css</code></td></tr><tr><td>sky</td><td><code>@svecodocs/kit/theme-sky.css</code></td></tr><tr><td>emerald</td><td><code>@svecodocs/kit/theme-emerald.css</code></td></tr><tr><td>fuchsia</td><td><code>@svecodocs/kit/theme-fuchsia.css</code></td></tr><tr><td>rose</td><td><code>@svecodocs/kit/theme-rose.css</code></td></tr></tbody></table>\n<h2>Tailwind Variables</h2>\n<p>Svecodocs uses TailwindCSS to style the UI components and provides a set of Tailwind variables that can be used to style your examples/custom components.</p>\n<h3>Gray</h3>\n<p>We override the TailwindCSS <code>gray</code> color scale to provide our own grays.</p>\n<h3>Brand</h3>\n<p>You can use the <code>brand</code> color to use the brand color of your project.</p>",
+    "raw": "The theme determines the branded color scheme for your site. A theme for each of the TailwindCSS colors is provided by the `@svecodocs/kit` package. Each theme has been designed to present well in both light and dark mode.\n\n## Using a theme\n\nTo use a theme, import the theme file into your `src/app.css` file _before_ importing the `@svecodocs/kit/globals.css` file.\n\n```css\n/* @import \"@svecodocs/kit/theme-orange.css\"; */\n@import \"@svecodocs/kit/theme-emerald.css\";\n@import \"@svecodocs/kit/globals.css\";\n```\n\nIt's not recommended to customize the theme to maintain consistency across the UI components that are provided by Svecodocs and align with the provided themes.\n\n## Available themes\n\n| Theme name | Import path                        |\n| ---------- | ---------------------------------- |\n| orange     | `@svecodocs/kit/theme-orange.css`  |\n| green      | `@svecodocs/kit/theme-green.css`   |\n| blue       | `@svecodocs/kit/theme-blue.css`    |\n| purple     | `@svecodocs/kit/theme-purple.css`  |\n| pink       | `@svecodocs/kit/theme-pink.css`    |\n| lime       | `@svecodocs/kit/theme-lime.css`    |\n| yellow     | `@svecodocs/kit/theme-yellow.css`  |\n| cyan       | `@svecodocs/kit/theme-cyan.css`    |\n| teal       | `@svecodocs/kit/theme-teal.css`    |\n| violet     | `@svecodocs/kit/theme-violet.css`  |\n| amber      | `@svecodocs/kit/theme-amber.css`   |\n| red        | `@svecodocs/kit/theme-red.css`     |\n| sky        | `@svecodocs/kit/theme-sky.css`     |\n| emerald    | `@svecodocs/kit/theme-emerald.css` |\n| fuchsia    | `@svecodocs/kit/theme-fuchsia.css` |\n| rose       | `@svecodocs/kit/theme-rose.css`    |\n\n## Tailwind Variables\n\nSvecodocs uses TailwindCSS to style the UI components and provides a set of Tailwind variables that can be used to style your examples/custom components.\n\n### Gray\n\nWe override the TailwindCSS `gray` color scale to provide our own grays.\n\n### Brand\n\nYou can use the `brand` color to use the brand color of your project.",
+    "toc": [
+      {
+        "title": "Using a theme",
+        "url": "#using-a-theme",
+        "items": []
+      },
+      {
+        "title": "Available themes",
+        "url": "#available-themes",
+        "items": []
+      },
+      {
+        "title": "Tailwind Variables",
+        "url": "#tailwind-variables",
+        "items": [
+          {
+            "title": "Gray",
+            "url": "#gray",
+            "items": []
+          },
+          {
+            "title": "Brand",
+            "url": "#brand",
+            "items": []
+          }
+        ]
+      }
+    ],
+    "section": "Configuration",
+    "slug": "configuration/theme",
+    "slugFull": "/configuration/theme"
   }
 ]
