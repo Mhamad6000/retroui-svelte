@@ -3,8 +3,12 @@ title: Pagination
 description: Displays data in smaller chunks, or "pages," to make it more manageable.
 section: Components
 links:
-  - title: "Component Source"
+  - title: "Docs"
     href: "https://bits-ui.com/docs/components/pagination"
+  - title: "API Reference"
+    href: "https://bits-ui.com/docs/components/pagination#api-reference"
+  - title : "Component Source"
+    href: "https://bits-ui.com/docs/components/accordion"
 ---
 <script>
 	import { ComponentPreview, PMCommand } from "$lib/components";
@@ -25,44 +29,32 @@ links:
 
 ```svelte
 <script lang="ts">
-  import * as Pagination from "$lib/components/ui/pagination/index.js";
-
-  let currentPage = $state(1);
+ import * as Pagination from "$lib/components/ui/pagination/index.js";
 </script>
-
-<Pagination.Root count={10} bind:value={currentPage} let:pages>
+ 
+<Pagination.Root count={100} perPage={10}>
+ {#snippet children({ pages, currentPage })}
   <Pagination.Content>
-    <Pagination.Item>
-      <Pagination.PrevButton />
-    </Pagination.Item>
-    {#each pages as page (page.key)}
-      <Pagination.Item>
-        <Pagination.Button {page} />
-      </Pagination.Item>
-    {/each}
-    <Pagination.Item>
-      <Pagination.NextButton />
-    </Pagination.Item>
+   <Pagination.Item>
+    <Pagination.PrevButton />
+   </Pagination.Item>
+   {#each pages as page (page.key)}
+    {#if page.type === "ellipsis"}
+     <Pagination.Item>
+      <Pagination.Ellipsis />
+     </Pagination.Item>
+    {:else}
+     <Pagination.Item>
+      <Pagination.Link {page} isActive={currentPage === page.value}>
+       {page.value}
+      </Pagination.Link>
+     </Pagination.Item>
+    {/if}
+   {/each}
+   <Pagination.Item>
+    <Pagination.NextButton />
+   </Pagination.Item>
   </Pagination.Content>
+ {/snippet}
 </Pagination.Root>
 ```
-
-<br />
-
-## Examples
-
-### Default
-
-<ComponentPreview name="pagination-default" />
-
-### With Count
-
-<ComponentPreview name="pagination-with-count" />
-
-### Controlled
-
-<ComponentPreview name="pagination-controlled" />
-
-### Ellipsis
-
-<ComponentPreview name="pagination-ellipsis" />

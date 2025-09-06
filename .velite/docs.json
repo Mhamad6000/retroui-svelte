@@ -887,60 +887,6 @@
     "slugFull": "/components/hover-card"
   },
   {
-    "title": "Input OTP",
-    "description": "A one-time password input component.",
-    "path": "components/input-otp",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"input-otp-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"input-otp\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import * as InputOTP from \"$lib/components/ui/input-otp/index.js\";\n\n  let value = $state(\"\");\n&#x3C;/script>\n\n&#x3C;InputOTP.Root maxlength={6} bind:value>\n  &#x3C;InputOTP.Group>\n    &#x3C;InputOTP.Slot index={0} />\n    &#x3C;InputOTP.Slot index={1} />\n    &#x3C;InputOTP.Slot index={2} />\n  &#x3C;/InputOTP.Group>\n  &#x3C;InputOTP.Separator />\n  &#x3C;InputOTP.Group>\n    &#x3C;InputOTP.Slot index={3} />\n    &#x3C;InputOTP.Slot index={4} />\n    &#x3C;InputOTP.Slot index={5} />\n  &#x3C;/InputOTP.Group>\n&#x3C;/InputOTP.Root>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"input-otp-default\">\n<h3>With Separator</h3>\n<componentpreview name=\"input-otp-with-separator\">\n<h3>Controlled</h3>\n<componentpreview name=\"input-otp-controlled\">\n<h3>Disabled</h3>\n<componentpreview name=\"input-otp-disabled\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"input-otp-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"input-otp\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import * as InputOTP from \"$lib/components/ui/input-otp/index.js\";\n\n  let value = $state(\"\");\n</script>\n\n<InputOTP.Root maxlength={6} bind:value>\n  <InputOTP.Group>\n    <InputOTP.Slot index={0} />\n    <InputOTP.Slot index={1} />\n    <InputOTP.Slot index={2} />\n  </InputOTP.Group>\n  <InputOTP.Separator />\n  <InputOTP.Group>\n    <InputOTP.Slot index={3} />\n    <InputOTP.Slot index={4} />\n    <InputOTP.Slot index={5} />\n  </InputOTP.Group>\n</InputOTP.Root>\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"input-otp-default\" />\n\n### With Separator\n\n<ComponentPreview name=\"input-otp-with-separator\" />\n\n### Controlled\n\n<ComponentPreview name=\"input-otp-controlled\" />\n\n### Disabled\n\n<ComponentPreview name=\"input-otp-disabled\" />",
-    "toc": [
-      {
-        "title": "Installation",
-        "url": "#installation",
-        "items": []
-      },
-      {
-        "title": "Usage",
-        "url": "#usage",
-        "items": []
-      },
-      {
-        "title": "Examples",
-        "url": "#examples",
-        "items": [
-          {
-            "title": "Default",
-            "url": "#default",
-            "items": []
-          },
-          {
-            "title": "With Separator",
-            "url": "#with-separator",
-            "items": []
-          },
-          {
-            "title": "Controlled",
-            "url": "#controlled",
-            "items": []
-          },
-          {
-            "title": "Disabled",
-            "url": "#disabled",
-            "items": []
-          }
-        ]
-      }
-    ],
-    "section": "Components",
-    "links": [
-      {
-        "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/input-otp"
-      }
-    ],
-    "slug": "components/input-otp",
-    "slugFull": "/components/input-otp"
-  },
-  {
     "title": "Input",
     "description": "Displays a form input field or a component that looks like an input field.",
     "path": "components/input",
@@ -1032,10 +978,10 @@
   },
   {
     "title": "Loader",
-    "description": "A loading spinner component.",
+    "description": "A loading indicator component.",
     "path": "components/loader",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"loader-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"loader\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import { Loader } from \"$lib/components/ui/loader/index.js\";\n&#x3C;/script>\n\n&#x3C;Loader />\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"loader-default\">\n<h3>Sizes</h3>\n<componentpreview name=\"loader-sizes\">\n<h3>Colors</h3>\n<componentpreview name=\"loader-colors\">\n<h3>Custom</h3>\n<componentpreview name=\"loader-custom\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"loader-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"loader\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { Loader } from \"$lib/components/ui/loader/index.js\";\n</script>\n\n<Loader />\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"loader-default\" />\n\n### Sizes\n\n<ComponentPreview name=\"loader-sizes\" />\n\n### Colors\n\n<ComponentPreview name=\"loader-colors\" />\n\n### Custom\n\n<ComponentPreview name=\"loader-custom\" />",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"loader-style-default\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"loader\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import { Loader } from \"$lib/components/ui/loader/index.js\";\n&#x3C;/script>\n\n&#x3C;Loader />\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"loader-style-default\">\n<br>\n<h3>Secondary</h3>\n<componentpreview name=\"loader-style-secondary\">\n<br>\n<h3>Outline</h3>\n<componentpreview name=\"loader-style-outline\">\n<br>\n<h3>Sizes</h3>\n<componentpreview name=\"loader-sizes\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"loader-style-default\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"loader\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { Loader } from \"$lib/components/ui/loader/index.js\";\n</script>\n\n<Loader />\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"loader-style-default\" />\n\n<br/>\n\n### Secondary\n\n<ComponentPreview name=\"loader-style-secondary\" />\n\n<br/>\n\n### Outline\n\n<ComponentPreview name=\"loader-style-outline\" />\n\n<br/>\n\n### Sizes\n\n<ComponentPreview name=\"loader-sizes\" />",
     "toc": [
       {
         "title": "Installation",
@@ -1057,18 +1003,18 @@
             "items": []
           },
           {
+            "title": "Secondary",
+            "url": "#secondary",
+            "items": []
+          },
+          {
+            "title": "Outline",
+            "url": "#outline",
+            "items": []
+          },
+          {
             "title": "Sizes",
             "url": "#sizes",
-            "items": []
-          },
-          {
-            "title": "Colors",
-            "url": "#colors",
-            "items": []
-          },
-          {
-            "title": "Custom",
-            "url": "#custom",
             "items": []
           }
         ]
@@ -1191,8 +1137,8 @@
     "title": "Pagination",
     "description": "Displays data in smaller chunks, or \"pages,\" to make it more manageable.",
     "path": "components/pagination",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"pagination-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"pagination\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import * as Pagination from \"$lib/components/ui/pagination/index.js\";\n\n  let currentPage = $state(1);\n&#x3C;/script>\n\n&#x3C;Pagination.Root count={10} bind:value={currentPage} let:pages>\n  &#x3C;Pagination.Content>\n    &#x3C;Pagination.Item>\n      &#x3C;Pagination.PrevButton />\n    &#x3C;/Pagination.Item>\n    {#each pages as page (page.key)}\n      &#x3C;Pagination.Item>\n        &#x3C;Pagination.Button {page} />\n      &#x3C;/Pagination.Item>\n    {/each}\n    &#x3C;Pagination.Item>\n      &#x3C;Pagination.NextButton />\n    &#x3C;/Pagination.Item>\n  &#x3C;/Pagination.Content>\n&#x3C;/Pagination.Root>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"pagination-default\">\n<h3>With Count</h3>\n<componentpreview name=\"pagination-with-count\">\n<h3>Controlled</h3>\n<componentpreview name=\"pagination-controlled\">\n<h3>Ellipsis</h3>\n<componentpreview name=\"pagination-ellipsis\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"pagination-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"pagination\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import * as Pagination from \"$lib/components/ui/pagination/index.js\";\n\n  let currentPage = $state(1);\n</script>\n\n<Pagination.Root count={10} bind:value={currentPage} let:pages>\n  <Pagination.Content>\n    <Pagination.Item>\n      <Pagination.PrevButton />\n    </Pagination.Item>\n    {#each pages as page (page.key)}\n      <Pagination.Item>\n        <Pagination.Button {page} />\n      </Pagination.Item>\n    {/each}\n    <Pagination.Item>\n      <Pagination.NextButton />\n    </Pagination.Item>\n  </Pagination.Content>\n</Pagination.Root>\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"pagination-default\" />\n\n### With Count\n\n<ComponentPreview name=\"pagination-with-count\" />\n\n### Controlled\n\n<ComponentPreview name=\"pagination-controlled\" />\n\n### Ellipsis\n\n<ComponentPreview name=\"pagination-ellipsis\" />",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"pagination-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"pagination\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n import * as Pagination from \"$lib/components/ui/pagination/index.js\";\n&#x3C;/script>\n \n&#x3C;Pagination.Root count={100} perPage={10}>\n {#snippet children({ pages, currentPage })}\n  &#x3C;Pagination.Content>\n   &#x3C;Pagination.Item>\n    &#x3C;Pagination.PrevButton />\n   &#x3C;/Pagination.Item>\n   {#each pages as page (page.key)}\n    {#if page.type === \"ellipsis\"}\n     &#x3C;Pagination.Item>\n      &#x3C;Pagination.Ellipsis />\n     &#x3C;/Pagination.Item>\n    {:else}\n     &#x3C;Pagination.Item>\n      &#x3C;Pagination.Link {page} isActive={currentPage === page.value}>\n       {page.value}\n      &#x3C;/Pagination.Link>\n     &#x3C;/Pagination.Item>\n    {/if}\n   {/each}\n   &#x3C;Pagination.Item>\n    &#x3C;Pagination.NextButton />\n   &#x3C;/Pagination.Item>\n  &#x3C;/Pagination.Content>\n {/snippet}\n&#x3C;/Pagination.Root>\n</code></pre></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"pagination-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"pagination\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n import * as Pagination from \"$lib/components/ui/pagination/index.js\";\n</script>\n \n<Pagination.Root count={100} perPage={10}>\n {#snippet children({ pages, currentPage })}\n  <Pagination.Content>\n   <Pagination.Item>\n    <Pagination.PrevButton />\n   </Pagination.Item>\n   {#each pages as page (page.key)}\n    {#if page.type === \"ellipsis\"}\n     <Pagination.Item>\n      <Pagination.Ellipsis />\n     </Pagination.Item>\n    {:else}\n     <Pagination.Item>\n      <Pagination.Link {page} isActive={currentPage === page.value}>\n       {page.value}\n      </Pagination.Link>\n     </Pagination.Item>\n    {/if}\n   {/each}\n   <Pagination.Item>\n    <Pagination.NextButton />\n   </Pagination.Item>\n  </Pagination.Content>\n {/snippet}\n</Pagination.Root>\n```",
     "toc": [
       {
         "title": "Installation",
@@ -1203,39 +1149,21 @@
         "title": "Usage",
         "url": "#usage",
         "items": []
-      },
-      {
-        "title": "Examples",
-        "url": "#examples",
-        "items": [
-          {
-            "title": "Default",
-            "url": "#default",
-            "items": []
-          },
-          {
-            "title": "With Count",
-            "url": "#with-count",
-            "items": []
-          },
-          {
-            "title": "Controlled",
-            "url": "#controlled",
-            "items": []
-          },
-          {
-            "title": "Ellipsis",
-            "url": "#ellipsis",
-            "items": []
-          }
-        ]
       }
     ],
     "section": "Components",
     "links": [
       {
-        "title": "Component Source",
+        "title": "Docs",
         "href": "https://bits-ui.com/docs/components/pagination"
+      },
+      {
+        "title": "API Reference",
+        "href": "https://bits-ui.com/docs/components/pagination#api-reference"
+      },
+      {
+        "title": "Component Source",
+        "href": "https://bits-ui.com/docs/components/accordion"
       }
     ],
     "slug": "components/pagination",
@@ -1245,8 +1173,8 @@
     "title": "Popover",
     "description": "Displays rich content in a portal, triggered by a button.",
     "path": "components/popover",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"popover-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"popover\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import * as Popover from \"$lib/components/ui/popover/index.js\";\n  import { Button } from \"$lib/components/ui/button/index.js\";\n\n  let open = $state(false);\n&#x3C;/script>\n\n&#x3C;Popover.Root bind:open>\n  &#x3C;Popover.Trigger asChild>\n    &#x3C;Button variant=\"outline\">Open popover&#x3C;/Button>\n  &#x3C;/Popover.Trigger>\n  &#x3C;Popover.Content class=\"w-80\">\n    &#x3C;div class=\"grid gap-4\">\n      &#x3C;div class=\"space-y-2\">\n        &#x3C;h4 class=\"font-medium leading-none\">Dimensions&#x3C;/h4>\n        &#x3C;p class=\"text-sm text-muted-foreground\">\n          Set the dimensions for the layer.\n        &#x3C;/p>\n      &#x3C;/div>\n      &#x3C;div class=\"grid gap-2\">\n        &#x3C;div class=\"grid grid-cols-3 items-center gap-4\">\n          &#x3C;label for=\"width\">Width&#x3C;/label>\n          &#x3C;Input id=\"width\" defaultValue=\"100%\" class=\"col-span-2 h-8\" />\n        &#x3C;/div>\n        &#x3C;div class=\"grid grid-cols-3 items-center gap-4\">\n          &#x3C;label for=\"maxWidth\">Max. width&#x3C;/label>\n          &#x3C;Input id=\"maxWidth\" defaultValue=\"300px\" class=\"col-span-2 h-8\" />\n        &#x3C;/div>\n        &#x3C;div class=\"grid grid-cols-3 items-center gap-4\">\n          &#x3C;label for=\"height\">Height&#x3C;/label>\n          &#x3C;Input id=\"height\" defaultValue=\"25px\" class=\"col-span-2 h-8\" />\n        &#x3C;/div>\n        &#x3C;div class=\"grid grid-cols-3 items-center gap-4\">\n          &#x3C;label for=\"maxHeight\">Max. height&#x3C;/label>\n          &#x3C;Input id=\"maxHeight\" defaultValue=\"none\" class=\"col-span-2 h-8\" />\n        &#x3C;/div>\n      &#x3C;/div>\n    &#x3C;/div>\n  &#x3C;/Popover.Content>\n&#x3C;/Popover.Root>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"popover-default\">\n<h3>With Form</h3>\n<componentpreview name=\"popover-with-form\">\n<h3>Hover Card</h3>\n<componentpreview name=\"popover-hover-card\"></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"popover-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"popover\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import * as Popover from \"$lib/components/ui/popover/index.js\";\n  import { Button } from \"$lib/components/ui/button/index.js\";\n\n  let open = $state(false);\n</script>\n\n<Popover.Root bind:open>\n  <Popover.Trigger asChild>\n    <Button variant=\"outline\">Open popover</Button>\n  </Popover.Trigger>\n  <Popover.Content class=\"w-80\">\n    <div class=\"grid gap-4\">\n      <div class=\"space-y-2\">\n        <h4 class=\"font-medium leading-none\">Dimensions</h4>\n        <p class=\"text-sm text-muted-foreground\">\n          Set the dimensions for the layer.\n        </p>\n      </div>\n      <div class=\"grid gap-2\">\n        <div class=\"grid grid-cols-3 items-center gap-4\">\n          <label for=\"width\">Width</label>\n          <Input id=\"width\" defaultValue=\"100%\" class=\"col-span-2 h-8\" />\n        </div>\n        <div class=\"grid grid-cols-3 items-center gap-4\">\n          <label for=\"maxWidth\">Max. width</label>\n          <Input id=\"maxWidth\" defaultValue=\"300px\" class=\"col-span-2 h-8\" />\n        </div>\n        <div class=\"grid grid-cols-3 items-center gap-4\">\n          <label for=\"height\">Height</label>\n          <Input id=\"height\" defaultValue=\"25px\" class=\"col-span-2 h-8\" />\n        </div>\n        <div class=\"grid grid-cols-3 items-center gap-4\">\n          <label for=\"maxHeight\">Max. height</label>\n          <Input id=\"maxHeight\" defaultValue=\"none\" class=\"col-span-2 h-8\" />\n        </div>\n      </div>\n    </div>\n  </Popover.Content>\n</Popover.Root>\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"popover-default\" />\n\n### With Form\n\n<ComponentPreview name=\"popover-with-form\" />\n\n### Hover Card\n\n<ComponentPreview name=\"popover-hover-card\" />",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"popover-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"popover\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n import * as Popover from \"$lib/components/ui/popover/index.js\";\n&#x3C;/script>\n \n&#x3C;Popover.Root>\n &#x3C;Popover.Trigger>Open&#x3C;/Popover.Trigger>\n &#x3C;Popover.Content>Place content for the popover here.&#x3C;/Popover.Content>\n&#x3C;/Popover.Root>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"popover-usage-example\">\n<br>\n<h3>Shadowed</h3>\n<componentpreview name=\"popover-style-shadowed\"></componentpreview></componentpreview></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"popover-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"popover\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n import * as Popover from \"$lib/components/ui/popover/index.js\";\n</script>\n \n<Popover.Root>\n <Popover.Trigger>Open</Popover.Trigger>\n <Popover.Content>Place content for the popover here.</Popover.Content>\n</Popover.Root>\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"popover-usage-example\" />\n\n<br />\n\n### Shadowed\n\n<ComponentPreview name=\"popover-style-shadowed\" />",
     "toc": [
       {
         "title": "Installation",
@@ -1268,13 +1196,8 @@
             "items": []
           },
           {
-            "title": "With Form",
-            "url": "#with-form",
-            "items": []
-          },
-          {
-            "title": "Hover Card",
-            "url": "#hover-card",
+            "title": "Shadowed",
+            "url": "#shadowed",
             "items": []
           }
         ]
@@ -1283,8 +1206,16 @@
     "section": "Components",
     "links": [
       {
-        "title": "Component Source",
+        "title": "Docs",
         "href": "https://bits-ui.com/docs/components/popover"
+      },
+      {
+        "title": "API Reference",
+        "href": "https://bits-ui.com/docs/components/dialog#api-reference"
+      },
+      {
+        "title": "Component Source",
+        "href": "https://bits-ui.com/docs/components/accordion"
       }
     ],
     "slug": "components/popover",
@@ -1498,8 +1429,8 @@
     "title": "Separator",
     "description": "Visually or semantically separates content.",
     "path": "components/separator",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"separator-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"separator\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import { Separator } from \"$lib/components/ui/separator/index.js\";\n&#x3C;/script>\n\n&#x3C;div>\n  &#x3C;div class=\"space-y-1\">\n    &#x3C;h4 class=\"text-sm font-medium leading-none\">Radix Primitives&#x3C;/h4>\n    &#x3C;p class=\"text-sm text-muted-foreground\">\n      An open-source UI component library.\n    &#x3C;/p>\n  &#x3C;/div>\n  &#x3C;Separator class=\"my-4\" />\n  &#x3C;div class=\"flex h-5 items-center space-x-4 text-sm\">\n    &#x3C;div>Blog&#x3C;/div>\n    &#x3C;Separator orientation=\"vertical\" />\n    &#x3C;div>Docs&#x3C;/div>\n    &#x3C;Separator orientation=\"vertical\" />\n    &#x3C;div>Source&#x3C;/div>\n  &#x3C;/div>\n&#x3C;/div>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Horizontal</h3>\n<componentpreview name=\"separator-horizontal\">\n<h3>Vertical</h3>\n<componentpreview name=\"separator-vertical\">\n<h3>With Label</h3>\n<componentpreview name=\"separator-with-label\"></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"separator-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"separator\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { Separator } from \"$lib/components/ui/separator/index.js\";\n</script>\n\n<div>\n  <div class=\"space-y-1\">\n    <h4 class=\"text-sm font-medium leading-none\">Radix Primitives</h4>\n    <p class=\"text-sm text-muted-foreground\">\n      An open-source UI component library.\n    </p>\n  </div>\n  <Separator class=\"my-4\" />\n  <div class=\"flex h-5 items-center space-x-4 text-sm\">\n    <div>Blog</div>\n    <Separator orientation=\"vertical\" />\n    <div>Docs</div>\n    <Separator orientation=\"vertical\" />\n    <div>Source</div>\n  </div>\n</div>\n```\n\n<br />\n\n## Examples\n\n### Horizontal\n\n<ComponentPreview name=\"separator-horizontal\" />\n\n### Vertical\n\n<ComponentPreview name=\"separator-vertical\" />\n\n### With Label\n\n<ComponentPreview name=\"separator-with-label\" />",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"separator-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"separator\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n import { Separator } from \"$lib/components/ui/separator/index.js\";\n&#x3C;/script>\n \n&#x3C;Separator />\n</code></pre></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"separator-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"separator\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n import { Separator } from \"$lib/components/ui/separator/index.js\";\n</script>\n \n<Separator />\n```",
     "toc": [
       {
         "title": "Installation",
@@ -1510,34 +1441,21 @@
         "title": "Usage",
         "url": "#usage",
         "items": []
-      },
-      {
-        "title": "Examples",
-        "url": "#examples",
-        "items": [
-          {
-            "title": "Horizontal",
-            "url": "#horizontal",
-            "items": []
-          },
-          {
-            "title": "Vertical",
-            "url": "#vertical",
-            "items": []
-          },
-          {
-            "title": "With Label",
-            "url": "#with-label",
-            "items": []
-          }
-        ]
       }
     ],
     "section": "Components",
     "links": [
       {
-        "title": "Component Source",
+        "title": "Docs",
         "href": "https://bits-ui.com/docs/components/separator"
+      },
+      {
+        "title": "API Reference",
+        "href": "https://bits-ui.com/docs/components/dialog#api-reference"
+      },
+      {
+        "title": "Component Source",
+        "href": "https://bits-ui.com/docs/components/accordion"
       }
     ],
     "slug": "components/separator",
@@ -1547,8 +1465,8 @@
     "title": "Sheet",
     "description": "Extends the Dialog component to display content that complements the main content of the screen.",
     "path": "components/sheet",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"sheet-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"sheet\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import * as Sheet from \"$lib/components/ui/sheet/index.js\";\n  import { Button } from \"$lib/components/ui/button/index.js\";\n\n  let open = $state(false);\n&#x3C;/script>\n\n&#x3C;Button onclick={() => open = true} variant=\"outline\">Open&#x3C;/Button>\n\n&#x3C;Sheet.Root bind:open>\n  &#x3C;Sheet.Content>\n    &#x3C;Sheet.Header>\n      &#x3C;Sheet.Title>Are you sure absolutely sure?&#x3C;/Sheet.Title>\n      &#x3C;Sheet.Description>\n        This action cannot be undone. This will permanently delete your account\n        and remove your data from our servers.\n      &#x3C;/Sheet.Description>\n    &#x3C;/Sheet.Header>\n    &#x3C;div class=\"grid gap-4 py-4\">\n      &#x3C;div class=\"grid grid-cols-4 items-center gap-4\">\n        &#x3C;label for=\"name\" class=\"text-right\">Name&#x3C;/label>\n        &#x3C;Input id=\"name\" value=\"Pedro Duarte\" class=\"col-span-3\" />\n      &#x3C;/div>\n      &#x3C;div class=\"grid grid-cols-4 items-center gap-4\">\n        &#x3C;label for=\"username\" class=\"text-right\">Username&#x3C;/label>\n        &#x3C;Input id=\"username\" value=\"@peduarte\" class=\"col-span-3\" />\n      &#x3C;/div>\n    &#x3C;/div>\n    &#x3C;Sheet.Footer>\n      &#x3C;Sheet.Close asChild>\n        &#x3C;Button type=\"submit\">Save changes&#x3C;/Button>\n      &#x3C;/Sheet.Close>\n    &#x3C;/Sheet.Footer>\n  &#x3C;/Sheet.Content>\n&#x3C;/Sheet.Root>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Side</h3>\n<componentpreview name=\"sheet-side\">\n<h3>Size</h3>\n<componentpreview name=\"sheet-size\">\n<h3>Position</h3>\n<componentpreview name=\"sheet-position\"></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"sheet-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"sheet\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import * as Sheet from \"$lib/components/ui/sheet/index.js\";\n  import { Button } from \"$lib/components/ui/button/index.js\";\n\n  let open = $state(false);\n</script>\n\n<Button onclick={() => open = true} variant=\"outline\">Open</Button>\n\n<Sheet.Root bind:open>\n  <Sheet.Content>\n    <Sheet.Header>\n      <Sheet.Title>Are you sure absolutely sure?</Sheet.Title>\n      <Sheet.Description>\n        This action cannot be undone. This will permanently delete your account\n        and remove your data from our servers.\n      </Sheet.Description>\n    </Sheet.Header>\n    <div class=\"grid gap-4 py-4\">\n      <div class=\"grid grid-cols-4 items-center gap-4\">\n        <label for=\"name\" class=\"text-right\">Name</label>\n        <Input id=\"name\" value=\"Pedro Duarte\" class=\"col-span-3\" />\n      </div>\n      <div class=\"grid grid-cols-4 items-center gap-4\">\n        <label for=\"username\" class=\"text-right\">Username</label>\n        <Input id=\"username\" value=\"@peduarte\" class=\"col-span-3\" />\n      </div>\n    </div>\n    <Sheet.Footer>\n      <Sheet.Close asChild>\n        <Button type=\"submit\">Save changes</Button>\n      </Sheet.Close>\n    </Sheet.Footer>\n  </Sheet.Content>\n</Sheet.Root>\n```\n\n<br />\n\n## Examples\n\n### Side\n\n<ComponentPreview name=\"sheet-side\" />\n\n### Size\n\n<ComponentPreview name=\"sheet-size\" />\n\n### Position\n\n<ComponentPreview name=\"sheet-position\" />",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"sheet-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"sheet\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n import * as Sheet from \"$lib/components/ui/sheet/index.js\";\n&#x3C;/script>\n \n&#x3C;Sheet.Root>\n &#x3C;Sheet.Trigger>Open&#x3C;/Sheet.Trigger>\n &#x3C;Sheet.Content>\n  &#x3C;Sheet.Header>\n   &#x3C;Sheet.Title>Are you sure absolutely sure?&#x3C;/Sheet.Title>\n   &#x3C;Sheet.Description>\n    This action cannot be undone. This will permanently delete your account\n    and remove your data from our servers.\n   &#x3C;/Sheet.Description>\n  &#x3C;/Sheet.Header>\n &#x3C;/Sheet.Content>\n&#x3C;/Sheet.Root>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Side</h3>\n<componentpreview name=\"sheet-side\"></componentpreview></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"sheet-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"sheet\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n import * as Sheet from \"$lib/components/ui/sheet/index.js\";\n</script>\n \n<Sheet.Root>\n <Sheet.Trigger>Open</Sheet.Trigger>\n <Sheet.Content>\n  <Sheet.Header>\n   <Sheet.Title>Are you sure absolutely sure?</Sheet.Title>\n   <Sheet.Description>\n    This action cannot be undone. This will permanently delete your account\n    and remove your data from our servers.\n   </Sheet.Description>\n  </Sheet.Header>\n </Sheet.Content>\n</Sheet.Root>\n```\n\n<br />\n\n## Examples\n\n### Side\n\n<ComponentPreview name=\"sheet-side\" />",
     "toc": [
       {
         "title": "Installation",
@@ -1568,16 +1486,6 @@
             "title": "Side",
             "url": "#side",
             "items": []
-          },
-          {
-            "title": "Size",
-            "url": "#size",
-            "items": []
-          },
-          {
-            "title": "Position",
-            "url": "#position",
-            "items": []
           }
         ]
       }
@@ -1585,66 +1493,20 @@
     "section": "Components",
     "links": [
       {
+        "title": "Docs",
+        "href": "https://bits-ui.com/docs/components/dialog"
+      },
+      {
+        "title": "API Reference",
+        "href": "https://bits-ui.com/docs/components/dialog#api-reference"
+      },
+      {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/sheet"
+        "href": "https://bits-ui.com/docs/components/accordion"
       }
     ],
     "slug": "components/sheet",
     "slugFull": "/components/sheet"
-  },
-  {
-    "title": "Sidebar",
-    "description": "A collapsible sidebar component.",
-    "path": "components/sidebar",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"sidebar-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"sidebar\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import * as Sidebar from \"$lib/components/ui/sidebar/index.js\";\n&#x3C;/script>\n\n&#x3C;Sidebar.Provider>\n  &#x3C;Sidebar.Root>\n    &#x3C;Sidebar.Content>\n      &#x3C;Sidebar.Group>\n        &#x3C;Sidebar.GroupLabel>Application&#x3C;/Sidebar.GroupLabel>\n        &#x3C;Sidebar.GroupContent>\n          &#x3C;Sidebar.Menu>\n            &#x3C;Sidebar.MenuItem>\n              &#x3C;Sidebar.MenuButton>\n                &#x3C;HomeIcon />\n                &#x3C;span>Home&#x3C;/span>\n              &#x3C;/Sidebar.MenuButton>\n            &#x3C;/Sidebar.MenuItem>\n            &#x3C;Sidebar.MenuItem>\n              &#x3C;Sidebar.MenuButton>\n                &#x3C;SettingsIcon />\n                &#x3C;span>Settings&#x3C;/span>\n              &#x3C;/Sidebar.MenuButton>\n            &#x3C;/Sidebar.MenuItem>\n          &#x3C;/Sidebar.Menu>\n        &#x3C;/Sidebar.GroupContent>\n      &#x3C;/Sidebar.Group>\n    &#x3C;/Sidebar.Content>\n    &#x3C;Sidebar.Footer>\n      &#x3C;Sidebar.Menu>\n        &#x3C;Sidebar.MenuItem>\n          &#x3C;Sidebar.MenuButton>\n            &#x3C;UserIcon />\n            &#x3C;span>Account&#x3C;/span>\n          &#x3C;/Sidebar.MenuButton>\n        &#x3C;/Sidebar.MenuItem>\n      &#x3C;/Sidebar.Menu>\n    &#x3C;/Sidebar.Footer>\n  &#x3C;/Sidebar.Root>\n&#x3C;/Sidebar.Provider>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"sidebar-default\">\n<h3>Collapsible</h3>\n<componentpreview name=\"sidebar-collapsible\">\n<h3>With Header</h3>\n<componentpreview name=\"sidebar-with-header\">\n<h3>Nested</h3>\n<componentpreview name=\"sidebar-nested\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"sidebar-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"sidebar\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import * as Sidebar from \"$lib/components/ui/sidebar/index.js\";\n</script>\n\n<Sidebar.Provider>\n  <Sidebar.Root>\n    <Sidebar.Content>\n      <Sidebar.Group>\n        <Sidebar.GroupLabel>Application</Sidebar.GroupLabel>\n        <Sidebar.GroupContent>\n          <Sidebar.Menu>\n            <Sidebar.MenuItem>\n              <Sidebar.MenuButton>\n                <HomeIcon />\n                <span>Home</span>\n              </Sidebar.MenuButton>\n            </Sidebar.MenuItem>\n            <Sidebar.MenuItem>\n              <Sidebar.MenuButton>\n                <SettingsIcon />\n                <span>Settings</span>\n              </Sidebar.MenuButton>\n            </Sidebar.MenuItem>\n          </Sidebar.Menu>\n        </Sidebar.GroupContent>\n      </Sidebar.Group>\n    </Sidebar.Content>\n    <Sidebar.Footer>\n      <Sidebar.Menu>\n        <Sidebar.MenuItem>\n          <Sidebar.MenuButton>\n            <UserIcon />\n            <span>Account</span>\n          </Sidebar.MenuButton>\n        </Sidebar.MenuItem>\n      </Sidebar.Menu>\n    </Sidebar.Footer>\n  </Sidebar.Root>\n</Sidebar.Provider>\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"sidebar-default\" />\n\n### Collapsible\n\n<ComponentPreview name=\"sidebar-collapsible\" />\n\n### With Header\n\n<ComponentPreview name=\"sidebar-with-header\" />\n\n### Nested\n\n<ComponentPreview name=\"sidebar-nested\" />",
-    "toc": [
-      {
-        "title": "Installation",
-        "url": "#installation",
-        "items": []
-      },
-      {
-        "title": "Usage",
-        "url": "#usage",
-        "items": []
-      },
-      {
-        "title": "Examples",
-        "url": "#examples",
-        "items": [
-          {
-            "title": "Default",
-            "url": "#default",
-            "items": []
-          },
-          {
-            "title": "Collapsible",
-            "url": "#collapsible",
-            "items": []
-          },
-          {
-            "title": "With Header",
-            "url": "#with-header",
-            "items": []
-          },
-          {
-            "title": "Nested",
-            "url": "#nested",
-            "items": []
-          }
-        ]
-      }
-    ],
-    "section": "Components",
-    "links": [
-      {
-        "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/sidebar"
-      }
-    ],
-    "slug": "components/sidebar",
-    "slugFull": "/components/sidebar"
   },
   {
     "title": "Slider",
@@ -1700,14 +1562,24 @@
   },
   {
     "title": "Sonner",
-    "description": "An opinionated toast component for React.",
+    "description": "An opinionated toast component for Svelte.",
     "path": "components/sonner",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"sonner-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"sonner\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import { Toaster } from \"$lib/components/ui/sonner/index.js\";\n  import { toast } from \"sonner\";\n&#x3C;/script>\n\n&#x3C;button onclick={() => toast(\"Event has been created\")}>\n  Show Toast\n&#x3C;/button>\n\n&#x3C;Toaster />\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"sonner-default\">\n<h3>With Action</h3>\n<componentpreview name=\"sonner-with-action\">\n<h3>Success</h3>\n<componentpreview name=\"sonner-success\">\n<h3>Error</h3>\n<componentpreview name=\"sonner-error\">\n<h3>Warning</h3>\n<componentpreview name=\"sonner-warning\">\n<h3>Info</h3>\n<componentpreview name=\"sonner-info\">\n<h3>Loading</h3>\n<componentpreview name=\"sonner-loading\">\n<h3>Custom</h3>\n<componentpreview name=\"sonner-custom\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"sonner-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"sonner\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { Toaster } from \"$lib/components/ui/sonner/index.js\";\n  import { toast } from \"sonner\";\n</script>\n\n<button onclick={() => toast(\"Event has been created\")}>\n  Show Toast\n</button>\n\n<Toaster />\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"sonner-default\" />\n\n### With Action\n\n<ComponentPreview name=\"sonner-with-action\" />\n\n### Success\n\n<ComponentPreview name=\"sonner-success\" />\n\n### Error\n\n<ComponentPreview name=\"sonner-error\" />\n\n### Warning\n\n<ComponentPreview name=\"sonner-warning\" />\n\n### Info\n\n<ComponentPreview name=\"sonner-info\" />\n\n### Loading\n\n<ComponentPreview name=\"sonner-loading\" />\n\n### Custom\n\n<ComponentPreview name=\"sonner-custom\" />",
+    "content": "<script>\n  import { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"sonner-usage-example\">\n<br>\n<br>\n<h2>About</h2>\n<p>The Sonner component is provided by <a href=\"https://svelte-sonner.vercel.app\">svelte-sonner</a>, which is a Svelte port of <a href=\"https://sonner.emilkowal.ski\">Sonner</a>, originally created by <a href=\"https://x.com/emilkowalski_\">Emil Kowalski</a> for React.</p>\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"sonner\"]} /></p>\n<br>\n<br>\n<h2>Setup</h2>\n<p>First, add the Toaster component to your root layout.</p>\n<pre><code class=\"language-svelte\">&#x3C;!-- +layout.svelte -->\n&#x3C;script lang=\"ts\">\n  import { Toaster } from \"$lib/components/ui/sonner/index.js\";\n  let { children } = $props();\n&#x3C;/script>\n\n&#x3C;Toaster />\n\n{@render children?.()}\n</code></pre>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import { toast } from \"svelte-sonner\";\n  import { Button } from \"$lib/components/ui/button/index.js\";\n&#x3C;/script>\n\n&#x3C;Button onclick={() => toast(\"Hello world\")}>Show toast&#x3C;/Button>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"sonner-usage-example\">\n<br>\n<h3>Status</h3>\n<componentpreview name=\"sonner-style-status\">\n<br>\n<h3>Colored Status</h3>\n<componentpreview name=\"sonner-style-colored-status\"></componentpreview></componentpreview></componentpreview></componentpreview>",
+    "raw": "<script>\n  import { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"sonner-usage-example\" />\n<br />\n<br />\n\n## About\nThe Sonner component is provided by [svelte-sonner](https://svelte-sonner.vercel.app), which is a Svelte port of [Sonner](https://sonner.emilkowal.ski), originally created by [Emil Kowalski](https://x.com/emilkowalski_) for React.\n\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"sonner\"]} />\n\n<br />\n<br />\n\n## Setup\n\nFirst, add the Toaster component to your root layout.\n\n```svelte\n<!-- +layout.svelte -->\n<script lang=\"ts\">\n  import { Toaster } from \"$lib/components/ui/sonner/index.js\";\n  let { children } = $props();\n</script>\n\n<Toaster />\n\n{@render children?.()}\n```\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { toast } from \"svelte-sonner\";\n  import { Button } from \"$lib/components/ui/button/index.js\";\n</script>\n\n<Button onclick={() => toast(\"Hello world\")}>Show toast</Button>\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"sonner-usage-example\" />\n\n<br />\n\n### Status\n\n<ComponentPreview name=\"sonner-style-status\" />\n\n<br />\n\n### Colored Status\n\n<ComponentPreview name=\"sonner-style-colored-status\" />",
     "toc": [
+      {
+        "title": "About",
+        "url": "#about",
+        "items": []
+      },
       {
         "title": "Installation",
         "url": "#installation",
+        "items": []
+      },
+      {
+        "title": "Setup",
+        "url": "#setup",
         "items": []
       },
       {
@@ -1725,38 +1597,13 @@
             "items": []
           },
           {
-            "title": "With Action",
-            "url": "#with-action",
+            "title": "Status",
+            "url": "#status",
             "items": []
           },
           {
-            "title": "Success",
-            "url": "#success",
-            "items": []
-          },
-          {
-            "title": "Error",
-            "url": "#error",
-            "items": []
-          },
-          {
-            "title": "Warning",
-            "url": "#warning",
-            "items": []
-          },
-          {
-            "title": "Info",
-            "url": "#info",
-            "items": []
-          },
-          {
-            "title": "Loading",
-            "url": "#loading",
-            "items": []
-          },
-          {
-            "title": "Custom",
-            "url": "#custom",
+            "title": "Colored Status",
+            "url": "#colored-status",
             "items": []
           }
         ]
@@ -1765,8 +1612,16 @@
     "section": "Components",
     "links": [
       {
+        "title": "Docs",
+        "href": "https://svelte-sonner.vercel.app"
+      },
+      {
+        "title": "API Reference",
+        "href": "https://bits-ui.com/docs/components/switch#api-reference"
+      },
+      {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/sonner"
+        "href": "https://bits-ui.com/docs/components/accordion"
       }
     ],
     "slug": "components/sonner",
@@ -1828,8 +1683,8 @@
     "title": "Table",
     "description": "A responsive table component.",
     "path": "components/table",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"table-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"table\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import * as Table from \"$lib/components/ui/table/index.js\";\n&#x3C;/script>\n\n&#x3C;Table.Root>\n  &#x3C;Table.Caption>A list of your recent invoices.&#x3C;/Table.Caption>\n  &#x3C;Table.Header>\n    &#x3C;Table.Row>\n      &#x3C;Table.Head class=\"w-[100px]\">Invoice&#x3C;/Table.Head>\n      &#x3C;Table.Head>Status&#x3C;/Table.Head>\n      &#x3C;Table.Head>Method&#x3C;/Table.Head>\n      &#x3C;Table.Head class=\"text-right\">Amount&#x3C;/Table.Head>\n    &#x3C;/Table.Row>\n  &#x3C;/Table.Header>\n  &#x3C;Table.Body>\n    &#x3C;Table.Row>\n      &#x3C;Table.Cell class=\"font-medium\">INV001&#x3C;/Table.Cell>\n      &#x3C;Table.Cell>Paid&#x3C;/Table.Cell>\n      &#x3C;Table.Cell>Credit Card&#x3C;/Table.Cell>\n      &#x3C;Table.Cell class=\"text-right\">$250.00&#x3C;/Table.Cell>\n    &#x3C;/Table.Row>\n    &#x3C;Table.Row>\n      &#x3C;Table.Cell class=\"font-medium\">INV002&#x3C;/Table.Cell>\n      &#x3C;Table.Cell>Pending&#x3C;/Table.Cell>\n      &#x3C;Table.Cell>PayPal&#x3C;/Table.Cell>\n      &#x3C;Table.Cell class=\"text-right\">$150.00&#x3C;/Table.Cell>\n    &#x3C;/Table.Row>\n    &#x3C;Table.Row>\n      &#x3C;Table.Cell class=\"font-medium\">INV003&#x3C;/Table.Cell>\n      &#x3C;Table.Cell>Unpaid&#x3C;/Table.Cell>\n      &#x3C;Table.Cell>Bank Transfer&#x3C;/Table.Cell>\n      &#x3C;Table.Cell class=\"text-right\">$350.00&#x3C;/Table.Cell>\n    &#x3C;/Table.Row>\n  &#x3C;/Table.Body>\n&#x3C;/Table.Root>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"table-default\">\n<h3>With Caption</h3>\n<componentpreview name=\"table-with-caption\">\n<h3>Striped</h3>\n<componentpreview name=\"table-striped\">\n<h3>Sortable</h3>\n<componentpreview name=\"table-sortable\">\n<h3>Dense</h3>\n<componentpreview name=\"table-dense\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"table-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"table\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import * as Table from \"$lib/components/ui/table/index.js\";\n</script>\n\n<Table.Root>\n  <Table.Caption>A list of your recent invoices.</Table.Caption>\n  <Table.Header>\n    <Table.Row>\n      <Table.Head class=\"w-[100px]\">Invoice</Table.Head>\n      <Table.Head>Status</Table.Head>\n      <Table.Head>Method</Table.Head>\n      <Table.Head class=\"text-right\">Amount</Table.Head>\n    </Table.Row>\n  </Table.Header>\n  <Table.Body>\n    <Table.Row>\n      <Table.Cell class=\"font-medium\">INV001</Table.Cell>\n      <Table.Cell>Paid</Table.Cell>\n      <Table.Cell>Credit Card</Table.Cell>\n      <Table.Cell class=\"text-right\">$250.00</Table.Cell>\n    </Table.Row>\n    <Table.Row>\n      <Table.Cell class=\"font-medium\">INV002</Table.Cell>\n      <Table.Cell>Pending</Table.Cell>\n      <Table.Cell>PayPal</Table.Cell>\n      <Table.Cell class=\"text-right\">$150.00</Table.Cell>\n    </Table.Row>\n    <Table.Row>\n      <Table.Cell class=\"font-medium\">INV003</Table.Cell>\n      <Table.Cell>Unpaid</Table.Cell>\n      <Table.Cell>Bank Transfer</Table.Cell>\n      <Table.Cell class=\"text-right\">$350.00</Table.Cell>\n    </Table.Row>\n  </Table.Body>\n</Table.Root>\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"table-default\" />\n\n### With Caption\n\n<ComponentPreview name=\"table-with-caption\" />\n\n### Striped\n\n<ComponentPreview name=\"table-striped\" />\n\n### Sortable\n\n<ComponentPreview name=\"table-sortable\" />\n\n### Dense\n\n<ComponentPreview name=\"table-dense\" />",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"table-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"table\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n import * as Table from \"$lib/components/ui/table/index.js\";\n&#x3C;/script>\n\n&#x3C;Table.Root>\n  &#x3C;Table.Caption>A list of your recent invoices.&#x3C;/Table.Caption>\n  &#x3C;Table.Header>\n    &#x3C;Table.Row>\n      &#x3C;Table.Head class=\"w-[100px]\">Invoice&#x3C;/Table.Head>\n      &#x3C;Table.Head>Status&#x3C;/Table.Head>\n      &#x3C;Table.Head>Method&#x3C;/Table.Head>\n      &#x3C;Table.Head class=\"text-right\">Amount&#x3C;/Table.Head>\n    &#x3C;/Table.Row>\n  &#x3C;/Table.Header>\n  &#x3C;Table.Body>\n    &#x3C;Table.Row>\n      &#x3C;Table.Cell class=\"font-medium\">INV001&#x3C;/Table.Cell>\n      &#x3C;Table.Cell>Paid&#x3C;/Table.Cell>\n      &#x3C;Table.Cell>Credit Card&#x3C;/Table.Cell>\n      &#x3C;Table.Cell class=\"text-right\">$250.00&#x3C;/Table.Cell>\n    &#x3C;/Table.Row>\n  &#x3C;/Table.Body>\n&#x3C;/Table.Root>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"table-usage-example\"></componentpreview></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"table-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"table\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n import * as Table from \"$lib/components/ui/table/index.js\";\n</script>\n\n<Table.Root>\n  <Table.Caption>A list of your recent invoices.</Table.Caption>\n  <Table.Header>\n    <Table.Row>\n      <Table.Head class=\"w-[100px]\">Invoice</Table.Head>\n      <Table.Head>Status</Table.Head>\n      <Table.Head>Method</Table.Head>\n      <Table.Head class=\"text-right\">Amount</Table.Head>\n    </Table.Row>\n  </Table.Header>\n  <Table.Body>\n    <Table.Row>\n      <Table.Cell class=\"font-medium\">INV001</Table.Cell>\n      <Table.Cell>Paid</Table.Cell>\n      <Table.Cell>Credit Card</Table.Cell>\n      <Table.Cell class=\"text-right\">$250.00</Table.Cell>\n    </Table.Row>\n  </Table.Body>\n</Table.Root>\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"table-usage-example\" />",
     "toc": [
       {
         "title": "Installation",
@@ -1848,26 +1703,6 @@
           {
             "title": "Default",
             "url": "#default",
-            "items": []
-          },
-          {
-            "title": "With Caption",
-            "url": "#with-caption",
-            "items": []
-          },
-          {
-            "title": "Striped",
-            "url": "#striped",
-            "items": []
-          },
-          {
-            "title": "Sortable",
-            "url": "#sortable",
-            "items": []
-          },
-          {
-            "title": "Dense",
-            "url": "#dense",
             "items": []
           }
         ]
@@ -1913,10 +1748,10 @@
   },
   {
     "title": "Text",
-    "description": "A text component with size and color variants.",
+    "description": "A polymorphic text component that renders as different HTML elements with predefined styles.",
     "path": "components/text",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"text-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"text\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import { Text } from \"$lib/components/ui/text/index.js\";\n&#x3C;/script>\n\n&#x3C;Text size=\"lg\">This is large text&#x3C;/Text>\n&#x3C;Text size=\"sm\" color=\"muted\">This is small muted text&#x3C;/Text>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Sizes</h3>\n<componentpreview name=\"text-sizes\">\n<h3>Colors</h3>\n<componentpreview name=\"text-colors\">\n<h3>Weights</h3>\n<componentpreview name=\"text-weights\">\n<h3>Variants</h3>\n<componentpreview name=\"text-variants\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"text-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"text\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { Text } from \"$lib/components/ui/text/index.js\";\n</script>\n\n<Text size=\"lg\">This is large text</Text>\n<Text size=\"sm\" color=\"muted\">This is small muted text</Text>\n```\n\n<br />\n\n## Examples\n\n### Sizes\n\n<ComponentPreview name=\"text-sizes\" />\n\n### Colors\n\n<ComponentPreview name=\"text-colors\" />\n\n### Weights\n\n<ComponentPreview name=\"text-weights\" />\n\n### Variants\n\n<ComponentPreview name=\"text-variants\" />",
+    "content": "<script>\n  import { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"text-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"text\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import { Text } from \"$lib/components/ui/text/index.js\";\n&#x3C;/script>\n\n&#x3C;Text>This is default paragraph text&#x3C;/Text>\n&#x3C;Text as=\"h1\">This is a heading&#x3C;/Text>\n&#x3C;Text as=\"a\" href=\"#\">This is a link&#x3C;/Text>\n</code></pre>\n<br>\n<h2>API</h2>\n<h3>Props</h3>\n<ul>\n<li><code>as?: \"p\" | \"li\" | \"a\" | \"h1\" | \"h2\" | \"h3\" | \"h4\" | \"h5\" | \"h6\"</code> - The HTML element to render as. Defaults to \"p\".</li>\n<li><code>class?: string</code> - Additional CSS classes.</li>\n<li>Other standard HTML attributes for the rendered element.</li>\n</ul>\n<br>\n<h2>Examples</h2>\n<h3>Paragraph</h3>\n<componentpreview name=\"text-paragraph\"></componentpreview></componentpreview>",
+    "raw": "<script>\n  import { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"text-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"text\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import { Text } from \"$lib/components/ui/text/index.js\";\n</script>\n\n<Text>This is default paragraph text</Text>\n<Text as=\"h1\">This is a heading</Text>\n<Text as=\"a\" href=\"#\">This is a link</Text>\n```\n\n<br />\n\n## API\n\n### Props\n\n- `as?: \"p\" | \"li\" | \"a\" | \"h1\" | \"h2\" | \"h3\" | \"h4\" | \"h5\" | \"h6\"` - The HTML element to render as. Defaults to \"p\".\n- `class?: string` - Additional CSS classes.\n- Other standard HTML attributes for the rendered element.\n\n<br />\n\n## Examples\n\n### Paragraph\n\n<ComponentPreview name=\"text-paragraph\" />",
     "toc": [
       {
         "title": "Installation",
@@ -1929,27 +1764,23 @@
         "items": []
       },
       {
+        "title": "API",
+        "url": "#api",
+        "items": [
+          {
+            "title": "Props",
+            "url": "#props",
+            "items": []
+          }
+        ]
+      },
+      {
         "title": "Examples",
         "url": "#examples",
         "items": [
           {
-            "title": "Sizes",
-            "url": "#sizes",
-            "items": []
-          },
-          {
-            "title": "Colors",
-            "url": "#colors",
-            "items": []
-          },
-          {
-            "title": "Weights",
-            "url": "#weights",
-            "items": []
-          },
-          {
-            "title": "Variants",
-            "url": "#variants",
+            "title": "Paragraph",
+            "url": "#paragraph",
             "items": []
           }
         ]
@@ -2013,8 +1844,8 @@
     "title": "Toggle Group",
     "description": "A set of two-state buttons that can be toggled on or off.",
     "path": "components/toggle-group",
-    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"toggle-group-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"toggle-group\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import * as ToggleGroup from \"$lib/components/ui/toggle-group/index.js\";\n\n  let value = $state(\"left\");\n&#x3C;/script>\n\n&#x3C;ToggleGroup.Root type=\"single\" bind:value>\n  &#x3C;ToggleGroup.Item value=\"left\" aria-label=\"Left aligned\">\n    &#x3C;AlignLeftIcon class=\"h-4 w-4\" />\n  &#x3C;/ToggleGroup.Item>\n  &#x3C;ToggleGroup.Item value=\"center\" aria-label=\"Center aligned\">\n    &#x3C;AlignCenterIcon class=\"h-4 w-4\" />\n  &#x3C;/ToggleGroup.Item>\n  &#x3C;ToggleGroup.Item value=\"right\" aria-label=\"Right aligned\">\n    &#x3C;AlignRightIcon class=\"h-4 w-4\" />\n  &#x3C;/ToggleGroup.Item>\n&#x3C;/ToggleGroup.Root>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"toggle-group-default\">\n<h3>Multiple</h3>\n<componentpreview name=\"toggle-group-multiple\">\n<h3>Disabled</h3>\n<componentpreview name=\"toggle-group-disabled\">\n<h3>With Text</h3>\n<componentpreview name=\"toggle-group-with-text\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
-    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"toggle-group-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"toggle-group\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import * as ToggleGroup from \"$lib/components/ui/toggle-group/index.js\";\n\n  let value = $state(\"left\");\n</script>\n\n<ToggleGroup.Root type=\"single\" bind:value>\n  <ToggleGroup.Item value=\"left\" aria-label=\"Left aligned\">\n    <AlignLeftIcon class=\"h-4 w-4\" />\n  </ToggleGroup.Item>\n  <ToggleGroup.Item value=\"center\" aria-label=\"Center aligned\">\n    <AlignCenterIcon class=\"h-4 w-4\" />\n  </ToggleGroup.Item>\n  <ToggleGroup.Item value=\"right\" aria-label=\"Right aligned\">\n    <AlignRightIcon class=\"h-4 w-4\" />\n  </ToggleGroup.Item>\n</ToggleGroup.Root>\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"toggle-group-default\" />\n\n### Multiple\n\n<ComponentPreview name=\"toggle-group-multiple\" />\n\n### Disabled\n\n<ComponentPreview name=\"toggle-group-disabled\" />\n\n### With Text\n\n<ComponentPreview name=\"toggle-group-with-text\" />",
+    "content": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n<componentpreview name=\"toggle-group-usage-example\">\n<br>\n<br>\n<h2>Installation</h2>\n<p>&#x3C;PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"toggle-group\"]} /></p>\n<br>\n<br>\n<h2>Usage</h2>\n<pre><code class=\"language-svelte\">&#x3C;script lang=\"ts\">\n  import * as ToggleGroup from \"$lib/components/ui/toggle-group/index.js\";\n&#x3C;/script>\n \n&#x3C;ToggleGroup.Root type=\"single\">\n  &#x3C;ToggleGroup.Item value=\"a\">A&#x3C;/ToggleGroup.Item>\n  &#x3C;ToggleGroup.Item value=\"b\">B&#x3C;/ToggleGroup.Item>\n  &#x3C;ToggleGroup.Item value=\"c\">C&#x3C;/ToggleGroup.Item>\n&#x3C;/ToggleGroup.Root>\n</code></pre>\n<br>\n<h2>Examples</h2>\n<h3>Default</h3>\n<componentpreview name=\"toggle-group-usage-example\">\n<br>\n<h3>Outlined</h3>\n<componentpreview name=\"toggle-group-style-outlined\">\n<br>\n<h3>Outline Muted</h3>\n<componentpreview name=\"toggle-group-style-outline-muted\">\n<br>\n<h3>Solid</h3>\n<componentpreview name=\"toggle-group-style-solid\"></componentpreview></componentpreview></componentpreview></componentpreview></componentpreview>",
+    "raw": "<script>\n\timport { ComponentPreview, PMCommand } from \"$lib/components\";\n\n</script>\n\n<ComponentPreview name=\"toggle-group-usage-example\" />\n<br />\n<br />\n\n## Installation\n<PMCommand command=\"execute\" args={[\"shadcn-svelte@next\", \"add\", \"toggle-group\"]} />\n\n<br />\n<br />\n\n## Usage\n\n```svelte\n<script lang=\"ts\">\n  import * as ToggleGroup from \"$lib/components/ui/toggle-group/index.js\";\n</script>\n \n<ToggleGroup.Root type=\"single\">\n  <ToggleGroup.Item value=\"a\">A</ToggleGroup.Item>\n  <ToggleGroup.Item value=\"b\">B</ToggleGroup.Item>\n  <ToggleGroup.Item value=\"c\">C</ToggleGroup.Item>\n</ToggleGroup.Root>\n```\n\n<br />\n\n## Examples\n\n### Default\n\n<ComponentPreview name=\"toggle-group-usage-example\" />\n\n\n<br />\n\n### Outlined\n\n<ComponentPreview name=\"toggle-group-style-outlined\" />\n\n\n<br />\n\n### Outline Muted\n\n<ComponentPreview name=\"toggle-group-style-outline-muted\" />\n\n<br />\n\n### Solid\n\n<ComponentPreview name=\"toggle-group-style-solid\" />",
     "toc": [
       {
         "title": "Installation",
@@ -2036,18 +1867,18 @@
             "items": []
           },
           {
-            "title": "Multiple",
-            "url": "#multiple",
+            "title": "Outlined",
+            "url": "#outlined",
             "items": []
           },
           {
-            "title": "Disabled",
-            "url": "#disabled",
+            "title": "Outline Muted",
+            "url": "#outline-muted",
             "items": []
           },
           {
-            "title": "With Text",
-            "url": "#with-text",
+            "title": "Solid",
+            "url": "#solid",
             "items": []
           }
         ]
@@ -2056,8 +1887,16 @@
     "section": "Components",
     "links": [
       {
-        "title": "Component Source",
+        "title": "Docs",
         "href": "https://bits-ui.com/docs/components/toggle-group"
+      },
+      {
+        "title": "API Reference",
+        "href": "https://bits-ui.com/docs/components/toggle-group#api-reference"
+      },
+      {
+        "title": "Component Source",
+        "href": "https://bits-ui.com/docs/components/accordion"
       }
     ],
     "slug": "components/toggle-group",
@@ -2110,8 +1949,16 @@
     "section": "Components",
     "links": [
       {
-        "title": "Component Source",
+        "title": "Docs",
         "href": "https://bits-ui.com/docs/components/toggle"
+      },
+      {
+        "title": "API Reference",
+        "href": "https://bits-ui.com/docs/components/toggle#api-reference"
+      },
+      {
+        "title": "Component Source",
+        "href": "https://bits-ui.com/docs/components/accordion"
       }
     ],
     "slug": "components/toggle",

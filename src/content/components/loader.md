@@ -1,6 +1,6 @@
 ---
 title: Loader
-description: A loading spinner component.
+description: A loading indicator component.
 section: Components
 links:
   - title: "Component Source"
@@ -11,7 +11,7 @@ links:
 
 </script>
 
-<ComponentPreview name="loader-usage-example" />
+<ComponentPreview name="loader-style-default" />
 <br />
 <br />
 
@@ -37,16 +37,22 @@ links:
 
 ### Default
 
-<ComponentPreview name="loader-default" />
+<ComponentPreview name="loader-style-default" />
+
+<br/>
+
+### Secondary
+
+<ComponentPreview name="loader-style-secondary" />
+
+<br/>
+
+### Outline
+
+<ComponentPreview name="loader-style-outline" />
+
+<br/>
 
 ### Sizes
 
 <ComponentPreview name="loader-sizes" />
-
-### Colors
-
-<ComponentPreview name="loader-colors" />
-
-### Custom
-
-<ComponentPreview name="loader-custom" />

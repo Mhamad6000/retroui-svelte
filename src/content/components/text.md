@@ -1,13 +1,13 @@
 ---
 title: Text
-description: A text component with size and color variants.
+description: A polymorphic text component that renders as different HTML elements with predefined styles.
 section: Components
 links:
   - title: "Component Source"
     href: "https://bits-ui.com/docs/components/text"
 ---
 <script>
-	import { ComponentPreview, PMCommand } from "$lib/components";
+  import { ComponentPreview, PMCommand } from "$lib/components";
 
 </script>
 
@@ -28,26 +28,26 @@ links:
   import { Text } from "$lib/components/ui/text/index.js";
 </script>
 
-<Text size="lg">This is large text</Text>
-<Text size="sm" color="muted">This is small muted text</Text>
+<Text>This is default paragraph text</Text>
+<Text as="h1">This is a heading</Text>
+<Text as="a" href="#">This is a link</Text>
 ```
+
+<br />
+
+## API
+
+### Props
+
+- `as?: "p" | "li" | "a" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6"` - The HTML element to render as. Defaults to "p".
+- `class?: string` - Additional CSS classes.
+- Other standard HTML attributes for the rendered element.
 
 <br />
 
 ## Examples
 
-### Sizes
+### Paragraph
 
-<ComponentPreview name="text-sizes" />
+<ComponentPreview name="text-paragraph" />
 
-### Colors
-
-<ComponentPreview name="text-colors" />
-
-### Weights
-
-<ComponentPreview name="text-weights" />
-
-### Variants
-
-<ComponentPreview name="text-variants" />

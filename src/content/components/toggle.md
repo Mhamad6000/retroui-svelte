@@ -3,8 +3,12 @@ title: Toggle
 description: A two-state button that can be either on or off.
 section: Components
 links:
-  - title: "Component Source"
+  - title: "Docs"
     href: "https://bits-ui.com/docs/components/toggle"
+  - title: "API Reference"
+    href: "https://bits-ui.com/docs/components/toggle#api-reference"
+  - title : "Component Source"
+    href: "https://bits-ui.com/docs/components/accordion"
 ---
 <script>
 	import { ComponentPreview, PMCommand } from "$lib/components";

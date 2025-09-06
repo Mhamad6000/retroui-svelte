@@ -29,10 +29,6 @@
 				lg: "h-10 px-6 has-[>svg]:px-4",
 				icon: "size-8",
 			},
-			shadow: {
-				true: "shadow-md hover:shadow-none",
-				false: "shadow-none",
-			},
 		},
 		defaultVariants: {
 			variant: "default",
@@ -41,12 +37,10 @@
 	});
 	export type ButtonVariant = VariantProps<typeof buttonVariants>["variant"];
 	export type ButtonSize = VariantProps<typeof buttonVariants>["size"];
-	export type ButtonShadow = VariantProps<typeof buttonVariants>["shadow"];
 	export type ButtonProps = WithElementRef<HTMLButtonAttributes> &
 		WithElementRef<HTMLAnchorAttributes> & {
 			variant?: ButtonVariant;
 			size?: ButtonSize;
-			shadow?: ButtonShadow;
 		};
 </script>
 
@@ -55,7 +49,6 @@
 		class: className,
 		variant = "default",
 		size = "md",
-		shadow = true,
 		ref = $bindable(null),
 		href = undefined,
 		type = "button",
@@ -69,7 +62,7 @@
 	<a
 		bind:this={ref}
 		data-slot="button"
-		class={cn(buttonVariants({ variant, size, shadow }), className)}
+		class={cn(buttonVariants({ variant, size }), className)}
 		href={disabled ? undefined : href}
 		aria-disabled={disabled}
 		role={disabled ? "link" : undefined}
@@ -82,7 +75,7 @@
 	<button
 		bind:this={ref}
 		data-slot="button"
-		class={cn(buttonVariants({ variant, size, shadow }), className)}
+		class={cn(buttonVariants({ variant, size }), className)}
 		{type}
 		{disabled}
 		{...restProps}

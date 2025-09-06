@@ -31,7 +31,6 @@
 		buttonVariants({
 			variant: isActive ? "default" : "ghost",
 			size,
-			shadow: false,
 		}),
 		className
 	)}

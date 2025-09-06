@@ -3,8 +3,12 @@ title: Toggle Group
 description: A set of two-state buttons that can be toggled on or off.
 section: Components
 links:
-  - title: "Component Source"
+  - title: "Docs"
     href: "https://bits-ui.com/docs/components/toggle-group"
+  - title: "API Reference"
+    href: "https://bits-ui.com/docs/components/toggle-group#api-reference"
+  - title : "Component Source"
+    href: "https://bits-ui.com/docs/components/accordion"
 ---
 <script>
 	import { ComponentPreview, PMCommand } from "$lib/components";
@@ -26,20 +30,12 @@ links:
 ```svelte
 <script lang="ts">
   import * as ToggleGroup from "$lib/components/ui/toggle-group/index.js";
-
-  let value = $state("left");
 </script>
-
-<ToggleGroup.Root type="single" bind:value>
-  <ToggleGroup.Item value="left" aria-label="Left aligned">
-    <AlignLeftIcon class="h-4 w-4" />
-  </ToggleGroup.Item>
-  <ToggleGroup.Item value="center" aria-label="Center aligned">
-    <AlignCenterIcon class="h-4 w-4" />
-  </ToggleGroup.Item>
-  <ToggleGroup.Item value="right" aria-label="Right aligned">
-    <AlignRightIcon class="h-4 w-4" />
-  </ToggleGroup.Item>
+ 
+<ToggleGroup.Root type="single">
+  <ToggleGroup.Item value="a">A</ToggleGroup.Item>
+  <ToggleGroup.Item value="b">B</ToggleGroup.Item>
+  <ToggleGroup.Item value="c">C</ToggleGroup.Item>
 </ToggleGroup.Root>
 ```
 
@@ -49,16 +45,24 @@ links:
 
 ### Default
 
-<ComponentPreview name="toggle-group-default" />
+<ComponentPreview name="toggle-group-usage-example" />
 
-### Multiple
 
-<ComponentPreview name="toggle-group-multiple" />
+<br />
 
-### Disabled
+### Outlined
 
-<ComponentPreview name="toggle-group-disabled" />
+<ComponentPreview name="toggle-group-style-outlined" />
 
-### With Text
 
-<ComponentPreview name="toggle-group-with-text" />
+<br />
+
+### Outline Muted
+
+<ComponentPreview name="toggle-group-style-outline-muted" />
+
+<br />
+
+### Solid
+
+<ComponentPreview name="toggle-group-style-solid" />
