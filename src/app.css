@@ -5,6 +5,8 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@custom-variant fixed (&:is(.layout-fixed *));
+
 @theme {
 	--font-head: "Archivo Black", sans-serif;
 	--font-sans: "Space Grotesk", sans-serif;
@@ -44,6 +46,7 @@
 }
 
 :root {
+	--radius: 0.5rem;
 	--background: #fff;
 	--foreground: #000;
 	--card: #fff;
@@ -89,7 +92,7 @@
 	--destructive-foreground: #fff;
 	--border: #3a3a3a;
 
-		--sidebar: #1a1a1a;
+	--sidebar: #1a1a1a;
 	--sidebar-foreground: #f5f5f5;
 	--sidebar-primary: #ffdb33;
 	--sidebar-primary-foreground: #000000;
@@ -97,6 +100,9 @@
 	--sidebar-accent-foreground: #f5f5f5;
 	--sidebar-border: #3a3a3a;
 	--sidebar-ring: #ffcc00;
+}
+@utility container-wrapper {
+	@apply mx-auto w-full px-2;
 }
 
 @layer base {

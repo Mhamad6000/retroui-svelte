@@ -59,9 +59,9 @@ export const navigation = defineNavigation({
 		// 	href: "/blocks",
 		// 	title: "Blocks",
 		// },
-		// {
-		// 	href: "/themes",
-		// 	title: "Themes",
-		// },
+		{
+			href: "/themes",
+			title: "Themes",
+		},
 	],
 });

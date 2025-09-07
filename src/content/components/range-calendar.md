@@ -3,8 +3,12 @@ title: Range Calendar
 description: A calendar component with range selection.
 section: Components
 links:
-  - title: "Component Source"
+  - title: "Docs"
     href: "https://bits-ui.com/docs/components/range-calendar"
+  - title: "API Reference"
+    href: "https://bits-ui.com/docs/components/range-calendar#api-reference"
+  - title : "Component Source"
+    href: "https://bits-ui.com/docs/components/accordion"
 ---
 <script>
 	import { ComponentPreview, PMCommand } from "$lib/components";
@@ -25,30 +29,8 @@ links:
 
 ```svelte
 <script lang="ts">
-  import * as RangeCalendar from "$lib/components/ui/range-calendar/index.js";
-
-  let value = $state<{ start: Date; end: Date } | undefined>();
+	import { RangeCalendar } from "$registry/ui/range-calendar/index.js";
 </script>
 
-<RangeCalendar.Root bind:value />
+<RangeCalendar class="rounded-md border" />
 ```
-
-<br />
-
-## Examples
-
-### Default
-
-<ComponentPreview name="range-calendar-default" />
-
-### With Time
-
-<ComponentPreview name="range-calendar-with-time" />
-
-### Disabled
-
-<ComponentPreview name="range-calendar-disabled" />
-
-### Custom Locale
-
-<ComponentPreview name="range-calendar-custom-locale" />

@@ -13,6 +13,6 @@
 	bind:ref
 	bind:loadingStatus
 	data-slot="avatar"
-	class={cn("relative flex h-14 w-14 overflow-hidden rounded-full border-2", className)}
+	class={cn("relative flex h-12 w-12 overflow-hidden rounded-full border-2", className)}
 	{...restProps}
 />
