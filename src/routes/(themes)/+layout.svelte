@@ -1,9 +1,13 @@
 <script lang="ts">
 	import Header from "$lib/layouts/header.svelte";
 	import { navigation } from "$lib/navigation";
-	import "../../themes.css";
+
 	let { children } = $props();
+
+	// Initialize user config
 </script>
 
-<Header {navigation} />
-{@render children?.()}
+<div class="" data-theme="purple">
+	<Header {navigation} />
+	{@render children?.()}
+</div>

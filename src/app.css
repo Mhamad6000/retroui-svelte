@@ -3,11 +3,13 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@import "./themes.css";
+
 @custom-variant dark (&:is(.dark *));
 
 @custom-variant fixed (&:is(.layout-fixed *));
 
-@theme {
+@theme inline{
 	--font-head: "Archivo Black", sans-serif;
 	--font-sans: "Space Grotesk", sans-serif;
 	--shadow-xs: 1px 1px 0 0 var(--border);
