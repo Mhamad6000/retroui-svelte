@@ -7,7 +7,7 @@
 	// Initialize user config
 </script>
 
-<div class="" data-theme="purple">
+<div class="" data-theme="green">
 	<Header {navigation} />
 	{@render children?.()}
 </div>
