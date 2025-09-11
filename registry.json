@@ -1,51 +1,50 @@
 {
 	"$schema": "https://shadcn-svelte.com/schema/registry.json",
-	"name": "zeno-ui",
-	"homepage": "https://acme.com",
+	"name": "retroui-svelte",
+	"homepage": "https://retroui-svelte.com",
+	"overrideDependencies": ["vaul-svelte@next"],
+	"aliases": {
+		"lib": "$registry/lib",
+		"ui": "$registry/ui",
+		"components": "./components",
+		"utils": "$registry/lib/utils",
+		"hooks": "$registry/hooks"
+	},
 	"items": [
 		{
-			"name": "button",
-			"type": "registry:ui",
-			"title": "Button",
-			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"description": "A simple button component",
-			"files": [
-				{
-					"path": "src/lib/registry/ui/button/index.ts",
-					"type": "registry:file"
-				},
-				{
-					"path": "src/lib/registry/ui/button/button.svelte",
-					"type": "registry:file"
-				}
-			],
-			"meta": {
-				"author": "Mhamad6000"
-			}
+			"name": "init",
+			"type": "registry:style",
+			"devDependencies": ["tailwind-variants", "@lucide/svelte", "tw-animate-css"],
+			"registryDependencies": ["utils"],
+			"files": []
 		},
 		{
-			"name": "badge",
+			"name": "accordion",
 			"type": "registry:ui",
-			"title": "Badge",
+			"dependencies": ["bits-ui"],
 			"registryDependencies": [],
-			"dependencies": [],
-			"devDependencies": [],
-			"description": "A simple badge component",
 			"files": [
 				{
-					"path": "src/lib/registry/ui/badge/index.ts",
-					"type": "registry:file"
+					"type": "registry:file",
+					"path": "registry/ui/accordion/accordion-content.svelte"
 				},
 				{
-					"path": "src/lib/registry/ui/badge/badge.svelte",
-					"type": "registry:file"
+					"type": "registry:file",
+					"path": "registry/ui/accordion/accordion-item.svelte"
+				},
+				{
+					"type": "registry:file",
+					"path": "registry/ui/accordion/accordion-trigger.svelte"
+				},
+				{
+					"type": "registry:file",
+					"path": "registry/ui/accordion/accordion.svelte"
+				},
+				{
+					"type": "registry:file",
+					"path": "registry/ui/accordion/index.ts"
 				}
-			],
-			"meta": {
-				"author": "Mhamad6000"
-			}
+			]
 		}
 	]
 }

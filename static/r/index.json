@@ -1,0 +1,24 @@
+[
+	{
+		"name": "init",
+		"type": "registry:style",
+		"devDependencies": [
+			"tailwind-variants",
+			"@lucide/svelte",
+			"tw-animate-css"
+		],
+		"registryDependencies": [
+			"utils"
+		],
+		"relativeUrl": "init.json"
+	},
+	{
+		"name": "accordion",
+		"type": "registry:ui",
+		"dependencies": [
+			"bits-ui"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "accordion.json"
+	}
+]
