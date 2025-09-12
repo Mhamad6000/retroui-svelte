@@ -1,0 +1,24 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "checkbox",
+	"type": "registry:ui",
+	"dependencies": [
+		"bits-ui"
+	],
+	"devDependencies": [
+		"@lucide/svelte",
+		"tailwind-variants"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\" module>\n\timport { Checkbox as CheckboxPrimitive } from \"bits-ui\";\n\timport CheckIcon from \"@lucide/svelte/icons/check\";\n\timport MinusIcon from \"@lucide/svelte/icons/minus\";\n\timport { cn, type WithoutChildrenOrChild } from \"$UTILS$.js\";\n\timport { type VariantProps, tv } from \"tailwind-variants\";\n\texport const checkboxVariants = tv({\n\t\tbase: \"font-head cursor-pointer font-medium flex items-center\",\n\t\tvariants: {\n\t\t\tvariant: {\n\t\t\t\tdefault: \"data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground \",\n\t\t\t\toutline: \"\",\n\t\t\t\tsolid: \"data-[state=checked]:bg-foreground data-[state=checked]:text-background\",\n\t\t\t},\n\t\t\tsize: {\n\t\t\t\tsm: \"h-4 w-4\",\n\t\t\t\tmd: \"h-5 w-5\",\n\t\t\t\tlg: \"h-6 w-6\",\n\t\t\t},\n\t\t},\n\t\tdefaultVariants: {\n\t\t\tvariant: \"default\",\n\t\t\tsize: \"md\",\n\t\t},\n\t});\n\texport type CheckboxVariant = VariantProps<typeof checkboxVariants>[\"variant\"];\n\texport type CheckboxSize = VariantProps<typeof checkboxVariants>[\"size\"];\n\texport type CheckboxProps = WithoutChildrenOrChild<CheckboxPrimitive.RootProps> & {\n\t\tvariant?: CheckboxVariant;\n\t\tsize?: CheckboxSize;\n\t};\n</script>\n\n<script lang=\"ts\">\n\tlet {\n\t\tref = $bindable(null),\n\t\tchecked = $bindable(false),\n\t\tindeterminate = $bindable(false),\n\t\tsize,\n\t\tvariant,\n\t\tclass: className,\n\t\t...restProps\n\t}: CheckboxProps = $props();\n</script>\n\n<!-- dark:bg-input/30 data-[state=checked]:border-primary -->\n<CheckboxPrimitive.Root\n\tbind:ref\n\tdata-slot=\"checkbox\"\n\tclass={cn(\n\t\t\"border-input aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive peer flex size-4 shrink-0 items-center justify-center border-2 outline-none focus-visible:ring-[1px] disabled:cursor-not-allowed disabled:opacity-50\",\n\t\tcheckboxVariants({\n\t\t\tvariant,\n\t\t\tsize,\n\t\t}),\n\t\tclassName\n\t)}\n\tbind:checked\n\tbind:indeterminate\n\t{...restProps}\n>\n\t{#snippet children({ checked, indeterminate })}\n\t\t<div data-slot=\"checkbox-indicator\" class=\"text-current transition-none\">\n\t\t\t{#if checked}\n\t\t\t\t<CheckIcon class=\"size-3.5\" />\n\t\t\t{:else if indeterminate}\n\t\t\t\t<MinusIcon class=\"size-3.5\" />\n\t\t\t{/if}\n\t\t</div>\n\t{/snippet}\n</CheckboxPrimitive.Root>\n",
+			"type": "registry:file",
+			"target": "checkbox/checkbox.svelte"
+		},
+		{
+			"content": "import Root from \"./checkbox.svelte\";\nexport {\n\tRoot,\n\t//\n\tRoot as Checkbox,\n};\n",
+			"type": "registry:file",
+			"target": "checkbox/index.ts"
+		}
+	]
+}

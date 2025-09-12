@@ -1,0 +1,23 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "separator",
+	"type": "registry:ui",
+	"dependencies": [
+		"bits-ui"
+	],
+	"devDependencies": [
+		"tailwind-variants"
+	],
+	"files": [
+		{
+			"content": "import Root from \"./separator.svelte\";\nexport {\n\tRoot,\n\t//\n\tRoot as Separator,\n};\n",
+			"type": "registry:file",
+			"target": "separator/index.ts"
+		},
+		{
+			"content": "<script lang=\"ts\" module>\n\timport { Separator as SeparatorPrimitive } from \"bits-ui\";\n\timport { cn } from \"$UTILS$.js\";\n\timport { type VariantProps, tv } from \"tailwind-variants\";\n\n\texport const separatorVariants = tv({\n\t\tbase: \"shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px\",\n\t\tvariants: {\n\t\t\tvariant: {\n\t\t\t\tdefault: \"bg-border\",\n\t\t\t\tprimary: \"bg-primary\",\n\t\t\t},\n\t\t},\n\t\tdefaultVariants: {\n\t\t\tvariant: \"default\",\n\t\t},\n\t});\n\n\texport type SeparatorVariant = VariantProps<typeof separatorVariants>[\"variant\"];\n\texport type SeparatorProps = SeparatorPrimitive.RootProps & {\n\t\tvariant?: SeparatorVariant;\n\t};\n</script>\n\n<script lang=\"ts\">\n\tlet {\n\t\tref = $bindable(null),\n\t\tclass: className,\n\t\tvariant = \"default\",\n\t\t...restProps\n\t}: SeparatorProps = $props();\n</script>\n\n<SeparatorPrimitive.Root\n\tbind:ref\n\tdata-slot=\"separator\"\n\tclass={cn(separatorVariants({ variant }), className)}\n\t{...restProps}\n/>\n",
+			"type": "registry:file",
+			"target": "separator/separator.svelte"
+		}
+	]
+}

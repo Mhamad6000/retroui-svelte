@@ -18,7 +18,418 @@
 		"dependencies": [
 			"bits-ui"
 		],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
 		"registryDependencies": [],
 		"relativeUrl": "accordion.json"
+	},
+	{
+		"name": "alert",
+		"type": "registry:ui",
+		"devDependencies": [
+			"tailwind-variants"
+		],
+		"registryDependencies": [
+			"local:text"
+		],
+		"relativeUrl": "alert.json"
+	},
+	{
+		"name": "alert-dialog",
+		"type": "registry:ui",
+		"registryDependencies": [
+			"local:button"
+		],
+		"relativeUrl": "alert-dialog.json"
+	},
+	{
+		"name": "avatar",
+		"type": "registry:ui",
+		"dependencies": [
+			"bits-ui"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "avatar.json"
+	},
+	{
+		"name": "badge",
+		"type": "registry:ui",
+		"devDependencies": [
+			"tailwind-variants"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "badge.json"
+	},
+	{
+		"name": "breadcrumb",
+		"type": "registry:ui",
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "breadcrumb.json"
+	},
+	{
+		"name": "button",
+		"type": "registry:ui",
+		"devDependencies": [
+			"tailwind-variants"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "button.json"
+	},
+	{
+		"name": "calendar",
+		"type": "registry:ui",
+		"dependencies": [
+			"@internationalized/date",
+			"bits-ui"
+		],
+		"devDependencies": [
+			"tailwind-variants",
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:button"
+		],
+		"relativeUrl": "calendar.json"
+	},
+	{
+		"name": "card",
+		"type": "registry:ui",
+		"registryDependencies": [
+			"local:text"
+		],
+		"relativeUrl": "card.json"
+	},
+	{
+		"name": "checkbox",
+		"type": "registry:ui",
+		"dependencies": [
+			"bits-ui"
+		],
+		"devDependencies": [
+			"@lucide/svelte",
+			"tailwind-variants"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "checkbox.json"
+	},
+	{
+		"name": "collapsible",
+		"type": "registry:ui",
+		"dependencies": [
+			"bits-ui"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "collapsible.json"
+	},
+	{
+		"name": "command",
+		"type": "registry:ui",
+		"dependencies": [
+			"bits-ui"
+		],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:dialog"
+		],
+		"relativeUrl": "command.json"
+	},
+	{
+		"name": "context-menu",
+		"type": "registry:ui",
+		"dependencies": [
+			"bits-ui"
+		],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "context-menu.json"
+	},
+	{
+		"name": "dialog",
+		"type": "registry:ui",
+		"dependencies": [
+			"bits-ui"
+		],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "dialog.json"
+	},
+	{
+		"name": "dropdown-menu",
+		"type": "registry:ui",
+		"dependencies": [
+			"bits-ui"
+		],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "dropdown-menu.json"
+	},
+	{
+		"name": "hover-card",
+		"type": "registry:ui",
+		"dependencies": [
+			"bits-ui"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "hover-card.json"
+	},
+	{
+		"name": "input",
+		"type": "registry:ui",
+		"registryDependencies": [],
+		"relativeUrl": "input.json"
+	},
+	{
+		"name": "label",
+		"type": "registry:ui",
+		"dependencies": [
+			"bits-ui"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "label.json"
+	},
+	{
+		"name": "loader",
+		"type": "registry:ui",
+		"devDependencies": [
+			"tailwind-variants"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "loader.json"
+	},
+	{
+		"name": "menubar",
+		"type": "registry:ui",
+		"dependencies": [
+			"bits-ui"
+		],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "menubar.json"
+	},
+	{
+		"name": "navigation-menu",
+		"type": "registry:ui",
+		"dependencies": [
+			"bits-ui"
+		],
+		"devDependencies": [
+			"tailwind-variants"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "navigation-menu.json"
+	},
+	{
+		"name": "pagination",
+		"type": "registry:ui",
+		"dependencies": [
+			"bits-ui"
+		],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:button"
+		],
+		"relativeUrl": "pagination.json"
+	},
+	{
+		"name": "popover",
+		"type": "registry:ui",
+		"dependencies": [
+			"bits-ui"
+		],
+		"devDependencies": [
+			"tailwind-variants"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "popover.json"
+	},
+	{
+		"name": "progress",
+		"type": "registry:ui",
+		"dependencies": [
+			"bits-ui"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "progress.json"
+	},
+	{
+		"name": "radio-group",
+		"type": "registry:ui",
+		"dependencies": [
+			"bits-ui"
+		],
+		"devDependencies": [
+			"tailwind-variants"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "radio-group.json"
+	},
+	{
+		"name": "range-calendar",
+		"type": "registry:ui",
+		"dependencies": [
+			"@internationalized/date",
+			"bits-ui"
+		],
+		"devDependencies": [
+			"tailwind-variants",
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:button"
+		],
+		"relativeUrl": "range-calendar.json"
+	},
+	{
+		"name": "select",
+		"type": "registry:ui",
+		"dependencies": [
+			"bits-ui"
+		],
+		"devDependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [
+			"local:separator"
+		],
+		"relativeUrl": "select.json"
+	},
+	{
+		"name": "separator",
+		"type": "registry:ui",
+		"dependencies": [
+			"bits-ui"
+		],
+		"devDependencies": [
+			"tailwind-variants"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "separator.json"
+	},
+	{
+		"name": "sheet",
+		"type": "registry:ui",
+		"dependencies": [
+			"bits-ui"
+		],
+		"devDependencies": [
+			"tailwind-variants"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "sheet.json"
+	},
+	{
+		"name": "slider",
+		"type": "registry:ui",
+		"dependencies": [
+			"bits-ui"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "slider.json"
+	},
+	{
+		"name": "sonner",
+		"type": "registry:ui",
+		"dependencies": [
+			"svelte-sonner",
+			"mode-watcher"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "sonner.json"
+	},
+	{
+		"name": "switch",
+		"type": "registry:ui",
+		"dependencies": [
+			"bits-ui"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "switch.json"
+	},
+	{
+		"name": "table",
+		"type": "registry:ui",
+		"registryDependencies": [],
+		"relativeUrl": "table.json"
+	},
+	{
+		"name": "tabs",
+		"type": "registry:ui",
+		"dependencies": [
+			"bits-ui"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "tabs.json"
+	},
+	{
+		"name": "textarea",
+		"type": "registry:ui",
+		"registryDependencies": [],
+		"relativeUrl": "textarea.json"
+	},
+	{
+		"name": "toggle",
+		"type": "registry:ui",
+		"dependencies": [
+			"bits-ui"
+		],
+		"devDependencies": [
+			"tailwind-variants"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "toggle.json"
+	},
+	{
+		"name": "toggle-group",
+		"type": "registry:ui",
+		"dependencies": [
+			"bits-ui"
+		],
+		"registryDependencies": [
+			"local:toggle"
+		],
+		"relativeUrl": "toggle-group.json"
+	},
+	{
+		"name": "tooltip",
+		"type": "registry:ui",
+		"dependencies": [
+			"bits-ui"
+		],
+		"devDependencies": [
+			"tailwind-variants"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "tooltip.json"
+	},
+	{
+		"name": "text",
+		"type": "registry:ui",
+		"devDependencies": [
+			"tailwind-variants"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "text.json"
+	},
+	{
+		"name": "utils",
+		"type": "registry:lib",
+		"registryDependencies": [],
+		"relativeUrl": "utils.json"
 	}
 ]

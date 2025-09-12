@@ -1,0 +1,20 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "text",
+	"type": "registry:ui",
+	"devDependencies": [
+		"tailwind-variants"
+	],
+	"files": [
+		{
+			"content": "import Root, { type TextProps, type TextAs, textVariants } from \"./text.svelte\";\nexport {\n\tRoot,\n\ttype TextProps as Props,\n\t//\n\tRoot as Text,\n\ttextVariants,\n\ttype TextProps,\n\ttype TextAs,\n};\n",
+			"type": "registry:file",
+			"target": "text/index.ts"
+		},
+		{
+			"content": "<script lang=\"ts\" module>\n\timport { cn, type WithElementRef } from \"$UTILS$.js\";\n\timport type { HTMLAttributes } from \"svelte/elements\";\n\timport { type VariantProps, tv } from \"tailwind-variants\";\n\texport const textVariants = tv({\n\t\tbase: \"font-head\",\n\t\tvariants: {\n\t\t\tas: {\n\t\t\t\tp: \"font-sans text-base\",\n\t\t\t\tli: \"font-sans text-base\",\n\t\t\t\ta: \"font-sans text-base hover:underline underline-offset-2 decoration-primary\",\n\t\t\t\th1: \"text-4xl lg:text-5xl font-bold\",\n\t\t\t\th2: \"text-3xl lg:text-4xl font-semibold\",\n\t\t\t\th3: \"text-2xl font-medium\",\n\t\t\t\th4: \"text-xl font-normal\",\n\t\t\t\th5: \"text-lg font-normal\",\n\t\t\t\th6: \"text-base font-normal\",\n\t\t\t},\n\t\t},\n\t\tdefaultVariants: {\n\t\t\tas: \"p\",\n\t\t},\n\t});\n\n\texport type TextAs = VariantProps<typeof textVariants>[\"as\"];\n\n\texport type TextProps = WithElementRef<HTMLAttributes<HTMLElement>> & {\n\t\tas?: TextAs;\n\t\tclass?: string;\n\t};\n</script>\n\n<script lang=\"ts\">\n\tlet {\n\t\tclass: className,\n\t\tas = \"p\",\n\t\tchildren,\n\t\tref = $bindable(null),\n\t\t...restProps\n\t}: TextProps = $props();\n</script>\n\n<svelte:element this={as} class={cn(textVariants({ as }), className)} {...restProps}>\n\t{@render children?.()}\n</svelte:element>\n",
+			"type": "registry:file",
+			"target": "text/text.svelte"
+		}
+	]
+}

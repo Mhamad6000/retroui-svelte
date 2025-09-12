@@ -90,7 +90,7 @@ function getButtonClasses(variant: string): string {
 	
 	switch (variant) {
 		case 'secondary':
-			return `${baseClasses} bg-secondary text-secondary-foreground hover:bg-secondary/80 border-2 border-black transition hover:translate-y-1`;
+			return `${baseClasses} bg-secondary text-secondary-foreground hover:bg-secondary/80 border-2 border-border transition hover:translate-y-1`;
 		case 'ghost':
 			return `${baseClasses} hover:bg-accent hover:text-accent-foreground bg-transparent border-transparent hover:border-border transition border-2 hover:text-foreground`;
 		case 'outline':
@@ -98,7 +98,7 @@ function getButtonClasses(variant: string): string {
 		case 'link':
 			return `${baseClasses} underline-offset-4 hover:underline text-primary bg-transparent`;
 		default:
-			return `${baseClasses} bg-primary text-primary-foreground hover:bg-primary/90 border-2 border-black transition hover:translate-y-1 hover:bg-primary-hover`;
+			return `${baseClasses} bg-primary text-primary-foreground hover:bg-primary/90 border-2 border-border transition hover:translate-y-1 hover:bg-primary-hover`;
 	}
 }
 

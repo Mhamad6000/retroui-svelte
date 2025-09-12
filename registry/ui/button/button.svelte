@@ -7,11 +7,11 @@
 		variants: {
 			variant: {
 				default:
-					"hover:shadow-none bg-primary text-primary-foreground border-2 border-black transition hover:translate-y-1 hover:bg-primary-hover",
+					"hover:shadow-none bg-primary text-primary-foreground border-2 border-border transition hover:translate-y-1 hover:bg-primary-hover",
 				secondary:
-					"hover:shadow-none bg-secondary shadow-primary text-secondary-foreground border-2 border-black transition hover:translate-y-1",
+					"hover:shadow-none bg-secondary shadow-primary text-secondary-foreground border-2 border-border transition hover:translate-y-1",
 				destructive:
-					"hover:shadow-none bg-destructive text-destructive-foreground border-2 border-black transition hover:translate-y-1 hover:bg-destructive-hover",
+					"hover:shadow-none bg-destructive text-destructive-foreground border-2 border-border transition hover:translate-y-1 hover:bg-destructive-hover",
 				outline: "hover:shadow-none bg-transparent border-2 transition hover:translate-y-1",
 				link: "bg-transparent hover:underline !shadow-none !border-none",
 				ghost:

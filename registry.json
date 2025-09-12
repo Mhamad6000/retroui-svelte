@@ -659,6 +659,22 @@
 			]
 		},
 		{
+			"name": "loader",
+			"type": "registry:ui",
+			"devDependencies": ["tailwind-variants"],
+			"registryDependencies": [],
+			"files": [
+				{
+					"type": "registry:file",
+					"path": "registry/ui/loader/index.ts"
+				},
+				{
+					"type": "registry:file",
+					"path": "registry/ui/loader/loader.svelte"
+				}
+			]
+		},
+		{
 			"name": "menubar",
 			"type": "registry:ui",
 			"devDependencies": ["@lucide/svelte"],
@@ -1244,6 +1260,22 @@
 				{
 					"type": "registry:file",
 					"path": "registry/ui/tooltip/tooltip-trigger.svelte"
+				}
+			]
+		},
+		{
+			"name": "text",
+			"type": "registry:ui",
+			"devDependencies": ["tailwind-variants"],
+			"registryDependencies": [],
+			"files": [
+				{
+					"type": "registry:file",
+					"path": "registry/ui/text/index.ts"
+				},
+				{
+					"type": "registry:file",
+					"path": "registry/ui/text/text.svelte"
 				}
 			]
 		},

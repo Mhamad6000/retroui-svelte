@@ -6,7 +6,7 @@
 		"bits-ui"
 	],
 	"devDependencies": [
-		"@lucide/svelte@^0.542.0"
+		"@lucide/svelte"
 	],
 	"files": [
 		{
