@@ -2,18 +2,22 @@ import { getContext, setContext } from "svelte";
 import { browser } from "$app/environment";
 
 export const availableThemes = [
-	{ value: "blue", label: "Blue", primary: "#2563eb" },
-	{ value: "green", label: "Green", primary: "#65a30d" },
-	{ value: "amber", label: "Amber", primary: "#d97706" },
-	{ value: "rose", label: "Rose", primary: "#e11d48" },
-	{ value: "purple", label: "Purple", primary: "#9333ea" },
-	{ value: "orange", label: "Orange", primary: "#ea580c" },
-	{ value: "teal", label: "Teal", primary: "#0d9488" },
-	{ value: "mono", label: "Mono", primary: "#57534e" },
-	{ value: "scaled", label: "Scaled", primary: "#2563eb" },
-	{ value: "red", label: "Red", primary: "#dc2626" },
-	{ value: "yellow", label: "Yellow", primary: "#facc15" },
-	{ value: "violet", label: "Violet", primary: "#7c3aed" },
+	{ value: "green", label: "Forest Green", primary: "#4caf50" },
+	{ value: "orange", label: "Sunset Orange", primary: "#ff6b35" },
+	{ value: "yellow", label: "Neon Yellow", primary: "#ffeb3b" },
+	{ value: "teal", label: "Ocean Teal", primary: "#26a69a" },
+	{ value: "purple", label: "Grape Purple", primary: "#8e24aa" },
+	{ value: "gold", label: "Amber Gold", primary: "#ffa000" },
+	{ value: "coral", label: "Hot Coral", primary: "#ff5722" },
+	{ value: "cyan", label: "Crystal Cyan", primary: "#00bcd4" },
+	{ value: "blue", label: "Ocean Blue", primary: "#2196f3" },
+	{ value: "red", label: "Crimson Red", primary: "#f44336" },
+	{ value: "pink", label: "Blush Pink", primary: "#e91e63" },
+	{ value: "indigo", label: "Deep Indigo", primary: "#3f51b5" },
+	{ value: "lime", label: "Bright Lime", primary: "#cddc39" },
+	{ value: "rose", label: "Rose Pink", primary: "#e91e63" },
+	{ value: "sky", label: "Sky Blue", primary: "#03a9f4" },
+	{ value: "slate", label: "Modern Slate", primary: "#475569" },
 ] as const;
 
 export type Theme = (typeof availableThemes)[number]["value"];
@@ -24,7 +28,7 @@ export interface UserConfigData {
 }
 
 const defaultConfig: UserConfigData = {
-	activeTheme: "purple",
+	activeTheme: "orange",
 	layout: "default",
 };
 
@@ -36,15 +40,9 @@ export class UserConfig {
 			this.current = { ...defaultConfig, ...initialConfig };
 		}
 
-		// Load from localStorage if in browser
-		if (browser) {
-			this.loadFromStorage();
-		}
-
-		// Save to localStorage whenever config changes
+		// Update theme attribute whenever config changes
 		if (browser) {
 			$effect(() => {
-				this.saveToStorage();
 				this.updateThemeAttribute();
 			});
 		}
@@ -63,30 +61,19 @@ export class UserConfig {
 		this.current.layout = layout;
 	}
 
-	private loadFromStorage() {
-		try {
-			const stored = localStorage.getItem("user-config");
-			if (stored) {
-				const parsed = JSON.parse(stored);
-				this.current = { ...defaultConfig, ...parsed };
-				this.updateThemeAttribute();
-			}
-		} catch (error) {
-			console.warn("Failed to load user config from localStorage:", error);
-		}
-	}
-
-	private saveToStorage() {
-		try {
-			localStorage.setItem("user-config", JSON.stringify(this.current));
-		} catch (error) {
-			console.warn("Failed to save user config to localStorage:", error);
-		}
-	}
-
 	private updateThemeAttribute() {
-		if (browser && document.documentElement) {
-			document.documentElement.setAttribute("data-theme", this.current.activeTheme);
+		if (browser) {
+			// Set theme on document element for global access
+			if (document.documentElement) {
+				document.documentElement.setAttribute("data-theme", this.current.activeTheme);
+			}
+			
+			// Also dispatch a custom event for reactive components
+			if (typeof window !== "undefined") {
+				window.dispatchEvent(new CustomEvent("theme-changed", { 
+					detail: { theme: this.current.activeTheme } 
+				}));
+			}
 		}
 	}
 }

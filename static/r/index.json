@@ -13,6 +13,15 @@
 		"relativeUrl": "init.json"
 	},
 	{
+		"name": "theme-default",
+		"type": "registry:theme",
+		"description": "A brutalist theme with bold shadows and yellow/black contrast",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "theme-default.json"
+	},
+	{
 		"name": "accordion",
 		"type": "registry:ui",
 		"dependencies": [

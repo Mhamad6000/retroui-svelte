@@ -7,6 +7,6 @@ export const siteConfig = defineSiteConfig({
 	author: "RetroUI Team",
 	keywords: ["svelte", "ui", "components", "retro", "retroui"],
 	links: {
-		github: "https://github.com/retroui/retroui-svelte",
+		github: "https://github.com/Mhamad6000/retroui-svelte",
 	},
 });

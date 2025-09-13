@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-description: A quick guide to get started using Svecodocs
+description: A quick guide to get started using RetroUI Svelte
 section: Overview
 ---
 
@@ -8,71 +8,239 @@ section: Overview
 
 </script>
 
-The following guide will walk you through the process of getting a Svecodocs project up and running.
+The following guide will walk you through the process of getting a RetroUI Svelte project up and running.
 
-## Clone the starter template
+## Prerequisites
 
-Clone the Svecodocs starter template:
+**Important**: RetroUI Svelte is built on top of the [shadcn-svelte](https://www.shadcn-svelte.com/) registry system. You **must** have shadcn-svelte installed and configured in your project before using RetroUI Svelte components.
+
+### Install shadcn-svelte First
+
+If you haven't already, install and initialize shadcn-svelte:
 
 ```bash
-pnpx degit svecosystem/svecodocs/starter
+# Install shadcn-svelte CLI
+npm install -g @shadcn-svelte/cli
+
+# Initialize shadcn-svelte in your project
+npx shadcn-svelte@latest init
 ```
 
-## Navigation
+Follow the prompts to configure shadcn-svelte with your preferred settings (styling, base color, etc.).
 
-The starter template comes with a basic navigation structure to get your started. To customize the navigation, adjust the `src/lib/navigation.ts` file.
+## Installation
 
-```ts
-import { createNavigation } from "@svecodocs/kit";
+Once you have shadcn-svelte set up, install RetroUI Svelte using your preferred package manager:
 
-export const navigation = createNavigation({
-	// Customize the navigation here
-});
+```bash
+# Using pnpm
+pnpm add retroui-svelte
+
+# Using npm
+npm install retroui-svelte
+
+# Using yarn
+yarn add retroui-svelte
 ```
 
-## Site config
+## Quick Start
 
-The site config is used to configure site-wide settings, such as the title, description, keywords, ogImage, and other metadata.
+Import and use RetroUI components in your Svelte project:
 
-The config is located in the `src/lib/site-config.ts` file.
+```svelte
+<script>
+	import { Button } from 'retroui-svelte';
+</script>
 
-```ts
-import { defineSiteConfig } from "@svecodocs/kit";
-
-export const siteConfig = defineSiteConfig({
-	title: "Svecodocs",
-	description: "A SvelteKit docs starter template",
-	keywords: ["sveltekit", "docs", "starter", "template"],
-	ogImage: {
-		url: "https://docs.sveco.dev/og.png",
-		height: 630,
-		width: 1200,
-	},
-});
+<Button variant="primary">Get Started</Button>
 ```
 
-### Per-Route Site Config
+## RetroUI Svelte Setup
 
-You can override any part of the site config on a per-route basis using the `useSiteConfig` hook.
+Follow these steps to set up RetroUI Svelte in your project:
 
-## Theme
+### 1. Install and Configure shadcn-svelte
 
-The starter template comes with the default Svecodocs theme (orange). To customize the theme, adjust the import in the `src/app.css` file to reflect the color scheme you want to use for your project. Each theme has been designed to work well in both light and dark mode.
+First, you need to install and configure [shadcn-svelte](https://www.shadcn-svelte.com/docs/installation) in your project. RetroUI Svelte is built on top of the shadcn-svelte registry system.
 
-```css {1-2}
-/* @import "@svecodocs/kit/themes/orange.css"; */
-@import "@svecodocs/kit/themes/emerald.css";
-@import "@svecodocs/kit/globals.css";
+```bash
+# Install shadcn-svelte CLI
+npm install -g @shadcn-svelte/cli
+
+# Initialize shadcn-svelte in your project
+npx shadcn-svelte@latest init
 ```
 
-## Logo
+Follow the prompts to configure `components.json` with your preferred settings (styling, base color, etc.).
 
-To customize the logo displayed in the sidebar header, head to the `src/routes/(docs)/+layout.svelte` file and adjust the contents of the `logo` snippet. If the logo has a light and dark version, ensure to handle those similarly to the default Svecosystem logo.
+### 2. Add RetroUI Fonts and Theme
 
-```svelte title="src/routes/(docs)/+layout.svelte"
-{#snippet logo()}
-	<LogoDark class="hidden h-7 dark:block" />
-	<LogoLight class="block h-7 dark:hidden" />
-	<span class="sr-only">The project name here</span>
-{/snippet}
+Add the RetroUI fonts and theme to your `src/app.css` file:
+
+```css
+/* src/app.css */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+/* RetroUI Theme Variables */
+:root {
+  --font-head: 'Archivo Black', sans-serif;
+  --font-sans: 'Space Grotesk', sans-serif;
+  
+  /* Light theme colors */
+  --background: #fff;
+  --foreground: #000;
+  --card: #fff;
+  --card-foreground: #000;
+  --primary: #ffdb33;
+  --primary-hover: #ffcc00;
+  --primary-foreground: #000;
+  --secondary: #000;
+  --secondary-foreground: #fff;
+  --muted: #aeaeae;
+  --muted-foreground: #5a5a5a;
+  --accent: #fae583;
+  --accent-foreground: #000;
+  --destructive: #e63946;
+  --destructive-foreground: #fff;
+  --border: #000;
+  
+  /* RetroUI shadow system */
+  --shadow-xs: 1px 1px 0 0 var(--border);
+  --shadow-sm: 2px 2px 0 0 var(--border);
+  --shadow: 3px 3px 0 0 var(--border);
+  --shadow-md: 4px 4px 0 0 var(--border);
+  --shadow-lg: 6px 6px 0 0 var(--border);
+  --shadow-xl: 10px 10px 0 1px var(--border);
+  --shadow-2xl: 16px 16px 0 1px var(--border);
+}
+
+/* Dark theme */
+.dark {
+  --background: #1a1a1a;
+  --foreground: #f5f5f5;
+  --card: #242424;
+  --card-foreground: #f5f5f5;
+  --primary: #ffdb33;
+  --primary-hover: #ffcc00;
+  --primary-foreground: #000;
+  --secondary: #3a3a3a;
+  --secondary-foreground: #f5f5f5;
+  --muted: #3f3f46;
+  --muted-foreground: #a0a0a0;
+  --accent: #fae583;
+  --accent-foreground: #000;
+  --destructive: #e63946;
+  --destructive-foreground: #fff;
+  --border: #3a3a3a;
+}
 ```
+
+### 3. Install RetroUI Components
+
+Install RetroUI components using the shadcn-svelte CLI:
+
+```bash
+# Install specific components
+npx shadcn-svelte@latest add button
+npx shadcn-svelte@latest add input
+npx shadcn-svelte@latest add card
+
+# Or install multiple components at once
+npx shadcn-svelte@latest add button input card alert-dialog
+```
+
+### 4. Configure Themes in Your App
+
+Set up theme configuration in your Svelte app:
+
+```svelte
+<!-- src/routes/+layout.svelte -->
+<script>
+  import { onMount } from 'svelte';
+  import { availableThemes } from 'retroui-svelte';
+
+  let currentTheme = 'yellow'; // Default theme
+
+  onMount(() => {
+    // Set initial theme
+    document.documentElement.setAttribute('data-theme', currentTheme);
+  });
+
+  function setTheme(theme) {
+    currentTheme = theme;
+    document.documentElement.setAttribute('data-theme', theme);
+  }
+</script>
+
+<main class="min-h-screen">
+  <!-- Your app content -->
+</main>
+```
+
+### 5. Use RetroUI Components
+
+Now you can import and use RetroUI components in your Svelte components:
+
+```svelte
+<script>
+  import { Button } from '@/components/ui/button';
+  import { Input } from '@/components/ui/input';
+  import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+</script>
+
+<Card class="w-96">
+  <CardHeader>
+    <CardTitle>Welcome to RetroUI</CardTitle>
+  </CardHeader>
+  <CardContent class="space-y-4">
+    <Input placeholder="Enter your name" />
+    <Button variant="primary">Get Started</Button>
+  </CardContent>
+</Card>
+```
+
+## Available Themes
+
+RetroUI Svelte comes with 16 beautiful themes that are faithful to the original RetroUI design system:
+
+### Available Themes
+
+Choose from our 16 pre-built themes:
+
+- **Green** - Forest Green theme
+- **Orange** - Sunset Orange theme
+- **Yellow** - Neon Yellow theme
+- **Teal** - Ocean Teal theme
+- **Purple** - Grape Purple theme
+- **Gold** - Amber Gold theme
+- **Coral** - Hot Coral theme
+- **Cyan** - Crystal Cyan theme
+- **Blue** - Ocean Blue theme
+- **Red** - Crimson Red theme
+- **Pink** - Blush Pink theme
+- **Indigo** - Deep Indigo theme
+- **Lime** - Bright Lime theme
+- **Rose** - Rose Pink theme
+- **Sky** - Sky Blue theme
+- **Slate** - Modern Slate theme
+
+
+## Customization
+
+### Custom CSS Variables
+
+Override default theme colors using CSS custom properties:
+
+```css
+:root {
+	--primary: #your-color;
+	--secondary: #your-color;
+	--accent: #your-color;
+}
+```
+
+## Next Steps
+
+- Explore our [Components](/components) section
+- Check out the [Configuration](/configuration) guide
+- View theme examples in our [Themes](/themes) section

@@ -32,7 +32,7 @@ export const navigation = defineNavigation({
 		},
 		{
 			title: "Releases",
-			href: "https://github.com/svecosystem/svecodocs/releases",
+			href: "https://github.com/Mhamad6000/retroui-svelte/releases",
 			icon: Tag,
 		},
 	],

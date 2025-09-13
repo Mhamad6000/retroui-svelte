@@ -23,40 +23,88 @@
   },
   {
     "title": "Getting Started",
-    "description": "A quick guide to get started using Svecodocs",
+    "description": "A quick guide to get started using RetroUI Svelte",
     "path": "getting-started",
-    "content": "<script>\n\n</script>\n<p>The following guide will walk you through the process of getting a Svecodocs project up and running.</p>\n<h2>Clone the starter template</h2>\n<p>Clone the Svecodocs starter template:</p>\n<pre><code class=\"language-bash\">pnpx degit svecosystem/svecodocs/starter\n</code></pre>\n<h2>Navigation</h2>\n<p>The starter template comes with a basic navigation structure to get your started. To customize the navigation, adjust the <code>src/lib/navigation.ts</code> file.</p>\n<pre><code class=\"language-ts\">import { createNavigation } from \"@svecodocs/kit\";\n\nexport const navigation = createNavigation({\n\t// Customize the navigation here\n});\n</code></pre>\n<h2>Site config</h2>\n<p>The site config is used to configure site-wide settings, such as the title, description, keywords, ogImage, and other metadata.</p>\n<p>The config is located in the <code>src/lib/site-config.ts</code> file.</p>\n<pre><code class=\"language-ts\">import { defineSiteConfig } from \"@svecodocs/kit\";\n\nexport const siteConfig = defineSiteConfig({\n\ttitle: \"Svecodocs\",\n\tdescription: \"A SvelteKit docs starter template\",\n\tkeywords: [\"sveltekit\", \"docs\", \"starter\", \"template\"],\n\togImage: {\n\t\turl: \"https://docs.sveco.dev/og.png\",\n\t\theight: 630,\n\t\twidth: 1200,\n\t},\n});\n</code></pre>\n<h3>Per-Route Site Config</h3>\n<p>You can override any part of the site config on a per-route basis using the <code>useSiteConfig</code> hook.</p>\n<h2>Theme</h2>\n<p>The starter template comes with the default Svecodocs theme (orange). To customize the theme, adjust the import in the <code>src/app.css</code> file to reflect the color scheme you want to use for your project. Each theme has been designed to work well in both light and dark mode.</p>\n<pre><code class=\"language-css\" metastring=\"{1-2}\">/* @import \"@svecodocs/kit/themes/orange.css\"; */\n@import \"@svecodocs/kit/themes/emerald.css\";\n@import \"@svecodocs/kit/globals.css\";\n</code></pre>\n<h2>Logo</h2>\n<p>To customize the logo displayed in the sidebar header, head to the <code>src/routes/(docs)/+layout.svelte</code> file and adjust the contents of the <code>logo</code> snippet. If the logo has a light and dark version, ensure to handle those similarly to the default Svecosystem logo.</p>\n<pre><code class=\"language-svelte\" metastring=\"title=&#x22;src/routes/(docs)/+layout.svelte&#x22;\">{#snippet logo()}\n\t&#x3C;LogoDark class=\"hidden h-7 dark:block\" />\n\t&#x3C;LogoLight class=\"block h-7 dark:hidden\" />\n\t&#x3C;span class=\"sr-only\">The project name here&#x3C;/span>\n{/snippet}\n</code></pre>",
-    "raw": "<script>\n\n</script>\n\nThe following guide will walk you through the process of getting a Svecodocs project up and running.\n\n## Clone the starter template\n\nClone the Svecodocs starter template:\n\n```bash\npnpx degit svecosystem/svecodocs/starter\n```\n\n## Navigation\n\nThe starter template comes with a basic navigation structure to get your started. To customize the navigation, adjust the `src/lib/navigation.ts` file.\n\n```ts\nimport { createNavigation } from \"@svecodocs/kit\";\n\nexport const navigation = createNavigation({\n\t// Customize the navigation here\n});\n```\n\n## Site config\n\nThe site config is used to configure site-wide settings, such as the title, description, keywords, ogImage, and other metadata.\n\nThe config is located in the `src/lib/site-config.ts` file.\n\n```ts\nimport { defineSiteConfig } from \"@svecodocs/kit\";\n\nexport const siteConfig = defineSiteConfig({\n\ttitle: \"Svecodocs\",\n\tdescription: \"A SvelteKit docs starter template\",\n\tkeywords: [\"sveltekit\", \"docs\", \"starter\", \"template\"],\n\togImage: {\n\t\turl: \"https://docs.sveco.dev/og.png\",\n\t\theight: 630,\n\t\twidth: 1200,\n\t},\n});\n```\n\n### Per-Route Site Config\n\nYou can override any part of the site config on a per-route basis using the `useSiteConfig` hook.\n\n## Theme\n\nThe starter template comes with the default Svecodocs theme (orange). To customize the theme, adjust the import in the `src/app.css` file to reflect the color scheme you want to use for your project. Each theme has been designed to work well in both light and dark mode.\n\n```css {1-2}\n/* @import \"@svecodocs/kit/themes/orange.css\"; */\n@import \"@svecodocs/kit/themes/emerald.css\";\n@import \"@svecodocs/kit/globals.css\";\n```\n\n## Logo\n\nTo customize the logo displayed in the sidebar header, head to the `src/routes/(docs)/+layout.svelte` file and adjust the contents of the `logo` snippet. If the logo has a light and dark version, ensure to handle those similarly to the default Svecosystem logo.\n\n```svelte title=\"src/routes/(docs)/+layout.svelte\"\n{#snippet logo()}\n\t<LogoDark class=\"hidden h-7 dark:block\" />\n\t<LogoLight class=\"block h-7 dark:hidden\" />\n\t<span class=\"sr-only\">The project name here</span>\n{/snippet}\n```",
+    "content": "<script>\n\n</script>\n<p>The following guide will walk you through the process of getting a RetroUI Svelte project up and running.</p>\n<h2>Prerequisites</h2>\n<p><strong>Important</strong>: RetroUI Svelte is built on top of the <a href=\"https://www.shadcn-svelte.com/\">shadcn-svelte</a> registry system. You <strong>must</strong> have shadcn-svelte installed and configured in your project before using RetroUI Svelte components.</p>\n<h3>Install shadcn-svelte First</h3>\n<p>If you haven't already, install and initialize shadcn-svelte:</p>\n<pre><code class=\"language-bash\"># Install shadcn-svelte CLI\nnpm install -g @shadcn-svelte/cli\n\n# Initialize shadcn-svelte in your project\nnpx shadcn-svelte@latest init\n</code></pre>\n<p>Follow the prompts to configure shadcn-svelte with your preferred settings (styling, base color, etc.).</p>\n<h2>Installation</h2>\n<p>Once you have shadcn-svelte set up, install RetroUI Svelte using your preferred package manager:</p>\n<pre><code class=\"language-bash\"># Using pnpm\npnpm add retroui-svelte\n\n# Using npm\nnpm install retroui-svelte\n\n# Using yarn\nyarn add retroui-svelte\n</code></pre>\n<h2>Quick Start</h2>\n<p>Import and use RetroUI components in your Svelte project:</p>\n<pre><code class=\"language-svelte\">&#x3C;script>\n\timport { Button } from 'retroui-svelte';\n&#x3C;/script>\n\n&#x3C;Button variant=\"primary\">Get Started&#x3C;/Button>\n</code></pre>\n<h2>RetroUI Svelte Setup</h2>\n<p>Follow these steps to set up RetroUI Svelte in your project:</p>\n<h3>1. Install and Configure shadcn-svelte</h3>\n<p>First, you need to install and configure <a href=\"https://www.shadcn-svelte.com/docs/installation\">shadcn-svelte</a> in your project. RetroUI Svelte is built on top of the shadcn-svelte registry system.</p>\n<pre><code class=\"language-bash\"># Install shadcn-svelte CLI\nnpm install -g @shadcn-svelte/cli\n\n# Initialize shadcn-svelte in your project\nnpx shadcn-svelte@latest init\n</code></pre>\n<p>Follow the prompts to configure <code>components.json</code> with your preferred settings (styling, base color, etc.).</p>\n<h3>2. Add RetroUI Fonts and Theme</h3>\n<p>Add the RetroUI fonts and theme to your <code>src/app.css</code> file:</p>\n<pre><code class=\"language-css\">/* src/app.css */\n@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&#x26;family=Space+Grotesk:wght@300;400;500;600;700&#x26;display=swap');\n\n/* RetroUI Theme Variables */\n:root {\n  --font-head: 'Archivo Black', sans-serif;\n  --font-sans: 'Space Grotesk', sans-serif;\n  \n  /* Light theme colors */\n  --background: #fff;\n  --foreground: #000;\n  --card: #fff;\n  --card-foreground: #000;\n  --primary: #ffdb33;\n  --primary-hover: #ffcc00;\n  --primary-foreground: #000;\n  --secondary: #000;\n  --secondary-foreground: #fff;\n  --muted: #aeaeae;\n  --muted-foreground: #5a5a5a;\n  --accent: #fae583;\n  --accent-foreground: #000;\n  --destructive: #e63946;\n  --destructive-foreground: #fff;\n  --border: #000;\n  \n  /* RetroUI shadow system */\n  --shadow-xs: 1px 1px 0 0 var(--border);\n  --shadow-sm: 2px 2px 0 0 var(--border);\n  --shadow: 3px 3px 0 0 var(--border);\n  --shadow-md: 4px 4px 0 0 var(--border);\n  --shadow-lg: 6px 6px 0 0 var(--border);\n  --shadow-xl: 10px 10px 0 1px var(--border);\n  --shadow-2xl: 16px 16px 0 1px var(--border);\n}\n\n/* Dark theme */\n.dark {\n  --background: #1a1a1a;\n  --foreground: #f5f5f5;\n  --card: #242424;\n  --card-foreground: #f5f5f5;\n  --primary: #ffdb33;\n  --primary-hover: #ffcc00;\n  --primary-foreground: #000;\n  --secondary: #3a3a3a;\n  --secondary-foreground: #f5f5f5;\n  --muted: #3f3f46;\n  --muted-foreground: #a0a0a0;\n  --accent: #fae583;\n  --accent-foreground: #000;\n  --destructive: #e63946;\n  --destructive-foreground: #fff;\n  --border: #3a3a3a;\n}\n</code></pre>\n<h3>3. Install RetroUI Components</h3>\n<p>Install RetroUI components using the shadcn-svelte CLI:</p>\n<pre><code class=\"language-bash\"># Install specific components\nnpx shadcn-svelte@latest add button\nnpx shadcn-svelte@latest add input\nnpx shadcn-svelte@latest add card\n\n# Or install multiple components at once\nnpx shadcn-svelte@latest add button input card alert-dialog\n</code></pre>\n<h3>4. Configure Themes in Your App</h3>\n<p>Set up theme configuration in your Svelte app:</p>\n<pre><code class=\"language-svelte\">&#x3C;!-- src/routes/+layout.svelte -->\n&#x3C;script>\n  import { onMount } from 'svelte';\n  import { availableThemes } from 'retroui-svelte';\n\n  let currentTheme = 'yellow'; // Default theme\n\n  onMount(() => {\n    // Set initial theme\n    document.documentElement.setAttribute('data-theme', currentTheme);\n  });\n\n  function setTheme(theme) {\n    currentTheme = theme;\n    document.documentElement.setAttribute('data-theme', theme);\n  }\n&#x3C;/script>\n\n&#x3C;main class=\"min-h-screen\">\n  &#x3C;!-- Your app content -->\n&#x3C;/main>\n</code></pre>\n<h3>5. Use RetroUI Components</h3>\n<p>Now you can import and use RetroUI components in your Svelte components:</p>\n<pre><code class=\"language-svelte\">&#x3C;script>\n  import { Button } from '@/components/ui/button';\n  import { Input } from '@/components/ui/input';\n  import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';\n&#x3C;/script>\n\n&#x3C;Card class=\"w-96\">\n  &#x3C;CardHeader>\n    &#x3C;CardTitle>Welcome to RetroUI&#x3C;/CardTitle>\n  &#x3C;/CardHeader>\n  &#x3C;CardContent class=\"space-y-4\">\n    &#x3C;Input placeholder=\"Enter your name\" />\n    &#x3C;Button variant=\"primary\">Get Started&#x3C;/Button>\n  &#x3C;/CardContent>\n&#x3C;/Card>\n</code></pre>\n<h2>Available Themes</h2>\n<p>RetroUI Svelte comes with 16 beautiful themes that are faithful to the original RetroUI design system:</p>\n<h3>Available Themes</h3>\n<p>Choose from our 16 pre-built themes:</p>\n<ul>\n<li><strong>Green</strong> - Forest Green theme</li>\n<li><strong>Orange</strong> - Sunset Orange theme</li>\n<li><strong>Yellow</strong> - Neon Yellow theme</li>\n<li><strong>Teal</strong> - Ocean Teal theme</li>\n<li><strong>Purple</strong> - Grape Purple theme</li>\n<li><strong>Gold</strong> - Amber Gold theme</li>\n<li><strong>Coral</strong> - Hot Coral theme</li>\n<li><strong>Cyan</strong> - Crystal Cyan theme</li>\n<li><strong>Blue</strong> - Ocean Blue theme</li>\n<li><strong>Red</strong> - Crimson Red theme</li>\n<li><strong>Pink</strong> - Blush Pink theme</li>\n<li><strong>Indigo</strong> - Deep Indigo theme</li>\n<li><strong>Lime</strong> - Bright Lime theme</li>\n<li><strong>Rose</strong> - Rose Pink theme</li>\n<li><strong>Sky</strong> - Sky Blue theme</li>\n<li><strong>Slate</strong> - Modern Slate theme</li>\n</ul>\n<h2>Customization</h2>\n<h3>Custom CSS Variables</h3>\n<p>Override default theme colors using CSS custom properties:</p>\n<pre><code class=\"language-css\">:root {\n\t--primary: #your-color;\n\t--secondary: #your-color;\n\t--accent: #your-color;\n}\n</code></pre>\n<h2>Next Steps</h2>\n<ul>\n<li>Explore our <a href=\"/components\">Components</a> section</li>\n<li>Check out the <a href=\"/configuration\">Configuration</a> guide</li>\n<li>View theme examples in our <a href=\"/themes\">Themes</a> section</li>\n</ul>",
+    "raw": "<script>\n\n</script>\n\nThe following guide will walk you through the process of getting a RetroUI Svelte project up and running.\n\n## Prerequisites\n\n**Important**: RetroUI Svelte is built on top of the [shadcn-svelte](https://www.shadcn-svelte.com/) registry system. You **must** have shadcn-svelte installed and configured in your project before using RetroUI Svelte components.\n\n### Install shadcn-svelte First\n\nIf you haven't already, install and initialize shadcn-svelte:\n\n```bash\n# Install shadcn-svelte CLI\nnpm install -g @shadcn-svelte/cli\n\n# Initialize shadcn-svelte in your project\nnpx shadcn-svelte@latest init\n```\n\nFollow the prompts to configure shadcn-svelte with your preferred settings (styling, base color, etc.).\n\n## Installation\n\nOnce you have shadcn-svelte set up, install RetroUI Svelte using your preferred package manager:\n\n```bash\n# Using pnpm\npnpm add retroui-svelte\n\n# Using npm\nnpm install retroui-svelte\n\n# Using yarn\nyarn add retroui-svelte\n```\n\n## Quick Start\n\nImport and use RetroUI components in your Svelte project:\n\n```svelte\n<script>\n\timport { Button } from 'retroui-svelte';\n</script>\n\n<Button variant=\"primary\">Get Started</Button>\n```\n\n## RetroUI Svelte Setup\n\nFollow these steps to set up RetroUI Svelte in your project:\n\n### 1. Install and Configure shadcn-svelte\n\nFirst, you need to install and configure [shadcn-svelte](https://www.shadcn-svelte.com/docs/installation) in your project. RetroUI Svelte is built on top of the shadcn-svelte registry system.\n\n```bash\n# Install shadcn-svelte CLI\nnpm install -g @shadcn-svelte/cli\n\n# Initialize shadcn-svelte in your project\nnpx shadcn-svelte@latest init\n```\n\nFollow the prompts to configure `components.json` with your preferred settings (styling, base color, etc.).\n\n### 2. Add RetroUI Fonts and Theme\n\nAdd the RetroUI fonts and theme to your `src/app.css` file:\n\n```css\n/* src/app.css */\n@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');\n\n/* RetroUI Theme Variables */\n:root {\n  --font-head: 'Archivo Black', sans-serif;\n  --font-sans: 'Space Grotesk', sans-serif;\n  \n  /* Light theme colors */\n  --background: #fff;\n  --foreground: #000;\n  --card: #fff;\n  --card-foreground: #000;\n  --primary: #ffdb33;\n  --primary-hover: #ffcc00;\n  --primary-foreground: #000;\n  --secondary: #000;\n  --secondary-foreground: #fff;\n  --muted: #aeaeae;\n  --muted-foreground: #5a5a5a;\n  --accent: #fae583;\n  --accent-foreground: #000;\n  --destructive: #e63946;\n  --destructive-foreground: #fff;\n  --border: #000;\n  \n  /* RetroUI shadow system */\n  --shadow-xs: 1px 1px 0 0 var(--border);\n  --shadow-sm: 2px 2px 0 0 var(--border);\n  --shadow: 3px 3px 0 0 var(--border);\n  --shadow-md: 4px 4px 0 0 var(--border);\n  --shadow-lg: 6px 6px 0 0 var(--border);\n  --shadow-xl: 10px 10px 0 1px var(--border);\n  --shadow-2xl: 16px 16px 0 1px var(--border);\n}\n\n/* Dark theme */\n.dark {\n  --background: #1a1a1a;\n  --foreground: #f5f5f5;\n  --card: #242424;\n  --card-foreground: #f5f5f5;\n  --primary: #ffdb33;\n  --primary-hover: #ffcc00;\n  --primary-foreground: #000;\n  --secondary: #3a3a3a;\n  --secondary-foreground: #f5f5f5;\n  --muted: #3f3f46;\n  --muted-foreground: #a0a0a0;\n  --accent: #fae583;\n  --accent-foreground: #000;\n  --destructive: #e63946;\n  --destructive-foreground: #fff;\n  --border: #3a3a3a;\n}\n```\n\n### 3. Install RetroUI Components\n\nInstall RetroUI components using the shadcn-svelte CLI:\n\n```bash\n# Install specific components\nnpx shadcn-svelte@latest add button\nnpx shadcn-svelte@latest add input\nnpx shadcn-svelte@latest add card\n\n# Or install multiple components at once\nnpx shadcn-svelte@latest add button input card alert-dialog\n```\n\n### 4. Configure Themes in Your App\n\nSet up theme configuration in your Svelte app:\n\n```svelte\n<!-- src/routes/+layout.svelte -->\n<script>\n  import { onMount } from 'svelte';\n  import { availableThemes } from 'retroui-svelte';\n\n  let currentTheme = 'yellow'; // Default theme\n\n  onMount(() => {\n    // Set initial theme\n    document.documentElement.setAttribute('data-theme', currentTheme);\n  });\n\n  function setTheme(theme) {\n    currentTheme = theme;\n    document.documentElement.setAttribute('data-theme', theme);\n  }\n</script>\n\n<main class=\"min-h-screen\">\n  <!-- Your app content -->\n</main>\n```\n\n### 5. Use RetroUI Components\n\nNow you can import and use RetroUI components in your Svelte components:\n\n```svelte\n<script>\n  import { Button } from '@/components/ui/button';\n  import { Input } from '@/components/ui/input';\n  import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';\n</script>\n\n<Card class=\"w-96\">\n  <CardHeader>\n    <CardTitle>Welcome to RetroUI</CardTitle>\n  </CardHeader>\n  <CardContent class=\"space-y-4\">\n    <Input placeholder=\"Enter your name\" />\n    <Button variant=\"primary\">Get Started</Button>\n  </CardContent>\n</Card>\n```\n\n## Available Themes\n\nRetroUI Svelte comes with 16 beautiful themes that are faithful to the original RetroUI design system:\n\n### Available Themes\n\nChoose from our 16 pre-built themes:\n\n- **Green** - Forest Green theme\n- **Orange** - Sunset Orange theme\n- **Yellow** - Neon Yellow theme\n- **Teal** - Ocean Teal theme\n- **Purple** - Grape Purple theme\n- **Gold** - Amber Gold theme\n- **Coral** - Hot Coral theme\n- **Cyan** - Crystal Cyan theme\n- **Blue** - Ocean Blue theme\n- **Red** - Crimson Red theme\n- **Pink** - Blush Pink theme\n- **Indigo** - Deep Indigo theme\n- **Lime** - Bright Lime theme\n- **Rose** - Rose Pink theme\n- **Sky** - Sky Blue theme\n- **Slate** - Modern Slate theme\n\n\n## Customization\n\n### Custom CSS Variables\n\nOverride default theme colors using CSS custom properties:\n\n```css\n:root {\n\t--primary: #your-color;\n\t--secondary: #your-color;\n\t--accent: #your-color;\n}\n```\n\n## Next Steps\n\n- Explore our [Components](/components) section\n- Check out the [Configuration](/configuration) guide\n- View theme examples in our [Themes](/themes) section",
     "toc": [
       {
-        "title": "Clone the starter template",
-        "url": "#clone-the-starter-template",
-        "items": []
-      },
-      {
-        "title": "Navigation",
-        "url": "#navigation",
-        "items": []
-      },
-      {
-        "title": "Site config",
-        "url": "#site-config",
+        "title": "Prerequisites",
+        "url": "#prerequisites",
         "items": [
           {
-            "title": "Per-Route Site Config",
-            "url": "#per-route-site-config",
+            "title": "Install shadcn-svelte First",
+            "url": "#install-shadcn-svelte-first",
             "items": []
           }
         ]
       },
       {
-        "title": "Theme",
-        "url": "#theme",
+        "title": "Installation",
+        "url": "#installation",
         "items": []
       },
       {
-        "title": "Logo",
-        "url": "#logo",
+        "title": "Quick Start",
+        "url": "#quick-start",
+        "items": []
+      },
+      {
+        "title": "RetroUI Svelte Setup",
+        "url": "#retroui-svelte-setup",
+        "items": [
+          {
+            "title": "1. Install and Configure shadcn-svelte",
+            "url": "#1-install-and-configure-shadcn-svelte",
+            "items": []
+          },
+          {
+            "title": "2. Add RetroUI Fonts and Theme",
+            "url": "#2-add-retroui-fonts-and-theme",
+            "items": []
+          },
+          {
+            "title": "3. Install RetroUI Components",
+            "url": "#3-install-retroui-components",
+            "items": []
+          },
+          {
+            "title": "4. Configure Themes in Your App",
+            "url": "#4-configure-themes-in-your-app",
+            "items": []
+          },
+          {
+            "title": "5. Use RetroUI Components",
+            "url": "#5-use-retroui-components",
+            "items": []
+          }
+        ]
+      },
+      {
+        "title": "Available Themes",
+        "url": "#available-themes",
+        "items": [
+          {
+            "title": "Available Themes",
+            "url": "#available-themes-1",
+            "items": []
+          }
+        ]
+      },
+      {
+        "title": "Customization",
+        "url": "#customization",
+        "items": [
+          {
+            "title": "Custom CSS Variables",
+            "url": "#custom-css-variables",
+            "items": []
+          }
+        ]
+      },
+      {
+        "title": "Next Steps",
+        "url": "#next-steps",
         "items": []
       }
     ],
@@ -66,20 +114,101 @@
   },
   {
     "title": "Introduction",
-    "description": "What exactly is Svecodocs?",
+    "description": "What exactly is RetroUI Svelte?",
     "path": "index",
-    "content": "<script>\n\t\n</script>\n<p>After spending countless hours building documentation sites for various projects, we decided to build a docs package/starter template that we can use for future projects. This project is a result of that effort.</p>\n<p>Svecodocs is a starting point/utility library for building documentation sites under the <a href=\"https://github.com/svecosystem\">Svecosystem</a> umbrella. The code is open source, but it's built and maintained for our own specific needs, so we won't be accepting any public feature requests.</p>\n<p>You are more than welcome to fork the project and customize it to your own needs.</p>\n<h2>Features</h2>\n<ul>\n<li><strong>Markdown-based docs</strong>. Write docs using Markdown and Svelte components</li>\n<li><strong>Light and dark mode</strong>. Toggle between light and dark mode</li>\n<li><strong>Syntax highlighting</strong>. Code blocks are automatically highlighted</li>\n<li><strong>SEO-friendly</strong>. Meta tags and Open Graph support out of the box</li>\n<li><strong>Pre-built components</strong>. Tabs, callouts, and more to use within the documentation</li>\n<li><strong>Custom unified plugins</strong>. Custom remark and rehype plugins to give more flexibility over the rendered HTML</li>\n<li><strong>shadcn-svelte</strong>. Beautifully designed Svelte components</li>\n<li><strong>Tailwind v4</strong>. Tailwind CSS v4 is used for styling</li>\n</ul>",
-    "raw": "<script>\n\t\n</script>\n\nAfter spending countless hours building documentation sites for various projects, we decided to build a docs package/starter template that we can use for future projects. This project is a result of that effort.\n\nSvecodocs is a starting point/utility library for building documentation sites under the [Svecosystem](https://github.com/svecosystem) umbrella. The code is open source, but it's built and maintained for our own specific needs, so we won't be accepting any public feature requests.\n\nYou are more than welcome to fork the project and customize it to your own needs.\n\n## Features\n\n- **Markdown-based docs**. Write docs using Markdown and Svelte components\n- **Light and dark mode**. Toggle between light and dark mode\n- **Syntax highlighting**. Code blocks are automatically highlighted\n- **SEO-friendly**. Meta tags and Open Graph support out of the box\n- **Pre-built components**. Tabs, callouts, and more to use within the documentation\n- **Custom unified plugins**. Custom remark and rehype plugins to give more flexibility over the rendered HTML\n- **shadcn-svelte**. Beautifully designed Svelte components\n- **Tailwind v4**. Tailwind CSS v4 is used for styling",
+    "content": "<p>RetroUI Svelte is a comprehensive UI component library that brings the beautiful design system of <a href=\"https://www.retroui.dev\">RetroUI</a> to the Svelte ecosystem. This is an <strong>unofficial port</strong> created by <a href=\"https://github.com/Mhamad6000\">Mhamad6000</a>,\nBuilt on top of the <a href=\"https://www.shadcn-svelte.com/\">shadcn-svelte</a> registry system, RetroUI Svelte provides a seamless development experience with pre-built components that follow modern design principles and attention to detail.</p>\n<br>\n<br>\n<h2>Prerequisites</h2>\n<p><strong>Important</strong>: Before using RetroUI Svelte, you must have <a href=\"https://www.shadcn-svelte.com/\">shadcn-svelte</a> installed and configured in your project. RetroUI Svelte components are built using the shadcn-svelte registry system.</p>\n<br>\n<br>\n<h2>Features</h2>\n<ul>\n<li><strong>🎨 16 Beautiful Themes</strong>. Choose from a curated collection of themes including Green, Orange, Yellow, Teal, Purple, Gold, Coral, Cyan, Blue, Red, Pink, Indigo, Lime, Rose, Sky, and Slate</li>\n<li><strong>🌓 Light &#x26; Dark Mode</strong>. All themes support both light and dark modes with smooth transitions</li>\n<li><strong>🔧 Highly Customizable</strong>. Extensive customization options through props, CSS variables, and theme overrides</li>\n<li><strong>📚 Rich Documentation</strong>. Detailed documentation with examples and usage guides</li>\n<li><strong>🔄 Unofficial Port</strong>. Community-driven port from the original RetroUI library created by <a href=\"https://github.com/Mhamad6000\">Mhamad6000</a></li>\n</ul>\n<br>\n<br>\n<h2>Design Philosophy</h2>\n<p>RetroUI Svelte follows the same design philosophy as the original <a href=\"https://www.retroui.dev\">RetroUI</a>, brought to Svelte by <a href=\"https://github.com/Mhamad6000\">Mhamad6000</a>:</p>\n<ul>\n<li><strong>Consistency</strong> - All components share the same design language</li>\n<li><strong>Flexibility</strong> - Easy to customize and adapt to different use cases</li>\n</ul>\n<br>\n<br>\n<h2>Community</h2>\n<p>RetroUI Svelte is an open-source project. We welcome contributions, bug reports, and feature requests through our GitHub repository. Join our community to share your experiences and help improve the library for everyone.</p>",
+    "raw": "RetroUI Svelte is a comprehensive UI component library that brings the beautiful design system of [RetroUI](https://www.retroui.dev) to the Svelte ecosystem. This is an **unofficial port** created by [Mhamad6000](https://github.com/Mhamad6000),\nBuilt on top of the [shadcn-svelte](https://www.shadcn-svelte.com/) registry system, RetroUI Svelte provides a seamless development experience with pre-built components that follow modern design principles and attention to detail.\n\n<br/>\n<br/>\n\n## Prerequisites\n\n**Important**: Before using RetroUI Svelte, you must have [shadcn-svelte](https://www.shadcn-svelte.com/) installed and configured in your project. RetroUI Svelte components are built using the shadcn-svelte registry system.\n\n<br/>\n<br/>\n\n## Features\n\n- **🎨 16 Beautiful Themes**. Choose from a curated collection of themes including Green, Orange, Yellow, Teal, Purple, Gold, Coral, Cyan, Blue, Red, Pink, Indigo, Lime, Rose, Sky, and Slate\n- **🌓 Light & Dark Mode**. All themes support both light and dark modes with smooth transitions\n- **🔧 Highly Customizable**. Extensive customization options through props, CSS variables, and theme overrides\n- **📚 Rich Documentation**. Detailed documentation with examples and usage guides\n- **🔄 Unofficial Port**. Community-driven port from the original RetroUI library created by [Mhamad6000](https://github.com/Mhamad6000)\n\n<br/>\n<br/>\n\n## Design Philosophy\n\nRetroUI Svelte follows the same design philosophy as the original [RetroUI](https://www.retroui.dev), brought to Svelte by [Mhamad6000](https://github.com/Mhamad6000):\n\n- **Consistency** - All components share the same design language\n- **Flexibility** - Easy to customize and adapt to different use cases\n\n<br/>\n<br/>\n\n## Community\n\nRetroUI Svelte is an open-source project. We welcome contributions, bug reports, and feature requests through our GitHub repository. Join our community to share your experiences and help improve the library for everyone.",
     "toc": [
+      {
+        "title": "Prerequisites",
+        "url": "#prerequisites",
+        "items": []
+      },
       {
         "title": "Features",
         "url": "#features",
+        "items": []
+      },
+      {
+        "title": "Design Philosophy",
+        "url": "#design-philosophy",
+        "items": []
+      },
+      {
+        "title": "Community",
+        "url": "#community",
         "items": []
       }
     ],
     "section": "Overview",
     "slug": "index",
     "slugFull": "/index"
+  },
+  {
+    "title": "Navigation",
+    "description": "Learn how to customize the navigation in your Svecodocs project.",
+    "path": "configuration/navigation",
+    "content": "<p>Navigation is a key component of every site, documenting the structure of your site and providing a clear path for users to navigate through your content.</p>\n<p>Svecodocs comes with a navigation structure that is designed to be flexible and customizable. Each page in your site should have a corresponding navigation item, and the navigation items should be nested according to their hierarchy.</p>\n<h2>Navigation Structure</h2>\n<h3>Anchors</h3>\n<p>Anchors are links that are displayed at the top of the sidebar and typically used to either highlight important information or provide quick access to linked content.</p>\n<h3>Sections</h3>\n<p>Sections are used to group related navigation items together. They are typically used to organize content into different categories, such as \"Components\", \"Configuration\", and \"Utilities\".</p>",
+    "raw": "Navigation is a key component of every site, documenting the structure of your site and providing a clear path for users to navigate through your content.\n\nSvecodocs comes with a navigation structure that is designed to be flexible and customizable. Each page in your site should have a corresponding navigation item, and the navigation items should be nested according to their hierarchy.\n\n## Navigation Structure\n\n### Anchors\n\nAnchors are links that are displayed at the top of the sidebar and typically used to either highlight important information or provide quick access to linked content.\n\n### Sections\n\nSections are used to group related navigation items together. They are typically used to organize content into different categories, such as \"Components\", \"Configuration\", and \"Utilities\".",
+    "toc": [
+      {
+        "title": "Navigation Structure",
+        "url": "#navigation-structure",
+        "items": [
+          {
+            "title": "Anchors",
+            "url": "#anchors",
+            "items": []
+          },
+          {
+            "title": "Sections",
+            "url": "#sections",
+            "items": []
+          }
+        ]
+      }
+    ],
+    "section": "Configuration",
+    "slug": "configuration/navigation",
+    "slugFull": "/configuration/navigation"
+  },
+  {
+    "title": "Theme",
+    "description": "Learn how to customize the theme in your Svecodocs project.",
+    "path": "configuration/theme",
+    "content": "<p>The theme determines the branded color scheme for your site. A theme for each of the TailwindCSS colors is provided by the <code>@svecodocs/kit</code> package. Each theme has been designed to present well in both light and dark mode.</p>\n<h2>Using a theme</h2>\n<p>To use a theme, import the theme file into your <code>src/app.css</code> file <em>before</em> importing the <code>@svecodocs/kit/globals.css</code> file.</p>\n<pre><code class=\"language-css\">/* @import \"@svecodocs/kit/theme-orange.css\"; */\n@import \"@svecodocs/kit/theme-emerald.css\";\n@import \"@svecodocs/kit/globals.css\";\n</code></pre>\n<p>It's not recommended to customize the theme to maintain consistency across the UI components that are provided by Svecodocs and align with the provided themes.</p>\n<h2>Available themes</h2>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<table><thead><tr><th>Theme name</th><th>Import path</th></tr></thead><tbody><tr><td>orange</td><td><code>@svecodocs/kit/theme-orange.css</code></td></tr><tr><td>green</td><td><code>@svecodocs/kit/theme-green.css</code></td></tr><tr><td>blue</td><td><code>@svecodocs/kit/theme-blue.css</code></td></tr><tr><td>purple</td><td><code>@svecodocs/kit/theme-purple.css</code></td></tr><tr><td>pink</td><td><code>@svecodocs/kit/theme-pink.css</code></td></tr><tr><td>lime</td><td><code>@svecodocs/kit/theme-lime.css</code></td></tr><tr><td>yellow</td><td><code>@svecodocs/kit/theme-yellow.css</code></td></tr><tr><td>cyan</td><td><code>@svecodocs/kit/theme-cyan.css</code></td></tr><tr><td>teal</td><td><code>@svecodocs/kit/theme-teal.css</code></td></tr><tr><td>violet</td><td><code>@svecodocs/kit/theme-violet.css</code></td></tr><tr><td>amber</td><td><code>@svecodocs/kit/theme-amber.css</code></td></tr><tr><td>red</td><td><code>@svecodocs/kit/theme-red.css</code></td></tr><tr><td>sky</td><td><code>@svecodocs/kit/theme-sky.css</code></td></tr><tr><td>emerald</td><td><code>@svecodocs/kit/theme-emerald.css</code></td></tr><tr><td>fuchsia</td><td><code>@svecodocs/kit/theme-fuchsia.css</code></td></tr><tr><td>rose</td><td><code>@svecodocs/kit/theme-rose.css</code></td></tr></tbody></table>\n<h2>Tailwind Variables</h2>\n<p>Svecodocs uses TailwindCSS to style the UI components and provides a set of Tailwind variables that can be used to style your examples/custom components.</p>\n<h3>Gray</h3>\n<p>We override the TailwindCSS <code>gray</code> color scale to provide our own grays.</p>\n<h3>Brand</h3>\n<p>You can use the <code>brand</code> color to use the brand color of your project.</p>",
+    "raw": "The theme determines the branded color scheme for your site. A theme for each of the TailwindCSS colors is provided by the `@svecodocs/kit` package. Each theme has been designed to present well in both light and dark mode.\n\n## Using a theme\n\nTo use a theme, import the theme file into your `src/app.css` file _before_ importing the `@svecodocs/kit/globals.css` file.\n\n```css\n/* @import \"@svecodocs/kit/theme-orange.css\"; */\n@import \"@svecodocs/kit/theme-emerald.css\";\n@import \"@svecodocs/kit/globals.css\";\n```\n\nIt's not recommended to customize the theme to maintain consistency across the UI components that are provided by Svecodocs and align with the provided themes.\n\n## Available themes\n\n| Theme name | Import path                        |\n| ---------- | ---------------------------------- |\n| orange     | `@svecodocs/kit/theme-orange.css`  |\n| green      | `@svecodocs/kit/theme-green.css`   |\n| blue       | `@svecodocs/kit/theme-blue.css`    |\n| purple     | `@svecodocs/kit/theme-purple.css`  |\n| pink       | `@svecodocs/kit/theme-pink.css`    |\n| lime       | `@svecodocs/kit/theme-lime.css`    |\n| yellow     | `@svecodocs/kit/theme-yellow.css`  |\n| cyan       | `@svecodocs/kit/theme-cyan.css`    |\n| teal       | `@svecodocs/kit/theme-teal.css`    |\n| violet     | `@svecodocs/kit/theme-violet.css`  |\n| amber      | `@svecodocs/kit/theme-amber.css`   |\n| red        | `@svecodocs/kit/theme-red.css`     |\n| sky        | `@svecodocs/kit/theme-sky.css`     |\n| emerald    | `@svecodocs/kit/theme-emerald.css` |\n| fuchsia    | `@svecodocs/kit/theme-fuchsia.css` |\n| rose       | `@svecodocs/kit/theme-rose.css`    |\n\n## Tailwind Variables\n\nSvecodocs uses TailwindCSS to style the UI components and provides a set of Tailwind variables that can be used to style your examples/custom components.\n\n### Gray\n\nWe override the TailwindCSS `gray` color scale to provide our own grays.\n\n### Brand\n\nYou can use the `brand` color to use the brand color of your project.",
+    "toc": [
+      {
+        "title": "Using a theme",
+        "url": "#using-a-theme",
+        "items": []
+      },
+      {
+        "title": "Available themes",
+        "url": "#available-themes",
+        "items": []
+      },
+      {
+        "title": "Tailwind Variables",
+        "url": "#tailwind-variables",
+        "items": [
+          {
+            "title": "Gray",
+            "url": "#gray",
+            "items": []
+          },
+          {
+            "title": "Brand",
+            "url": "#brand",
+            "items": []
+          }
+        ]
+      }
+    ],
+    "section": "Configuration",
+    "slug": "configuration/theme",
+    "slugFull": "/configuration/theme"
   },
   {
     "title": "Accordion",
@@ -1929,71 +2058,5 @@
     ],
     "slug": "components/tooltip",
     "slugFull": "/components/tooltip"
-  },
-  {
-    "title": "Navigation",
-    "description": "Learn how to customize the navigation in your Svecodocs project.",
-    "path": "configuration/navigation",
-    "content": "<p>Navigation is a key component of every site, documenting the structure of your site and providing a clear path for users to navigate through your content.</p>\n<p>Svecodocs comes with a navigation structure that is designed to be flexible and customizable. Each page in your site should have a corresponding navigation item, and the navigation items should be nested according to their hierarchy.</p>\n<h2>Navigation Structure</h2>\n<h3>Anchors</h3>\n<p>Anchors are links that are displayed at the top of the sidebar and typically used to either highlight important information or provide quick access to linked content.</p>\n<h3>Sections</h3>\n<p>Sections are used to group related navigation items together. They are typically used to organize content into different categories, such as \"Components\", \"Configuration\", and \"Utilities\".</p>",
-    "raw": "Navigation is a key component of every site, documenting the structure of your site and providing a clear path for users to navigate through your content.\n\nSvecodocs comes with a navigation structure that is designed to be flexible and customizable. Each page in your site should have a corresponding navigation item, and the navigation items should be nested according to their hierarchy.\n\n## Navigation Structure\n\n### Anchors\n\nAnchors are links that are displayed at the top of the sidebar and typically used to either highlight important information or provide quick access to linked content.\n\n### Sections\n\nSections are used to group related navigation items together. They are typically used to organize content into different categories, such as \"Components\", \"Configuration\", and \"Utilities\".",
-    "toc": [
-      {
-        "title": "Navigation Structure",
-        "url": "#navigation-structure",
-        "items": [
-          {
-            "title": "Anchors",
-            "url": "#anchors",
-            "items": []
-          },
-          {
-            "title": "Sections",
-            "url": "#sections",
-            "items": []
-          }
-        ]
-      }
-    ],
-    "section": "Configuration",
-    "slug": "configuration/navigation",
-    "slugFull": "/configuration/navigation"
-  },
-  {
-    "title": "Theme",
-    "description": "Learn how to customize the theme in your Svecodocs project.",
-    "path": "configuration/theme",
-    "content": "<p>The theme determines the branded color scheme for your site. A theme for each of the TailwindCSS colors is provided by the <code>@svecodocs/kit</code> package. Each theme has been designed to present well in both light and dark mode.</p>\n<h2>Using a theme</h2>\n<p>To use a theme, import the theme file into your <code>src/app.css</code> file <em>before</em> importing the <code>@svecodocs/kit/globals.css</code> file.</p>\n<pre><code class=\"language-css\">/* @import \"@svecodocs/kit/theme-orange.css\"; */\n@import \"@svecodocs/kit/theme-emerald.css\";\n@import \"@svecodocs/kit/globals.css\";\n</code></pre>\n<p>It's not recommended to customize the theme to maintain consistency across the UI components that are provided by Svecodocs and align with the provided themes.</p>\n<h2>Available themes</h2>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<table><thead><tr><th>Theme name</th><th>Import path</th></tr></thead><tbody><tr><td>orange</td><td><code>@svecodocs/kit/theme-orange.css</code></td></tr><tr><td>green</td><td><code>@svecodocs/kit/theme-green.css</code></td></tr><tr><td>blue</td><td><code>@svecodocs/kit/theme-blue.css</code></td></tr><tr><td>purple</td><td><code>@svecodocs/kit/theme-purple.css</code></td></tr><tr><td>pink</td><td><code>@svecodocs/kit/theme-pink.css</code></td></tr><tr><td>lime</td><td><code>@svecodocs/kit/theme-lime.css</code></td></tr><tr><td>yellow</td><td><code>@svecodocs/kit/theme-yellow.css</code></td></tr><tr><td>cyan</td><td><code>@svecodocs/kit/theme-cyan.css</code></td></tr><tr><td>teal</td><td><code>@svecodocs/kit/theme-teal.css</code></td></tr><tr><td>violet</td><td><code>@svecodocs/kit/theme-violet.css</code></td></tr><tr><td>amber</td><td><code>@svecodocs/kit/theme-amber.css</code></td></tr><tr><td>red</td><td><code>@svecodocs/kit/theme-red.css</code></td></tr><tr><td>sky</td><td><code>@svecodocs/kit/theme-sky.css</code></td></tr><tr><td>emerald</td><td><code>@svecodocs/kit/theme-emerald.css</code></td></tr><tr><td>fuchsia</td><td><code>@svecodocs/kit/theme-fuchsia.css</code></td></tr><tr><td>rose</td><td><code>@svecodocs/kit/theme-rose.css</code></td></tr></tbody></table>\n<h2>Tailwind Variables</h2>\n<p>Svecodocs uses TailwindCSS to style the UI components and provides a set of Tailwind variables that can be used to style your examples/custom components.</p>\n<h3>Gray</h3>\n<p>We override the TailwindCSS <code>gray</code> color scale to provide our own grays.</p>\n<h3>Brand</h3>\n<p>You can use the <code>brand</code> color to use the brand color of your project.</p>",
-    "raw": "The theme determines the branded color scheme for your site. A theme for each of the TailwindCSS colors is provided by the `@svecodocs/kit` package. Each theme has been designed to present well in both light and dark mode.\n\n## Using a theme\n\nTo use a theme, import the theme file into your `src/app.css` file _before_ importing the `@svecodocs/kit/globals.css` file.\n\n```css\n/* @import \"@svecodocs/kit/theme-orange.css\"; */\n@import \"@svecodocs/kit/theme-emerald.css\";\n@import \"@svecodocs/kit/globals.css\";\n```\n\nIt's not recommended to customize the theme to maintain consistency across the UI components that are provided by Svecodocs and align with the provided themes.\n\n## Available themes\n\n| Theme name | Import path                        |\n| ---------- | ---------------------------------- |\n| orange     | `@svecodocs/kit/theme-orange.css`  |\n| green      | `@svecodocs/kit/theme-green.css`   |\n| blue       | `@svecodocs/kit/theme-blue.css`    |\n| purple     | `@svecodocs/kit/theme-purple.css`  |\n| pink       | `@svecodocs/kit/theme-pink.css`    |\n| lime       | `@svecodocs/kit/theme-lime.css`    |\n| yellow     | `@svecodocs/kit/theme-yellow.css`  |\n| cyan       | `@svecodocs/kit/theme-cyan.css`    |\n| teal       | `@svecodocs/kit/theme-teal.css`    |\n| violet     | `@svecodocs/kit/theme-violet.css`  |\n| amber      | `@svecodocs/kit/theme-amber.css`   |\n| red        | `@svecodocs/kit/theme-red.css`     |\n| sky        | `@svecodocs/kit/theme-sky.css`     |\n| emerald    | `@svecodocs/kit/theme-emerald.css` |\n| fuchsia    | `@svecodocs/kit/theme-fuchsia.css` |\n| rose       | `@svecodocs/kit/theme-rose.css`    |\n\n## Tailwind Variables\n\nSvecodocs uses TailwindCSS to style the UI components and provides a set of Tailwind variables that can be used to style your examples/custom components.\n\n### Gray\n\nWe override the TailwindCSS `gray` color scale to provide our own grays.\n\n### Brand\n\nYou can use the `brand` color to use the brand color of your project.",
-    "toc": [
-      {
-        "title": "Using a theme",
-        "url": "#using-a-theme",
-        "items": []
-      },
-      {
-        "title": "Available themes",
-        "url": "#available-themes",
-        "items": []
-      },
-      {
-        "title": "Tailwind Variables",
-        "url": "#tailwind-variables",
-        "items": [
-          {
-            "title": "Gray",
-            "url": "#gray",
-            "items": []
-          },
-          {
-            "title": "Brand",
-            "url": "#brand",
-            "items": []
-          }
-        ]
-      }
-    ],
-    "section": "Configuration",
-    "slug": "configuration/theme",
-    "slugFull": "/configuration/theme"
   }
 ]

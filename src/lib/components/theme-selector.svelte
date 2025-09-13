@@ -35,7 +35,7 @@
 				"Select theme"}
 		</div>
 	</Select.Trigger>
-	<Select.Content>
+	<Select.Content class="z-40">
 		{#each availableThemes as theme (theme.value)}
 			<Select.Item value={theme.value}>
 				<div class="flex items-center gap-2">
