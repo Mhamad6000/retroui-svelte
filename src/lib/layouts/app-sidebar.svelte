@@ -12,14 +12,21 @@
 
 	// Check if current path matches the href
 	function isActive(href: string): boolean {
-		return page.url.pathname === href || page.url.pathname.startsWith(href + "/");
+		const currentPath = page.url.pathname;
+
+		// Get the last segment of both paths
+		const currentLastSegment = currentPath.split("/").pop() || "";
+		const hrefLastSegment = href.split("/").pop() || "";
+
+		// Return true if the last segments match and both are not empty
+		return currentLastSegment === hrefLastSegment && currentLastSegment !== "";
 	}
 </script>
 
 <Sheet.Root bind:open>
 	<Sheet.Content side="left" class="w-64 p-0">
 		<Sheet.Header class="border-b p-4">
-			<a href="/" class="flex items-center gap-2" onclick={() => (open = false)}>
+			<a href="/docs" class="flex items-center gap-2" onclick={() => (open = false)}>
 				<img src="/logo.webp" alt="Retroui Svelte Logo" class="h-6 w-6" />
 				<span class="text-lg font-semibold">Retroui Svelte</span>
 			</a>
@@ -34,11 +41,7 @@
 						{#each navigation.header as item}
 							<a
 								href={item.href}
-								class="flex items-center gap-2 px-3 py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground {isActive(
-									item.href
-								)
-									? 'bg-accent text-accent-foreground font-medium'
-									: ''}"
+								class="flex items-center gap-2 px-3 py-2 text-sm transition-colors hover:bg-primary hover:text-accent-foreground"
 								onclick={() => (open = false)}
 							>
 								{item.title}
@@ -68,7 +71,7 @@
 									class="flex items-center gap-2 rounded-md px-3 py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground {isActive(
 										anchor.href
 									)
-										? 'bg-accent text-accent-foreground font-medium'
+										? 'bg-primary text-accent-foreground font-medium'
 										: ''}"
 									target={anchor.href.startsWith("http") ? "_blank" : "_self"}
 									onclick={() => !anchor.href.startsWith("http") && (open = false)}
@@ -109,10 +112,10 @@
 									{:else}
 										<a
 											href={item.href}
-											class="flex items-center justify-between rounded-md px-3 py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground {isActive(
+											class="flex items-center justify-between rounded-md px-3 py-2 text-sm transition-colors hover:bg-primary hover:text-accent-foreground {isActive(
 												item.href
 											)
-												? 'bg-accent text-accent-foreground font-medium'
+												? 'bg-primary text-accent-foreground font-medium'
 												: ''}"
 											target={item.external ? "_blank" : "_self"}
 											onclick={() => !item.external && (open = false)}
@@ -169,10 +172,10 @@
 								{:else}
 									<a
 										href={item.href}
-										class="flex items-center justify-between rounded-md px-3 py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground {isActive(
+										class="flex items-center justify-between rounded-md px-3 py-2 text-sm transition-colors hover:bg-primary hover:text-accent-foreground {isActive(
 											item.href
 										)
-											? 'bg-accent text-accent-foreground font-medium'
+											? 'bg-primary text-accent-foreground font-medium'
 											: ''}"
 										target={item.external ? "_blank" : "_self"}
 										onclick={() => !item.external && (open = false)}

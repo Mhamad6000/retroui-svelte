@@ -3,6 +3,7 @@
 	import { MenuIcon, MoonIcon, SunIcon } from "@lucide/svelte";
 	import { toggleMode } from "mode-watcher";
 	import type { Navigation } from "$lib/utils/navigation.js";
+	import AppSidebar from "./app-sidebar.svelte";
 
 	interface Props {
 		navigation: Navigation;
@@ -22,7 +23,7 @@
 			<img src="/logo.webp" alt="Retroui Svelte Logo" class="h-6 w-6" />
 			<span class="text-xl font-medium">Retroui Svelte</span>
 		</a>
-		<nav class="hidden md:flex items-center gap-0">
+		<nav class="hidden lg:flex items-center gap-0">
 			{#each navigation.header ?? [] as item}
 				<a href={item.href} class="inline-block p-3 hover:underline">{item.title}</a>
 			{/each}
@@ -84,9 +85,12 @@
 			<span class="sr-only">Toggle theme</span>
 		</Button>
 
-		<Button class="md:hidden" variant="secondary" onclick={() => (open = !open)} size="icon">
+		<Button class="lg:hidden" variant="secondary" onclick={() => (open = !open)} size="icon">
 			<MenuIcon />
 			<span class="sr-only">Toggle Sidebar</span>
 		</Button>
 	</div>
 </div>
+
+<!-- Mobile Sidebar -->
+<AppSidebar {navigation} bind:open />

@@ -28,7 +28,7 @@ export interface UserConfigData {
 }
 
 const defaultConfig: UserConfigData = {
-	activeTheme: "orange",
+	activeTheme: "yellow",
 	layout: "default",
 };
 

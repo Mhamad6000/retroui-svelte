@@ -11,6 +11,7 @@
 		previewComponentSources,
 		type PreviewComponentName,
 	} from "../../preview/index.js";
+	import { transformImportAliases } from "$lib/utils";
 
 	let {
 		class: className,
@@ -39,7 +40,8 @@
 
 	// Get the source code from the imported map
 	function getPreviewComponentCode(componentName: string): string | null {
-		return previewComponentSources[componentName as PreviewComponentName] || null;
+		const rawCode = previewComponentSources[componentName as PreviewComponentName];
+		return rawCode ? transformImportAliases(rawCode) : null;
 	}
 </script>
 

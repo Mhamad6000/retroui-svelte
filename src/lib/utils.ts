@@ -38,3 +38,31 @@ export async function getDoc(slug: string = "index") {
 		metadata,
 	};
 }
+
+/**
+ * Transform internal registry imports to user-facing imports
+ */
+export function transformImportAliases(sourceCode: string): string {
+    const aliasMap = {
+        '$registry/lib': '$lib',
+        '$registry/ui': '$lib/components/ui',
+        '$registry/lib/utils': '$lib/utils',
+        '$registry/hooks': '$lib/hooks',
+        // Add any other aliases as needed
+    };
+
+    let transformedCode = sourceCode;
+
+    // Transform each alias
+    Object.entries(aliasMap).forEach(([registryPath, userPath]) => {
+        // Match import statements with the registry path
+        const importRegex = new RegExp(
+            `(import\\s+.*?from\\s+['"\`])${registryPath.replace('$', '\\$')}([^'"\`]*['"\`])`,
+            'g'
+        );
+        
+        transformedCode = transformedCode.replace(importRegex, `$1${userPath}$2`);
+    });
+
+    return transformedCode;
+}

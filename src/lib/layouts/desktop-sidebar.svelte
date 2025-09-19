@@ -12,23 +12,12 @@
 	function isActive(href: string): boolean {
 		const currentPath = page.url.pathname;
 
-		// Exact match is always active
-		if (currentPath === href) return true;
+		// Get the last segment of both paths
+		const currentLastSegment = currentPath.split("/").pop() || "";
+		const hrefLastSegment = href.split("/").pop() || "";
 
-		// For root path, only exact match
-		if (href === "/") return false;
-
-		// For other paths, check if it's a direct parent
-		if (currentPath.startsWith(href + "/")) {
-			// Count path segments to ensure it's a direct parent
-			const hrefSegments = href.split("/").filter(Boolean).length;
-			const currentSegments = currentPath.split("/").filter(Boolean).length;
-
-			// Only active if it's the immediate parent (one level up)
-			return currentSegments === hrefSegments + 1;
-		}
-
-		return false;
+		// Return true if the last segments match and both are not empty
+		return currentLastSegment === hrefLastSegment && currentLastSegment !== "";
 	}
 </script>
 
