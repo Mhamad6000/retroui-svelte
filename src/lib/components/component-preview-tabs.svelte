@@ -6,6 +6,11 @@
 	import { highlightCode } from "$lib/utils/highlight.js";
 	import CopyCodeButton from "./copy-code-button.svelte";
 	import ScrollArea from "$registry/ui/scroll-area/scroll-area.svelte";
+	import {
+		previewComponents,
+		previewComponentSources,
+		type PreviewComponentName,
+	} from "../../preview/index.js";
 
 	let {
 		class: className,
@@ -27,28 +32,14 @@
 
 	let value: "code" | "preview" = $state("preview");
 
-	// Function to dynamically import preview components
-	async function loadPreviewComponent(componentName: string) {
-		try {
-			// Import the preview component from src/preview/components
-			const module = await import(`../../preview/components/${componentName}.svelte`);
-			return module.default;
-		} catch (error) {
-			console.warn(`Could not load preview component: ${componentName}`, error);
-			return null;
-		}
+	// Get the preview component from the imported map
+	function getPreviewComponent(componentName: string): Component | null {
+		return previewComponents[componentName as PreviewComponentName] || null;
 	}
 
-	// Function to fetch the source code of the preview component
-	async function loadPreviewComponentCode(componentName: string) {
-		try {
-			// Use dynamic import with ?raw suffix to get the source code
-			const sourceModule = await import(`../../preview/components/${componentName}.svelte?raw`);
-			return sourceModule.default;
-		} catch (error) {
-			console.warn(`Could not load preview component code: ${componentName}`, error);
-			return null;
-		}
+	// Get the source code from the imported map
+	function getPreviewComponentCode(componentName: string): string | null {
+		return previewComponentSources[componentName as PreviewComponentName] || null;
 	}
 </script>
 
@@ -57,35 +48,22 @@
 		{@const Component = component}
 		<Component />
 	{:else}
-		{#await loadPreviewComponent(name)}
-			<div class="flex items-center justify-center">
-				<div class="text-muted-foreground text-sm">Loading preview...</div>
-			</div>
-		{:then PreviewComponent}
-			{#if PreviewComponent}
-				<PreviewComponent />
-			{:else}
-				<p class="text-muted-foreground text-sm">
-					No preview component found for
-					<code class="bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm">
-						{name}
-					</code>
-					. Create
-					<code class="bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm">
-						src/preview/components/{name}.svelte
-					</code>
-					to show a preview.
-				</p>
-			{/if}
-		{:catch error}
-			<p class="text-destructive text-sm">
-				Error loading preview component
+		{@const PreviewComponent = getPreviewComponent(name)}
+		{#if PreviewComponent}
+			<PreviewComponent />
+		{:else}
+			<p class="text-muted-foreground text-sm">
+				No preview component found for
 				<code class="bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm">
 					{name}
 				</code>
-				: {error.message}
+				. Create
+				<code class="bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm">
+					src/preview/components/{name}.svelte
+				</code>
+				to show a preview.
 			</p>
-		{/await}
+		{/if}
 	{/if}
 {/snippet}
 
@@ -125,48 +103,35 @@
 					{#if children}
 						{@render children()}
 					{:else}
-						{#await loadPreviewComponentCode(name)}
-							<div class="flex h-full items-center justify-center">
-								<div class="text-muted-foreground text-sm">Loading code...</div>
-							</div>
-						{:then sourceCode}
-							{#if sourceCode}
-								{#await highlightCode(sourceCode, "svelte")}
-									<div class="flex h-full items-center justify-center">
-										<div class="text-muted-foreground text-sm">Highlighting code...</div>
-									</div>
-								{:then highlightedHtml}
-									<div class="relative h-full">
-										<CopyCodeButton code={sourceCode} />
-										<ScrollArea orientation="both" class="h-full pb-0" data-pre-wrapper="">
-											{@html highlightedHtml}
-										</ScrollArea>
-									</div>
-								{:catch}
-									<div class="relative h-full">
-										<CopyCodeButton code={sourceCode} />
-										<pre class="rounded-lg h-full overflow-auto"><code>{sourceCode}</code></pre>
-									</div>
-								{/await}
-							{:else}
+						{@const sourceCode = getPreviewComponentCode(name)}
+						{#if sourceCode}
+							{#await highlightCode(sourceCode, "svelte")}
 								<div class="flex h-full items-center justify-center">
-									<p class="text-muted-foreground text-sm">
-										Could not load source code for
-										<code
-											class="bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm"
-										>
-											{name}
-										</code>
-									</p>
+									<div class="text-muted-foreground text-sm">Highlighting code...</div>
 								</div>
-							{/if}
-						{:catch error}
+							{:then highlightedHtml}
+								<div class="relative h-full">
+									<CopyCodeButton code={sourceCode} />
+									<ScrollArea orientation="both" class="h-full pb-0" data-pre-wrapper="">
+										{@html highlightedHtml}
+									</ScrollArea>
+								</div>
+							{:catch}
+								<div class="relative h-full">
+									<CopyCodeButton code={sourceCode} />
+									<pre class="rounded-lg h-full overflow-auto"><code>{sourceCode}</code></pre>
+								</div>
+							{/await}
+						{:else}
 							<div class="flex h-full items-center justify-center">
-								<p class="text-destructive text-sm">
-									Error loading source code: {error.message}
+								<p class="text-muted-foreground text-sm">
+									Could not load source code for
+									<code class="bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm">
+										{name}
+									</code>
 								</p>
 							</div>
-						{/await}
+						{/if}
 					{/if}
 				</div>
 			</Tabs.Content>

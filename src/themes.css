@@ -1,6 +1,6 @@
 /* 🌿 GREEN THEME */
 [data-theme="green"] .theme-container {
-	--background: #f0f8f0;
+	--background: #fff;
 	--foreground: #1b2f1b;
 	--card: #fff;
 	--card-foreground: #1b2f1b;
@@ -65,7 +65,7 @@
 
 /* 🍊 ORANGE THEME */
 [data-theme="orange"] .theme-container {
-	--background: #fdf6e3;
+	--background: #fff;
 	--foreground: #2f1b14;
 	--card: #fff;
 	--card-foreground: #2f1b14;
@@ -194,7 +194,7 @@
 
 /* 🌊 TEAL THEME */
 [data-theme="teal"] .theme-container {
-	--background: #f0fffe;
+	--background: #fff;
 	--foreground: #0d2e2a;
 	--card: #fff;
 	--card-foreground: #0d2e2a;
@@ -259,7 +259,7 @@
 
 /* 🍇 PURPLE THEME */
 [data-theme="purple"] .theme-container {
-	--background: #faf4ff;
+	--background: #fff;
 	--foreground: #2d1b3d;
 	--card: #fff;
 	--card-foreground: #2d1b3d;
@@ -324,7 +324,7 @@
 
 /* 🔸 GOLD THEME */
 [data-theme="gold"] .theme-container {
-	--background: #fffbf0;
+	--background: #fff;
 	--foreground: #3e2723;
 	--card: #fff;
 	--card-foreground: #3e2723;
@@ -389,7 +389,7 @@
 
 /* 🔥 CORAL THEME */
 [data-theme="coral"] .theme-container {
-	--background: #fff5f5;
+	--background: #fff;
 	--foreground: #3d1a1a;
 	--card: #fff;
 	--card-foreground: #3d1a1a;
@@ -454,7 +454,7 @@
 
 /* 💎 CYAN THEME */
 [data-theme="cyan"] .theme-container {
-	--background: #f0fdff;
+	--background: #fff;
 	--foreground: #0f2027;
 	--card: #fff;
 	--card-foreground: #0f2027;
@@ -519,7 +519,7 @@
 
 /* 🔵 BLUE THEME */
 [data-theme="blue"] .theme-container {
-	--background: #f0f8ff;
+	--background: #fff;
 	--foreground: #0f1419;
 	--card: #fff;
 	--card-foreground: #0f1419;
@@ -584,7 +584,7 @@
 
 /* 🔴 RED THEME */
 [data-theme="red"] .theme-container {
-	--background: #fff5f5;
+	--background: #fff;
 	--foreground: #2d1b1b;
 	--card: #fff;
 	--card-foreground: #2d1b1b;
@@ -649,7 +649,7 @@
 
 /* 🩷 PINK THEME */
 [data-theme="pink"] .theme-container {
-	--background: #fdf2f8;
+	--background: #fff;
 	--foreground: #2d1b2d;
 	--card: #fff;
 	--card-foreground: #2d1b2d;
@@ -714,7 +714,7 @@
 
 /* 🔷 INDIGO THEME */
 [data-theme="indigo"] .theme-container {
-	--background: #f3f4ff;
+	--background: #fff;
 	--foreground: #1a1a2e;
 	--card: #fff;
 	--card-foreground: #1a1a2e;
@@ -779,7 +779,7 @@
 
 /* 🟢 LIME THEME */
 [data-theme="lime"] .theme-container {
-	--background: #f9fbe7;
+	--background: #fff;
 	--foreground: #1b2d1b;
 	--card: #fff;
 	--card-foreground: #1b2d1b;
@@ -844,7 +844,7 @@
 
 /* 🌹 ROSE THEME */
 [data-theme="rose"] .theme-container {
-	--background: #fdf2f8;
+	--background: #fff;
 	--foreground: #2d1b2d;
 	--card: #fff;
 	--card-foreground: #2d1b2d;
@@ -909,7 +909,7 @@
 
 /* 🌤️ SKY THEME */
 [data-theme="sky"] .theme-container {
-	--background: #f0f9ff;
+	--background: #fff;
 	--foreground: #0c1b2d;
 	--card: #fff;
 	--card-foreground: #0c1b2d;
@@ -974,7 +974,7 @@
 
 /* ⚫ SLATE THEME */
 [data-theme="slate"] .theme-container {
-	--background: #f8fafc;
+	--background: #fff;
 	--foreground: #1e293b;
 	--card: #fff;
 	--card-foreground: #1e293b;

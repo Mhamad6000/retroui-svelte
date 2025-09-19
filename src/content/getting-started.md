@@ -10,38 +10,13 @@ section: Overview
 
 The following guide will walk you through the process of getting a RetroUI Svelte project up and running.
 
+<br/>
+
 ## Prerequisites
 
 **Important**: RetroUI Svelte is built on top of the [shadcn-svelte](https://www.shadcn-svelte.com/) registry system. You **must** have shadcn-svelte installed and configured in your project before using RetroUI Svelte components.
 
-### Install shadcn-svelte First
-
-If you haven't already, install and initialize shadcn-svelte:
-
-```bash
-# Install shadcn-svelte CLI
-npm install -g @shadcn-svelte/cli
-
-# Initialize shadcn-svelte in your project
-npx shadcn-svelte@latest init
-```
-
-Follow the prompts to configure shadcn-svelte with your preferred settings (styling, base color, etc.).
-
-## Installation
-
-Once you have shadcn-svelte set up, install RetroUI Svelte using your preferred package manager:
-
-```bash
-# Using pnpm
-pnpm add retroui-svelte
-
-# Using npm
-npm install retroui-svelte
-
-# Using yarn
-yarn add retroui-svelte
-```
+<br/>
 
 ## Quick Start
 
@@ -49,31 +24,19 @@ Import and use RetroUI components in your Svelte project:
 
 ```svelte
 <script>
-	import { Button } from 'retroui-svelte';
+	import { Button } from '$lib/components/ui/button';
 </script>
 
 <Button variant="primary">Get Started</Button>
 ```
 
+<br/>
+
 ## RetroUI Svelte Setup
 
 Follow these steps to set up RetroUI Svelte in your project:
 
-### 1. Install and Configure shadcn-svelte
-
-First, you need to install and configure [shadcn-svelte](https://www.shadcn-svelte.com/docs/installation) in your project. RetroUI Svelte is built on top of the shadcn-svelte registry system.
-
-```bash
-# Install shadcn-svelte CLI
-npm install -g @shadcn-svelte/cli
-
-# Initialize shadcn-svelte in your project
-npx shadcn-svelte@latest init
-```
-
-Follow the prompts to configure `components.json` with your preferred settings (styling, base color, etc.).
-
-### 2. Add RetroUI Fonts and Theme
+### 1. Add RetroUI Fonts and Theme
 
 Add the RetroUI fonts and theme to your `src/app.css` file:
 
@@ -135,7 +98,7 @@ Add the RetroUI fonts and theme to your `src/app.css` file:
 }
 ```
 
-### 3. Install RetroUI Components
+### 2. Install RetroUI Components
 
 Install RetroUI components using the shadcn-svelte CLI:
 
@@ -149,43 +112,15 @@ npx shadcn-svelte@latest add card
 npx shadcn-svelte@latest add button input card alert-dialog
 ```
 
-### 4. Configure Themes in Your App
-
-Set up theme configuration in your Svelte app:
-
-```svelte
-<!-- src/routes/+layout.svelte -->
-<script>
-  import { onMount } from 'svelte';
-  import { availableThemes } from 'retroui-svelte';
-
-  let currentTheme = 'yellow'; // Default theme
-
-  onMount(() => {
-    // Set initial theme
-    document.documentElement.setAttribute('data-theme', currentTheme);
-  });
-
-  function setTheme(theme) {
-    currentTheme = theme;
-    document.documentElement.setAttribute('data-theme', theme);
-  }
-</script>
-
-<main class="min-h-screen">
-  <!-- Your app content -->
-</main>
-```
-
-### 5. Use RetroUI Components
+### 3. Use RetroUI Components
 
 Now you can import and use RetroUI components in your Svelte components:
 
 ```svelte
 <script>
-  import { Button } from '@/components/ui/button';
-  import { Input } from '@/components/ui/input';
-  import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+  import { Button } from '$lib/components/ui/button';
+  import { Input } from '$lib/components/ui/input';
+  import { Card, CardContent, CardHeader, CardTitle } from '$lib/components/ui/card';
 </script>
 
 <Card class="w-96">
@@ -199,13 +134,11 @@ Now you can import and use RetroUI components in your Svelte components:
 </Card>
 ```
 
+<br/>
+
 ## Available Themes
 
 RetroUI Svelte comes with 16 beautiful themes that are faithful to the original RetroUI design system:
-
-### Available Themes
-
-Choose from our 16 pre-built themes:
 
 - **Green** - Forest Green theme
 - **Orange** - Sunset Orange theme
@@ -224,6 +157,7 @@ Choose from our 16 pre-built themes:
 - **Sky** - Sky Blue theme
 - **Slate** - Modern Slate theme
 
+<br/>
 
 ## Customization
 
@@ -242,5 +176,4 @@ Override default theme colors using CSS custom properties:
 ## Next Steps
 
 - Explore our [Components](/components) section
-- Check out the [Configuration](/configuration) guide
 - View theme examples in our [Themes](/themes) section

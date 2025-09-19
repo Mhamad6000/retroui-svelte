@@ -3,12 +3,24 @@
 	import type { Snippet } from "svelte";
 	import Header from "./header.svelte";
 	import DesktopSidebar from "./desktop-sidebar.svelte";
+	import { afterNavigate } from "$app/navigation";
+	import { tick } from "svelte";
 
 	interface Props {
 		children: Snippet;
 		navigation: Navigation;
 	}
 	let { children, navigation }: Props = $props();
+
+	let contentElement: HTMLElement;
+
+	// Reset scroll position when navigating between pages
+	afterNavigate(async () => {
+		await tick();
+		if (contentElement) {
+			contentElement.scrollTop = 0;
+		}
+	});
 </script>
 
 <div class="flex flex-col h-screen">
@@ -16,6 +28,7 @@
 	<div class="flex flex-1 overflow-hidden">
 		<DesktopSidebar {navigation} />
 		<div
+			bind:this={contentElement}
 			class="relative gap-4 flex-row-reverse overflow-auto flex w-full flex-1 px-4 py-8 lg:px-8"
 			id="content"
 		>
