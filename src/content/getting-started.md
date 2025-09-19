@@ -175,5 +175,5 @@ Override default theme colors using CSS custom properties:
 
 ## Next Steps
 
-- Explore our [Components](/components) section
+- Explore our [Components](/docs/components) section
 - View theme examples in our [Themes](/themes) section

@@ -3,8 +3,8 @@
     "title": "Components",
     "description": "Here you can find all the components available in the library. We are working on adding more components.",
     "path": "components",
-    "content": "<div class=\"grid gap-4 md:grid-cols-2 lg:grid-cols-3\">\n\t<a class=\"hover:underline\" href=\"/docs/components/accordion\">Accordion</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/alert\">Alert</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/alert-dialog\">Alert Dialog</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/avatar\">Avatar</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/badge\">Badge</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/breadcrumb\">Breadcrumb</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/button\">Button</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/calendar\">Calendar</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/card\">Card</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/checkbox\">Checkbox</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/collapsible\">Collapsible</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/command\">Command</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/context-menu\">Context Menu</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/dialog\">Dialog</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/dropdown-menu\">Dropdown Menu</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/hover-card\">Hover Card</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/input\">Input</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/input-otp\">Input OTP</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/label\">Label</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/loader\">Loader</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/menubar\">Menubar</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/navigation-menu\">Navigation Menu</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/pagination\">Pagination</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/popover\">Popover</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/progress\">Progress</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/radio-group\">Radio Group</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/range-calendar\">Range Calendar</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/scroll-area\">Scroll Area</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/select\">Select</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/separator\">Separator</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/sheet\">Sheet</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/sidebar\">Sidebar</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/skeleton\">Skeleton</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/slider\">Slider</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/sonner\">Sonner</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/switch\">Switch</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/table\">Table</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/tabs\">Tabs</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/text\">Text</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/textarea\">Textarea</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/toggle\">Toggle</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/toggle-group\">Toggle Group</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/tooltip\">Tooltip</a>\n</div>",
-    "raw": "<div class=\"grid gap-4 md:grid-cols-2 lg:grid-cols-3\">\n\t<a class=\"hover:underline\" href=\"/docs/components/accordion\">Accordion</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/alert\">Alert</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/alert-dialog\">Alert Dialog</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/avatar\">Avatar</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/badge\">Badge</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/breadcrumb\">Breadcrumb</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/button\">Button</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/calendar\">Calendar</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/card\">Card</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/checkbox\">Checkbox</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/collapsible\">Collapsible</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/command\">Command</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/context-menu\">Context Menu</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/dialog\">Dialog</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/dropdown-menu\">Dropdown Menu</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/hover-card\">Hover Card</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/input\">Input</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/input-otp\">Input OTP</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/label\">Label</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/loader\">Loader</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/menubar\">Menubar</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/navigation-menu\">Navigation Menu</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/pagination\">Pagination</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/popover\">Popover</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/progress\">Progress</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/radio-group\">Radio Group</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/range-calendar\">Range Calendar</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/scroll-area\">Scroll Area</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/select\">Select</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/separator\">Separator</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/sheet\">Sheet</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/sidebar\">Sidebar</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/skeleton\">Skeleton</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/slider\">Slider</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/sonner\">Sonner</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/switch\">Switch</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/table\">Table</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/tabs\">Tabs</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/text\">Text</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/textarea\">Textarea</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/toggle\">Toggle</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/toggle-group\">Toggle Group</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/tooltip\">Tooltip</a>\n</div>",
+    "content": "<div class=\"grid gap-4 md:grid-cols-2 lg:grid-cols-3\">\n\t<a class=\"hover:underline\" href=\"/docs/components/accordion\">Accordion</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/alert\">Alert</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/alert-dialog\">Alert Dialog</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/avatar\">Avatar</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/badge\">Badge</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/breadcrumb\">Breadcrumb</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/button\">Button</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/calendar\">Calendar</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/card\">Card</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/checkbox\">Checkbox</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/collapsible\">Collapsible</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/command\">Command</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/context-menu\">Context Menu</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/dialog\">Dialog</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/dropdown-menu\">Dropdown Menu</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/hover-card\">Hover Card</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/input\">Input</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/label\">Label</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/loader\">Loader</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/menubar\">Menubar</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/navigation-menu\">Navigation Menu</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/pagination\">Pagination</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/popover\">Popover</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/progress\">Progress</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/radio-group\">Radio Group</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/range-calendar\">Range Calendar</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/select\">Select</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/separator\">Separator</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/sheet\">Sheet</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/slider\">Slider</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/sonner\">Sonner</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/switch\">Switch</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/table\">Table</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/tabs\">Tabs</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/text\">Text</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/textarea\">Textarea</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/toggle\">Toggle</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/toggle-group\">Toggle Group</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/tooltip\">Tooltip</a>\n</div>",
+    "raw": "<div class=\"grid gap-4 md:grid-cols-2 lg:grid-cols-3\">\n\t<a class=\"hover:underline\" href=\"/docs/components/accordion\">Accordion</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/alert\">Alert</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/alert-dialog\">Alert Dialog</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/avatar\">Avatar</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/badge\">Badge</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/breadcrumb\">Breadcrumb</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/button\">Button</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/calendar\">Calendar</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/card\">Card</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/checkbox\">Checkbox</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/collapsible\">Collapsible</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/command\">Command</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/context-menu\">Context Menu</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/dialog\">Dialog</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/dropdown-menu\">Dropdown Menu</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/hover-card\">Hover Card</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/input\">Input</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/label\">Label</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/loader\">Loader</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/menubar\">Menubar</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/navigation-menu\">Navigation Menu</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/pagination\">Pagination</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/popover\">Popover</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/progress\">Progress</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/radio-group\">Radio Group</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/range-calendar\">Range Calendar</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/select\">Select</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/separator\">Separator</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/sheet\">Sheet</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/slider\">Slider</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/sonner\">Sonner</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/switch\">Switch</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/table\">Table</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/tabs\">Tabs</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/text\">Text</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/textarea\">Textarea</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/toggle\">Toggle</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/toggle-group\">Toggle Group</a>\n\t<a class=\"hover:underline\" href=\"/docs/components/tooltip\">Tooltip</a>\n</div>",
     "toc": [],
     "section": "Components",
     "slug": "components",
@@ -14,8 +14,8 @@
     "title": "Getting Started",
     "description": "A quick guide to get started using RetroUI Svelte",
     "path": "getting-started",
-    "content": "<script>\n\n</script>\n<p>The following guide will walk you through the process of getting a RetroUI Svelte project up and running.</p>\n<br>\n<h2>Prerequisites</h2>\n<p><strong>Important</strong>: RetroUI Svelte is built on top of the <a href=\"https://www.shadcn-svelte.com/\">shadcn-svelte</a> registry system. You <strong>must</strong> have shadcn-svelte installed and configured in your project before using RetroUI Svelte components.</p>\n<br>\n<h2>Quick Start</h2>\n<p>Import and use RetroUI components in your Svelte project:</p>\n<pre><code class=\"language-svelte\">&#x3C;script>\n\timport { Button } from '$lib/components/ui/button';\n&#x3C;/script>\n\n&#x3C;Button variant=\"primary\">Get Started&#x3C;/Button>\n</code></pre>\n<br>\n<h2>RetroUI Svelte Setup</h2>\n<p>Follow these steps to set up RetroUI Svelte in your project:</p>\n<h3>1. Add RetroUI Fonts and Theme</h3>\n<p>Add the RetroUI fonts and theme to your <code>src/app.css</code> file:</p>\n<pre><code class=\"language-css\">/* src/app.css */\n@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&#x26;family=Space+Grotesk:wght@300;400;500;600;700&#x26;display=swap');\n\n/* RetroUI Theme Variables */\n:root {\n  --font-head: 'Archivo Black', sans-serif;\n  --font-sans: 'Space Grotesk', sans-serif;\n  \n  /* Light theme colors */\n  --background: #fff;\n  --foreground: #000;\n  --card: #fff;\n  --card-foreground: #000;\n  --primary: #ffdb33;\n  --primary-hover: #ffcc00;\n  --primary-foreground: #000;\n  --secondary: #000;\n  --secondary-foreground: #fff;\n  --muted: #aeaeae;\n  --muted-foreground: #5a5a5a;\n  --accent: #fae583;\n  --accent-foreground: #000;\n  --destructive: #e63946;\n  --destructive-foreground: #fff;\n  --border: #000;\n  \n  /* RetroUI shadow system */\n  --shadow-xs: 1px 1px 0 0 var(--border);\n  --shadow-sm: 2px 2px 0 0 var(--border);\n  --shadow: 3px 3px 0 0 var(--border);\n  --shadow-md: 4px 4px 0 0 var(--border);\n  --shadow-lg: 6px 6px 0 0 var(--border);\n  --shadow-xl: 10px 10px 0 1px var(--border);\n  --shadow-2xl: 16px 16px 0 1px var(--border);\n}\n\n/* Dark theme */\n.dark {\n  --background: #1a1a1a;\n  --foreground: #f5f5f5;\n  --card: #242424;\n  --card-foreground: #f5f5f5;\n  --primary: #ffdb33;\n  --primary-hover: #ffcc00;\n  --primary-foreground: #000;\n  --secondary: #3a3a3a;\n  --secondary-foreground: #f5f5f5;\n  --muted: #3f3f46;\n  --muted-foreground: #a0a0a0;\n  --accent: #fae583;\n  --accent-foreground: #000;\n  --destructive: #e63946;\n  --destructive-foreground: #fff;\n  --border: #3a3a3a;\n}\n</code></pre>\n<h3>2. Install RetroUI Components</h3>\n<p>Install RetroUI components using the shadcn-svelte CLI:</p>\n<pre><code class=\"language-bash\"># Install specific components\nnpx shadcn-svelte@latest add button\nnpx shadcn-svelte@latest add input\nnpx shadcn-svelte@latest add card\n\n# Or install multiple components at once\nnpx shadcn-svelte@latest add button input card alert-dialog\n</code></pre>\n<h3>3. Use RetroUI Components</h3>\n<p>Now you can import and use RetroUI components in your Svelte components:</p>\n<pre><code class=\"language-svelte\">&#x3C;script>\n  import { Button } from '$lib/components/ui/button';\n  import { Input } from '$lib/components/ui/input';\n  import { Card, CardContent, CardHeader, CardTitle } from '$lib/components/ui/card';\n&#x3C;/script>\n\n&#x3C;Card class=\"w-96\">\n  &#x3C;CardHeader>\n    &#x3C;CardTitle>Welcome to RetroUI&#x3C;/CardTitle>\n  &#x3C;/CardHeader>\n  &#x3C;CardContent class=\"space-y-4\">\n    &#x3C;Input placeholder=\"Enter your name\" />\n    &#x3C;Button variant=\"primary\">Get Started&#x3C;/Button>\n  &#x3C;/CardContent>\n&#x3C;/Card>\n</code></pre>\n<br>\n<h2>Available Themes</h2>\n<p>RetroUI Svelte comes with 16 beautiful themes that are faithful to the original RetroUI design system:</p>\n<ul>\n<li><strong>Green</strong> - Forest Green theme</li>\n<li><strong>Orange</strong> - Sunset Orange theme</li>\n<li><strong>Yellow</strong> - Neon Yellow theme</li>\n<li><strong>Teal</strong> - Ocean Teal theme</li>\n<li><strong>Purple</strong> - Grape Purple theme</li>\n<li><strong>Gold</strong> - Amber Gold theme</li>\n<li><strong>Coral</strong> - Hot Coral theme</li>\n<li><strong>Cyan</strong> - Crystal Cyan theme</li>\n<li><strong>Blue</strong> - Ocean Blue theme</li>\n<li><strong>Red</strong> - Crimson Red theme</li>\n<li><strong>Pink</strong> - Blush Pink theme</li>\n<li><strong>Indigo</strong> - Deep Indigo theme</li>\n<li><strong>Lime</strong> - Bright Lime theme</li>\n<li><strong>Rose</strong> - Rose Pink theme</li>\n<li><strong>Sky</strong> - Sky Blue theme</li>\n<li><strong>Slate</strong> - Modern Slate theme</li>\n</ul>\n<br>\n<h2>Customization</h2>\n<h3>Custom CSS Variables</h3>\n<p>Override default theme colors using CSS custom properties:</p>\n<pre><code class=\"language-css\">:root {\n\t--primary: #your-color;\n\t--secondary: #your-color;\n\t--accent: #your-color;\n}\n</code></pre>\n<h2>Next Steps</h2>\n<ul>\n<li>Explore our <a href=\"/components\">Components</a> section</li>\n<li>View theme examples in our <a href=\"/themes\">Themes</a> section</li>\n</ul>",
-    "raw": "<script>\n\n</script>\n\nThe following guide will walk you through the process of getting a RetroUI Svelte project up and running.\n\n<br/>\n\n## Prerequisites\n\n**Important**: RetroUI Svelte is built on top of the [shadcn-svelte](https://www.shadcn-svelte.com/) registry system. You **must** have shadcn-svelte installed and configured in your project before using RetroUI Svelte components.\n\n<br/>\n\n## Quick Start\n\nImport and use RetroUI components in your Svelte project:\n\n```svelte\n<script>\n\timport { Button } from '$lib/components/ui/button';\n</script>\n\n<Button variant=\"primary\">Get Started</Button>\n```\n\n<br/>\n\n## RetroUI Svelte Setup\n\nFollow these steps to set up RetroUI Svelte in your project:\n\n### 1. Add RetroUI Fonts and Theme\n\nAdd the RetroUI fonts and theme to your `src/app.css` file:\n\n```css\n/* src/app.css */\n@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');\n\n/* RetroUI Theme Variables */\n:root {\n  --font-head: 'Archivo Black', sans-serif;\n  --font-sans: 'Space Grotesk', sans-serif;\n  \n  /* Light theme colors */\n  --background: #fff;\n  --foreground: #000;\n  --card: #fff;\n  --card-foreground: #000;\n  --primary: #ffdb33;\n  --primary-hover: #ffcc00;\n  --primary-foreground: #000;\n  --secondary: #000;\n  --secondary-foreground: #fff;\n  --muted: #aeaeae;\n  --muted-foreground: #5a5a5a;\n  --accent: #fae583;\n  --accent-foreground: #000;\n  --destructive: #e63946;\n  --destructive-foreground: #fff;\n  --border: #000;\n  \n  /* RetroUI shadow system */\n  --shadow-xs: 1px 1px 0 0 var(--border);\n  --shadow-sm: 2px 2px 0 0 var(--border);\n  --shadow: 3px 3px 0 0 var(--border);\n  --shadow-md: 4px 4px 0 0 var(--border);\n  --shadow-lg: 6px 6px 0 0 var(--border);\n  --shadow-xl: 10px 10px 0 1px var(--border);\n  --shadow-2xl: 16px 16px 0 1px var(--border);\n}\n\n/* Dark theme */\n.dark {\n  --background: #1a1a1a;\n  --foreground: #f5f5f5;\n  --card: #242424;\n  --card-foreground: #f5f5f5;\n  --primary: #ffdb33;\n  --primary-hover: #ffcc00;\n  --primary-foreground: #000;\n  --secondary: #3a3a3a;\n  --secondary-foreground: #f5f5f5;\n  --muted: #3f3f46;\n  --muted-foreground: #a0a0a0;\n  --accent: #fae583;\n  --accent-foreground: #000;\n  --destructive: #e63946;\n  --destructive-foreground: #fff;\n  --border: #3a3a3a;\n}\n```\n\n### 2. Install RetroUI Components\n\nInstall RetroUI components using the shadcn-svelte CLI:\n\n```bash\n# Install specific components\nnpx shadcn-svelte@latest add button\nnpx shadcn-svelte@latest add input\nnpx shadcn-svelte@latest add card\n\n# Or install multiple components at once\nnpx shadcn-svelte@latest add button input card alert-dialog\n```\n\n### 3. Use RetroUI Components\n\nNow you can import and use RetroUI components in your Svelte components:\n\n```svelte\n<script>\n  import { Button } from '$lib/components/ui/button';\n  import { Input } from '$lib/components/ui/input';\n  import { Card, CardContent, CardHeader, CardTitle } from '$lib/components/ui/card';\n</script>\n\n<Card class=\"w-96\">\n  <CardHeader>\n    <CardTitle>Welcome to RetroUI</CardTitle>\n  </CardHeader>\n  <CardContent class=\"space-y-4\">\n    <Input placeholder=\"Enter your name\" />\n    <Button variant=\"primary\">Get Started</Button>\n  </CardContent>\n</Card>\n```\n\n<br/>\n\n## Available Themes\n\nRetroUI Svelte comes with 16 beautiful themes that are faithful to the original RetroUI design system:\n\n- **Green** - Forest Green theme\n- **Orange** - Sunset Orange theme\n- **Yellow** - Neon Yellow theme\n- **Teal** - Ocean Teal theme\n- **Purple** - Grape Purple theme\n- **Gold** - Amber Gold theme\n- **Coral** - Hot Coral theme\n- **Cyan** - Crystal Cyan theme\n- **Blue** - Ocean Blue theme\n- **Red** - Crimson Red theme\n- **Pink** - Blush Pink theme\n- **Indigo** - Deep Indigo theme\n- **Lime** - Bright Lime theme\n- **Rose** - Rose Pink theme\n- **Sky** - Sky Blue theme\n- **Slate** - Modern Slate theme\n\n<br/>\n\n## Customization\n\n### Custom CSS Variables\n\nOverride default theme colors using CSS custom properties:\n\n```css\n:root {\n\t--primary: #your-color;\n\t--secondary: #your-color;\n\t--accent: #your-color;\n}\n```\n\n## Next Steps\n\n- Explore our [Components](/components) section\n- View theme examples in our [Themes](/themes) section",
+    "content": "<script>\n\n</script>\n<p>The following guide will walk you through the process of getting a RetroUI Svelte project up and running.</p>\n<br>\n<h2>Prerequisites</h2>\n<p><strong>Important</strong>: RetroUI Svelte is built on top of the <a href=\"https://www.shadcn-svelte.com/\">shadcn-svelte</a> registry system. You <strong>must</strong> have shadcn-svelte installed and configured in your project before using RetroUI Svelte components.</p>\n<br>\n<h2>Quick Start</h2>\n<p>Import and use RetroUI components in your Svelte project:</p>\n<pre><code class=\"language-svelte\">&#x3C;script>\n\timport { Button } from '$lib/components/ui/button';\n&#x3C;/script>\n\n&#x3C;Button variant=\"primary\">Get Started&#x3C;/Button>\n</code></pre>\n<br>\n<h2>RetroUI Svelte Setup</h2>\n<p>Follow these steps to set up RetroUI Svelte in your project:</p>\n<h3>1. Add RetroUI Fonts and Theme</h3>\n<p>Add the RetroUI fonts and theme to your <code>src/app.css</code> file:</p>\n<pre><code class=\"language-css\">/* src/app.css */\n@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&#x26;family=Space+Grotesk:wght@300;400;500;600;700&#x26;display=swap');\n\n/* RetroUI Theme Variables */\n:root {\n  --font-head: 'Archivo Black', sans-serif;\n  --font-sans: 'Space Grotesk', sans-serif;\n  \n  /* Light theme colors */\n  --background: #fff;\n  --foreground: #000;\n  --card: #fff;\n  --card-foreground: #000;\n  --primary: #ffdb33;\n  --primary-hover: #ffcc00;\n  --primary-foreground: #000;\n  --secondary: #000;\n  --secondary-foreground: #fff;\n  --muted: #aeaeae;\n  --muted-foreground: #5a5a5a;\n  --accent: #fae583;\n  --accent-foreground: #000;\n  --destructive: #e63946;\n  --destructive-foreground: #fff;\n  --border: #000;\n  \n  /* RetroUI shadow system */\n  --shadow-xs: 1px 1px 0 0 var(--border);\n  --shadow-sm: 2px 2px 0 0 var(--border);\n  --shadow: 3px 3px 0 0 var(--border);\n  --shadow-md: 4px 4px 0 0 var(--border);\n  --shadow-lg: 6px 6px 0 0 var(--border);\n  --shadow-xl: 10px 10px 0 1px var(--border);\n  --shadow-2xl: 16px 16px 0 1px var(--border);\n}\n\n/* Dark theme */\n.dark {\n  --background: #1a1a1a;\n  --foreground: #f5f5f5;\n  --card: #242424;\n  --card-foreground: #f5f5f5;\n  --primary: #ffdb33;\n  --primary-hover: #ffcc00;\n  --primary-foreground: #000;\n  --secondary: #3a3a3a;\n  --secondary-foreground: #f5f5f5;\n  --muted: #3f3f46;\n  --muted-foreground: #a0a0a0;\n  --accent: #fae583;\n  --accent-foreground: #000;\n  --destructive: #e63946;\n  --destructive-foreground: #fff;\n  --border: #3a3a3a;\n}\n</code></pre>\n<h3>2. Install RetroUI Components</h3>\n<p>Install RetroUI components using the shadcn-svelte CLI:</p>\n<pre><code class=\"language-bash\"># Install specific components\nnpx shadcn-svelte@latest add button\nnpx shadcn-svelte@latest add input\nnpx shadcn-svelte@latest add card\n\n# Or install multiple components at once\nnpx shadcn-svelte@latest add button input card alert-dialog\n</code></pre>\n<h3>3. Use RetroUI Components</h3>\n<p>Now you can import and use RetroUI components in your Svelte components:</p>\n<pre><code class=\"language-svelte\">&#x3C;script>\n  import { Button } from '$lib/components/ui/button';\n  import { Input } from '$lib/components/ui/input';\n  import { Card, CardContent, CardHeader, CardTitle } from '$lib/components/ui/card';\n&#x3C;/script>\n\n&#x3C;Card class=\"w-96\">\n  &#x3C;CardHeader>\n    &#x3C;CardTitle>Welcome to RetroUI&#x3C;/CardTitle>\n  &#x3C;/CardHeader>\n  &#x3C;CardContent class=\"space-y-4\">\n    &#x3C;Input placeholder=\"Enter your name\" />\n    &#x3C;Button variant=\"primary\">Get Started&#x3C;/Button>\n  &#x3C;/CardContent>\n&#x3C;/Card>\n</code></pre>\n<br>\n<h2>Available Themes</h2>\n<p>RetroUI Svelte comes with 16 beautiful themes that are faithful to the original RetroUI design system:</p>\n<ul>\n<li><strong>Green</strong> - Forest Green theme</li>\n<li><strong>Orange</strong> - Sunset Orange theme</li>\n<li><strong>Yellow</strong> - Neon Yellow theme</li>\n<li><strong>Teal</strong> - Ocean Teal theme</li>\n<li><strong>Purple</strong> - Grape Purple theme</li>\n<li><strong>Gold</strong> - Amber Gold theme</li>\n<li><strong>Coral</strong> - Hot Coral theme</li>\n<li><strong>Cyan</strong> - Crystal Cyan theme</li>\n<li><strong>Blue</strong> - Ocean Blue theme</li>\n<li><strong>Red</strong> - Crimson Red theme</li>\n<li><strong>Pink</strong> - Blush Pink theme</li>\n<li><strong>Indigo</strong> - Deep Indigo theme</li>\n<li><strong>Lime</strong> - Bright Lime theme</li>\n<li><strong>Rose</strong> - Rose Pink theme</li>\n<li><strong>Sky</strong> - Sky Blue theme</li>\n<li><strong>Slate</strong> - Modern Slate theme</li>\n</ul>\n<br>\n<h2>Customization</h2>\n<h3>Custom CSS Variables</h3>\n<p>Override default theme colors using CSS custom properties:</p>\n<pre><code class=\"language-css\">:root {\n\t--primary: #your-color;\n\t--secondary: #your-color;\n\t--accent: #your-color;\n}\n</code></pre>\n<h2>Next Steps</h2>\n<ul>\n<li>Explore our <a href=\"/docs/components\">Components</a> section</li>\n<li>View theme examples in our <a href=\"/themes\">Themes</a> section</li>\n</ul>",
+    "raw": "<script>\n\n</script>\n\nThe following guide will walk you through the process of getting a RetroUI Svelte project up and running.\n\n<br/>\n\n## Prerequisites\n\n**Important**: RetroUI Svelte is built on top of the [shadcn-svelte](https://www.shadcn-svelte.com/) registry system. You **must** have shadcn-svelte installed and configured in your project before using RetroUI Svelte components.\n\n<br/>\n\n## Quick Start\n\nImport and use RetroUI components in your Svelte project:\n\n```svelte\n<script>\n\timport { Button } from '$lib/components/ui/button';\n</script>\n\n<Button variant=\"primary\">Get Started</Button>\n```\n\n<br/>\n\n## RetroUI Svelte Setup\n\nFollow these steps to set up RetroUI Svelte in your project:\n\n### 1. Add RetroUI Fonts and Theme\n\nAdd the RetroUI fonts and theme to your `src/app.css` file:\n\n```css\n/* src/app.css */\n@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');\n\n/* RetroUI Theme Variables */\n:root {\n  --font-head: 'Archivo Black', sans-serif;\n  --font-sans: 'Space Grotesk', sans-serif;\n  \n  /* Light theme colors */\n  --background: #fff;\n  --foreground: #000;\n  --card: #fff;\n  --card-foreground: #000;\n  --primary: #ffdb33;\n  --primary-hover: #ffcc00;\n  --primary-foreground: #000;\n  --secondary: #000;\n  --secondary-foreground: #fff;\n  --muted: #aeaeae;\n  --muted-foreground: #5a5a5a;\n  --accent: #fae583;\n  --accent-foreground: #000;\n  --destructive: #e63946;\n  --destructive-foreground: #fff;\n  --border: #000;\n  \n  /* RetroUI shadow system */\n  --shadow-xs: 1px 1px 0 0 var(--border);\n  --shadow-sm: 2px 2px 0 0 var(--border);\n  --shadow: 3px 3px 0 0 var(--border);\n  --shadow-md: 4px 4px 0 0 var(--border);\n  --shadow-lg: 6px 6px 0 0 var(--border);\n  --shadow-xl: 10px 10px 0 1px var(--border);\n  --shadow-2xl: 16px 16px 0 1px var(--border);\n}\n\n/* Dark theme */\n.dark {\n  --background: #1a1a1a;\n  --foreground: #f5f5f5;\n  --card: #242424;\n  --card-foreground: #f5f5f5;\n  --primary: #ffdb33;\n  --primary-hover: #ffcc00;\n  --primary-foreground: #000;\n  --secondary: #3a3a3a;\n  --secondary-foreground: #f5f5f5;\n  --muted: #3f3f46;\n  --muted-foreground: #a0a0a0;\n  --accent: #fae583;\n  --accent-foreground: #000;\n  --destructive: #e63946;\n  --destructive-foreground: #fff;\n  --border: #3a3a3a;\n}\n```\n\n### 2. Install RetroUI Components\n\nInstall RetroUI components using the shadcn-svelte CLI:\n\n```bash\n# Install specific components\nnpx shadcn-svelte@latest add button\nnpx shadcn-svelte@latest add input\nnpx shadcn-svelte@latest add card\n\n# Or install multiple components at once\nnpx shadcn-svelte@latest add button input card alert-dialog\n```\n\n### 3. Use RetroUI Components\n\nNow you can import and use RetroUI components in your Svelte components:\n\n```svelte\n<script>\n  import { Button } from '$lib/components/ui/button';\n  import { Input } from '$lib/components/ui/input';\n  import { Card, CardContent, CardHeader, CardTitle } from '$lib/components/ui/card';\n</script>\n\n<Card class=\"w-96\">\n  <CardHeader>\n    <CardTitle>Welcome to RetroUI</CardTitle>\n  </CardHeader>\n  <CardContent class=\"space-y-4\">\n    <Input placeholder=\"Enter your name\" />\n    <Button variant=\"primary\">Get Started</Button>\n  </CardContent>\n</Card>\n```\n\n<br/>\n\n## Available Themes\n\nRetroUI Svelte comes with 16 beautiful themes that are faithful to the original RetroUI design system:\n\n- **Green** - Forest Green theme\n- **Orange** - Sunset Orange theme\n- **Yellow** - Neon Yellow theme\n- **Teal** - Ocean Teal theme\n- **Purple** - Grape Purple theme\n- **Gold** - Amber Gold theme\n- **Coral** - Hot Coral theme\n- **Cyan** - Crystal Cyan theme\n- **Blue** - Ocean Blue theme\n- **Red** - Crimson Red theme\n- **Pink** - Blush Pink theme\n- **Indigo** - Deep Indigo theme\n- **Lime** - Bright Lime theme\n- **Rose** - Rose Pink theme\n- **Sky** - Sky Blue theme\n- **Slate** - Modern Slate theme\n\n<br/>\n\n## Customization\n\n### Custom CSS Variables\n\nOverride default theme colors using CSS custom properties:\n\n```css\n:root {\n\t--primary: #your-color;\n\t--secondary: #your-color;\n\t--accent: #your-color;\n}\n```\n\n## Next Steps\n\n- Explore our [Components](/docs/components) section\n- View theme examples in our [Themes](/themes) section",
     "toc": [
       {
         "title": "Prerequisites",
@@ -136,7 +136,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/accordion"
       }
     ],
     "slug": "components/accordion",
@@ -172,7 +172,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/alert-dialog"
       }
     ],
     "slug": "components/alert-dialog",
@@ -226,7 +226,7 @@
     "links": [
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/alert"
       }
     ],
     "slug": "components/alert",
@@ -262,7 +262,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/avatar"
       }
     ],
     "slug": "components/avatar",
@@ -327,7 +327,7 @@
     "links": [
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/badge"
       }
     ],
     "slug": "components/badge",
@@ -376,7 +376,7 @@
     "links": [
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/breadcrumb"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/breadcrumb"
       }
     ],
     "slug": "components/breadcrumb",
@@ -443,6 +443,12 @@
       }
     ],
     "section": "Components",
+    "links": [
+      {
+        "title": "Component Source",
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/button"
+      }
+    ],
     "slug": "components/button",
     "slugFull": "/components/button"
   },
@@ -492,7 +498,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/calendar"
       }
     ],
     "slug": "components/calendar",
@@ -525,7 +531,7 @@
     "links": [
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/card"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/card"
       }
     ],
     "slug": "components/card",
@@ -577,7 +583,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/checkbox"
       }
     ],
     "slug": "components/checkbox",
@@ -613,7 +619,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/collapsible"
       }
     ],
     "slug": "components/collapsible",
@@ -665,7 +671,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/command"
       }
     ],
     "slug": "components/command",
@@ -701,7 +707,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/context-menu"
       }
     ],
     "slug": "components/context-menu",
@@ -775,7 +781,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/dialog"
       }
     ],
     "slug": "components/dialog",
@@ -827,7 +833,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/dropdown-menu"
       }
     ],
     "slug": "components/dropdown-menu",
@@ -863,7 +869,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/hover-card"
       }
     ],
     "slug": "components/hover-card",
@@ -917,7 +923,7 @@
     "links": [
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/input"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/input"
       }
     ],
     "slug": "components/input",
@@ -953,7 +959,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/label"
       }
     ],
     "slug": "components/label",
@@ -1007,7 +1013,7 @@
     "links": [
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/loader"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/loader"
       }
     ],
     "slug": "components/loader",
@@ -1043,7 +1049,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/menubar"
       }
     ],
     "slug": "components/menubar",
@@ -1079,7 +1085,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/navigation-menu"
       }
     ],
     "slug": "components/navigation-menu",
@@ -1115,7 +1121,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/pagination"
       }
     ],
     "slug": "components/pagination",
@@ -1167,7 +1173,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/popover"
       }
     ],
     "slug": "components/popover",
@@ -1203,7 +1209,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/progress"
       }
     ],
     "slug": "components/progress",
@@ -1260,7 +1266,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/radio-group"
       }
     ],
     "slug": "components/radio-group",
@@ -1296,7 +1302,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/range-calendar"
       }
     ],
     "slug": "components/range-calendar",
@@ -1353,7 +1359,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/select"
       }
     ],
     "slug": "components/select",
@@ -1389,7 +1395,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/separator"
       }
     ],
     "slug": "components/separator",
@@ -1436,7 +1442,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/sheet"
       }
     ],
     "slug": "components/sheet",
@@ -1488,7 +1494,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/slider"
       }
     ],
     "slug": "components/slider",
@@ -1555,7 +1561,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/sonner"
       }
     ],
     "slug": "components/sonner",
@@ -1607,7 +1613,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/switch"
       }
     ],
     "slug": "components/switch",
@@ -1646,7 +1652,7 @@
     "links": [
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/table"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/table"
       }
     ],
     "slug": "components/table",
@@ -1674,7 +1680,7 @@
     "links": [
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/tabs"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/tabs"
       }
     ],
     "slug": "components/tabs",
@@ -1724,7 +1730,7 @@
     "links": [
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/text"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/text"
       }
     ],
     "slug": "components/text",
@@ -1768,7 +1774,7 @@
     "links": [
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/textarea"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/textarea"
       }
     ],
     "slug": "components/textarea",
@@ -1830,7 +1836,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/toggle-group"
       }
     ],
     "slug": "components/toggle-group",
@@ -1892,7 +1898,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/toggle"
       }
     ],
     "slug": "components/toggle",
@@ -1949,7 +1955,7 @@
       },
       {
         "title": "Component Source",
-        "href": "https://bits-ui.com/docs/components/accordion"
+        "href": "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/tooltip"
       }
     ],
     "slug": "components/tooltip",

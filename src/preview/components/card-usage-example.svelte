@@ -22,7 +22,10 @@
 				<div class="grid gap-2">
 					<div class="flex items-center">
 						<Label for="password">Password</Label>
-						<a href="##" class="ml-auto inline-block text-sm underline-offset-4 hover:underline">
+						<a
+							href="/docs/components/card"
+							class="ml-auto inline-block text-sm underline-offset-4 hover:underline"
+						>
 							Forgot your password?
 						</a>
 					</div>

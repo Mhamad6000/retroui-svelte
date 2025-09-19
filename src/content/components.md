@@ -22,7 +22,6 @@ section: Components
 	<a class="hover:underline" href="/docs/components/dropdown-menu">Dropdown Menu</a>
 	<a class="hover:underline" href="/docs/components/hover-card">Hover Card</a>
 	<a class="hover:underline" href="/docs/components/input">Input</a>
-	<a class="hover:underline" href="/docs/components/input-otp">Input OTP</a>
 	<a class="hover:underline" href="/docs/components/label">Label</a>
 	<a class="hover:underline" href="/docs/components/loader">Loader</a>
 	<a class="hover:underline" href="/docs/components/menubar">Menubar</a>
@@ -32,12 +31,9 @@ section: Components
 	<a class="hover:underline" href="/docs/components/progress">Progress</a>
 	<a class="hover:underline" href="/docs/components/radio-group">Radio Group</a>
 	<a class="hover:underline" href="/docs/components/range-calendar">Range Calendar</a>
-	<a class="hover:underline" href="/docs/components/scroll-area">Scroll Area</a>
 	<a class="hover:underline" href="/docs/components/select">Select</a>
 	<a class="hover:underline" href="/docs/components/separator">Separator</a>
 	<a class="hover:underline" href="/docs/components/sheet">Sheet</a>
-	<a class="hover:underline" href="/docs/components/sidebar">Sidebar</a>
-	<a class="hover:underline" href="/docs/components/skeleton">Skeleton</a>
 	<a class="hover:underline" href="/docs/components/slider">Slider</a>
 	<a class="hover:underline" href="/docs/components/sonner">Sonner</a>
 	<a class="hover:underline" href="/docs/components/switch">Switch</a>
