@@ -4,7 +4,7 @@ description: Displays the path to the current resource using a hierarchy of link
 section: Components
 links:
   - title: "Component Source"
-    href: "https://bits-ui.com/docs/components/breadcrumb"
+    href: "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/breadcrumb"
 ---
 <script>
 	import { ComponentPreview, PMCommand } from "$lib/components";

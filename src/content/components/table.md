@@ -4,7 +4,7 @@ description: A responsive table component.
 section: Components
 links:
   - title: "Component Source"
-    href: "https://bits-ui.com/docs/components/table"
+    href: "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/table"
 ---
 <script>
 	import { ComponentPreview, PMCommand } from "$lib/components";

@@ -4,7 +4,7 @@ description: Displays a form input field or a component that looks like an input
 section: Components
 links:
   - title: "Component Source"
-    href: "https://bits-ui.com/docs/components/input"
+    href: "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/input"
 ---
 <script>
 	import { ComponentPreview, PMCommand } from "$lib/components";

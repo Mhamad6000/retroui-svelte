@@ -4,7 +4,7 @@ description: A flexible container for displaying content and actions.
 section: Components
 links:
   - title: "Component Source"
-    href: "https://bits-ui.com/docs/components/card"
+    href: "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/card"
 ---
 <script>
 	import { ComponentPreview, PMCommand } from "$lib/components";

@@ -2,6 +2,9 @@
 title: Button
 description: A button component to use in examples and documentation.
 section: Components
+links:
+  - title: "Component Source"
+    href: "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/button"
 ---
 
 <script>

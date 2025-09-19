@@ -4,7 +4,7 @@ description: A loading indicator component.
 section: Components
 links:
   - title: "Component Source"
-    href: "https://bits-ui.com/docs/components/loader"
+    href: "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/loader"
 ---
 <script>
 	import { ComponentPreview, PMCommand } from "$lib/components";

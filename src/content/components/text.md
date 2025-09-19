@@ -4,7 +4,7 @@ description: A polymorphic text component that renders as different HTML element
 section: Components
 links:
   - title: "Component Source"
-    href: "https://bits-ui.com/docs/components/text"
+    href: "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/text"
 ---
 <script>
   import { ComponentPreview, PMCommand } from "$lib/components";

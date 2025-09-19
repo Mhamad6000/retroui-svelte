@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { Snippet } from "svelte";
-
 	import type { Navigation } from "$lib/utils/navigation.js";
 	interface Props {
 		children: Snippet;
