@@ -1,0 +1,28 @@
+[build]
+  command = "CI='' npm run build"
+  publish = "build"
+  base = "/"
+
+# Static assets and API endpoints should be served directly if they exist
+[[redirects]]
+  from = "/api/*"
+  to = "/api/:splat"
+  status = 200
+
+# Registry JSON files should be served directly
+[[redirects]]
+  from = "/r/*"
+  to = "/r/:splat"
+  status = 200
+
+# Static assets should be served directly
+[[redirects]]
+  from = "/_app/*"
+  to = "/_app/:splat"
+  status = 200
+
+# All other routes should fall back to index.html for SPA routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
