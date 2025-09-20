@@ -8,6 +8,6 @@ export const siteConfig = defineSiteConfig({
 	links: {
 		github: "https://github.com/Mhamad6000/retroui-svelte"
 	},
-	ogImage:"/og-image.png",
+	ogImage:"/og.png",
 	url: "https://retroui-svelte.netlify.app"
 });
