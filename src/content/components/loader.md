@@ -9,7 +9,7 @@ links:
 
 <script>
   import { ComponentPreview, PMCommand } from "$lib/components";
-  const installArgs = ["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/loader"];
+  const installArgs = ["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/loader.json"];
 </script>
 
 <ComponentPreview name="loader-style-default" />

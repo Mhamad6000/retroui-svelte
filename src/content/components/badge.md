@@ -9,7 +9,7 @@ links:
 
 <script>
   import { ComponentPreview , PMCommand } from "$lib/components";
-  const installArgs = ["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/badge"];
+  const installArgs = ["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/badge.json"];
 </script>
 
 <ComponentPreview name="badge-usage-example" />

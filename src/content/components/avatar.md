@@ -13,7 +13,7 @@ links:
 
 <script>
   import { ComponentPreview , PMCommand } from "$lib/components";
-  const installArgs = ["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/avatar"];
+  const installArgs = ["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/avatar.json"];
 </script>
 
 <ComponentPreview name="avatar-usage-example" />

@@ -9,7 +9,7 @@ links:
 
 <script>
 	import { ComponentPreview , PMCommand } from "$lib/components";
-	const installArgs = ["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/alert"];
+	const installArgs = ["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/alert.json"];
 </script>
 
 <ComponentPreview name="alert-style-default" />

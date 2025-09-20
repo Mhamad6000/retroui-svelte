@@ -9,7 +9,7 @@ links:
 
 <script>
   import { ComponentPreview, PMCommand } from "$lib/components";
-  const installArgs = ["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/textarea"];
+  const installArgs = ["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/textarea.json"];
 </script>
 
 <ComponentPreview name="textarea-style-default" />

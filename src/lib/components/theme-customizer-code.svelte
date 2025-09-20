@@ -90,7 +90,7 @@
 	const installArgs = $derived([
 		"shadcn-svelte@next",
 		"add",
-		`https://retroui-svelte.netlify.app/r/${userConfig?.current.activeTheme || "yellow"}`,
+		`https://retroui-svelte.netlify.app/r/theme-${userConfig?.current.activeTheme || "yellow"}.json`,
 	]);
 </script>
 

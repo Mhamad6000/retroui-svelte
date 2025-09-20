@@ -12,7 +12,7 @@ links:
 ---
 <script>
 	import { ComponentPreview, PMCommand } from "$lib/components";
-  const installArgs = ["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/alert-dialog"];
+  const installArgs = ["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/alert-dialog.json"];
 </script>
 
 <ComponentPreview name="alert-dialog-usage-example" />

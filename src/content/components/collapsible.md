@@ -13,7 +13,7 @@ links:
 
 <script>
   import { ComponentPreview, PMCommand } from "$lib/components";
-  const installArgs = ["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/collapsible"];
+  const installArgs = ["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/collapsible.json"];
 </script>
 
 <ComponentPreview name="collapsible-usage-example" />

@@ -13,7 +13,7 @@ links:
 
 <script>
   import { ComponentPreview, PMCommand } from "$lib/components";
-  const installArgs = ["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/command"];
+  const installArgs = ["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/command.json"];
 </script>
 
 <ComponentPreview name="command-usage-example" />
