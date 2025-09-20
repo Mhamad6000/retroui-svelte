@@ -4,7 +4,8 @@
 	"type": "module",
 	"scripts": {
 		"dev": "pnpm \"/dev:/\"",
-		"dev:svelte": "vite dev --port 3000",
+		"dev:content": "velite dev --watch",
+		"dev:svelte": "vite dev",
 		"build": "velite && node ./scripts/update-velite-output.js && vite build",
 		"build:search": "node ./scripts/build-search-data.js",
 		"preview": "vite preview",

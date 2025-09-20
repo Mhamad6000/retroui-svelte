@@ -2,7 +2,7 @@
 	import { tv, type VariantProps } from "tailwind-variants";
 
 	const style = tv({
-		base: "border-border relative w-full rounded-lg border",
+		base: "border-border relative w-full rounded-md border",
 		variants: {
 			variant: {
 				default: "bg-[#24292e] text-[#e1e4e8]",

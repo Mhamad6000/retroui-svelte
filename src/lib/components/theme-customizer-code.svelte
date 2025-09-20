@@ -79,25 +79,34 @@
 	import { highlightCode } from "$lib/utils/highlight";
 	import ScrollArea from "$registry/ui/scroll-area/scroll-area.svelte";
 	import CopyCodeButton from "./copy-code-button.svelte";
+	import { PMCommand } from "$lib/components/pm-command";
 
 	const userConfig = UserConfigContext.get();
 
 	const activeThemeData = $derived(
 		convertThemeData(getThemeData(userConfig?.current.activeTheme || "yellow"))
 	);
+
+	const installArgs = $derived([
+		"shadcn-svelte@next",
+		"add",
+		`https://retroui-svelte.netlify.app/r/${userConfig?.current.activeTheme || "yellow"}`,
+	]);
 </script>
 
-<div class="min-w-0 px-4 pb-4 md:p-0">
+<PMCommand command="execute" args={installArgs} />
+
+<div class="">
 	{#await highlightCode(getThemeCode(activeThemeData, userConfig?.current.activeTheme || "yellow"), "css")}
 		<div class="flex h-full items-center justify-center">
 			<div class="text-muted-foreground text-sm">Highlighting code...</div>
 		</div>
 	{:then highlightedHtml}
-		<div class="relative h-full">
+		<div class="relative h-full rounded-lg overflow-hidden">
 			<CopyCodeButton
 				code={getThemeCode(activeThemeData, userConfig?.current.activeTheme || "yellow")}
 			/>
-			<ScrollArea orientation="both" class="h-full pb-0" data-pre-wrapper="">
+			<ScrollArea orientation="both" class="h-[50vh] pb-0" data-pre-wrapper="">
 				{@html highlightedHtml}
 			</ScrollArea>
 		</div>

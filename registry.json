@@ -126,8 +126,7 @@
 					"accent-foreground": "#000",
 					"destructive": "#e63946",
 					"destructive-foreground": "#fff",
-					"border": "#3a3a3a",
-					"ring": "#4caf50"
+					"border": "#3a3a3a"
 				},
 				"theme": {
 					"font-head": "\"Archivo Black\", sans-serif",
@@ -185,8 +184,7 @@
 					"accent-foreground": "#000",
 					"destructive": "#e63946",
 					"destructive-foreground": "#fff",
-					"border": "#3a3a3a",
-					"ring": "#ff6b35"
+					"border": "#3a3a3a"
 				},
 				"theme": {
 					"font-head": "\"Archivo Black\", sans-serif",

@@ -4,7 +4,7 @@ description: Here you can find all the components available in the library. We a
 section: Components
 ---
 
-<div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+<div class="grid gap-4 grid-cols-2 md:grid-cols-3">
 	<a class="hover:underline" href="/docs/components/accordion">Accordion</a>
 	<a class="hover:underline" href="/docs/components/alert">Alert</a>
 	<a class="hover:underline" href="/docs/components/alert-dialog">Alert Dialog</a>
