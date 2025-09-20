@@ -6,7 +6,14 @@
 	"cssVars": {
 		"theme": {
 			"font-head": "\"Archivo Black\", sans-serif",
-			"font-sans": "\"Space Grotesk\", sans-serif"
+			"font-sans": "\"Space Grotesk\", sans-serif",
+			"shadow-xs": "1px 1px 0 0 var(--border)",
+			"shadow-sm": "2px 2px 0 0 var(--border)",
+			"shadow": "3px 3px 0 0 var(--border)",
+			"shadow-md": "4px 4px 0 0 var(--border)",
+			"shadow-lg": "6px 6px 0 0 var(--border)",
+			"shadow-xl": "10px 10px 0 1px var(--border)",
+			"shadow-2xl": "16px 16px 0 1px var(--border)"
 		},
 		"light": {
 			"radius": "0.5rem",

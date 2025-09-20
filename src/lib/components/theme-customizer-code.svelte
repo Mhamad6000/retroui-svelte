@@ -35,15 +35,6 @@
         --color-destructive: var(--destructive);
         --color-destructive-foreground: var(--destructive-foreground);
         --color-border: var(--border);
-
-        --color-sidebar: var(--sidebar);
-        --color-sidebar-foreground: var(--sidebar-foreground);
-        --color-sidebar-primary: var(--sidebar-primary);
-        --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-        --color-sidebar-accent: var(--sidebar-accent);
-        --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-        --color-sidebar-border: var(--sidebar-border);
-        --color-sidebar-ring: var(--sidebar-ring);
 }
         
 `;
