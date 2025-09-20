@@ -41,7 +41,7 @@
 						{#each navigation.header as item}
 							<a
 								href={item.href}
-								class="flex items-center gap-2 px-3 py-2 text-sm transition-colors hover:bg-primary hover:text-accent-foreground"
+								class="flex items-center gap-2 px-3 py-2 text-sm transition-colors hover:bg-muted/50 hover:text-muted-foreground data-[state=active]:bg-primary data-[state=active]:text-accent-foreground data-[state=active]:font-medium"
 								onclick={() => (open = false)}
 							>
 								{item.title}
@@ -60,7 +60,7 @@
 							{@const IconComponent = anchor.icon}
 							{#if anchor.disabled}
 								<div
-									class="flex items-center gap-2 rounded-md px-3 py-2 text-sm opacity-50 cursor-not-allowed"
+									class="flex items-center gap-2 px-3 py-2 text-sm opacity-50 cursor-not-allowed"
 								>
 									<IconComponent class="h-4 w-4" />
 									{anchor.title}
@@ -68,11 +68,8 @@
 							{:else}
 								<a
 									href={anchor.href}
-									class="flex items-center gap-2 rounded-md px-3 py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground {isActive(
-										anchor.href
-									)
-										? 'bg-primary text-accent-foreground font-medium'
-										: ''}"
+									data-state={isActive(anchor.href) ? "active" : null}
+									class="flex items-center gap-2 px-3 py-2 text-sm transition-colors hover:bg-muted/50 hover:text-muted-foreground data-[state=active]:bg-primary data-[state=active]:text-accent-foreground data-[state=active]:font-medium"
 									target={anchor.href.startsWith("http") ? "_blank" : "_self"}
 									onclick={() => !anchor.href.startsWith("http") && (open = false)}
 								>
@@ -100,11 +97,11 @@
 								{#if item.href}
 									{#if item.disabled}
 										<div
-											class="flex items-center justify-between rounded-md px-3 py-2 text-sm opacity-50 cursor-not-allowed"
+											class="flex items-center justify-between px-3 py-2 text-sm opacity-50 cursor-not-allowed"
 										>
 											<span>{item.title}</span>
 											{#if item.label}
-												<span class="text-xs bg-muted px-1.5 py-0.5 rounded">
+												<span class="text-xs bg-muted px-1.5 py-0.5">
 													{item.label}
 												</span>
 											{/if}
@@ -112,18 +109,15 @@
 									{:else}
 										<a
 											href={item.href}
-											class="flex items-center justify-between rounded-md px-3 py-2 text-sm transition-colors hover:bg-primary hover:text-accent-foreground {isActive(
-												item.href
-											)
-												? 'bg-primary text-accent-foreground font-medium'
-												: ''}"
+											data-state={isActive(item.href) ? "active" : null}
+											class="flex items-center justify-between px-3 py-2 text-sm transition-colors hover:bg-muted/50 hover:text-muted-foreground data-[state=active]:bg-primary data-[state=active]:text-accent-foreground data-[state=active]:font-medium data-[state=active]:bg-primary data-[state=active]:text-accent-foreground data-[state=active]:font-medium"
 											target={item.external ? "_blank" : "_self"}
 											onclick={() => !item.external && (open = false)}
 										>
 											<span>{item.title}</span>
 											<div class="flex items-center gap-1">
 												{#if item.label}
-													<span class="text-xs bg-muted px-1.5 py-0.5 rounded">
+													<span class="text-xs bg-muted px-1.5 py-0.5">
 														{item.label}
 													</span>
 												{/if}
@@ -139,7 +133,7 @@
 									>
 										<span>{item.title}</span>
 										{#if item.label}
-											<span class="text-xs bg-muted px-1.5 py-0.5 rounded">
+											<span class="text-xs bg-muted px-1.5 py-0.5">
 												{item.label}
 											</span>
 										{/if}
@@ -160,11 +154,11 @@
 							{#if item.href}
 								{#if item.disabled}
 									<div
-										class="flex items-center justify-between rounded-md px-3 py-2 text-sm opacity-50 cursor-not-allowed"
+										class="flex items-center justify-between px-3 py-2 text-sm opacity-50 cursor-not-allowed"
 									>
 										<span>{item.title}</span>
 										{#if item.label}
-											<span class="text-xs bg-muted px-1.5 py-0.5 rounded">
+											<span class="text-xs bg-muted px-1.5 py-0.5">
 												{item.label}
 											</span>
 										{/if}
@@ -172,18 +166,15 @@
 								{:else}
 									<a
 										href={item.href}
-										class="flex items-center justify-between rounded-md px-3 py-2 text-sm transition-colors hover:bg-primary hover:text-accent-foreground {isActive(
-											item.href
-										)
-											? 'bg-primary text-accent-foreground font-medium'
-											: ''}"
+										data-state={isActive(item.href) ? "active" : null}
+										class="flex items-center justify-between px-3 py-2 text-sm transition-colors hover:bg-muted/50 hover:text-muted-foreground data-[state=active]:bg-primary data-[state=active]:text-accent-foreground data-[state=active]:font-medium data-[state=active]:bg-primary data-[state=active]:text-accent-foreground data-[state=active]:font-medium"
 										target={item.external ? "_blank" : "_self"}
 										onclick={() => !item.external && (open = false)}
 									>
 										<span>{item.title}</span>
 										<div class="flex items-center gap-1">
 											{#if item.label}
-												<span class="text-xs bg-muted px-1.5 py-0.5 rounded">
+												<span class="text-xs bg-muted px-1.5 py-0.5">
 													{item.label}
 												</span>
 											{/if}
@@ -199,7 +190,7 @@
 								>
 									<span>{item.title}</span>
 									{#if item.label}
-										<span class="text-xs bg-muted px-1.5 py-0.5 rounded">
+										<span class="text-xs bg-muted px-1.5 py-0.5">
 											{item.label}
 										</span>
 									{/if}

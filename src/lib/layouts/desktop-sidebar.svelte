@@ -40,11 +40,8 @@
 						{:else}
 							<a
 								href={anchor.href}
-								class="flex items-center gap-2 px-3 py-2 text-sm transition-colors hover:bg-muted/50 hover:text-accent-foreground dark:hover:text-wh {isActive(
-									anchor.href
-								)
-									? 'bg-primary text-primary-foreground font-medium'
-									: ''}"
+								data-state={isActive(anchor.href) ? "active" : null}
+								class="flex items-center gap-2 px-3 py-2 text-sm transition-colors hover:bg-muted/50 hover:text-muted-foreground dark:hover:text-wh data-[state=active]:!bg-primary data-[state=active]:!text-primary-foreground data-[state=active]:font-medium"
 								{...anchor.href.startsWith("http") && { target: "_blank" }}
 							>
 								<IconComponent class="h-4 w-4" />
@@ -85,11 +82,8 @@
 								{:else}
 									<a
 										href={item.href}
-										class="flex items-center justify-between px-3 py-2 text-sm transition-colors hover:bg-muted/50 hover:text-accent-foreground dark:hover:text-wh {isActive(
-											item.href
-										)
-											? 'bg-primary text-primary-foreground font-medium'
-											: ''}"
+										data-state={isActive(item.href) ? "active" : null}
+										class="flex items-center justify-between px-3 py-2 text-sm transition-colors hover:bg-muted/50 hover:text-muted-foreground dark:hover:text-wh data-[state=active]:!bg-primary data-[state=active]:!text-primary-foreground data-[state=active]:font-medium"
 										{...item.external && { target: "_blank" }}
 									>
 										<span>{item.title}</span>
@@ -146,11 +140,8 @@
 							{:else}
 								<a
 									href={item.href}
-									class="flex items-center justify-between px-3 py-2 text-sm transition-colors hover:bg-muted/50 hover:text-accent-foreground dark:hover:text-wh {isActive(
-										item.href
-									)
-										? 'bg-primary text-primary-foreground font-medium'
-										: ''}"
+									data-state={isActive(item.href) ? "active" : null}
+									class="flex items-center justify-between px-3 py-2 text-sm transition-colors hover:bg-muted/50 hover:text-muted-foreground dark:hover:text-wh data-[state=active]:!bg-primary data-[state=active]:!text-primary-foreground data-[state=active]:font-medium"
 									{...item.external && { target: "_blank" }}
 								>
 									<span>{item.title}</span>

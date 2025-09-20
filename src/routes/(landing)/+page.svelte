@@ -802,7 +802,7 @@ import { Button } from "$registry/ui/button/index.js";
 	}
 
 	/* Decorative stars */
-	:global(.bg-primary) {
+	/* :global(.bg-primary) {
 		position: relative;
-	}
+	} */
 </style>
