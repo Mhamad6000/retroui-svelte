@@ -17,15 +17,15 @@ export function defineSiteConfig(config: SiteConfig) {
 }
 
 export function useSiteConfig(): SiteConfig {
-	// This would typically get the config from context or a store
-	// For now, we'll return a default config
 	return {
-		name: "RetroUI Svelte",
+		name: "Retroui-Svelte",
 		description: "A collection of retro-styled UI components for Svelte",
-		author: "RetroUI Team",
-		keywords: ["svelte", "ui", "components", "retro"],
+		author: "Mhamad6000",
+		keywords: ["svelte", "ui", "components", "retro", "retroui" , "tailwindcss" , "shadcn-svelte" , "retroui-svelte"],
 		links: {
-			github: "https://github.com/retroui/retroui-svelte"
-		}
+			github: "https://github.com/Mhamad6000/retroui-svelte"
+		},
+		ogImage:"/og-image.png",
+		url: "https://retroui-svelte.netlify.app"
 	};
 }

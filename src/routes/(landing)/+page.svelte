@@ -62,14 +62,6 @@
 	];
 </script>
 
-<svelte:head>
-	<title>RetroUI - Ship Faster With Blocks and Templates</title>
-	<meta
-		name="description"
-		content="React and TailwindCSS based UI library built for making unique and modern looking web applications. Perfect for any project using Shadcn/ui."
-	/>
-</svelte:head>
-
 <div class="min-h-screen bg-background">
 	<!-- Hero Section -->
 	<section class="min-h-screen w-full bg-white relative">

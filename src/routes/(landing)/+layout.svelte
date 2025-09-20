@@ -1,10 +1,13 @@
 <script lang="ts">
 	import { navigation } from "$lib/navigation";
 	import Header from "$lib/layouts/header.svelte";
+	import MetaData from "$lib/components/meta-data.svelte";
 	let { children } = $props();
 </script>
 
-<div class="theme-container">
+<MetaData />
+
+<div>
 	<Header {navigation} />
 	{@render children()}
 </div>

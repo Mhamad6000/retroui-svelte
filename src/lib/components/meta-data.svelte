@@ -1,18 +1,3 @@
-<!--
-Metadata Component
-A reusable component for setting page metadata including SEO, OpenGraph, and Twitter Card tags.
-
-Props:
-- title?: string - Page title (defaults to site name)
-- description?: string - Page description (defaults to site description)
-- keywords?: string[] - Page keywords (defaults to site keywords)
-- ogImage?: object - OpenGraph image object with url, width, height
-- author?: string - Page author
-- type?: string - OpenGraph type (default: "website")
-
-Usage:
-<Metadata title="Page Title" description="Page description" />
--->
 <script lang="ts">
 	import { page } from "$app/state";
 	import { siteConfig } from "$lib/site-config";
@@ -53,8 +38,8 @@ Usage:
 	<meta name="twitter:site" content={siteConfig.url} />
 	<meta name="twitter:title" content={trueTitle} />
 	<meta name="twitter:description" content={description} />
-	{#if ogImage?.url}
-		<meta name="twitter:image" content={ogImage.url} />
+	{#if ogImage}
+		<meta name="twitter:image" content={ogImage} />
 		<meta name="twitter:image:alt" content={title} />
 	{/if}
 	<meta name="twitter:creator" content={author} />
@@ -63,15 +48,11 @@ Usage:
 	<meta property="og:title" content={trueTitle} />
 	<meta property="og:type" content={type} />
 	<meta property="og:url" content={currentUrl} />
-	{#if ogImage?.url}
-		<meta property="og:image" content={ogImage.url} />
+	{#if ogImage}
+		<meta property="og:image" content={ogImage} />
 		<meta property="og:image:alt" content={title} />
-		{#if ogImage.width}
-			<meta property="og:image:width" content={ogImage.width.toString()} />
-		{/if}
-		{#if ogImage.height}
-			<meta property="og:image:height" content={ogImage.height.toString()} />
-		{/if}
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
 	{/if}
 	<meta property="og:description" content={description} />
 	<meta property="og:site_name" content={siteConfig.name} />

@@ -1,9 +1,3 @@
-/**
- * Code Block Enhancer
- * Enhances code blocks to show interactive previews for Svelte components
- */
-
-import { Button } from "$registry/ui/button/index.js";
 
 export function enhanceCodeBlocks() {
 	// Find all code blocks with svelte language
