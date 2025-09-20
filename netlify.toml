@@ -3,26 +3,25 @@
   publish = "build"
   base = "/"
 
-# Static assets and API endpoints should be served directly if they exist
-[[redirects]]
-  from = "/api/*"
-  to = "/api/:splat"
-  status = 200
-
-# Registry JSON files should be served directly
-[[redirects]]
-  from = "/r/*"
-  to = "/r/:splat"
-  status = 200
-
-# Static assets should be served directly
+# Static assets and registry files should be served directly if they exist
 [[redirects]]
   from = "/_app/*"
   to = "/_app/:splat"
   status = 200
 
-# All other routes should fall back to index.html for SPA routing
+[[redirects]]
+  from = "/r/*"
+  to = "/r/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/api/*"
+  to = "/api/:splat"
+  status = 200
+
+# For all other requests, let SvelteKit handle them (including 404s)
+# Status 404 tells Netlify this is a "not found" that should be handled by the SPA
 [[redirects]]
   from = "/*"
   to = "/index.html"
-  status = 200
+  status = 404
