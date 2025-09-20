@@ -8,7 +8,6 @@
 		<Badge>Badge</Badge>
 		<Badge variant="solid">Solid</Badge>
 		<Badge variant="outline">Outline</Badge>
-		<Badge variant="surface">Surface</Badge>
 	</div>
 	<div class="flex w-full flex-wrap gap-2">
 		<Badge variant="default" class="bg-blue-500 text-white dark:bg-blue-600">
