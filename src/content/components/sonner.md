@@ -26,7 +26,7 @@ The Sonner component is provided by [svelte-sonner](https://svelte-sonner.vercel
 <br />
 
 ## Installation
-<PMCommand command="execute" args={["shadcn-svelte@next", "add", "sonner"]} />
+<!-- <PMCommand command="execute" `args={`["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/sonner"`} /> -->
 
 <br />
 <br />

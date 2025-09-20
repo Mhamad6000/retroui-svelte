@@ -16,7 +16,7 @@ links:
 <br />
 
 ## Installation
-<PMCommand command="execute" args={["shadcn-svelte@next", "add", "textarea"]} />
+<!-- <PMCommand command="execute" `args={`["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/textarea"`} /> -->
 
 <br />
 <br />

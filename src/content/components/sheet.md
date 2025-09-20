@@ -20,7 +20,7 @@ links:
 <br />
 
 ## Installation
-<PMCommand command="execute" args={["shadcn-svelte@next", "add", "sheet"]} />
+<!-- <PMCommand command="execute" `args={`["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/sheet"`} /> -->
 
 <br />
 <br />

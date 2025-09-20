@@ -20,7 +20,7 @@ links:
 <br />
 
 ## Installation
-<PMCommand command="execute" args={["shadcn-svelte@next", "add", "range-calendar"]} />
+<!-- <PMCommand command="execute" `args={`["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/range-calendar"`} /> -->
 
 <br />
 <br />

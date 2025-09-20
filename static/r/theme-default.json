@@ -1,7 +1,7 @@
 {
 	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
 	"name": "theme-default",
-	"type": "registry:theme",
+	"type": "registry:style",
 	"description": "A brutalist theme with bold shadows and yellow/black contrast",
 	"cssVars": {
 		"theme": {
@@ -26,14 +26,11 @@
 			"destructive": "#e63946",
 			"destructive-foreground": "#fff",
 			"border": "#000",
-			"sidebar": "#ffffff",
-			"sidebar-foreground": "#000000",
-			"sidebar-primary": "#ffdb33",
-			"sidebar-primary-foreground": "#000000",
-			"sidebar-accent": "#f9f9f9",
-			"sidebar-accent-foreground": "#000000",
-			"sidebar-border": "#e5e5e5",
-			"sidebar-ring": "#ffcc00"
+			"chart-1": "#fff176",
+			"chart-2": "#ffee58",
+			"chart-3": "#ffeb3b",
+			"chart-4": "#fdd835",
+			"chart-5": "#f9a825"
 		},
 		"dark": {
 			"radius": "0.5rem",
@@ -52,15 +49,7 @@
 			"accent-foreground": "#000",
 			"destructive": "#e63946",
 			"destructive-foreground": "#fff",
-			"border": "#3a3a3a",
-			"sidebar": "#1a1a1a",
-			"sidebar-foreground": "#f5f5f5",
-			"sidebar-primary": "#ffdb33",
-			"sidebar-primary-foreground": "#000000",
-			"sidebar-accent": "#242424",
-			"sidebar-accent-foreground": "#f5f5f5",
-			"sidebar-border": "#3a3a3a",
-			"sidebar-ring": "#ffcc00"
+			"border": "#3a3a3a"
 		}
 	},
 	"files": []

@@ -20,7 +20,7 @@ links:
 <br />
 
 ## Installation
-<PMCommand command="execute" args={["shadcn-svelte@next", "add", "dialog"]} />
+<!-- <PMCommand command="execute" `args={`["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/dialog"`} /> -->
 
 <br />
 <br />

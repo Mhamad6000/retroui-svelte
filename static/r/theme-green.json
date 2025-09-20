@@ -1,0 +1,57 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "theme-green",
+	"type": "registry:style",
+	"description": "A nature-inspired green theme with forest colors",
+	"cssVars": {
+		"theme": {
+			"font-head": "\"Archivo Black\", sans-serif",
+			"font-sans": "\"Space Grotesk\", sans-serif"
+		},
+		"light": {
+			"radius": "0.5rem",
+			"background": "#fff",
+			"foreground": "#1b2f1b",
+			"card": "#fff",
+			"card-foreground": "#1b2f1b",
+			"primary": "#4caf50",
+			"primary-hover": "#45a049",
+			"primary-foreground": "#fff",
+			"secondary": "#1b2f1b",
+			"secondary-foreground": "#fff",
+			"muted": "#c8e6c9",
+			"muted-foreground": "#2e7d32",
+			"accent": "#81c784",
+			"accent-foreground": "#1b2f1b",
+			"destructive": "#d32f2f",
+			"destructive-foreground": "#fff",
+			"border": "#1b2f1b",
+			"chart-1": "#81c784",
+			"chart-2": "#66bb6a",
+			"chart-3": "#4caf50",
+			"chart-4": "#43a047",
+			"chart-5": "#388e3c"
+		},
+		"dark": {
+			"radius": "0.5rem",
+			"background": "#1a1a1a",
+			"foreground": "#f5f5f5",
+			"card": "#242424",
+			"card-foreground": "#f5f5f5",
+			"primary": "#66bb6a",
+			"primary-hover": "#4caf50",
+			"primary-foreground": "#000",
+			"secondary": "#3a3a3a",
+			"secondary-foreground": "#f5f5f5",
+			"muted": "#3f3f46",
+			"muted-foreground": "#a0a0a0",
+			"accent": "#a5d6a7",
+			"accent-foreground": "#000",
+			"destructive": "#e63946",
+			"destructive-foreground": "#fff",
+			"border": "#3a3a3a",
+			"ring": "#4caf50"
+		}
+	},
+	"files": []
+}

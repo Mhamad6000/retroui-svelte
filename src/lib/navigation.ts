@@ -11,12 +11,6 @@ const components = allDocs
 		href: `/docs/${doc.slug}`,
 	}));
 
-const configuration = allDocs
-	.filter((doc :any) => doc.section === "Configuration")
-	.map((doc :any) => ({
-		title: doc.title,
-		href: `/docs/${doc.slug}`,
-	}));
 
 export const navigation = defineNavigation({
 	anchors: [
@@ -37,10 +31,6 @@ export const navigation = defineNavigation({
 		},
 	],
 	sections: [
-		{
-			title: "Configuration",
-			items: configuration,
-		},
 		{
 			title: "Components",
 			items: components,

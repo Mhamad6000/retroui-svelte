@@ -15,8 +15,8 @@ links:
 <br />
 <br />
 
-## Installation
-<PMCommand command="execute" args={["shadcn-svelte@next", "add", "card"]} />
+<!-- ## Installation
+<PMCommand command="execute" `args={`["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/card"`} /> -->
 
 <br />
 <br />

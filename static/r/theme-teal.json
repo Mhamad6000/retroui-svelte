@@ -1,0 +1,56 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "theme-teal",
+	"type": "registry:style",
+	"description": "A calming teal theme with ocean-inspired colors",
+	"cssVars": {
+		"theme": {
+			"font-head": "\"Archivo Black\", sans-serif",
+			"font-sans": "\"Space Grotesk\", sans-serif"
+		},
+		"light": {
+			"radius": "0.5rem",
+			"background": "#fff",
+			"foreground": "#0d2e2a",
+			"card": "#fff",
+			"card-foreground": "#0d2e2a",
+			"primary": "#26a69a",
+			"primary-hover": "#00897b",
+			"primary-foreground": "#fff",
+			"secondary": "#0d2e2a",
+			"secondary-foreground": "#fff",
+			"muted": "#b2dfdb",
+			"muted-foreground": "#00695c",
+			"accent": "#4db6ac",
+			"accent-foreground": "#0d2e2a",
+			"destructive": "#e57373",
+			"destructive-foreground": "#fff",
+			"border": "#0d2e2a",
+			"chart-1": "#80cbc4",
+			"chart-2": "#4db6ac",
+			"chart-3": "#26a69a",
+			"chart-4": "#00897b",
+			"chart-5": "#00695c"
+		},
+		"dark": {
+			"radius": "0.5rem",
+			"background": "#1a1a1a",
+			"foreground": "#f5f5f5",
+			"card": "#242424",
+			"card-foreground": "#f5f5f5",
+			"primary": "#4dd0e1",
+			"primary-hover": "#26c6da",
+			"primary-foreground": "#000",
+			"secondary": "#3a3a3a",
+			"secondary-foreground": "#f5f5f5",
+			"muted": "#3f3f46",
+			"muted-foreground": "#a0a0a0",
+			"accent": "#80cbc4",
+			"accent-foreground": "#000",
+			"destructive": "#e63946",
+			"destructive-foreground": "#fff",
+			"border": "#3a3a3a"
+		}
+	},
+	"files": []
+}

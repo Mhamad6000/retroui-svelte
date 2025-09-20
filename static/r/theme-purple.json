@@ -1,0 +1,56 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "theme-purple",
+	"type": "registry:style",
+	"description": "A rich purple theme with royal elegance",
+	"cssVars": {
+		"theme": {
+			"font-head": "\"Archivo Black\", sans-serif",
+			"font-sans": "\"Space Grotesk\", sans-serif"
+		},
+		"light": {
+			"radius": "0.5rem",
+			"background": "#fff",
+			"foreground": "#2d1b3d",
+			"card": "#fff",
+			"card-foreground": "#2d1b3d",
+			"primary": "#8e24aa",
+			"primary-hover": "#7b1fa2",
+			"primary-foreground": "#fff",
+			"secondary": "#2d1b3d",
+			"secondary-foreground": "#fff",
+			"muted": "#e1bee7",
+			"muted-foreground": "#4a148c",
+			"accent": "#ba68c8",
+			"accent-foreground": "#2d1b3d",
+			"destructive": "#e91e63",
+			"destructive-foreground": "#fff",
+			"border": "#2d1b3d",
+			"chart-1": "#ce93d8",
+			"chart-2": "#ba68c8",
+			"chart-3": "#ab47bc",
+			"chart-4": "#8e24aa",
+			"chart-5": "#7b1fa2"
+		},
+		"dark": {
+			"radius": "0.5rem",
+			"background": "#1a1a1a",
+			"foreground": "#f5f5f5",
+			"card": "#242424",
+			"card-foreground": "#f5f5f5",
+			"primary": "#ce93d8",
+			"primary-hover": "#ba68c8",
+			"primary-foreground": "#000",
+			"secondary": "#3a3a3a",
+			"secondary-foreground": "#f5f5f5",
+			"muted": "#3f3f46",
+			"muted-foreground": "#a0a0a0",
+			"accent": "#e1bee7",
+			"accent-foreground": "#000",
+			"destructive": "#e63946",
+			"destructive-foreground": "#fff",
+			"border": "#3a3a3a"
+		}
+	},
+	"files": []
+}

@@ -1,0 +1,56 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "theme-red",
+	"type": "registry:style",
+	"description": "A bold red theme with dramatic intensity",
+	"cssVars": {
+		"theme": {
+			"font-head": "\"Archivo Black\", sans-serif",
+			"font-sans": "\"Space Grotesk\", sans-serif"
+		},
+		"light": {
+			"radius": "0.5rem",
+			"background": "#fff",
+			"foreground": "#2d1b1b",
+			"card": "#fff",
+			"card-foreground": "#2d1b1b",
+			"primary": "#f44336",
+			"primary-hover": "#d32f2f",
+			"primary-foreground": "#fff",
+			"secondary": "#2d1b1b",
+			"secondary-foreground": "#fff",
+			"muted": "#ffcdd2",
+			"muted-foreground": "#b71c1c",
+			"accent": "#ef5350",
+			"accent-foreground": "#2d1b1b",
+			"destructive": "#d32f2f",
+			"destructive-foreground": "#fff",
+			"border": "#2d1b1b",
+			"chart-1": "#e57373",
+			"chart-2": "#ef5350",
+			"chart-3": "#f44336",
+			"chart-4": "#e53935",
+			"chart-5": "#d32f2f"
+		},
+		"dark": {
+			"radius": "0.5rem",
+			"background": "#1a1a1a",
+			"foreground": "#f5f5f5",
+			"card": "#242424",
+			"card-foreground": "#f5f5f5",
+			"primary": "#ef5350",
+			"primary-hover": "#f44336",
+			"primary-foreground": "#000",
+			"secondary": "#3a3a3a",
+			"secondary-foreground": "#f5f5f5",
+			"muted": "#3f3f46",
+			"muted-foreground": "#a0a0a0",
+			"accent": "#e57373",
+			"accent-foreground": "#000",
+			"destructive": "#e63946",
+			"destructive-foreground": "#fff",
+			"border": "#3a3a3a"
+		}
+	},
+	"files": []
+}

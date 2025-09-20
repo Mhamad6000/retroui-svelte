@@ -14,12 +14,156 @@
 	},
 	{
 		"name": "theme-default",
-		"type": "registry:theme",
+		"type": "registry:style",
 		"description": "A brutalist theme with bold shadows and yellow/black contrast",
 		"dependencies": [],
 		"devDependencies": [],
 		"registryDependencies": [],
 		"relativeUrl": "theme-default.json"
+	},
+	{
+		"name": "theme-green",
+		"type": "registry:style",
+		"description": "A nature-inspired green theme with forest colors",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "theme-green.json"
+	},
+	{
+		"name": "theme-orange",
+		"type": "registry:style",
+		"description": "A vibrant orange theme with warm autumn colors",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "theme-orange.json"
+	},
+	{
+		"name": "theme-yellow",
+		"type": "registry:style",
+		"description": "A bright yellow theme with high contrast and retro vibes",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "theme-yellow.json"
+	},
+	{
+		"name": "theme-teal",
+		"type": "registry:style",
+		"description": "A calming teal theme with ocean-inspired colors",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "theme-teal.json"
+	},
+	{
+		"name": "theme-purple",
+		"type": "registry:style",
+		"description": "A rich purple theme with royal elegance",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "theme-purple.json"
+	},
+	{
+		"name": "theme-gold",
+		"type": "registry:style",
+		"description": "A luxurious gold theme with warm metallic tones",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "theme-gold.json"
+	},
+	{
+		"name": "theme-coral",
+		"type": "registry:style",
+		"description": "A vibrant coral theme with fiery red-orange hues",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "theme-coral.json"
+	},
+	{
+		"name": "theme-cyan",
+		"type": "registry:style",
+		"description": "A fresh cyan theme with electric blue accents",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "theme-cyan.json"
+	},
+	{
+		"name": "theme-blue",
+		"type": "registry:style",
+		"description": "A classic blue theme with professional styling",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "theme-blue.json"
+	},
+	{
+		"name": "theme-red",
+		"type": "registry:style",
+		"description": "A bold red theme with dramatic intensity",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "theme-red.json"
+	},
+	{
+		"name": "theme-pink",
+		"type": "registry:style",
+		"description": "A playful pink theme with romantic charm",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "theme-pink.json"
+	},
+	{
+		"name": "theme-indigo",
+		"type": "registry:style",
+		"description": "A sophisticated indigo theme with deep blue-purple tones",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "theme-indigo.json"
+	},
+	{
+		"name": "theme-lime",
+		"type": "registry:style",
+		"description": "A zesty lime theme with energetic green-yellow hues",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "theme-lime.json"
+	},
+	{
+		"name": "theme-rose",
+		"type": "registry:style",
+		"description": "An elegant rose theme with delicate pink tones",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "theme-rose.json"
+	},
+	{
+		"name": "theme-sky",
+		"type": "registry:style",
+		"description": "A serene sky theme with light blue and airy tones",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "theme-sky.json"
+	},
+	{
+		"name": "theme-slate",
+		"type": "registry:style",
+		"description": "A modern slate theme with neutral gray tones",
+		"dependencies": [],
+		"devDependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "theme-slate.json"
 	},
 	{
 		"name": "accordion",

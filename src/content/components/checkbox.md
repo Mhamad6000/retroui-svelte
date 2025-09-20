@@ -19,8 +19,8 @@ links:
 <br />
 <br />
 
-## Installation
-<PMCommand command="execute" args={["shadcn-svelte@next", "add", "checkbox"]} />
+<!-- ## Installation
+<PMCommand command="execute" `args={`["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/checkbox"`} /> -->
 
 <br />
 <br />

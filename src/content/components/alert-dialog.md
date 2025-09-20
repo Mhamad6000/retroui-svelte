@@ -20,7 +20,8 @@ links:
 <br />
 
 ## Installation
-<PMCommand command="execute" args={["shadcn-svelte@next", "add", "alert-dialog"]} />
+
+<!-- <PMCommand command="execute" args={["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/alert-dialog"} /> -->
 
 <br />
 <br />
