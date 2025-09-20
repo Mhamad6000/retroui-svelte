@@ -1,11 +1,10 @@
 {
-	"name": "@svecodocs/docs",
+	"name": "retroui-svelte",
 	"version": "0.8.0",
 	"type": "module",
 	"scripts": {
 		"dev": "pnpm \"/dev:/\"",
-		"dev:content": "velite dev --watch",
-		"dev:svelte": "vite dev",
+		"dev:svelte": "vite dev --port 3000",
 		"build": "velite && node ./scripts/update-velite-output.js && vite build",
 		"build:search": "node ./scripts/build-search-data.js",
 		"preview": "vite preview",

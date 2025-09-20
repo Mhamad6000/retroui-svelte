@@ -10,18 +10,19 @@ links:
   - title : "Component Source"
     href: "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/command"
 ---
-<script>
-	import { ComponentPreview, PMCommand } from "$lib/components";
 
+<script>
+  import { ComponentPreview, PMCommand } from "$lib/components";
+  const installArgs = ["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/command"];
 </script>
 
 <ComponentPreview name="command-usage-example" />
 <br />
 <br />
 
-## Installation
-<!-- <PMCommand command="execute" `args={`["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/command"`} /> -->
 
+## Installation
+<PMCommand command="execute" args={installArgs} />
 <br />
 <br />
 

@@ -7,11 +7,16 @@ links:
     href: "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/button"
 ---
 
+
 <script>
-	import { Button } from "$registry/ui/button/index.js";
-	import { ComponentPreview } from "$lib/components";
-	
+  import { Button } from "$registry/ui/button/index.js";
+  import { ComponentPreview, PMCommand } from "$lib/components";
+  const installArgs = ["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/button"];
 </script>
+## Installation
+<PMCommand command="execute" args={installArgs} />
+<br />
+<br />
 
 ## Usage
 

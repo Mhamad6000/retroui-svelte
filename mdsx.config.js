@@ -23,5 +23,5 @@ export default defineConfig({
 			path: resolve(__dirname, "./src/lib/components/blueprint.svelte"),
 		},
 	},
-	extensions: [".md"],
+	extensions: [".md",],
 });

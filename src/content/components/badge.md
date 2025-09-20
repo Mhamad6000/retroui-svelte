@@ -6,18 +6,19 @@ links:
   - title : "Component Source"
     href: "https://github.com/Mhamad6000/retroui-svelte/tree/main/registry/ui/badge"
 ---
+
 <script>
-	import { ComponentPreview , PMCommand } from "$lib/components";
-	
+  import { ComponentPreview , PMCommand } from "$lib/components";
+  const installArgs = ["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/badge"];
 </script>
 
 <ComponentPreview name="badge-usage-example" />
 <br />
 <br />
 
-## Installation
-<!-- <PMCommand command="execute" args={["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/badge"} /> -->
 
+## Installation
+<PMCommand command="execute" args={installArgs} />
 <br />
 <br />
 
