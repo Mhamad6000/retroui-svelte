@@ -77,7 +77,7 @@
 			<Button
 				variant="secondary"
 				target="_blank"
-				href="https://github.com/retroui/retroui"
+				href="https://github.com/Mhamad6000/retroui-svelte"
 				class="flex gap-2 items-center"
 			>
 				<svg
@@ -98,7 +98,7 @@
 			</Button>
 		</div>
 		<Button
-			href="https://github.com/retroui/retroui"
+			href="https://github.com/Mhamad6000/retroui-svelte"
 			target="_blank"
 			variant="secondary"
 			size="icon"

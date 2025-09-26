@@ -6,7 +6,7 @@ export const siteConfig = defineSiteConfig({
 	author: "Mhamad6000",
 	keywords: ["svelte", "ui", "components", "retro", "retroui" , "tailwindcss" , "shadcn-svelte" , "retroui-svelte"],
 	links: {
-		github: "https://github.com/Mhamad6000/retroui-svelte"
+		github: "https://github.com/Mhamad6000/retroui-svelte",
 	},
 	ogImage:"/og.png",
 	url: "https://retroui-svelte.netlify.app"

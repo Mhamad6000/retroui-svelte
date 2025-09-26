@@ -9,7 +9,7 @@
 
 **A comprehensive UI component library that brings the beautiful design system of [RetroUI](https://www.retroui.dev) to the Svelte ecosystem.**
 
-[🌐 Website](https://retroui-svelte.dev) • [📚 Documentation](https://retroui-svelte.dev/docs) • [🐛 Issues](https://github.com/Mhamad6000/retroui-svelte/issues) • [💬 Discussions](https://github.com/Mhamad6000/retroui-svelte/discussions)
+[🌐 Website](https://retroui-svelte.dev) • [📚 Documentation](https://retroui-svelte.dev/docs) • [🐛 Issues](https://github.com/Mhamad6000/retroui-svelte/issues)
 
 </div>
 
@@ -17,12 +17,11 @@
 
 ## ✨ Features
 
-- **🎨 16 Beautiful Themes** - Choose from Green, Orange, Yellow, Teal, Purple, Gold, Coral, Cyan, Blue, Red, Pink, Indigo, Lime, Rose, Sky, and Slate
-- **🌓 Light & Dark Mode** - All themes support both light and dark modes with smooth transitions
-- **🔧 Highly Customizable** - Extensive customization through props, CSS variables, and theme overrides
-- **📱 Responsive Design** - Mobile-first approach with responsive components
-- **♿ Accessible** - Built with accessibility in mind following WCAG guidelines
-- **🔄 Unofficial Port** - Community-driven port from the original RetroUI library
+- **🎨 16 Beautiful Themes**. Choose from a curated collection of themes including Green, Orange, Yellow, Teal, Purple, Gold, Coral, Cyan, Blue, Red, Pink, Indigo, Lime, Rose, Sky, and Slate
+- **🌓 Light & Dark Mode**. All themes support both light and dark modes with smooth transitions
+- **🔧 Highly Customizable**. Extensive customization options through props, CSS variables, and theme overrides
+- **📚 Rich Documentation**. Detailed documentation with examples and usage guides
+- **🔄 Unofficial Port**. Community-driven port from the original RetroUI library created by [Mhamad6000](https://github.com/Mhamad6000)
 
 ## 🚀 Quick Start
 
@@ -34,9 +33,9 @@
 
 ```bash
 # Install components
-npx shadcn-svelte@latest add button
-npx shadcn-svelte@latest add input
-npx shadcn-svelte@latest add card
+npx shadcn-svelte@latest add https://retroui-svelte.netlify.app/r/button.json
+npx shadcn-svelte@latest add https://retroui-svelte.netlify.app/r/input.json
+npx shadcn-svelte@latest add https://retroui-svelte.netlify.app/r/card.json
 ```
 
 ### Usage
@@ -52,7 +51,7 @@ npx shadcn-svelte@latest add card
     <CardTitle>Welcome to RetroUI</CardTitle>
   </CardHeader>
   <CardContent>
-    <Button variant="primary">Get Started</Button>
+    <Button>Get Started</Button>
   </CardContent>
 </Card>
 ```
@@ -60,12 +59,6 @@ npx shadcn-svelte@latest add card
 ## 🤝 Contributing
 
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ## 📄 License
 
@@ -75,21 +68,17 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Original RetroUI**: This is an unofficial port of the original [RetroUI](https://www.retroui.dev) library
 - **shadcn-svelte**: Built on top of the excellent [shadcn-svelte](https://www.shadcn-svelte.com/) registry system
-- **SvelteKit**: Powered by [SvelteKit](https://kit.svelte.dev/) for the documentation site
 - **Community**: Thanks to all contributors and users!
 
 ## 📞 Support
 
 - 🐛 **Issues**: [GitHub Issues](https://github.com/Mhamad6000/retroui-svelte/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/Mhamad6000/retroui-svelte/discussions)
-- 📖 **Documentation**: [Full Documentation](https://retroui-svelte.dev/docs)
+- 📖 **Documentation**: [Full Documentation](https://retroui-svelte.netlify.app/docs)
 
 ---
 
 <div align="center">
 
-**Built with ❤️ by the RetroUI Community**
-
-[🌐 Visit Website](https://retroui-svelte.dev) • [📚 Read Docs](https://retroui-svelte.dev/docs) • [🐙 GitHub](https://github.com/Mhamad6000/retroui-svelte)
+[🌐 Visit Website](https://retroui-svelte.netlify.app) • [📚 Read Docs](https://retroui-svelte.netlify.app/docs) • [🐙 GitHub](https://github.com/Mhamad6000/retroui-svelte)
 
 </div>
