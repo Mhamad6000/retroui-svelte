@@ -26,39 +26,41 @@
 	} from "@lucide/svelte";
 
 	import { Slider } from "$registry/ui/slider/index.js";
+	import {
+		collaboratorsStore,
+		collaboratorsData,
+		collaboratorsLoading,
+		collaboratorsError as collaboratorsErrorStore,
+	} from "$lib/stores/collaborators.js";
+	import { GITHUB_CONFIG } from "$lib/config/github.js";
 
 	let value = $state(50);
 
 	let mounted = false;
 	onMount(() => {
 		mounted = true;
+		// Fetch collaborators when component mounts
+		collaboratorsStore.fetchCollaborators(
+			GITHUB_CONFIG.OWNER,
+			GITHUB_CONFIG.REPO,
+			GITHUB_CONFIG.TOKEN
+		);
 	});
 
 	const copyCommand = () => {
 		navigator.clipboard.writeText("npx shadcn-svelte@latest add button");
 	};
 
-	const contributors = [
-		{ name: "John Doe", avatar: "/avatars/01.png" },
-		{ name: "Jane Smith", avatar: "/avatars/02.png" },
-		{ name: "Mike Johnson", avatar: "/avatars/03.png" },
-		{ name: "Sarah Wilson", avatar: "/avatars/04.png" },
-		{ name: "Alex Brown", avatar: "/avatars/05.png" },
-		{ name: "Emma Davis", avatar: "/avatars/01.png" },
-		{ name: "Chris Lee", avatar: "/avatars/02.png" },
-		{ name: "Lisa Garcia", avatar: "/avatars/03.png" },
-		{ name: "Tom Miller", avatar: "/avatars/04.png" },
-		{ name: "Anna Taylor", avatar: "/avatars/05.png" },
-		{ name: "David White", avatar: "/avatars/01.png" },
-		{ name: "Maya Chen", avatar: "/avatars/02.png" },
-	];
+	// Use reactive data from the store
+	let contributors = $derived($collaboratorsData);
+	let isLoadingCollaborators = $derived($collaboratorsLoading);
+	let collaboratorsError = $derived($collaboratorsErrorStore);
 
 	const techLogos = [
-		{ name: "Vite", icon: "⚡" },
-		{ name: "Next.js", icon: "N" },
-		{ name: "React", icon: "R" },
 		{ name: "Svelte", icon: "S" },
-		{ name: "Gatsby", icon: "G" },
+		{ name: "Vite", icon: "⚡" },
+		{ name: "TypeScript", icon: "T" },
+		{ name: "TailwindCSS", icon: "T" },
 	];
 </script>
 
@@ -66,7 +68,7 @@
 	<title>RetroUI - Ship Faster With Blocks and Templates</title>
 	<meta
 		name="description"
-		content="React and TailwindCSS based UI library built for making unique and modern looking web applications. Perfect for any project using Shadcn/ui."
+		content="Svelte UI component library built with TailwindCSS for creating beautiful and modern web applications. Perfect for Svelte projects using shadcn-svelte."
 	/>
 </svelte:head>
 
@@ -110,7 +112,7 @@
 							Svelte apps
 						</h1>
 						<p class="text-xl lg:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
-							The most beautiful UI component library for SvelteKit. Copy, paste, and customize with
+							The most beautiful UI component library for Svelte. Copy, paste, and customize with
 							40+ components, 16 themes, and endless possibilities.
 						</p>
 					</div>
@@ -120,7 +122,7 @@
 						<Badge.Badge variant="primary">40+ Components</Badge.Badge>
 						<Badge.Badge>16 Themes</Badge.Badge>
 						<Badge.Badge>TypeScript</Badge.Badge>
-						<Badge.Badge>SvelteKit Ready</Badge.Badge>
+						<Badge.Badge>Svelte Ready</Badge.Badge>
 					</div>
 
 					<!-- CTA Buttons -->
@@ -155,7 +157,7 @@
 						</div>
 						<div class="text-center">
 							<div class="text-3xl font-bold text-black">100%</div>
-							<div class="text-sm text-secondary">SvelteKit</div>
+							<div class="text-sm text-secondary">Svelte</div>
 						</div>
 					</div>
 				</div>
@@ -247,7 +249,7 @@ import { Button } from "$registry/ui/button/index.js";
 					</span>
 				</h2>
 				<p class="text-xl text-muted-foreground max-w-3xl mx-auto">
-					Built specifically for SvelteKit with modern development practices and beautiful design
+					Built specifically for Svelte with modern development practices and beautiful design
 					patterns.
 				</p>
 			</div>
@@ -399,7 +401,7 @@ import { Button } from "$registry/ui/button/index.js";
 						<Zap class="w-8 h-8 text-black" />
 					</div>
 					<div class="text-3xl font-bold text-black mb-2">Lightning Fast</div>
-					<div class="text-muted-foreground">Optimized for SvelteKit</div>
+					<div class="text-muted-foreground">Optimized for Svelte</div>
 				</div>
 			</div>
 		</div>
@@ -411,7 +413,7 @@ import { Button } from "$registry/ui/button/index.js";
 			<div class="text-center mb-16">
 				<h2 class="text-4xl lg:text-5xl font-bold text-black mb-4">Beautiful Svelte Components</h2>
 				<p class="text-xl text-muted-foreground max-w-2xl mx-auto">
-					Over 40+ carefully crafted components built for SvelteKit with shadcn-svelte. Copy, paste,
+					Over 40+ carefully crafted components built for Svelte with shadcn-svelte. Copy, paste,
 					and customize to your heart's content.
 				</p>
 			</div>
@@ -504,27 +506,6 @@ import { Button } from "$registry/ui/button/index.js";
 					</Card.Content>
 				</Card.Root>
 
-				<!-- Card Layouts -->
-				<Card.Root
-					class="bg-white border-4 border-black shadow-lg hover:shadow-xl transition-shadow"
-				>
-					<Card.Header class="bg-primary p-4 items-center border-2 border-black">
-						<Card.Title class="text-black text-center">Card Layouts</Card.Title>
-					</Card.Header>
-					<Card.Content class="p-6">
-						<div class="space-y-3">
-							<div class="p-3 bg-gray-50 border border-gray-200">
-								<h4 class="font-medium text-sm">Simple Card</h4>
-								<p class="text-xs text-muted-foreground">Clean and minimal design</p>
-							</div>
-							<div class="p-3 bg-primary/10 border border-primary">
-								<h4 class="font-medium text-sm text-primary">Highlighted Card</h4>
-								<p class="text-xs text-muted-foreground">With accent styling</p>
-							</div>
-						</div>
-					</Card.Content>
-				</Card.Root>
-
 				<!-- Interactive Elements -->
 				<Card.Root
 					class="bg-white border-4 border-black shadow-lg hover:shadow-xl transition-shadow"
@@ -556,7 +537,7 @@ import { Button } from "$registry/ui/button/index.js";
 				</div>
 				<div class="text-center">
 					<div class="text-4xl font-bold text-black mb-2">100%</div>
-					<div class="text-lg text-muted-foreground">SvelteKit Ready</div>
+					<div class="text-lg text-muted-foreground">Svelte Ready</div>
 				</div>
 			</div>
 
@@ -603,9 +584,53 @@ import { Button } from "$registry/ui/button/index.js";
 
 			<!-- Contributors -->
 			<div class="flex flex-wrap justify-center gap-4 mb-12">
-				{#each contributors as contributor}
-					<div class="w-12 h-12 bg-gray-300 border-2 border-black"></div>
-				{/each}
+				{#if isLoadingCollaborators}
+					<!-- Loading state -->
+					<div class="flex items-center justify-center w-full py-8">
+						<div class="animate-spin rounded-full h-8 w-8 border-b-2 border-black"></div>
+						<span class="ml-2 text-black">Loading contributors...</span>
+					</div>
+				{:else if collaboratorsError}
+					<!-- Error state -->
+					<div class="flex items-center justify-center w-full py-8">
+						<Alert.Root status="warning" class="items-center">
+							<InfoIcon className="size-4 mr-4" />
+							<Alert.Title class="text-sm"
+								>Unable to load contributors: {collaboratorsError}</Alert.Title
+							>
+						</Alert.Root>
+					</div>
+				{:else if contributors.length > 0}
+					<!-- Contributors list -->
+					{#each contributors as contributor}
+						<a
+							href={contributor.profileUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="group relative"
+							title={`${contributor.name} (${contributor.role})`}
+						>
+							<img
+								src={contributor.avatar}
+								alt={contributor.name}
+								class="w-12 h-12 rounded-full border-2 border-black group-hover:border-primary transition-colors"
+								loading="lazy"
+							/>
+							{#if contributor.isAdmin}
+								<div
+									class="absolute -top-1 -right-1 w-4 h-4 bg-primary border border-black rounded-full flex items-center justify-center"
+								>
+									<Star class="w-2 h-2 text-black" />
+								</div>
+							{/if}
+						</a>
+					{/each}
+				{:else}
+					<!-- Fallback when no contributors -->
+					<div class="flex items-center justify-center w-full py-8">
+						<span class="text-muted-foreground">No contributors found</span>
+					</div>
+				{/if}
 			</div>
 
 			<div class="flex justify-center space-x-4">
@@ -654,7 +679,7 @@ import { Button } from "$registry/ui/button/index.js";
 					</span>
 				</h2>
 				<p class="text-xl text-muted-foreground max-w-3xl mx-auto">
-					Perfect integration with SvelteKit's SSR, client-side hydration, and shadcn-svelte's
+					Perfect integration with Svelte's SSR, client-side hydration, and shadcn-svelte's
 					component system. Works seamlessly with your favorite tools.
 				</p>
 			</div>
@@ -667,11 +692,11 @@ import { Button } from "$registry/ui/button/index.js";
 				>
 					<Card.Content class="p-8 text-center">
 						<div
-							class="w-20 h-20 bg-orange-500 text-white flex items-center justify-center text-3xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform"
+							class="w-20 h-20 text-white flex items-center justify-center text-3xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform"
 						>
-							S
+							<img src="/23617963.png" alt="Svelte" class="size-full object-contain" />
 						</div>
-						<h3 class="text-xl font-bold text-black mb-2">SvelteKit</h3>
+						<h3 class="text-xl font-bold text-black mb-2">Svelte</h3>
 						<p class="text-muted-foreground text-sm">
 							Full SSR & SPA support with optimal performance
 						</p>
@@ -684,9 +709,9 @@ import { Button } from "$registry/ui/button/index.js";
 				>
 					<Card.Content class="p-8 text-center">
 						<div
-							class="w-20 h-20 bg-blue-500 text-white flex items-center justify-center text-3xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform"
+							class="w-20 h-20 text-white flex items-center justify-center text-3xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform"
 						>
-							T
+							<img src="/typescript.png" alt="TypeScript" class="size-full object-contain" />
 						</div>
 						<h3 class="text-xl font-bold text-black mb-2">TypeScript</h3>
 						<p class="text-muted-foreground text-sm">
@@ -701,9 +726,13 @@ import { Button } from "$registry/ui/button/index.js";
 				>
 					<Card.Content class="p-8 text-center">
 						<div
-							class="w-20 h-20 bg-cyan-500 text-white flex items-center justify-center text-3xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform"
+							class="w-20 h-20 text-white flex items-center justify-center text-3xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform"
 						>
-							T
+							<img
+								src="/Tailwind_CSS_Logo.svg.png"
+								alt="TailwindCSS"
+								class="size-full object-contain"
+							/>
 						</div>
 						<h3 class="text-xl font-bold text-black mb-2">TailwindCSS</h3>
 						<p class="text-muted-foreground text-sm">Utility-first CSS with full customization</p>
@@ -716,9 +745,9 @@ import { Button } from "$registry/ui/button/index.js";
 				>
 					<Card.Content class="p-8 text-center">
 						<div
-							class="w-20 h-20 bg-green-500 text-white flex items-center justify-center text-3xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform"
+							class="w-20 h-20 text-white flex items-center justify-center text-3xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform"
 						>
-							V
+							<img src="/Vitejs-logo.svg" alt="Vite" class="size-full object-contain" />
 						</div>
 						<h3 class="text-xl font-bold text-black mb-2">Vite</h3>
 						<p class="text-muted-foreground text-sm">Lightning-fast build tool and dev server</p>
@@ -729,16 +758,16 @@ import { Button } from "$registry/ui/button/index.js";
 			<!-- Integration Features -->
 			<div class="grid lg:grid-cols-3 gap-8 mb-16">
 				<div class="text-center">
-					<div class="w-16 h-16 bg-primary flex items-center justify-center mx-auto mb-4">
+					<div class="w-16 h-16 bg-primary flex items-center justify-center mx-auto mb-4  border-2 border-black">
 						<Zap class="w-8 h-8 text-black" />
 					</div>
 					<h3 class="text-xl font-bold text-black mb-2">Server-Side Rendering</h3>
 					<p class="text-muted-foreground">
-						Components work perfectly with SvelteKit's SSR for optimal SEO and performance.
+						Components work perfectly with Svelte's SSR for optimal SEO and performance.
 					</p>
 				</div>
 				<div class="text-center">
-					<div class="w-16 h-16 bg-primary flex items-center justify-center mx-auto mb-4">
+					<div class="w-16 h-16 bg-primary flex items-center justify-center mx-auto mb-4  border-2 border-black">
 						<CheckCircle class="w-8 h-8 text-black" />
 					</div>
 					<h3 class="text-xl font-bold text-black mb-2">shadcn-svelte Compatible</h3>
@@ -747,7 +776,7 @@ import { Button } from "$registry/ui/button/index.js";
 					</p>
 				</div>
 				<div class="text-center">
-					<div class="w-16 h-16 bg-primary flex items-center justify-center mx-auto mb-4">
+					<div class="w-16 h-16 bg-primary flex items-center justify-center mx-auto mb-4  border-2 border-black">
 						<Wrench class="w-8 h-8 text-black" />
 					</div>
 					<h3 class="text-xl font-bold text-black mb-2">Easy Integration</h3>
@@ -774,7 +803,7 @@ import { Button } from "$registry/ui/button/index.js";
 						<span class="text-green-400 font-mono">$</span>
 						<span class="text-white font-mono">npx shadcn-svelte@latest add button card input</span>
 					</div>
-					<div class="text-gray-400 text-sm">✓ Components added to your SvelteKit project</div>
+					<div class="text-gray-400 text-sm">✓ Components added to your Svelte project</div>
 				</div>
 			</div>
 		</div>

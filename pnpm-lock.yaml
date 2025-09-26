@@ -43,6 +43,9 @@ devDependencies:
   '@tanstack/table-core':
     specifier: ^8.21.3
     version: 8.21.3
+  '@types/node':
+    specifier: ^24.5.2
+    version: 24.5.2
   clsx:
     specifier: ^2.1.1
     version: 2.1.1
@@ -108,7 +111,7 @@ devDependencies:
     version: 0.2.4
   vite:
     specifier: ^6.2.4
-    version: 6.3.6
+    version: 6.3.6(@types/node@24.5.2)
 
 packages:
 
@@ -983,7 +986,7 @@ packages:
       set-cookie-parser: 2.7.1
       sirv: 3.0.2
       svelte: 5.39.2
-      vite: 6.3.6
+      vite: 6.3.6(@types/node@24.5.2)
     dev: true
 
   /@sveltejs/vite-plugin-svelte-inspector@4.0.1(@sveltejs/vite-plugin-svelte@5.1.1)(svelte@5.39.2)(vite@6.3.6):
@@ -997,7 +1000,7 @@ packages:
       '@sveltejs/vite-plugin-svelte': 5.1.1(svelte@5.39.2)(vite@6.3.6)
       debug: 4.4.3
       svelte: 5.39.2
-      vite: 6.3.6
+      vite: 6.3.6(@types/node@24.5.2)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1015,7 +1018,7 @@ packages:
       kleur: 4.1.5
       magic-string: 0.30.19
       svelte: 5.39.2
-      vite: 6.3.6
+      vite: 6.3.6(@types/node@24.5.2)
       vitefu: 1.1.1(vite@6.3.6)
     transitivePeerDependencies:
       - supports-color
@@ -1182,7 +1185,7 @@ packages:
       '@tailwindcss/node': 4.1.13
       '@tailwindcss/oxide': 4.1.13
       tailwindcss: 4.1.13
-      vite: 6.3.6
+      vite: 6.3.6(@types/node@24.5.2)
     dev: true
 
   /@tanstack/table-core@8.21.3:
@@ -1225,6 +1228,12 @@ packages:
 
   /@types/ms@2.1.0:
     resolution: {integrity: sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==}
+    dev: true
+
+  /@types/node@24.5.2:
+    resolution: {integrity: sha512-FYxk1I7wPv3K2XBaoyH2cTnocQEu8AOZ60hPbsyukMPLv5/5qr7V1i8PLHdl6Zf87I+xZXFvPCXYjiTFq+YSDQ==}
+    dependencies:
+      undici-types: 7.12.0
     dev: true
 
   /@types/unist@2.0.11:
@@ -3271,6 +3280,10 @@ packages:
     hasBin: true
     dev: true
 
+  /undici-types@7.12.0:
+    resolution: {integrity: sha512-goOacqME2GYyOZZfb5Lgtu+1IDmAlAEu5xnD3+xTzS10hT0vzpf0SPjkXwAw9Jm+4n/mQGDP3LO8CPbYROeBfQ==}
+    dev: true
+
   /unified@11.0.5:
     resolution: {integrity: sha512-xKvGhPWw3k84Qjh8bI3ZeJjqnyadK+GEFtazSfZv/rKeTkTjOJho6mFqh2SM96iIcZokxiOpg78GazTSg8+KHA==}
     dependencies:
@@ -3349,7 +3362,7 @@ packages:
       '@types/unist': 3.0.3
       vfile-message: 4.0.3
 
-  /vite@6.3.6:
+  /vite@6.3.6(@types/node@24.5.2):
     resolution: {integrity: sha512-0msEVHJEScQbhkbVTb/4iHZdJ6SXp/AvxL2sjwYQFfBqleHtnCqv1J3sa9zbWz/6kW1m9Tfzn92vW+kZ1WV6QA==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
@@ -3389,6 +3402,7 @@ packages:
       yaml:
         optional: true
     dependencies:
+      '@types/node': 24.5.2
       esbuild: 0.25.10
       fdir: 6.5.0(picomatch@4.0.3)
       picomatch: 4.0.3
@@ -3407,7 +3421,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 6.3.6
+      vite: 6.3.6(@types/node@24.5.2)
     dev: true
 
   /web-namespaces@2.0.1:

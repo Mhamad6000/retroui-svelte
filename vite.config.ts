@@ -8,6 +8,7 @@ const __dirname = new URL(".", import.meta.url).pathname;
 export default defineConfig({
 	plugins: [sveltekit(), tailwindcss()],
 	server: {
+		port: 3000,
 		fs: {
 			allow: [resolve(__dirname, "./.velite"), resolve(__dirname, "./registry")],
 		},
