@@ -74,13 +74,13 @@
 
 <div class="min-h-screen bg-background">
 	<!-- Hero Section -->
-	<section class="min-h-screen w-full bg-white relative">
+	<section class="min-h-screen w-full bg-card/60 relative">
 		<!-- Grid Background -->
 		<div
 			class="absolute inset-0 z-0"
 			style="
-				background-image: linear-gradient(to right, #e5e7eb 1px, transparent 1px),
-				linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
+				background-image: linear-gradient(to right, var(--border) 0.3px, transparent 1px),
+				linear-gradient(to bottom, var(--border) 0.3px, transparent 1px);
 				background-size: 40px 40px;"
 		></div>
 
@@ -92,7 +92,7 @@
 					<div class="inline-flex items-center space-x-2">
 						<!-- <Badge.Badge
 							variant="outline"
-							class="bg-primary/10 border-primary text-black px-4 py-2"
+							class="bg-primary/10 border-primary  px-4 py-2"
 						>
 							<Rocket class="w-4 h-4 mr-2" />
 							Introducing RetroUI Svelte v1.0!
@@ -100,13 +100,13 @@
 
 						<Alert.Root status="warning" class="items-center">
 							<InfoIcon className="size-4 mr-4" />
-							<Alert.Title>Introducing RetroUI Svelte v1.0!</Alert.Title>
+							<Alert.Title>Introducing RetroUI Svelte v0.8!</Alert.Title>
 						</Alert.Root>
 					</div>
 
 					<!-- Main Headline -->
 					<div class="space-y-6">
-						<h1 class="text-6xl lg:text-7xl font-bold text-black leading-tight">
+						<h1 class="text-6xl lg:text-7xl font-bold leading-tight">
 							Build <span class="relative"> amazing </span>
 							<br />
 							Svelte apps
@@ -129,7 +129,7 @@
 					<div class="flex flex-col sm:flex-row gap-4">
 						<Button.Root
 							size="lg"
-							class="bg-primary text-black border-2 border-black hover:bg-primary-hover text-lg px-8 py-4 shadow-lg hover:shadow-xl transition-all"
+							class="bg-primary  border-2 border-black hover:bg-primary-hover text-lg px-8 py-4 shadow-lg hover:shadow-xl transition-all"
 						>
 							<Star class="w-5 h-5 mr-2" />
 							Get Started
@@ -137,7 +137,7 @@
 						<Button.Root
 							variant="outline"
 							size="lg"
-							class="border-2 border-black text-black hover:bg-primary text-lg px-8 py-4 shadow-lg hover:shadow-xl transition-all"
+							class="border-2 border-black  hover:bg-primary hover:text-card text-lg px-8 py-4 shadow-lg hover:shadow-xl transition-all"
 							onclick={copyCommand}
 						>
 							<code class="mr-2 font-mono text-sm">npx shadcn-svelte@latest add button</code>
@@ -148,16 +148,16 @@
 					<!-- Stats -->
 					<div class="grid grid-cols-3 gap-8 pt-8">
 						<div class="text-center">
-							<div class="text-3xl font-bold text-black">40+</div>
-							<div class="text-sm text-secondary">Components</div>
+							<div class="text-3xl font-bold">40+</div>
+							<div class="text-sm text-muted-foreground">Components</div>
 						</div>
 						<div class="text-center">
-							<div class="text-3xl font-bold text-black">16</div>
-							<div class="text-sm text-secondary">Themes</div>
+							<div class="text-3xl font-bold">16</div>
+							<div class="text-sm text-muted-foreground">Themes</div>
 						</div>
 						<div class="text-center">
-							<div class="text-3xl font-bold text-black">100%</div>
-							<div class="text-sm text-secondary">Svelte</div>
+							<div class="text-3xl font-bold">100%</div>
+							<div class="text-sm text-muted-foreground">Svelte</div>
 						</div>
 					</div>
 				</div>
@@ -209,7 +209,7 @@ import { Button } from "$registry/ui/button/index.js";
 					<div
 						class="hidden absolute -top-4 -right-4 w-12 h-12 sm:w-16 sm:h-16 bg-primary border-2 sm:border-4 border-black sm:flex items-center justify-center shadow-lg"
 					>
-						<Star class="w-6 h-6 sm:w-8 sm:h-8 text-black" />
+						<Star class="w-6 h-6 sm:w-8 sm:h-8 text-card" />
 					</div>
 					<div
 						class="hidden absolute -bottom-4 -left-4 w-8 h-8 sm:w-12 sm:h-12 bg-blue-500 border-2 sm:border-4 border-black sm:flex items-center justify-center shadow-lg"
@@ -224,7 +224,7 @@ import { Button } from "$registry/ui/button/index.js";
 					<div
 						class=" sm:hidden absolute -top-2 -right-2 w-8 h-8 bg-primary border-2 border-black flex items-center justify-center shadow-lg"
 					>
-						<Star class="w-4 h-4 text-black" />
+						<Star class="w-4 h-4 text-card" />
 					</div>
 					<div
 						class=" sm:hidden absolute -bottom-2 -left-2 w-6 h-6 bg-blue-500 border-2 border-black flex items-center justify-center shadow-lg"
@@ -237,10 +237,10 @@ import { Button } from "$registry/ui/button/index.js";
 	</section>
 
 	<!-- Features Section -->
-	<section class="py-24 px-4 bg-white">
+	<section class="py-24 px-4 bg-background">
 		<div class="container mx-auto">
 			<div class="text-center mb-20">
-				<h2 class="text-5xl lg:text-6xl font-bold text-black mb-6">
+				<h2 class="text-5xl lg:text-6xl font-bold mb-6">
 					Why Choose <span class="relative">
 						RetroUI Svelte?
 						<div
@@ -259,16 +259,14 @@ import { Button } from "$registry/ui/button/index.js";
 				<div class="space-y-8">
 					<div class="grid gap-6">
 						<Card.Root
-							class="bg-white border-4 border-black shadow-lg hover:shadow-xl transition-shadow"
+							class="bg-background border-4 border-black shadow-lg hover:shadow-xl transition-shadow"
 						>
 							<div>
-								<Card.Title
-									class="font-bold text-xl text-black mb-2 flex flex-row items-center gap-2"
-								>
+								<Card.Title class="font-bold text-xl  mb-2 flex flex-row items-center gap-2">
 									<div
 										class="w-12 h-12 bg-primary flex items-center justify-center flex-shrink-0 border-2 border-black"
 									>
-										<Copy class="w-6 h-6 text-black" />
+										<Copy class="w-6 h-6 text-card" />
 									</div>
 									<p>Copy-Paste Ready</p>
 								</Card.Title>
@@ -280,15 +278,13 @@ import { Button } from "$registry/ui/button/index.js";
 						</Card.Root>
 
 						<Card.Root
-							class="bg-white border-4 border-black shadow-lg hover:shadow-xl transition-shadow"
+							class="bg-background border-4 border-black shadow-lg hover:shadow-xl transition-shadow"
 						>
-							<Card.Title
-								class="font-bold text-xl text-black mb-2 flex flex-row items-center gap-2"
-							>
+							<Card.Title class="font-bold text-xl  mb-2 flex flex-row items-center gap-2">
 								<div
 									class="w-12 h-12 bg-primary flex items-center justify-center flex-shrink-0 border-2 border-black"
 								>
-									<Wrench class="w-6 h-6 text-black" />
+									<Wrench class="w-6 h-6 text-card" />
 								</div>
 								<p>Tailwind Based</p>
 							</Card.Title>
@@ -298,15 +294,13 @@ import { Button } from "$registry/ui/button/index.js";
 						</Card.Root>
 
 						<Card.Root
-							class="bg-white border-4 border-black shadow-lg hover:shadow-xl transition-shadow"
+							class="bg-background border-4 border-black shadow-lg hover:shadow-xl transition-shadow"
 						>
-							<Card.Title
-								class="font-bold text-xl text-black mb-2 flex flex-row items-center gap-2"
-							>
+							<Card.Title class="font-bold text-xl  mb-2 flex flex-row items-center gap-2">
 								<div
 									class="w-12 h-12 bg-primary flex items-center justify-center flex-shrink-0 border-2 border-black"
 								>
-									<CheckCircle class="w-6 h-6 text-black" />
+									<CheckCircle class="w-6 h-6 text-card" />
 								</div>
 								<p>Type Safe</p>
 							</Card.Title>
@@ -318,7 +312,7 @@ import { Button } from "$registry/ui/button/index.js";
 
 					<Button.Root
 						size="lg"
-						class="bg-primary text-black border-2 border-black hover:bg-primary-hover shadow-lg"
+						class="bg-primary  border-2 border-black hover:bg-primary-hover shadow-lg"
 					>
 						<Star class="w-5 h-5 mr-2" />
 						Explore Components
@@ -371,36 +365,36 @@ import { Button } from "$registry/ui/button/index.js";
 					<div
 						class="w-16 h-16 bg-primary flex items-center justify-center mx-auto mb-4 border-2 border-black"
 					>
-						<Copy class="w-8 h-8 text-black" />
+						<Copy class="w-8 h-8 text-card" />
 					</div>
-					<div class="text-3xl font-bold text-black mb-2">Zero Config</div>
+					<div class="text-3xl font-bold mb-2">Zero Config</div>
 					<div class="text-muted-foreground">Just copy and paste</div>
 				</div>
 				<div class="text-center">
 					<div
 						class="w-16 h-16 bg-primary flex items-center justify-center mx-auto mb-4 border-2 border-black"
 					>
-						<Wrench class="w-8 h-8 text-black" />
+						<Wrench class="w-8 h-8 text-card" />
 					</div>
-					<div class="text-3xl font-bold text-black mb-2">Fully Customizable</div>
+					<div class="text-3xl font-bold mb-2">Fully Customizable</div>
 					<div class="text-muted-foreground">Override any style</div>
 				</div>
 				<div class="text-center">
 					<div
 						class="w-16 h-16 bg-primary flex items-center justify-center mx-auto mb-4 border-2 border-black"
 					>
-						<CheckCircle class="w-8 h-8 text-black" />
+						<CheckCircle class="w-8 h-8 text-card" />
 					</div>
-					<div class="text-3xl font-bold text-black mb-2">Type Safe</div>
+					<div class="text-3xl font-bold mb-2">Type Safe</div>
 					<div class="text-muted-foreground">Full TypeScript support</div>
 				</div>
 				<div class="text-center">
 					<div
 						class="w-16 h-16 bg-primary flex items-center justify-center mx-auto mb-4 border-2 border-black"
 					>
-						<Zap class="w-8 h-8 text-black" />
+						<Zap class="w-8 h-8 text-card" />
 					</div>
-					<div class="text-3xl font-bold text-black mb-2">Lightning Fast</div>
+					<div class="text-3xl font-bold mb-2">Lightning Fast</div>
 					<div class="text-muted-foreground">Optimized for Svelte</div>
 				</div>
 			</div>
@@ -408,10 +402,10 @@ import { Button } from "$registry/ui/button/index.js";
 	</section>
 
 	<!-- Components Showcase -->
-	<section class="py-20 px-4 bg-white">
+	<section class="py-20 px-4 bg-card/60">
 		<div class="container mx-auto">
 			<div class="text-center mb-16">
-				<h2 class="text-4xl lg:text-5xl font-bold text-black mb-4">Beautiful Svelte Components</h2>
+				<h2 class="text-4xl lg:text-5xl font-bold mb-4">Beautiful Svelte Components</h2>
 				<p class="text-xl text-muted-foreground max-w-2xl mx-auto">
 					Over 40+ carefully crafted components built for Svelte with shadcn-svelte. Copy, paste,
 					and customize to your heart's content.
@@ -422,10 +416,10 @@ import { Button } from "$registry/ui/button/index.js";
 			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
 				<!-- Form Components -->
 				<Card.Root
-					class="bg-white border-4 border-black shadow-lg hover:shadow-xl transition-shadow"
+					class="bg-background border-4 border-black shadow-lg hover:shadow-xl transition-shadow"
 				>
 					<Card.Header class="bg-primary p-4 items-center border-2 border-black">
-						<Card.Title class="text-black text-center">Form Components</Card.Title>
+						<Card.Title class="text-card text-center">Form Components</Card.Title>
 					</Card.Header>
 					<Card.Content class="p-6 space-y-4">
 						<div class="space-y-3">
@@ -438,61 +432,57 @@ import { Button } from "$registry/ui/button/index.js";
 							</div>
 						</div>
 						<div class="flex space-x-2">
-							<Button.Root size="sm" class="bg-primary text-black border-black">Submit</Button.Root>
-							<Button.Root size="sm" variant="outline" class="border-black text-black"
-								>Cancel</Button.Root
-							>
+							<Button.Root size="sm" class="bg-primary  border-black">Submit</Button.Root>
+							<Button.Root size="sm" variant="outline" class="border-black ">Cancel</Button.Root>
 						</div>
 					</Card.Content>
 				</Card.Root>
 
 				<!-- Button Variants -->
 				<Card.Root
-					class="bg-white border-4 border-black shadow-lg hover:shadow-xl transition-shadow"
+					class="bg-background border-4 border-black shadow-lg hover:shadow-xl transition-shadow"
 				>
 					<Card.Header class="bg-primary p-4 items-center border-2 border-black">
-						<Card.Title class="text-black text-center">Button Variants</Card.Title>
+						<Card.Title class="text-card text-center">Button Variants</Card.Title>
 					</Card.Header>
 					<Card.Content class="p-6 space-y-4">
 						<div class="grid grid-cols-2 gap-3">
-							<Button.Root class="bg-primary text-black border-black">Primary</Button.Root>
-							<Button.Root variant="outline" class="border-black text-black">Outline</Button.Root>
-							<Button.Root variant="secondary" class="bg-gray-200 text-black border-black"
-								>Secondary</Button.Root
-							>
-							<Button.Root variant="ghost" class="text-black hover:bg-gray-100">Ghost</Button.Root>
+							<Button.Root class="">Primary</Button.Root>
+							<Button.Root variant="outline" class=" ">Outline</Button.Root>
+							<Button.Root variant="secondary" class="">Secondary</Button.Root>
+							<Button.Root variant="ghost" class="">Ghost</Button.Root>
 						</div>
 						<div class="flex space-x-2">
-							<Button.Root size="sm" class="bg-black text-white">Small</Button.Root>
-							<Button.Root class="bg-primary text-black border-black">Default</Button.Root>
-							<Button.Root size="lg" class="bg-primary text-black border-black">Large</Button.Root>
+							<Button.Root size="sm" class="">Small</Button.Root>
+							<Button.Root class="">Default</Button.Root>
+							<Button.Root size="lg" class="">Large</Button.Root>
 						</div>
 					</Card.Content>
 				</Card.Root>
 
 				<!-- Badge Collection -->
 				<Card.Root
-					class="bg-white border-4 border-black shadow-lg hover:shadow-xl transition-shadow"
+					class="bg-background border-4 border-black shadow-lg hover:shadow-xl transition-shadow"
 				>
 					<Card.Header class="bg-primary p-4 items-center border-2 border-black">
-						<Card.Title class="text-black text-center">Badge Collection</Card.Title>
+						<Card.Title class="text-card text-center">Badge Collection</Card.Title>
 					</Card.Header>
 					<Card.Content class="p-6 space-y-4">
 						<div class="flex flex-wrap gap-2">
-							<Badge.Badge class="bg-primary text-black">Default</Badge.Badge>
-							<Badge.Badge variant="outline" class="border-black text-black">Outlined</Badge.Badge>
-							<Badge.Badge variant="solid" class="bg-gray-200 text-black">Secondary</Badge.Badge>
-							<Badge.Badge variant="primary" class="bg-primary text-black">Primary</Badge.Badge>
+							<Badge.Badge class="bg-primary ">Default</Badge.Badge>
+							<Badge.Badge variant="outline" class="border-black ">Outlined</Badge.Badge>
+							<Badge.Badge variant="solid" class="bg-gray-200 ">Secondary</Badge.Badge>
+							<Badge.Badge variant="primary" class="bg-primary ">Primary</Badge.Badge>
 						</div>
 					</Card.Content>
 				</Card.Root>
 
 				<!-- Alert Examples -->
 				<Card.Root
-					class="bg-white border-4 border-black shadow-lg hover:shadow-xl transition-shadow"
+					class="bg-background border-4 border-black shadow-lg hover:shadow-xl transition-shadow"
 				>
 					<Card.Header class="bg-primary p-4 items-center border-2 border-black">
-						<Card.Title class="text-black text-center">Alert Components</Card.Title>
+						<Card.Title class="text-card text-center">Alert Components</Card.Title>
 					</Card.Header>
 					<Card.Content class="p-6 space-y-3">
 						<Alert.Root status="success" class="items-center">
@@ -508,17 +498,17 @@ import { Button } from "$registry/ui/button/index.js";
 
 				<!-- Interactive Elements -->
 				<Card.Root
-					class="bg-white border-4 border-black shadow-lg hover:shadow-xl transition-shadow"
+					class="bg-background border-4 border-black shadow-lg hover:shadow-xl transition-shadow"
 				>
 					<Card.Header class="bg-primary p-4 items-center border-2 border-black">
-						<Card.Title class="text-black text-center">Interactive Elements</Card.Title>
+						<Card.Title class="text-card text-center">Interactive Elements</Card.Title>
 					</Card.Header>
 					<Card.Content class="p-6 space-y-4">
 						<div class="flex items-center space-x-4">
 							<div class="w-8 h-8 bg-primary flex items-center justify-center">
-								<Star class="w-4 h-4 text-black" />
+								<Star class="w-4 h-4 " />
 							</div>
-							<span class="text-sm text-black">Interactive Icon</span>
+							<span class="text-sm">Interactive Icon</span>
 						</div>
 						<Slider type="single" bind:value max={100} step={1} class="w-full" />
 					</Card.Content>
@@ -528,22 +518,22 @@ import { Button } from "$registry/ui/button/index.js";
 			<!-- Component Count & Features -->
 			<div class="grid md:grid-cols-3 gap-8 mb-12">
 				<div class="text-center">
-					<div class="text-4xl font-bold text-black mb-2">40+</div>
+					<div class="text-4xl font-bold mb-2">40+</div>
 					<div class="text-lg text-muted-foreground">Components</div>
 				</div>
 				<div class="text-center">
-					<div class="text-4xl font-bold text-black mb-2">16</div>
+					<div class="text-4xl font-bold mb-2">16</div>
 					<div class="text-lg text-muted-foreground">Themes</div>
 				</div>
 				<div class="text-center">
-					<div class="text-4xl font-bold text-black mb-2">100%</div>
+					<div class="text-4xl font-bold mb-2">100%</div>
 					<div class="text-lg text-muted-foreground">Svelte Ready</div>
 				</div>
 			</div>
 
 			<div class="text-center">
 				<a href="/docs/components">
-					<Button.Root size="lg" class="bg-primary text-black border-black hover:bg-primary-hover">
+					<Button.Root size="lg" class="bg-primary  border-black hover:bg-primary-hover">
 						View All Components
 					</Button.Root>
 				</a>
@@ -554,31 +544,31 @@ import { Button } from "$registry/ui/button/index.js";
 	<!-- Community Section -->
 	<section class="py-20 px-4 bg-primary">
 		<div class="container mx-auto text-center">
-			<h2 class="text-4xl lg:text-5xl font-bold text-black mb-4">
+			<h2 class="text-4xl lg:text-5xl font-bold text-card mb-4">
 				A Growing Community of Developers and Designers
 			</h2>
-			<p class="text-xl text-black mb-12 max-w-2xl mx-auto">
+			<p class="text-xl text-secondary mb-12 max-w-2xl mx-auto">
 				RetroUI core is free and open-source, and it is made possible by our awesome contributors.
 			</p>
 
 			<div class="flex justify-center items-center space-x-16 mb-12">
 				<div class="text-center">
 					<div class="relative">
-						<div class="text-6xl font-bold text-black mb-2">700+</div>
+						<div class="text-6xl font-bold text-secondary mb-2">700+</div>
 						<div class="absolute -top-4 -left-4">
-							<Star class="w-8 h-8 text-black" />
+							<Star class="w-8 h-8 text-secondary" />
 						</div>
 					</div>
-					<div class="text-lg font-medium text-black">Github Stars</div>
+					<div class="text-lg font-medium text-secondary">Github Stars</div>
 				</div>
 				<div class="text-center">
 					<div class="relative">
-						<div class="text-6xl font-bold text-black mb-2">100+</div>
+						<div class="text-6xl font-bold text-secondary mb-2">100+</div>
 						<div class="absolute -bottom-4 -right-4">
-							<Star class="w-8 h-8 text-black" />
+							<Star class="w-8 h-8 text-secondary" />
 						</div>
 					</div>
-					<div class="text-lg font-medium text-black">Discord Members</div>
+					<div class="text-lg font-medium text-secondary">Discord Members</div>
 				</div>
 			</div>
 
@@ -588,7 +578,7 @@ import { Button } from "$registry/ui/button/index.js";
 					<!-- Loading state -->
 					<div class="flex items-center justify-center w-full py-8">
 						<div class="animate-spin rounded-full h-8 w-8 border-b-2 border-black"></div>
-						<span class="ml-2 text-black">Loading contributors...</span>
+						<span class="ml-2">Loading contributors...</span>
 					</div>
 				{:else if collaboratorsError}
 					<!-- Error state -->
@@ -620,7 +610,7 @@ import { Button } from "$registry/ui/button/index.js";
 								<div
 									class="absolute -top-1 -right-1 w-4 h-4 bg-primary border border-black rounded-full flex items-center justify-center"
 								>
-									<Star class="w-2 h-2 text-black" />
+									<Star class="w-2 h-2 text-secondary" />
 								</div>
 							{/if}
 						</a>
@@ -637,7 +627,7 @@ import { Button } from "$registry/ui/button/index.js";
 				<Button.Root
 					variant="outline"
 					size="lg"
-					class="bg-white text-black border-black hover:bg-gray-100"
+					class="bg-white text-card  border-black hover:bg-gray-100"
 				>
 					<Star class="w-5 h-5 mr-2" />
 					Star on Github
@@ -645,7 +635,7 @@ import { Button } from "$registry/ui/button/index.js";
 				<Button.Root
 					variant="outline"
 					size="lg"
-					class="bg-white text-black border-black hover:bg-gray-100"
+					class="bg-white text-card  border-black hover:bg-gray-100"
 				>
 					<Users class="w-5 h-5 mr-2" />
 					Join Community
@@ -655,22 +645,21 @@ import { Button } from "$registry/ui/button/index.js";
 	</section>
 
 	<!-- Compatibility Section -->
-	<section class="min-h-screen w-full bg-white relative">
+	<section class="min-h-screen w-full bg-background relative">
 		<!-- White Sphere Grid Background -->
 		<div
 			class="absolute inset-0 z-0"
 			style="
-				background: white;
 				background-image: 
-					linear-gradient(to right, rgba(255,219,51,0.6) 1px, transparent 1px),
-					linear-gradient(to bottom, rgba(255,219,51,0.6) 1px, transparent 1px),
-					radial-gradient(circle at 50% 50%, rgba(255,219,51,0.25) 0%, rgba(255,219,51,0.1) 40%, transparent 80%);
+					linear-gradient(to right, rgba(255,219,51,0.3) 1px, transparent 1px),
+					linear-gradient(to bottom, rgba(255,219,51,0.3) 1px, transparent 1px),
+					radial-gradient(circle at 50% 50%, rgba(255,219,51,0.05) 0%, rgba(255,219,51,0.05) 40%, transparent 80%);
 				background-size: 32px 32px, 32px 32px, 100% 100%;
 			"
 		></div>
 		<div class="relative z-10 container mx-auto py-24 px-4">
 			<div class="text-center mb-20">
-				<h2 class="text-5xl lg:text-6xl font-bold text-black mb-6">
+				<h2 class="text-5xl lg:text-6xl font-bold mb-6">
 					Built for Modern <span class="relative">
 						Development
 						<div
@@ -688,7 +677,7 @@ import { Button } from "$registry/ui/button/index.js";
 			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
 				<!-- SvelteKit -->
 				<Card.Root
-					class="bg-white border-4 border-black shadow-lg hover:shadow-xl transition-all group"
+					class="bg-card border-4 border-black shadow-lg hover:shadow-xl transition-all group"
 				>
 					<Card.Content class="p-8 text-center">
 						<div
@@ -696,7 +685,7 @@ import { Button } from "$registry/ui/button/index.js";
 						>
 							<img src="/23617963.png" alt="Svelte" class="size-full object-contain" />
 						</div>
-						<h3 class="text-xl font-bold text-black mb-2">Svelte</h3>
+						<h3 class="text-xl font-bold mb-2">Svelte</h3>
 						<p class="text-muted-foreground text-sm">
 							Full SSR & SPA support with optimal performance
 						</p>
@@ -705,7 +694,7 @@ import { Button } from "$registry/ui/button/index.js";
 
 				<!-- TypeScript -->
 				<Card.Root
-					class="bg-white border-4 border-black shadow-lg hover:shadow-xl transition-all group"
+					class="bg-card border-4 border-black shadow-lg hover:shadow-xl transition-all group"
 				>
 					<Card.Content class="p-8 text-center">
 						<div
@@ -713,7 +702,7 @@ import { Button } from "$registry/ui/button/index.js";
 						>
 							<img src="/typescript.png" alt="TypeScript" class="size-full object-contain" />
 						</div>
-						<h3 class="text-xl font-bold text-black mb-2">TypeScript</h3>
+						<h3 class="text-xl font-bold mb-2">TypeScript</h3>
 						<p class="text-muted-foreground text-sm">
 							Full type safety with excellent IntelliSense
 						</p>
@@ -722,7 +711,7 @@ import { Button } from "$registry/ui/button/index.js";
 
 				<!-- TailwindCSS -->
 				<Card.Root
-					class="bg-white border-4 border-black shadow-lg hover:shadow-xl transition-all group"
+					class="bg-card border-4 border-black shadow-lg hover:shadow-xl transition-all group"
 				>
 					<Card.Content class="p-8 text-center">
 						<div
@@ -734,14 +723,14 @@ import { Button } from "$registry/ui/button/index.js";
 								class="size-full object-contain"
 							/>
 						</div>
-						<h3 class="text-xl font-bold text-black mb-2">TailwindCSS</h3>
+						<h3 class="text-xl font-bold mb-2">TailwindCSS</h3>
 						<p class="text-muted-foreground text-sm">Utility-first CSS with full customization</p>
 					</Card.Content>
 				</Card.Root>
 
 				<!-- Vite -->
 				<Card.Root
-					class="bg-white border-4 border-black shadow-lg hover:shadow-xl transition-all group"
+					class="bg-card border-4 border-black shadow-lg hover:shadow-xl transition-all group"
 				>
 					<Card.Content class="p-8 text-center">
 						<div
@@ -749,7 +738,7 @@ import { Button } from "$registry/ui/button/index.js";
 						>
 							<img src="/Vitejs-logo.svg" alt="Vite" class="size-full object-contain" />
 						</div>
-						<h3 class="text-xl font-bold text-black mb-2">Vite</h3>
+						<h3 class="text-xl font-bold mb-2">Vite</h3>
 						<p class="text-muted-foreground text-sm">Lightning-fast build tool and dev server</p>
 					</Card.Content>
 				</Card.Root>
@@ -758,28 +747,34 @@ import { Button } from "$registry/ui/button/index.js";
 			<!-- Integration Features -->
 			<div class="grid lg:grid-cols-3 gap-8 mb-16">
 				<div class="text-center">
-					<div class="w-16 h-16 bg-primary flex items-center justify-center mx-auto mb-4  border-2 border-black">
-						<Zap class="w-8 h-8 text-black" />
+					<div
+						class="w-16 h-16 bg-primary flex items-center justify-center mx-auto mb-4 border-2 border-black"
+					>
+						<Zap class="w-8 h-8 " />
 					</div>
-					<h3 class="text-xl font-bold text-black mb-2">Server-Side Rendering</h3>
+					<h3 class="text-xl font-bold mb-2">Server-Side Rendering</h3>
 					<p class="text-muted-foreground">
 						Components work perfectly with Svelte's SSR for optimal SEO and performance.
 					</p>
 				</div>
 				<div class="text-center">
-					<div class="w-16 h-16 bg-primary flex items-center justify-center mx-auto mb-4  border-2 border-black">
-						<CheckCircle class="w-8 h-8 text-black" />
+					<div
+						class="w-16 h-16 bg-primary flex items-center justify-center mx-auto mb-4 border-2 border-black"
+					>
+						<CheckCircle class="w-8 h-8 " />
 					</div>
-					<h3 class="text-xl font-bold text-black mb-2">shadcn-svelte Compatible</h3>
+					<h3 class="text-xl font-bold mb-2">shadcn-svelte Compatible</h3>
 					<p class="text-muted-foreground">
 						Built on top of shadcn-svelte's proven component architecture.
 					</p>
 				</div>
 				<div class="text-center">
-					<div class="w-16 h-16 bg-primary flex items-center justify-center mx-auto mb-4  border-2 border-black">
-						<Wrench class="w-8 h-8 text-black" />
+					<div
+						class="w-16 h-16 bg-primary flex items-center justify-center mx-auto mb-4 border-2 border-black"
+					>
+						<Wrench class="w-8 h-8 " />
 					</div>
-					<h3 class="text-xl font-bold text-black mb-2">Easy Integration</h3>
+					<h3 class="text-xl font-bold mb-2">Easy Integration</h3>
 					<p class="text-muted-foreground">
 						Install with a single command and start building immediately.
 					</p>
@@ -818,7 +813,7 @@ import { Button } from "$registry/ui/button/index.js";
 					<a href="#" class="hover:text-primary">GitHub</a>
 					<a href="#" class="hover:text-primary">Documentation</a>
 				</div>
-				<div class="text-sm text-gray-400">Built by Arif Hossain.</div>
+				<div class="text-sm text-gray-400">Built by Mohammed Othman.</div>
 			</div>
 		</div>
 	</footer>
