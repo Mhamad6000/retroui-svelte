@@ -6,7 +6,6 @@
 		"dev": "pnpm \"/dev:/\"",
 		"dev:svelte": "vite dev",
 		"build": "velite && node ./scripts/update-velite-output.js && vite build",
-		"build:search": "node ./scripts/build-search-data.js",
 		"preview": "vite preview",
 		"check": "velite && svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "pnpm build:content && svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",

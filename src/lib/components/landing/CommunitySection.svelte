@@ -54,6 +54,7 @@
 
 	onMount(async () => {
 		stars = await getGithubStarCount();
+		console.log(stars);
 		isLoadingCollaborators = true;
 		contributors = await getGithubContributors();
 		isLoadingCollaborators = false;
