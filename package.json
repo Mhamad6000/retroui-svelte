@@ -5,6 +5,7 @@
 	"scripts": {
 		"dev": "pnpm \"/dev:/\"",
 		"dev:svelte": "vite dev",
+		"dev:velite": "velite --watch",
 		"build": "velite && node ./scripts/update-velite-output.js && vite build",
 		"preview": "vite preview",
 		"check": "velite && svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",

@@ -16,6 +16,7 @@
 			"$lib/*": ["src/lib/*"],
 			"$content/*": [".velite/*"],
     	}
-	}
+	},
+	"include": ["registry/**/*"]
 	
 }
