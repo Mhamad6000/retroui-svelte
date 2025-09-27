@@ -54,13 +54,10 @@
 
 	onMount(async () => {
 		stars = await getGithubStarCount();
-		console.log(stars);
 		isLoadingCollaborators = true;
 		contributors = await getGithubContributors();
 		isLoadingCollaborators = false;
 	});
-
-	$inspect(stars);
 </script>
 
 <section class="py-20 px-4 bg-primary">

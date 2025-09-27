@@ -1,11 +1,4 @@
 <!-- 
-Copy Code Button Component
-A specialized copy button for code blocks using registry button styling.
-
-Props:
-- code: string - The code text to copy
-- class: string - Additional CSS classes
-
 Usage:
 <CopyCodeButton code="console.log('hello')" />
 -->
