@@ -17,6 +17,6 @@
 			"$content/*": [".velite/*"],
     	}
 	},
-	"include": ["registry/**/*"]
+	"include": ["src/**/*", "registry/**/*"]
 	
 }

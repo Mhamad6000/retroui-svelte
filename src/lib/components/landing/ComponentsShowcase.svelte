@@ -54,7 +54,7 @@
 					<div class="grid grid-cols-2 gap-3">
 						<Button.Root class="">Primary</Button.Root>
 						<Button.Root variant="outline" class=" ">Outline</Button.Root>
-						<Button.Root variant="secondary" class="">Secondary</Button.Root>
+						<Button.Root>Solid</Button.Root>
 						<Button.Root variant="ghost" class="">Ghost</Button.Root>
 					</div>
 					<div class="flex space-x-2">
@@ -105,7 +105,7 @@
 				<Card.Content class="p-6 space-y-4">
 					<div class="flex items-center space-x-4">
 						<div class="w-8 h-8 bg-primary flex items-center justify-center">
-							<Star class="w-4 h-4 " />
+							<Star class="w-4 h-4 text-primary-foreground" />
 						</div>
 						<span class="text-sm">Interactive Icon</span>
 					</div>
