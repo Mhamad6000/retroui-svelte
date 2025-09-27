@@ -4,7 +4,6 @@
 	"type": "module",
 	"scripts": {
 		"dev": "pnpm \"/dev:/\"",
-		"dev:content": "velite dev --watch",
 		"dev:svelte": "vite dev",
 		"build": "velite && node ./scripts/update-velite-output.js && vite build",
 		"build:search": "node ./scripts/build-search-data.js",
@@ -22,6 +21,7 @@
 		"@sveltejs/vite-plugin-svelte": "^5.0.3",
 		"@tailwindcss/vite": "^4.1.1",
 		"@tanstack/table-core": "^8.21.3",
+		"@types/node": "^24.5.2",
 		"clsx": "^2.1.1",
 		"d3-scale": "^4.0.2",
 		"d3-shape": "^3.2.0",

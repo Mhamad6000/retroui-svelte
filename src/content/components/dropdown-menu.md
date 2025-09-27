@@ -13,7 +13,7 @@ links:
 
 <script>
   import { ComponentPreview, PMCommand } from "$lib/components";
-  const installArgs = ["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/dropdown-menu.json"];
+  const installArgs = ["shadcn-svelte@latest", "add", "https://retroui-svelte.netlify.app/r/dropdown-menu.json"];
 </script>
 
 <ComponentPreview name="dropdown-menu-usage-example" />

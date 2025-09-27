@@ -14,20 +14,6 @@ The following guide will walk you through the process of getting a RetroUI Svelt
 
 <br/>
 
-## Quick Start
-
-Import and use RetroUI components in your Svelte project:
-
-```svelte
-<script>
-	import { Button } from '$lib/components/ui/button';
-</script>
-
-<Button>Get Started</Button>
-```
-
-<br/>
-
 ## RetroUI Svelte Setup
 
 Follow these steps to set up RetroUI Svelte in your project:
@@ -83,7 +69,6 @@ Add the RetroUI fonts and theme to your `src/app.css` file:
 }
 
 :root {
-	--radius: 0.5rem;
 	--background: #fff;
 	--foreground: #000;
 	--card: #fff;
@@ -133,9 +118,9 @@ Install RetroUI components using the shadcn-svelte CLI:
 
 ```bash
 # Install components
-npx shadcn-svelte@next add https://retroui-svelte.netlify.app/r/button
-npx shadcn-svelte@next add https://retroui-svelte.netlify.app/r/input
-npx shadcn-svelte@next add https://retroui-svelte.netlify.app/r/card
+npx shadcn-svelte@latest add https://retroui-svelte.netlify.app/r/button
+npx shadcn-svelte@latest add https://retroui-svelte.netlify.app/r/input
+npx shadcn-svelte@latest add https://retroui-svelte.netlify.app/r/card
 ```
 
 ### 3. Use RetroUI Components

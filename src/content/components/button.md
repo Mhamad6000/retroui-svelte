@@ -11,7 +11,7 @@ links:
 <script>
   import { Button } from "$registry/ui/button/index.js";
   import { ComponentPreview, PMCommand } from "$lib/components";
-  const installArgs = ["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/button.json"];
+  const installArgs = ["shadcn-svelte@latest", "add", "https://retroui-svelte.netlify.app/r/button.json"];
 </script>
 ## Installation
 <PMCommand command="execute" args={installArgs} />

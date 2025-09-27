@@ -9,7 +9,7 @@ links:
 
 <script>
   import { ComponentPreview, PMCommand } from "$lib/components";
-  const installArgs = ["shadcn-svelte@next", "add", "https://retroui-svelte.netlify.app/r/breadcrumb.json"];
+  const installArgs = ["shadcn-svelte@latest", "add", "https://retroui-svelte.netlify.app/r/breadcrumb.json"];
 </script>
 
 <ComponentPreview name="breadcrumb-usage-example" />
