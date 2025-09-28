@@ -2,14 +2,14 @@
 
 <div align="center">
 
-[![RetroUI Svelte](https://img.shields.io/badge/RetroUI-Svelte-orange?style=for-the-badge&logo=svelte)](https://retroui-svelte.dev)
+[![RetroUI Svelte](https://img.shields.io/badge/RetroUI-Svelte-orange?style=for-the-badge&logo=svelte)](https://retroui-svelte.netlify.app)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![Svelte](https://img.shields.io/badge/Svelte-5.0+-ff3e00?style=for-the-badge&logo=svelte)](https://svelte.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 
 **A comprehensive UI component library that brings the beautiful design system of [RetroUI](https://www.retroui.dev) to the Svelte ecosystem.**
 
-[🌐 Website](https://retroui-svelte.dev) • [📚 Documentation](https://retroui-svelte.dev/docs) • [🐛 Issues](https://github.com/Mhamad6000/retroui-svelte/issues)
+[🌐 Website](https://retroui-svelte.netlify.app) • [📚 Documentation](https://retroui-svelte.netlify.app/docs) • [🐛 Issues](https://github.com/Mhamad6000/retroui-svelte/issues)
 
 </div>
 
@@ -70,15 +70,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **shadcn-svelte**: Built on top of the excellent [shadcn-svelte](https://www.shadcn-svelte.com/) registry system
 - **Community**: Thanks to all contributors and users!
 
-## 📞 Support
 
-- 🐛 **Issues**: [GitHub Issues](https://github.com/Mhamad6000/retroui-svelte/issues)
-- 📖 **Documentation**: [Full Documentation](https://retroui-svelte.netlify.app/docs)
-
----
-
-<div align="center">
-
-[🌐 Visit Website](https://retroui-svelte.netlify.app) • [📚 Read Docs](https://retroui-svelte.netlify.app/docs) • [🐙 GitHub](https://github.com/Mhamad6000/retroui-svelte)
-
-</div>
