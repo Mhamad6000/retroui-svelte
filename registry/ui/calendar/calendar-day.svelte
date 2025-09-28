@@ -24,7 +24,7 @@
 		// Unavailable
 		"data-[unavailable]:text-muted-foreground data-[unavailable]:line-through",
 		// hover
-		"dark:hover:text-accent-foreground",
+		// "dark:hover:text-accent-foreground",
 		// focus
 		"focus:border-ring focus:ring-ring/50 focus:relative",
 		// inner spans
