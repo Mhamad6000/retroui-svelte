@@ -118,9 +118,9 @@ Install RetroUI components using the shadcn-svelte CLI:
 
 ```bash
 # Install components
-npx shadcn-svelte@latest add https://retroui-svelte.netlify.app/r/button
-npx shadcn-svelte@latest add https://retroui-svelte.netlify.app/r/input
-npx shadcn-svelte@latest add https://retroui-svelte.netlify.app/r/card
+npx shadcn-svelte@latest add https://retroui-svelte.netlify.app/r/button.json
+npx shadcn-svelte@latest add https://retroui-svelte.netlify.app/r/input.json
+npx shadcn-svelte@latest add https://retroui-svelte.netlify.app/r/card.json
 ```
 
 ### 3. Use RetroUI Components
