@@ -15,7 +15,7 @@
 		<!-- <List class="size-4 shrink-0" /> -->
 		<p class="text-muted-foreground text-sm">On this page</p>
 	</div>
-	<div class="relative mt-4">
+	<div class="relative mt-4" data-desktop-toc>
 		<div
 			class="bg-foreground absolute -left-[0.5px] top-0 h-5 w-0.5 rounded-full"
 			style="transition: top 0.25s; top:{tocState.markerTopStyle};"
