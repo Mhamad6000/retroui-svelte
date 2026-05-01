@@ -12,7 +12,7 @@
 	bind:ref
 	data-slot="accordion-item"
 	class={cn(
-		"bg-background text-foreground overflow-hidden border-2 shadow-md transition-all hover:shadow-sm data-[state=open]:shadow-sm",
+		"bg-background rounded-md text-foreground overflow-hidden border-2 shadow-md transition-all hover:shadow-sm data-[state=open]:shadow-sm",
 		className
 	)}
 	{...restProps}

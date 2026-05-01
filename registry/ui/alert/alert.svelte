@@ -1,7 +1,7 @@
 <script lang="ts" module>
 	import { type VariantProps, tv } from "tailwind-variants";
 	export const alertVariants = tv({
-		base: "relative grid w-full grid-cols-[0_1fr] items-start gap-y-0.5 border-2 p-4 text-sm has-[>svg]:grid-cols-[calc(var(--spacing)*4)_1fr] has-[>svg]:gap-x-3 [&>svg]:size-4 [&>svg]:translate-y-0.5 [&>svg]:text-current",
+		base: "relative rounded-md grid w-full grid-cols-[0_1fr] items-start gap-y-0.5 border-2 p-4 text-sm has-[>svg]:grid-cols-[calc(var(--spacing)*4)_1fr] has-[>svg]:gap-x-3 [&>svg]:size-4 [&>svg]:translate-y-0.5 [&>svg]:text-current",
 		variants: {
 			variant: {
 				default: "bg-background text-foreground",

@@ -57,7 +57,7 @@
 >
 	{#each Array.from({ length: count }) as _, i}
 		<div
-			class="animate-bounce border-2"
+			class="animate-bounce rounded-xl border-2"
 			style="animation-duration: {duration}s; animation-iteration-count: infinite; animation-delay: {i *
 				delayStep}ms;"
 		></div>

@@ -3,7 +3,7 @@
 	import { tv } from "tailwind-variants";
 
 	export const navigationMenuTriggerStyle = tv({
-		base: "bg-background hover:bg-primary hover:text-accent-foreground focus:bg-primary focus:text-accent-foreground data-[state=open]:hover:bg-primary data-[state=open]:text-accent-foreground data-[state=open]:focus:bg-primary data-[state=open]:bg-primary/50 focus-visible:ring-ring/50 group inline-flex h-9 w-max items-center justify-center px-4 py-2 text-sm font-medium outline-none transition-[color,box-shadow] focus-visible:outline-1 focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50",
+		base: "bg-background rounded-md hover:bg-primary hover:text-accent-foreground focus:bg-primary focus:text-accent-foreground data-[state=open]:hover:bg-primary data-[state=open]:text-accent-foreground data-[state=open]:focus:bg-primary data-[state=open]:bg-primary/50 focus-visible:ring-ring/50 group inline-flex h-9 w-max items-center justify-center px-4 py-2 text-sm font-medium outline-none transition-[color,box-shadow] focus-visible:outline-1 focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50",
 	});
 </script>
 
