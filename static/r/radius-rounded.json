@@ -1,0 +1,15 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "radius-rounded",
+	"type": "registry:style",
+	"description": "Rounded corners",
+	"cssVars": {
+		"light": {
+			"radius": "0.7rem"
+		},
+		"dark": {
+			"radius": "0.7rem"
+		}
+	},
+	"files": []
+}

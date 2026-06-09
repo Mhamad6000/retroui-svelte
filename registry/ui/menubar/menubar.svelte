@@ -12,6 +12,6 @@
 <MenubarPrimitive.Root
 	bind:ref
 	data-slot="menubar"
-	class={cn("bg-background flex h-9 items-center gap-1 border p-1 shadow-md", className)}
+	class={cn("bg-background rounded-md flex h-9 items-center gap-1 border p-1 shadow-md", className)}
 	{...restProps}
 />

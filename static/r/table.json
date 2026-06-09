@@ -24,7 +24,7 @@
 			"target": "table/table-cell.svelte"
 		},
 		{
-			"content": "<script lang=\"ts\">\n\timport { cn, type WithElementRef } from \"$UTILS$.js\";\n\timport type { HTMLAttributes } from \"svelte/elements\";\n\tlet {\n\t\tref = $bindable(null),\n\t\tclass: className,\n\t\tchildren,\n\t\t...restProps\n\t}: WithElementRef<HTMLAttributes<HTMLTableSectionElement>> = $props();\n</script>\n\n<tfoot\n\tbind:this={ref}\n\tdata-slot=\"table-footer\"\n\tclass={cn(\"bg-accent border-t font-medium [&>tr]:last:border-b-0\", className)}\n\t{...restProps}\n>\n\t{@render children?.()}\n</tfoot>\n",
+			"content": "<script lang=\"ts\">\n\timport { cn, type WithElementRef } from \"$UTILS$.js\";\n\timport type { HTMLAttributes } from \"svelte/elements\";\n\tlet {\n\t\tref = $bindable(null),\n\t\tclass: className,\n\t\tchildren,\n\t\t...restProps\n\t}: WithElementRef<HTMLAttributes<HTMLTableSectionElement>> = $props();\n</script>\n\n<tfoot\n\tbind:this={ref}\n\tdata-slot=\"table-footer\"\n\tclass={cn(\n\t\t\"bg-accent text-accent-foreground border-t font-medium [&>tr]:last:border-b-0\",\n\t\tclassName\n\t)}\n\t{...restProps}\n>\n\t{@render children?.()}\n</tfoot>\n",
 			"type": "registry:file",
 			"target": "table/table-footer.svelte"
 		},

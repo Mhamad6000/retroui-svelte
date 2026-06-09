@@ -4,7 +4,7 @@
 	import { tv } from "tailwind-variants";
 
 	export const radioVariants = tv({
-		base: "border-border border-2 shrink-0 transition-[color,box-shadow] outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50",
+		base: "border-border rounded-xl border-2 shrink-0 transition-[color,box-shadow] outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50",
 		variants: {
 			variant: {
 				default: "",
@@ -24,7 +24,7 @@
 	});
 
 	export const radioIndicatorVariants = tv({
-		base: "flex",
+		base: "flex rounded-xl",
 		variants: {
 			variant: {
 				default: "bg-primary border-2 border-border",

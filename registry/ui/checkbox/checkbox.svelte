@@ -5,7 +5,7 @@
 	import { cn, type WithoutChildrenOrChild } from "$registry/lib/utils.js";
 	import { type VariantProps, tv } from "tailwind-variants";
 	export const checkboxVariants = tv({
-		base: "font-head cursor-pointer font-medium flex items-center",
+		base: "font-head rounded-md cursor-pointer font-medium flex items-center",
 		variants: {
 			variant: {
 				default: "data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground ",

@@ -44,6 +44,11 @@ Add the RetroUI fonts and theme to your `src/app.css` file:
 	--shadow-xl: 10px 10px 0 1px var(--border);
 	--shadow-2xl: 16px 16px 0 1px var(--border);
 
+	--radius-sm: calc(var(--radius) - 4px);
+	--radius-md: calc(var(--radius) - 2px);
+	--radius-lg: var(--radius);
+	--radius-xl: calc(var(--radius) + 4px);
+
 	--color-background: var(--background);
 	--color-foreground: var(--foreground);
 	--color-primary: var(--primary);
@@ -69,6 +74,7 @@ Add the RetroUI fonts and theme to your `src/app.css` file:
 }
 
 :root {
+	--radius: 0.5rem;
 	--background: #fff;
 	--foreground: #000;
 	--card: #fff;
@@ -183,6 +189,28 @@ Override default theme colors using CSS custom properties:
 	--accent: #your-color;
 }
 ```
+
+### Border Radius
+
+Corner roundness is controlled by the single `--radius` variable, just like the color variables. Set it directly:
+
+```css
+:root {
+	--radius: 0.7rem; /* more rounded */
+}
+```
+
+Or install a ready-made radius option from the registry. These ship as standalone styles, so they work with any theme — no need to reinstall your colors:
+
+```bash
+# Rounded corners (--radius: 0.7rem)
+npx shadcn-svelte@latest add https://retroui-svelte.netlify.app/r/radius-rounded.json
+
+# Square / box corners (--radius: 0rem)
+npx shadcn-svelte@latest add https://retroui-svelte.netlify.app/r/radius-box.json
+```
+
+Installing a radius option only overrides `--radius` — nothing else in your theme changes. Skip it entirely to keep the default `0.5rem`.
 
 ## Next Steps
 

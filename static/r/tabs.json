@@ -12,7 +12,7 @@
 			"target": "tabs/index.ts"
 		},
 		{
-			"content": "<script lang=\"ts\">\n\timport { Tabs as TabsPrimitive } from \"bits-ui\";\n\timport { cn } from \"$UTILS$.js\";\n\tlet {\n\t\tref = $bindable(null),\n\t\tclass: className,\n\t\t...restProps\n\t}: TabsPrimitive.ContentProps = $props();\n</script>\n\n<TabsPrimitive.Content\n\tbind:ref\n\tdata-slot=\"tabs-content\"\n\tclass={cn(\"border-border mt-2 flex-1 border-2 p-4 outline-none\", className)}\n\t{...restProps}\n/>\n",
+			"content": "<script lang=\"ts\">\n\timport { Tabs as TabsPrimitive } from \"bits-ui\";\n\timport { cn } from \"$UTILS$.js\";\n\tlet {\n\t\tref = $bindable(null),\n\t\tclass: className,\n\t\t...restProps\n\t}: TabsPrimitive.ContentProps = $props();\n</script>\n\n<TabsPrimitive.Content\n\tbind:ref\n\tdata-slot=\"tabs-content\"\n\tclass={cn(\"border-border rounded-md mt-2 flex-1 border-2 p-4 outline-none\", className)}\n\t{...restProps}\n/>\n",
 			"type": "registry:file",
 			"target": "tabs/tabs-content.svelte"
 		},
@@ -22,7 +22,7 @@
 			"target": "tabs/tabs-list.svelte"
 		},
 		{
-			"content": "<script lang=\"ts\">\n\timport { Tabs as TabsPrimitive } from \"bits-ui\";\n\timport { cn } from \"$UTILS$.js\";\n\n\tlet {\n\t\tref = $bindable(null),\n\t\tclass: className,\n\t\tchildren,\n\t\t...restProps\n\t}: TabsPrimitive.TriggerProps = $props();\n</script>\n\n<TabsPrimitive.Trigger\n\tbind:ref\n\tdata-slot=\"tabs-trigger\"\n\tclass={cn(\n\t\t\"data-[state=active]:border-border data-[state=active]:bg-primary data-[state=active]:text-primary-foreground border-2 border-transparent px-4 py-1 font-medium transition-all focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 data-[state=active]:font-semibold [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4\",\n\t\tclassName\n\t)}\n\t{...restProps}\n>\n\t{@render children?.()}\n</TabsPrimitive.Trigger>\n",
+			"content": "<script lang=\"ts\">\n\timport { Tabs as TabsPrimitive } from \"bits-ui\";\n\timport { cn } from \"$UTILS$.js\";\n\n\tlet {\n\t\tref = $bindable(null),\n\t\tclass: className,\n\t\tchildren,\n\t\t...restProps\n\t}: TabsPrimitive.TriggerProps = $props();\n</script>\n\n<TabsPrimitive.Trigger\n\tbind:ref\n\tdata-slot=\"tabs-trigger\"\n\tclass={cn(\n\t\t\"data-[state=active]:border-border rounded-md data-[state=active]:bg-primary data-[state=active]:text-primary-foreground border-2 border-transparent px-4 py-1 font-medium transition-all focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 data-[state=active]:font-semibold [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4\",\n\t\tclassName\n\t)}\n\t{...restProps}\n>\n\t{@render children?.()}\n</TabsPrimitive.Trigger>\n",
 			"type": "registry:file",
 			"target": "tabs/tabs-trigger.svelte"
 		},

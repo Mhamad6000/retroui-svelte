@@ -21,6 +21,7 @@ Built on top of the [shadcn-svelte](https://www.shadcn-svelte.com/) registry sys
 
 - **🎨 16 Beautiful Themes**. Choose from a curated collection of themes including Green, Orange, Yellow, Teal, Purple, Gold, Coral, Cyan, Blue, Red, Pink, Indigo, Lime, Rose, Sky, and Slate
 - **🌓 Light & Dark Mode**. All themes support both light and dark modes with smooth transitions
+- **📐 Radius Options**. Switch corner style with a single `--radius` variable — ships with `rounded` and `box` options that work with any theme
 - **🔧 Highly Customizable**. Extensive customization options through props, CSS variables, and theme overrides
 - **📚 Rich Documentation**. Detailed documentation with examples and usage guides
 - **🔄 Unofficial Port**. Community-driven port from the original RetroUI library created by [Mhamad6000](https://github.com/Mhamad6000)
