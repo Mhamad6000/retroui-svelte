@@ -15,7 +15,7 @@
 			"target": "accordion/accordion-content.svelte"
 		},
 		{
-			"content": "<script lang=\"ts\">\n\timport { Accordion as AccordionPrimitive } from \"bits-ui\";\n\timport { cn } from \"$UTILS$.js\";\n\tlet {\n\t\tref = $bindable(null),\n\t\tclass: className,\n\t\t...restProps\n\t}: AccordionPrimitive.ItemProps = $props();\n</script>\n\n<AccordionPrimitive.Item\n\tbind:ref\n\tdata-slot=\"accordion-item\"\n\tclass={cn(\n\t\t\"bg-background text-foreground overflow-hidden border-2 shadow-md transition-all hover:shadow-sm data-[state=open]:shadow-sm\",\n\t\tclassName\n\t)}\n\t{...restProps}\n/>\n",
+			"content": "<script lang=\"ts\">\n\timport { Accordion as AccordionPrimitive } from \"bits-ui\";\n\timport { cn } from \"$UTILS$.js\";\n\tlet {\n\t\tref = $bindable(null),\n\t\tclass: className,\n\t\t...restProps\n\t}: AccordionPrimitive.ItemProps = $props();\n</script>\n\n<AccordionPrimitive.Item\n\tbind:ref\n\tdata-slot=\"accordion-item\"\n\tclass={cn(\n\t\t\"bg-background rounded-md text-foreground overflow-hidden border-2 shadow-md transition-all hover:shadow-sm data-[state=open]:shadow-sm\",\n\t\tclassName\n\t)}\n\t{...restProps}\n/>\n",
 			"type": "registry:file",
 			"target": "accordion/accordion-item.svelte"
 		},

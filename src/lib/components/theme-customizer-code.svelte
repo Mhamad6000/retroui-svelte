@@ -94,6 +94,7 @@
 		"shadcn-svelte@latest",
 		"add",
 		`https://retroui-svelte.netlify.app/r/theme-${userConfig?.current.activeTheme || "yellow"}.json`,
+		`https://retroui-svelte.netlify.app/r/radius-${userConfig?.current.activeRadiusStyle || "rounded"}.json`,
 	]);
 </script>
 

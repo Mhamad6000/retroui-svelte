@@ -13,6 +13,20 @@
 		"relativeUrl": "init.json"
 	},
 	{
+		"name": "radius-rounded",
+		"type": "registry:style",
+		"description": "Rounded corners",
+		"registryDependencies": [],
+		"relativeUrl": "radius-rounded.json"
+	},
+	{
+		"name": "radius-box",
+		"type": "registry:style",
+		"description": "Square corners",
+		"registryDependencies": [],
+		"relativeUrl": "radius-box.json"
+	},
+	{
 		"name": "theme-default",
 		"type": "registry:style",
 		"description": "A brutalist theme with bold shadows and yellow/black contrast",

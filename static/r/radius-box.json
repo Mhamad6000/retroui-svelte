@@ -1,0 +1,15 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "radius-box",
+	"type": "registry:style",
+	"description": "Square corners",
+	"cssVars": {
+		"light": {
+			"radius": "0rem"
+		},
+		"dark": {
+			"radius": "0rem"
+		}
+	},
+	"files": []
+}
