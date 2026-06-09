@@ -12,7 +12,10 @@
 
 <MetaData />
 
-<div data-theme={userConfig?.current.activeTheme || "sunset-orange"}>
+<div
+	data-theme={userConfig?.current.activeTheme || "sunset-orange"}
+	data-radius={userConfig?.current.activeRadiusStyle || "rounded"}
+>
 	<div class="theme-container">
 		<Header {navigation} />
 		{@render children?.()}

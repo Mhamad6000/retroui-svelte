@@ -1,5 +1,6 @@
 <script lang="ts">
 	import ThemeSelector from "./theme-selector.svelte";
+	import ThemeRadiusSelector from "./theme-radius-selector.svelte";
 	import ThemeCustomizerCopyCodeButton from "./theme-customizer-copy-code-button.svelte";
 </script>
 
@@ -12,8 +13,11 @@
 			</p>
 		</div>
 	</div>
-	<div class="flex items-center gap-2 justify-between">
-		<ThemeSelector />
+	<div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+		<div class="flex flex-wrap items-center gap-2">
+			<ThemeSelector />
+			<ThemeRadiusSelector />
+		</div>
 		<ThemeCustomizerCopyCodeButton variant="secondary" size="sm" />
 	</div>
 </div>

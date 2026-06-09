@@ -20,17 +20,29 @@ export const availableThemes = [
 	{ value: "slate", label: "Modern Slate", primary: "#475569" },
 ] as const;
 
+export const availableRadiusStyles = [
+	{ value: "rounded", label: "Rounded", radius: "0.7rem" },
+	{ value: "box", label: "Box", radius: "0rem" },
+] as const;
+
 export type Theme = (typeof availableThemes)[number]["value"];
+export type RadiusStyle = (typeof availableRadiusStyles)[number]["value"];
 
 export interface UserConfigData {
 	activeTheme: Theme;
+	activeRadiusStyle: RadiusStyle;
 	layout: "default" | "sidebar" | "fixed";
 }
 
 const defaultConfig: UserConfigData = {
 	activeTheme: "yellow",
+	activeRadiusStyle: "rounded",
 	layout: "default",
 };
+
+export function getRadiusStyleValue(radiusStyle: RadiusStyle | undefined) {
+	return availableRadiusStyles.find((style) => style.value === radiusStyle)?.radius || "0.5rem";
+}
 
 export class UserConfig {
 	current = $state<UserConfigData>(defaultConfig);
@@ -57,6 +69,10 @@ export class UserConfig {
 		this.current.activeTheme = theme;
 	}
 
+	setRadiusStyle(radiusStyle: RadiusStyle) {
+		this.current.activeRadiusStyle = radiusStyle;
+	}
+
 	setLayout(layout: UserConfigData["layout"]) {
 		this.current.layout = layout;
 	}
@@ -66,13 +82,19 @@ export class UserConfig {
 			// Set theme on document element for global access
 			if (document.documentElement) {
 				document.documentElement.setAttribute("data-theme", this.current.activeTheme);
+				document.documentElement.setAttribute("data-radius", this.current.activeRadiusStyle);
 			}
-			
+
 			// Also dispatch a custom event for reactive components
 			if (typeof window !== "undefined") {
-				window.dispatchEvent(new CustomEvent("theme-changed", { 
-					detail: { theme: this.current.activeTheme } 
-				}));
+				window.dispatchEvent(
+					new CustomEvent("theme-changed", {
+						detail: {
+							theme: this.current.activeTheme,
+							radiusStyle: this.current.activeRadiusStyle,
+						},
+					})
+				);
 			}
 		}
 	}

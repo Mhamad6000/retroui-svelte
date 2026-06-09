@@ -1006,3 +1006,11 @@
 		--sidebar-ring: #64748b;
 	}
 }
+
+[data-radius="rounded"] .theme-container {
+	--radius: 0.7rem;
+}
+
+[data-radius="box"] .theme-container {
+	--radius: 0rem;
+}
