@@ -82,8 +82,10 @@
 		</div>
 		<Tooltip.Provider delayDuration={0}>
 			<Tooltip.Root>
-				<Tooltip.Trigger>
-					<CopyCodeButton class="relative right-auto top-auto" code={commandText} />
+				<Tooltip.Trigger asChild>
+					{#snippet child({ props })}
+						<CopyCodeButton class="relative right-auto top-auto" code={commandText} {...props} />
+					{/snippet}
 				</Tooltip.Trigger>
 				<Tooltip.Content>Copy to Clipboard</Tooltip.Content>
 			</Tooltip.Root>

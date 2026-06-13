@@ -2416,6 +2416,40 @@
 					"path": "registry/lib/utils.ts"
 				}
 			]
+		},
+		{
+			"name": "portfolio",
+			"type": "registry:block",
+			"description": "A dark retro portfolio landing page block with skills, testimonials, and contact sections.",
+			"registryDependencies": ["local:badge", "local:button", "local:input", "local:textarea", "local:separator", "local:text", "local:tabs"],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"type": "registry:file",
+					"path": "registry/blocks/portfolio/portfolio.svelte"
+				},
+				{
+					"type": "registry:file",
+					"path": "registry/blocks/portfolio/index.ts"
+				}
+			]
+		},
+		{
+			"name": "retro-characters",
+			"type": "registry:block",
+			"description": "A cream and pink retro cartoon character shop landing page with products, customization, and footer.",
+			"registryDependencies": ["local:badge", "local:button", "local:input", "local:textarea", "local:separator"],
+			"devDependencies": ["@lucide/svelte"],
+			"files": [
+				{
+					"type": "registry:file",
+					"path": "registry/blocks/retro-characters/retro-characters.svelte"
+				},
+				{
+					"type": "registry:file",
+					"path": "registry/blocks/retro-characters/index.ts"
+				}
+			]
 		}
 	]
 }

@@ -36,7 +36,7 @@ export const navigation = defineNavigation({
 			items: components,
 		},
 	],
-	header: [
+		header: [
 		{
 			href: "/docs",
 			title: "Docs",
@@ -45,10 +45,10 @@ export const navigation = defineNavigation({
 			href: "/docs/components",
 			title: "Components",
 		},
-		// {
-		// 	href: "/blocks",
-		// 	title: "Blocks",
-		// },
+		{
+			href: "/templates",
+			title: "Templates",
+		},
 		{
 			href: "/themes",
 			title: "Themes",
