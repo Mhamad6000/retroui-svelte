@@ -13,7 +13,7 @@
 	UserConfigContext.set(userConfig);
 </script>
 
-<ModeWatcher />
+<ModeWatcher track={false} defaultMode="dark" />
 <Toaster />
 
 {@render children?.()}

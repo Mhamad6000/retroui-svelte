@@ -1,3 +1,5 @@
+@custom-variant dark (&:is(.dark *));
+
 /* 🌿 GREEN THEME */
 [data-theme="green"] .theme-container {
 	--background: #fff;
