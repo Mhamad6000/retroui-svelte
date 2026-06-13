@@ -2,10 +2,10 @@
 	import { Portfolio } from "$registry/blocks/portfolio";
 	import { RetroCharacters } from "$registry/blocks/retro-characters";
 	import CopyCodeButton from "$lib/components/copy-code-button.svelte";
+	import { PMCommand } from "$lib/components/pm-command";
+	import { highlightCode } from "$lib/utils/highlight";
 	import * as Tabs from "$registry/ui/tabs/index.js";
 	import { Badge } from "$registry/ui/badge/index.js";
-	import { Button } from "$registry/ui/button/index.js";
-	import { Copy, Check } from "@lucide/svelte";
 
 	import PortfolioSource from "$registry/blocks/portfolio/portfolio.svelte?raw";
 	import RetroCharactersSource from "$registry/blocks/retro-characters/retro-characters.svelte?raw";
@@ -18,7 +18,11 @@
 				"A dark retro portfolio landing page with skills, testimonials, process, experience, and contact sections.",
 			component: Portfolio,
 			source: PortfolioSource,
-			install: "npx shadcn-svelte@latest add https://retroui-svelte.netlify.app/r/portfolio.json",
+			installArgs: [
+				"shadcn-svelte@latest",
+				"add",
+				"https://retroui-svelte.netlify.app/r/portfolio.json",
+			],
 		},
 		{
 			name: "retro-characters",
@@ -27,18 +31,13 @@
 				"A cream and pink retro cartoon character shop landing page with products, customization form, and footer.",
 			component: RetroCharacters,
 			source: RetroCharactersSource,
-			install:
-				"npx shadcn-svelte@latest add https://retroui-svelte.netlify.app/r/retro-characters.json",
+			installArgs: [
+				"shadcn-svelte@latest",
+				"add",
+				"https://retroui-svelte.netlify.app/r/retro-characters.json",
+			],
 		},
 	] as const;
-
-	let copied = $state<string | null>(null);
-
-	function copy(text: string, name: string) {
-		navigator.clipboard.writeText(text);
-		copied = name;
-		setTimeout(() => (copied = null), 1500);
-	}
 </script>
 
 <div class="min-h-screen bg-background pb-16">
@@ -59,30 +58,12 @@
 		{#each blocks as block (block.name)}
 			{@const Component = block.component}
 			<div class="space-y-4">
-				<div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-					<div>
-						<h2 class="font-head text-2xl uppercase">{block.title}</h2>
-						<p class="max-w-xl text-sm text-muted-foreground">{block.description}</p>
-					</div>
-					<div class="flex w-full items-center gap-2 md:w-[420px]">
-						<code
-							class="flex-1 truncate rounded-md border border-foreground/20 bg-card px-3 py-2 font-mono text-xs"
-							>{block.install}</code
-						>
-						<Button
-							variant="outline"
-							size="icon"
-							class="shrink-0"
-							onclick={() => copy(block.install, block.name)}
-						>
-							{#if copied === block.name}
-								<Check class="size-4 text-green-500" />
-							{:else}
-								<Copy class="size-4" />
-							{/if}
-						</Button>
-					</div>
+				<div class="flex flex-col gap-2">
+					<h2 class="font-head text-2xl uppercase">{block.title}</h2>
+					<p class="max-w-xl text-sm text-muted-foreground">{block.description}</p>
 				</div>
+
+				<PMCommand command="execute" args={block.installArgs} />
 
 				<Tabs.Root value="preview" class="w-full">
 					<Tabs.List class="w-full justify-start rounded-none border-b border-foreground/10 pb-0">
@@ -97,12 +78,27 @@
 						</div>
 					</Tabs.Content>
 					<Tabs.Content value="code" class="border-0 p-0 pt-4">
-						<div class="relative rounded-lg border-2 border-foreground/10 bg-[#24292e]">
-							<CopyCodeButton code={block.source} />
-							<pre class="max-h-[600px] overflow-auto p-4 text-sm"><code class="text-[#e1e4e8]"
-									>{block.source}</code
-								></pre>
-						</div>
+						{#await highlightCode(block.source, "svelte")}
+							<div
+								class="flex h-24 items-center justify-center rounded-lg border-2 border-foreground/10 bg-[#24292e]"
+							>
+								<span class="text-sm text-[#e1e4e8]/60">Highlighting code...</span>
+							</div>
+						{:then highlightedHtml}
+							<div class="relative overflow-hidden rounded-lg border-2 border-foreground/10">
+								<CopyCodeButton code={block.source} />
+								<div class="max-h-[600px] overflow-auto">
+									{@html highlightedHtml}
+								</div>
+							</div>
+						{:catch}
+							<div class="relative rounded-lg border-2 border-foreground/10 bg-[#24292e]">
+								<CopyCodeButton code={block.source} />
+								<pre class="max-h-[600px] overflow-auto p-4 text-sm"><code class="text-[#e1e4e8]"
+										>{block.source}</code
+									></pre>
+							</div>
+						{/await}
 					</Tabs.Content>
 				</Tabs.Root>
 			</div>

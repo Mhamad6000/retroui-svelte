@@ -5,7 +5,6 @@
 @import "./themes.css";
 
 @custom-variant dark (&:is(.dark *));
-
 @custom-variant fixed (&:is(.layout-fixed *));
 
 @theme inline{

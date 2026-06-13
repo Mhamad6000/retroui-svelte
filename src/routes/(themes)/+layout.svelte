@@ -13,7 +13,7 @@
 <MetaData />
 
 <div
-	data-theme={userConfig?.current.activeTheme || "sunset-orange"}
+	data-theme={userConfig?.current.activeTheme || "yellow"}
 	data-radius={userConfig?.current.activeRadiusStyle || "rounded"}
 >
 	<div class="theme-container">
